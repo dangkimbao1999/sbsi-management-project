@@ -6752,7 +6752,6 @@ Bạn có chắc chắn muốn tiếp tục?`)) {
         const timer = setTimeout(() => ctrl.abort(), 6000);
         const cfResp = await fetch(PUBLIC_API_URL + '&t=' + Date.now(), {
           method: 'GET',
-          headers: { 'Cache-Control': 'no-cache, no-store, must-revalidate', 'Pragma': 'no-cache' },
           cache: 'no-store',
           signal: ctrl.signal
         });
@@ -6780,14 +6779,12 @@ Bạn có chắc chắn muốn tiếp tục?`)) {
           const apiEndpoint = (typeof window !== 'undefined' && window.location.origin) ? (window.location.origin + '/api/jira-sync') : '/api/jira-sync';
           let localResp = await fetch(apiEndpoint + '?t=' + Date.now(), {
             method: 'GET',
-            headers: { 'Cache-Control': 'no-cache, no-store, must-revalidate', 'Pragma': 'no-cache' },
             cache: 'no-store',
             signal: ctrl.signal
           }).catch(() => null);
           if (!localResp || !localResp.ok) {
             localResp = await fetch('http://127.0.0.1:8080/api/jira-sync?t=' + Date.now(), {
               method: 'GET',
-              headers: { 'Cache-Control': 'no-cache, no-store, must-revalidate', 'Pragma': 'no-cache' },
               cache: 'no-store',
               signal: ctrl.signal
             }).catch(() => null);
@@ -6826,7 +6823,6 @@ Bạn có chắc chắn muốn tiếp tục?`)) {
           const timer = setTimeout(() => ctrl.abort(), 3000);
           const cfResp = await fetch('https://misotest-01.pages.dev/jira_sbsiuat_issues.json?v=' + Date.now(), {
             method: 'GET',
-            headers: { 'Cache-Control': 'no-cache, no-store, must-revalidate', 'Pragma': 'no-cache' },
             cache: 'no-store',
             signal: ctrl.signal
           });

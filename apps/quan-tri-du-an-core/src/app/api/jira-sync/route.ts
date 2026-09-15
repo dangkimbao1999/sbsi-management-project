@@ -52,6 +52,27 @@ export async function POST(request: Request) {
   return handleSync(request);
 }
 
+async function getFallbackSnapshot() {
+  try {
+    const fs = await import("fs/promises");
+    const path = await import("path");
+    const filePath = path.join(process.cwd(), "public", "jira_sbsiuat_issues.json");
+    const content = await fs.readFile(filePath, "utf-8");
+    const data = JSON.parse(content);
+    return {
+      success: true,
+      count: data.issues?.length || 0,
+      totalJira: data.total || 0,
+      allowedUsers: ALLOWED_USERS,
+      issues: data.issues || [],
+      syncedAt: data.syncedAt || new Date().toISOString(),
+      source: "SNAPSHOT_FALLBACK"
+    };
+  } catch {
+    return null;
+  }
+}
+
 async function handleSync(request: Request) {
   const url = new URL(request.url);
 
@@ -59,6 +80,8 @@ async function handleSync(request: Request) {
   const password = process.env.JIRA_PASS;
 
   if (!username || !password) {
+    const fallback = await getFallbackSnapshot();
+    if (fallback) return corsJson(fallback);
     return corsJson({
       success: false,
       error: "Jira sync is not configured: set JIRA_USER and JIRA_PASS (see .env.example)."
@@ -89,10 +112,13 @@ async function handleSync(request: Request) {
         Authorization: authHeader,
         "Content-Type": "application/json",
         "User-Agent": "SBSI-UAT-Portal/1.0"
-      }
+      },
+      signal: AbortSignal.timeout(3500)
     });
 
     if (!jiraResp.ok) {
+      const fallback = await getFallbackSnapshot();
+      if (fallback) return corsJson(fallback);
       const errText = await jiraResp.text();
       return corsJson({
         success: false,
@@ -210,6 +236,9 @@ async function handleSync(request: Request) {
       syncedAt: new Date().toISOString()
     });
   } catch (error) {
+    const fallback = await getFallbackSnapshot();
+    if (fallback) return corsJson(fallback);
+
     // Node's fetch wraps the real network error (DNS, TLS, connect-timeout —
     // e.g. Jira only being reachable from inside the corporate network) in
     // a generic "fetch failed" TypeError with the actual cause nested in

@@ -25,6 +25,39 @@ export async function OPTIONS() {
 export async function GET(request: Request) {
   const url = new URL(request.url);
   const platform = url.searchParams.get("platform");
+  const key = url.searchParams.get("key");
+
+  // Support direct key retrieval (e.g. key=sbsi_jira_issues)
+  if (key === "sbsi_jira_issues") {
+    try {
+      const kvData = await kvGet<any>("sbsi_jira_issues");
+      if (kvData) {
+        return corsJson({
+          success: true,
+          platform: "custom",
+          key: "sbsi_jira_issues",
+          state: kvData,
+          timestamp: Date.now()
+        });
+      }
+    } catch {}
+
+    // Fallback to local snapshot file so call never fails
+    try {
+      const fs = await import("fs/promises");
+      const path = await import("path");
+      const filePath = path.join(process.cwd(), "public", "jira_sbsiuat_issues.json");
+      const content = await fs.readFile(filePath, "utf-8");
+      const data = JSON.parse(content);
+      return corsJson({
+        success: true,
+        platform: "custom",
+        key: "sbsi_jira_issues",
+        state: data,
+        timestamp: Date.now()
+      });
+    } catch {}
+  }
 
   try {
     const centralState =
