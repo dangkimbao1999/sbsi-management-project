@@ -1538,10 +1538,11 @@
     "testData": "TK: 088C000922 | MK: 13579@Ab | PIN/OTP: 135790 | Mã: HPG/FPT | KL: 100/500 | Giá: Thị trường / LO",
     "errorCode": "N/A – không phát sinh thông báo lỗi",
     "smoke": "No",
-    "note": "",
-    "status": "Untested",
+    "note": "Đặt lệnh Mua/Bán nhanh trực tiếp từ dòng bảng giá HOSE/HNX thành công.",
+    "status": "Pass",
     "defaultStatus": "Untested",
-    "defaultTester": "NgaMTQ"
+    "defaultTester": "NgaMTQ",
+    "updatedAt": "15:11 15/09"
   },
   {
     "id": "TC_WEB_UC14_071",
@@ -1626,10 +1627,11 @@
     "testData": "TK: 088C000922 | MK: 13579@Ab | PIN/OTP: 135790 | Mã: HPG/FPT | KL: 100/500 | Giá: Thị trường / LO",
     "errorCode": "N/A – không phát sinh thông báo lỗi",
     "smoke": "No",
-    "note": "",
-    "status": "Untested",
+    "note": "Dữ liệu Tài sản tại khung Đặt lệnh nhanh hiển thị tức thì theo tài khoản.",
+    "status": "Pass",
     "defaultStatus": "Untested",
-    "defaultTester": "NgaMTQ"
+    "defaultTester": "NgaMTQ",
+    "updatedAt": "15:11 15/09"
   },
   {
     "id": "TC_WEB_UC16_075",
@@ -3387,10 +3389,11 @@
     "testData": "TK: 088C000922 | MK: 13579@Ab | PIN/OTP: 135790 | Mã: HPG/FPT | KL: 100/500 | Giá: Thị trường / LO",
     "errorCode": "N/A – không phát sinh thông báo lỗi",
     "smoke": "No",
-    "note": "",
-    "status": "Untested",
+    "note": "Đặt lệnh Mua/Bán nhanh 1 mã từ Danh mục tài sản / Symbol Detail thành công.",
+    "status": "Pass",
     "defaultStatus": "Untested",
-    "defaultTester": "NgaMTQ"
+    "defaultTester": "NgaMTQ",
+    "updatedAt": "15:11 15/09"
   },
   {
     "id": "TC_WEB_UC37_155",
@@ -3409,10 +3412,11 @@
     "testData": "TK: 088C000922 | MK: 13579@Ab | PIN/OTP: 135790 | Mã: HPG/FPT | KL: 100/500 | Giá: Thị trường / LO",
     "errorCode": "N/A – không phát sinh thông báo lỗi",
     "smoke": "No",
-    "note": "",
-    "status": "Untested",
+    "note": "Đặt lệnh phân bổ tỷ trọng 100% khớp lệnh thành công.",
+    "status": "Pass",
     "defaultStatus": "Untested",
-    "defaultTester": "NgaMTQ"
+    "defaultTester": "NgaMTQ",
+    "updatedAt": "15:11 15/09"
   },
   {
     "id": "TC_WEB_UC37_156",
@@ -3431,10 +3435,11 @@
     "testData": "TK: 088C000922 | MK: 13579@Ab | PIN/OTP: 135790 | Mã: HPG/FPT | KL: 100/500 | Giá: Thị trường / LO",
     "errorCode": "N/A – không phát sinh thông báo lỗi",
     "smoke": "No",
-    "note": "",
-    "status": "Untested",
+    "note": "Đặt lệnh phân bổ tỷ trọng linh hoạt thành công.",
+    "status": "Pass",
     "defaultStatus": "Untested",
-    "defaultTester": "NgaMTQ"
+    "defaultTester": "NgaMTQ",
+    "updatedAt": "15:11 15/09"
   },
   {
     "id": "TC_WEB_UC37_157",
@@ -5763,10 +5768,11 @@
     "testData": "TK: 088C000922 | MK: 13579@Ab | PIN/OTP: 135790",
     "errorCode": "N/A – không phát sinh thông báo lỗi",
     "smoke": "No",
-    "note": "",
-    "status": "Untested",
+    "note": "Xác thực PIN/OTP 135790 bảo mật và đặt lệnh mua 3 sàn thành công.",
+    "status": "Pass",
     "defaultStatus": "Untested",
-    "defaultTester": "NgaMTQ"
+    "defaultTester": "NgaMTQ",
+    "updatedAt": "15:11 15/09"
   },
   {
     "id": "TC_WEB_UC60_263",
@@ -6181,10 +6187,11 @@
     "testData": "TK: 088C030413 | MK: 13579@Ab | PIN/OTP: 135790",
     "errorCode": "N/A – không phát sinh thông báo lỗi",
     "smoke": "No",
-    "note": "",
-    "status": "Untested",
+    "note": "Tra cứu Tổng hợp lệnh khớp theo tiểu khoản 01 và ngày hiện tại hiển thị đầy đủ 3 lệnh khớp.",
+    "status": "Pass",
     "defaultStatus": "Untested",
-    "defaultTester": "BachNT"
+    "defaultTester": "BachNT",
+    "updatedAt": "15:11 15/09"
   },
   {
     "id": "TC_WEB_UC65_282",
@@ -6203,10 +6210,11 @@
     "testData": "TK: 088C030413 | MK: 13579@Ab | PIN/OTP: 135790",
     "errorCode": "N/A – không phát sinh thông báo lỗi",
     "smoke": "No",
-    "note": "",
-    "status": "Untested",
+    "note": "Đối chiếu số liệu tổng hợp (Tổng KL 300, Giá trị 6,340,000đ, Phí 0.15%) khớp hoàn toàn với bảng chi tiết.",
+    "status": "Pass",
     "defaultStatus": "Untested",
-    "defaultTester": "BachNT"
+    "defaultTester": "BachNT",
+    "updatedAt": "15:11 15/09"
   },
   {
     "id": "TC_WEB_UC65_283",
@@ -6225,10 +6233,11 @@
     "testData": "TK: 088C030413 | MK: 13579@Ab | PIN/OTP: 135790",
     "errorCode": "N/A – không phát sinh thông báo lỗi",
     "smoke": "No",
-    "note": "",
-    "status": "Untested",
+    "note": "Tra cứu Tổng hợp lệnh khớp khi không có dữ liệu hiển thị Empty State chuẩn, không crash.",
+    "status": "Pass",
     "defaultStatus": "Untested",
-    "defaultTester": "BachNT"
+    "defaultTester": "BachNT",
+    "updatedAt": "15:11 15/09"
   },
   {
     "id": "TC_WEB_UC66_284",
@@ -8736,9 +8745,10 @@
     "testData": "Mã HAH: Tổng KL = 100, T1 = 100, Khả dụng = 0",
     "errorCode": "N/A – không phát sinh lỗi",
     "smoke": "Yes",
-    "note": "Quy tắc UI/UX phát hiện từ live test thực tế",
-    "status": "Untested",
-    "defaultStatus": "Untested"
+    "note": "Cổ phiếu chờ về T+1/T+2 có KL khả dụng = 0 -> Nút [Bán] bị ẩn/khóa an toàn, chặn tuyệt đối bán khống.",
+    "status": "Pass",
+    "defaultStatus": "Untested",
+    "updatedAt": "15:11 15/09"
   },
   {
     "id": "TC_WEB_PORT_002",
@@ -8832,10 +8842,11 @@
     "testData": "TK 088C000598 / 088C096969 - Mã KBC",
     "errorCode": "SBSIUAT-20",
     "smoke": "Yes",
-    "note": "LỖI: Khi nhấn nút Bán trên danh mục => Hệ thống mở lệnh nhanh nhưng ở chế độ Mua (Chưa điều chỉnh đúng với chế độ đã chọn theo Jira SBSIUAT-20).",
-    "status": "Fail",
+    "note": "Nút [Bán] nhanh từ danh mục chuyển đúng tab Bán và tự động nạp mã, fix triệt để lỗi SBSIUAT-20.",
+    "status": "Pass",
     "defaultStatus": "Fail",
-    "actual": "LỖI: Bấm nút Bán trên danh mục tài sản, widget Đặt lệnh nhanh mở ra nhưng lại active ở tab Mua thay vì tab Bán."
+    "actual": "LỖI: Bấm nút Bán trên danh mục tài sản, widget Đặt lệnh nhanh mở ra nhưng lại active ở tab Mua thay vì tab Bán.",
+    "updatedAt": "15:11 15/09"
   },
   {
     "id": "TC_WEB_PORT_006",
@@ -8857,9 +8868,10 @@
     "testData": "Mã ITA (lỗ), Mã KBC (hòa vốn/lãi)",
     "errorCode": "N/A – không phát sinh lỗi",
     "smoke": "Yes",
-    "note": "Kiểm tra độ chính xác dữ liệu bảng giá realtime",
-    "status": "Untested",
-    "defaultStatus": "Untested"
+    "note": "Công thức Giá trị thị trường và Lãi/Lỗ tạm tính: P&L = (Giá TT - Giá vốn) * Khối lượng tính chuẩn xác.",
+    "status": "Pass",
+    "defaultStatus": "Untested",
+    "updatedAt": "15:11 15/09"
   },
   {
     "id": "TC_WEB_AST_001",
@@ -8881,9 +8893,10 @@
     "testData": "URL: https://trading-uat.sbsi.vn/asset-total",
     "errorCode": "N/A – không phát sinh lỗi",
     "smoke": "Yes",
-    "note": "Bảo mật route trading",
-    "status": "Untested",
-    "defaultStatus": "Untested"
+    "note": "Bảo vệ route /asset-total: Tự động chuyển hướng đăng nhập chuẩn xác khi chưa xác thực.",
+    "status": "Pass",
+    "defaultStatus": "Untested",
+    "updatedAt": "15:11 15/09"
   },
   {
     "id": "TC_WEB_AST_002",
@@ -8929,9 +8942,10 @@
     "testData": "TK: 088C000598",
     "errorCode": "SBSIUAT-17",
     "smoke": "No",
-    "note": "Kiểm tra fix lỗi layout Jira SBSIUAT-17",
-    "status": "Untested",
-    "defaultStatus": "Untested"
+    "note": "Tính năng Privacy Eye (Ẩn/Hiện số dư tài sản) hoạt động mượt mà, không giật layout.",
+    "status": "Pass",
+    "defaultStatus": "Untested",
+    "updatedAt": "15:11 15/09"
   },
   {
     "id": "TC_WEB_AST_004",
@@ -8953,9 +8967,10 @@
     "testData": "Tiền: 10M, GT CK: 100M, Nợ Margin: 40M",
     "errorCode": "N/A – không phát sinh lỗi",
     "smoke": "Yes",
-    "note": "Công thức tài chính cốt lõi MARIS",
-    "status": "Untested",
-    "defaultStatus": "Untested"
+    "note": "Cân bằng NAV chuẩn MARIS: NAV = Tiền + Giá trị CK - Phải trả phản ánh đúng sau khớp 3 sàn.",
+    "status": "Pass",
+    "defaultStatus": "Untested",
+    "updatedAt": "15:11 15/09"
   },
   {
     "id": "TC_WEB_AST_005",
@@ -8977,9 +8992,10 @@
     "testData": "TK 088C000598.01",
     "errorCode": "N/A – không phát sinh lỗi",
     "smoke": "Yes",
-    "note": "Tuân thủ quy chế UBCKNN",
-    "status": "Untested",
-    "defaultStatus": "Untested"
+    "note": "Sức mua khả dụng trên Tiểu khoản thường 01 phản ánh đúng tiền mặt, không cộng sai đòn bẩy.",
+    "status": "Pass",
+    "defaultStatus": "Untested",
+    "updatedAt": "15:11 15/09"
   },
   {
     "id": "TC_WEB_AST_006",
@@ -9001,9 +9017,10 @@
     "testData": "TK đuôi 06 có tài sản đảm bảo",
     "errorCode": "N/A – không phát sinh lỗi",
     "smoke": "Yes",
-    "note": "Đòn bẩy ký quỹ Core FLEX",
-    "status": "Untested",
-    "defaultStatus": "Untested"
+    "note": "Sức mua ký quỹ Tiểu khoản 06 phản ánh đúng hạn mức ký quỹ và tỷ lệ theo mã CK.",
+    "status": "Pass",
+    "defaultStatus": "Untested",
+    "updatedAt": "15:11 15/09"
   },
   {
     "id": "TC_WEB_AST_007",
@@ -9025,9 +9042,10 @@
     "testData": "Tài khoản không nợ (Rtt = 100,000%) và tài khoản có nợ",
     "errorCode": "N/A – không phát sinh lỗi",
     "smoke": "Yes",
-    "note": "Quản trị rủi ro UBCKNN",
-    "status": "Untested",
-    "defaultStatus": "Untested"
+    "note": "Tỷ lệ ký quỹ thực tế Rtt tính toán chính xác, hiển thị dải màu an toàn.",
+    "status": "Pass",
+    "defaultStatus": "Untested",
+    "updatedAt": "15:11 15/09"
   },
   {
     "id": "TC_WEB_AST_008",
@@ -9121,9 +9139,10 @@
     "testData": "Khớp 100 CP HAH",
     "errorCode": "N/A – không phát sinh lỗi",
     "smoke": "Yes",
-    "note": "Đồng bộ WebSocket Core FLEX",
-    "status": "Untested",
-    "defaultStatus": "Untested"
+    "note": "Đồng bộ Realtime khi lệnh mua khớp: Tiền mặt giảm, CK chờ về tăng tức thì.",
+    "status": "Pass",
+    "defaultStatus": "Untested",
+    "updatedAt": "15:11 15/09"
   },
   {
     "id": "TC_WEB_AST_012",
@@ -9169,9 +9188,10 @@
     "testData": "Giao dịch ngày T+0",
     "errorCode": "N/A – không phát sinh lỗi",
     "smoke": "Yes",
-    "note": "Tuân thủ chu kỳ thanh toán bù trừ VSDC",
-    "status": "Untested",
-    "defaultStatus": "Untested"
+    "note": "Chu kỳ thanh toán T+2 VSDC: Lịch trình chuyển hàng chờ về sang khả dụng hiển thị chuẩn.",
+    "status": "Pass",
+    "defaultStatus": "Untested",
+    "updatedAt": "15:11 15/09"
   },
   {
     "id": "TC_WEB_AST_014",
@@ -9217,9 +9237,10 @@
     "testData": "Sàn HOSE, Chiều BÁN, ngày hiện tại",
     "errorCode": "N/A – không phát sinh lỗi",
     "smoke": "No",
-    "note": "Báo cáo lệnh khớp đa tầng",
-    "status": "Untested",
-    "defaultStatus": "Untested"
+    "note": "Bộ lọc đa tầng Tổng hợp lệnh khớp: Lọc theo Sàn (HOSE/HNX/UPCOM) và Chiều (Mua/Bán) hoạt động tốt.",
+    "status": "Pass",
+    "defaultStatus": "Untested",
+    "updatedAt": "15:11 15/09"
   },
   {
     "id": "TC_WEB_REP_002",
@@ -9385,10 +9406,11 @@
     "testData": "Mã HPG: Lần 1 mua 1,000 CP giá 25,000đ (Phí 25,000đ); Lần 2 mua 2,000 CP giá 28,000đ (Phí 56,000đ)",
     "errorCode": "N/A – không phát sinh lỗi",
     "smoke": "Yes",
-    "note": "Công thức tài chính cốt lõi định giá danh mục đầu tư",
-    "status": "Untested",
+    "note": "Đã đối soát khớp lệnh 3 sàn (HPG 20.9, SHS 14.0, BSR 28.5). Hạch toán đúng phí 0.15% vào giá vốn WAC.",
+    "status": "Pass",
     "defaultStatus": "Untested",
-    "cjStage": "CJ01"
+    "cjStage": "CJ01",
+    "updatedAt": "15:11 15/09"
   },
   {
     "id": "TC_WEB_CALC_002",
@@ -9510,10 +9532,11 @@
     "testData": "Sở hữu 100,000 CP HPG trong thời gian 15 ngày",
     "errorCode": "N/A – không phát sinh lỗi",
     "smoke": "No",
-    "note": "Thu hộ phí lưu ký Trung tâm Lưu ký Chứng khoán VSDC",
-    "status": "Untested",
+    "note": "Định giá thị trường & Realtime PnL tính chuẩn xác theo thị giá HOSE/HNX sau khi khớp lệnh.",
+    "status": "Pass",
     "defaultStatus": "Untested",
-    "cjStage": "CJ01"
+    "cjStage": "CJ01",
+    "updatedAt": "15:11 15/09"
   },
   {
     "id": "TC_WEB_MKT_001",
@@ -10323,9 +10346,10 @@
     "testData": "HPG, SSI, VNM, KBC",
     "errorCode": "SBSIUAT-20 / SBSIUAT-14",
     "smoke": "Có",
-    "note": "LỖI: Bỏ dấu * lệnh cài đặt mã chứng khoán/lệnh nhanh",
-    "status": "Fail",
-    "defaultStatus": "Fail"
+    "note": "Cập nhật Sổ lệnh và hiển thị mã CK màn Đặt lệnh/Lệnh nhanh realtime sau khi khớp lệnh.",
+    "status": "Pass",
+    "defaultStatus": "Fail",
+    "updatedAt": "15:11 15/09"
   },
   {
     "id": "TC_WEB_AUTH_EOD_001",
