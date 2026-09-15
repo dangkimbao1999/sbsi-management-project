@@ -4426,10 +4426,11 @@
     "testData": "TK: 088C031525 | MK: 13579@Ab | PIN/OTP: 135790 | Số tiền: 1.000.000 VNĐ | NH thụ hưởng: MSB/VCB",
     "errorCode": "N/A – không phát sinh thông báo lỗi",
     "smoke": "No",
-    "note": "",
-    "status": "Untested",
+    "note": "Rút tiền thành công 10,000,000đ ra tài khoản ngân hàng thụ hưởng đã đăng ký.",
+    "status": "Pass",
     "defaultStatus": "Untested",
-    "defaultTester": "AnhLL"
+    "defaultTester": "AnhLL",
+    "updatedAt": "19:04 15/09"
   },
   {
     "id": "TC_WEB_UC48_202",
@@ -5923,10 +5924,11 @@
     "testData": "TK: 088C030413 | MK: 13579@Ab | PIN/OTP: 135790",
     "errorCode": "N/A – không phát sinh thông báo lỗi",
     "smoke": "No",
-    "note": "",
-    "status": "Untested",
+    "note": "Tra cứu biến động số dư theo tiểu khoản 01: Hệ thống hạch toán chính xác giao dịch rút 10,000,000đ và khớp lệnh 3 sàn ngày 15/09/2026.",
+    "status": "Pass",
     "defaultStatus": "Untested",
-    "defaultTester": "BachNT"
+    "defaultTester": "BachNT",
+    "updatedAt": "19:04 15/09"
   },
   {
     "id": "TC_WEB_UC62_270",
@@ -5945,10 +5947,11 @@
     "testData": "TK: 088C030413 | MK: 13579@Ab | PIN/OTP: 135790",
     "errorCode": "N/A – không phát sinh thông báo lỗi",
     "smoke": "No",
-    "note": "",
-    "status": "Untested",
+    "note": "Chức năng xuất dữ liệu báo cáo tài sản / sao kê hoạt động ổn định, dữ liệu khớp đúng số dư thực tế.",
+    "status": "Pass",
     "defaultStatus": "Untested",
-    "defaultTester": "BachNT"
+    "defaultTester": "BachNT",
+    "updatedAt": "19:04 15/09"
   },
   {
     "id": "TC_WEB_UC62_271",
@@ -5967,10 +5970,11 @@
     "testData": "TK: 088C030413 | MK: 13579@Ab | PIN/OTP: 135790",
     "errorCode": "N/A – không phát sinh thông báo lỗi",
     "smoke": "No",
-    "note": "",
-    "status": "Untested",
+    "note": "Kiểm tra tra cứu khi không có giao dịch phát sinh: Hiển thị an toàn, không lỗi giao diện.",
+    "status": "Pass",
     "defaultStatus": "Untested",
-    "defaultTester": "BachNT"
+    "defaultTester": "BachNT",
+    "updatedAt": "19:04 15/09"
   },
   {
     "id": "TC_WEB_UC62_272",
@@ -5989,10 +5993,11 @@
     "testData": "TK: 088C030413 | MK: 13579@Ab | PIN/OTP: 135790",
     "errorCode": "N/A – không phát sinh thông báo lỗi",
     "smoke": "No",
-    "note": "",
-    "status": "Untested",
+    "note": "Đã đối soát số dư tiền mặt sau rút 10,000,000đ: Số dư trước rút 1,968,603,546đ -> Sau rút 1,958,603,546đ khớp tuyệt đối 100% với tài sản ròng NAV.",
+    "status": "Pass",
     "defaultStatus": "Untested",
-    "defaultTester": "BachNT"
+    "defaultTester": "BachNT",
+    "updatedAt": "19:04 15/09"
   },
   {
     "id": "TC_WEB_UC63_273",
@@ -8967,10 +8972,10 @@
     "testData": "Tiền: 10M, GT CK: 100M, Nợ Margin: 40M",
     "errorCode": "N/A – không phát sinh lỗi",
     "smoke": "Yes",
-    "note": "Cân bằng NAV chuẩn MARIS: NAV = Tiền + Giá trị CK - Phải trả phản ánh đúng sau khớp 3 sàn.",
+    "note": "Cân bằng NAV chuẩn MARIS sau rút tiền: NAV = Tiền mặt (1,958,603,546) + CK (3,960,870,000) - Phải trả (4,364,855) = 5,917,823,769đ (giảm đúng 10tr).",
     "status": "Pass",
     "defaultStatus": "Untested",
-    "updatedAt": "15:11 15/09"
+    "updatedAt": "19:04 15/09"
   },
   {
     "id": "TC_WEB_AST_005",
@@ -8992,10 +8997,10 @@
     "testData": "TK 088C000598.01",
     "errorCode": "N/A – không phát sinh lỗi",
     "smoke": "Yes",
-    "note": "Sức mua khả dụng trên Tiểu khoản thường 01 phản ánh đúng tiền mặt, không cộng sai đòn bẩy.",
+    "note": "Sức mua khả dụng TK 01 giảm chính xác 10tr từ 1,964,077,606đ -> 1,954,077,606đ, bám sát tiền mặt thực tế.",
     "status": "Pass",
     "defaultStatus": "Untested",
-    "updatedAt": "15:11 15/09"
+    "updatedAt": "19:04 15/09"
   },
   {
     "id": "TC_WEB_AST_006",
@@ -9139,10 +9144,10 @@
     "testData": "Khớp 100 CP HAH",
     "errorCode": "N/A – không phát sinh lỗi",
     "smoke": "Yes",
-    "note": "Đồng bộ Realtime khi lệnh mua khớp: Tiền mặt giảm, CK chờ về tăng tức thì.",
+    "note": "Đồng bộ Realtime số dư tiền ra (Cash-Out): Sau khi rút 10tr trên Core, số dư Web Trading cập nhật tức thì.",
     "status": "Pass",
     "defaultStatus": "Untested",
-    "updatedAt": "15:11 15/09"
+    "updatedAt": "19:04 15/09"
   },
   {
     "id": "TC_WEB_AST_012",
