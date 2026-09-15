@@ -23,21 +23,26 @@ export async function OPTIONS() {
 }
 
 export async function GET() {
-  try {
-    const centralState =
-      (await kvGet<CentralState>("sbsi_central_state")) ?? {
-        mobile: {},
-        web: {},
-        core: {},
-        tprl: {},
-        ekyc: {}
-      };
+  let centralState: CentralState = {
+    mobile: {},
+    web: {},
+    core: {},
+    tprl: {},
+    ekyc: {}
+  };
 
-    let grandTotal = 0;
-    let grandPass = 0;
-    let grandFail = 0;
-    let grandPending = 0;
-    const summary: Record<string, unknown> = {};
+  try {
+    const fetched = await kvGet<CentralState>("sbsi_central_state");
+    if (fetched) centralState = fetched;
+  } catch {
+    // Cloudflare KV is optional / unconfigured; gracefully proceed with initial platforms
+  }
+
+  let grandTotal = 0;
+  let grandPass = 0;
+  let grandFail = 0;
+  let grandPending = 0;
+  const summary: Record<string, unknown> = {};
 
     for (const p in TOTAL_DATASET) {
       const total = TOTAL_DATASET[p];
@@ -81,10 +86,4 @@ export async function GET() {
     };
 
     return corsJson({ success: true, summary, timestamp: Date.now() });
-  } catch (error) {
-    return corsJson(
-      { success: false, error: error instanceof Error ? error.message : String(error) },
-      { status: 500 }
-    );
-  }
 }
