@@ -178,6 +178,12 @@ def sync_jira():
             out_js.write(js_content)
         print(f"Đã lưu json & js ({len(formatted)} issues) vào: {public_dir}")
 
+        data_dir = os.path.join(script_dir, "..", "src", "data")
+        os.makedirs(data_dir, exist_ok=True)
+        with open(os.path.join(data_dir, "jira_sbsiuat_issues.json"), "w", encoding="utf-8") as out_df:
+            json.dump(payload, out_df, ensure_ascii=False, indent=2)
+        print(f"Đã lưu json ({len(formatted)} issues) vào: {data_dir}")
+
         # Tự động đẩy dữ liệu lên Public API Cloudflare Worker (KV Cache sbsi_jira_issues)
         try:
             cf_url = "https://sbsi-uat-api.tungbachntb.workers.dev/api/state?key=sbsi_jira_issues"
