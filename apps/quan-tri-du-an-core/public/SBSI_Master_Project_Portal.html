@@ -8735,74 +8735,93 @@ Bạn có chắc chắn muốn tiếp tục?`)) {
       let syncSource = '';
 
       // =========================================================================
-      // CHIẾN LƯỢC ĐỒNG BỘ ISSUE JIRA FSS ĐA TẦNG (HIGH AVAILABILITY)
+      // BỘ PUBLIC API ĐỒNG BỘ JIRA FSS ĐA TẦNG (HIGH AVAILABILITY - 100% CORS-FREE)
+      // Không truyền custom headers (Cache-Control/Pragma) để tránh CORS preflight OPTIONS!
       // =========================================================================
-      // TẦNG 1: PUBLIC CLOUDFLARE KV API (Hoạt động toàn cầu 24/7, Bypass 100% CORS trên cả file:// và web)
-      const PUBLIC_API_URL = (typeof SBSI_API_BASE !== 'undefined' ? SBSI_API_BASE : 'https://sbsi-uat-api.tungbachntb.workers.dev') + '/api/state?key=sbsi_jira_issues';
 
+      // TẦNG 1: PUBLIC CLOUDFLARE KV API (Thời gian thực 24/7)
+      const PUBLIC_API_URL = (typeof SBSI_API_BASE !== 'undefined' ? SBSI_API_BASE : 'https://sbsi-uat-api.tungbachntb.workers.dev') + '/api/state?key=sbsi_jira_issues&t=' + Date.now();
       try {
         const ctrl = new AbortController();
-        const timer = setTimeout(() => ctrl.abort(), 6000);
-        const cfResp = await fetch(PUBLIC_API_URL + '&t=' + Date.now(), {
-          method: 'GET',
-          headers: { 'Cache-Control': 'no-cache, no-store, must-revalidate', 'Pragma': 'no-cache' },
-          cache: 'no-store',
-          signal: ctrl.signal
-        });
+        const timer = setTimeout(() => ctrl.abort(), 4500);
+        const cfResp = await fetch(PUBLIC_API_URL, { signal: ctrl.signal });
         clearTimeout(timer);
-        if (cfResp.ok) {
+        if (cfResp && cfResp.ok) {
           const resObj = await cfResp.json();
           if (resObj && resObj.success && resObj.state) {
-            const issuesList = resObj.state.issues || (Array.isArray(resObj.state) ? resObj.state : []);
-            if (Array.isArray(issuesList) && issuesList.length > 0) {
-              syncedIssues = issuesList;
+            const list = resObj.state.issues || (Array.isArray(resObj.state) ? resObj.state : []);
+            if (Array.isArray(list) && list.length > 0) {
+              syncedIssues = list;
               fetchSuccess = true;
-              syncSource = 'Public Cloud API (Cloudflare KV)';
+              syncSource = 'Public Cloudflare KV API';
             }
           }
         }
       } catch(e) {
-        console.warn('Tầng 1 Public API chưa phản hồi:', e);
+        console.warn('Tầng 1 Public Cloudflare KV chưa phản hồi, chuyển sang Tầng 2:', e);
       }
 
-      // TẦNG 2: NEXT.JS API ROUTE / MÁY CHỦ PROXY NỘI BỘ (NẾU ĐANG BẬT)
+      // TẦNG 2: GITHUB RAW CDN PUBLIC API (High Availability CDN, 100% CORS-Free)
       if (!fetchSuccess) {
+        const GITHUB_CDN_URL = 'https://raw.githubusercontent.com/dangkimbao1999/sbsi-management-project/main/apps/quan-tri-du-an-core/public/jira_sbsiuat_issues.json?t=' + Date.now();
         try {
           const ctrl = new AbortController();
-          const timer = setTimeout(() => ctrl.abort(), 2500);
-          const apiEndpoint = (typeof window !== 'undefined' && window.location.origin && window.location.origin.startsWith('http'))
-            ? (window.location.origin + '/api/jira-sync')
-            : 'http://127.0.0.1:8080/api/jira-sync';
-          let localResp = await fetch(apiEndpoint + '?t=' + Date.now(), {
-            method: 'GET',
-            headers: { 'Cache-Control': 'no-cache, no-store, must-revalidate', 'Pragma': 'no-cache' },
-            cache: 'no-store',
-            signal: ctrl.signal
-          }).catch(() => null);
-          if (!localResp || !localResp.ok) {
-            localResp = await fetch('http://127.0.0.1:8080/api/jira-sync?t=' + Date.now(), {
-              method: 'GET',
-              headers: { 'Cache-Control': 'no-cache, no-store, must-revalidate', 'Pragma': 'no-cache' },
-              cache: 'no-store',
-              signal: ctrl.signal
-            }).catch(() => null);
-          }
+          const timer = setTimeout(() => ctrl.abort(), 4500);
+          const ghResp = await fetch(GITHUB_CDN_URL, { signal: ctrl.signal });
           clearTimeout(timer);
-          if (localResp && localResp.ok) {
-            const data = await localResp.json();
-            if (data && (data.issues || Array.isArray(data))) {
-              const list = Array.isArray(data.issues) ? data.issues : (Array.isArray(data) ? data : []);
-              if (list.length > 0) {
-                syncedIssues = list;
-                fetchSuccess = true;
-                syncSource = 'Next.js API Proxy / Máy Chủ Nội Bộ (➔ Jira FSS)';
-              }
+          if (ghResp && ghResp.ok) {
+            const ghData = await ghResp.json();
+            if (ghData && Array.isArray(ghData.issues) && ghData.issues.length > 0) {
+              syncedIssues = ghData.issues;
+              fetchSuccess = true;
+              syncSource = 'GitHub CDN Public API';
+            }
+          }
+        } catch(e) {
+          console.warn('Tầng 2 GitHub CDN chưa phản hồi, chuyển sang Tầng 3:', e);
+        }
+      }
+
+      // TẦNG 3: CLOUDFLARE PAGES STATIC CDN
+      if (!fetchSuccess) {
+        const PAGES_CDN_URL = 'https://misotest-01.pages.dev/jira_sbsiuat_issues.json?t=' + Date.now();
+        try {
+          const ctrl = new AbortController();
+          const timer = setTimeout(() => ctrl.abort(), 3500);
+          const pagesResp = await fetch(PAGES_CDN_URL, { signal: ctrl.signal });
+          clearTimeout(timer);
+          if (pagesResp && pagesResp.ok) {
+            const pData = await pagesResp.json();
+            if (pData && Array.isArray(pData.issues) && pData.issues.length > 0) {
+              syncedIssues = pData.issues;
+              fetchSuccess = true;
+              syncSource = 'Cloudflare Pages CDN';
             }
           }
         } catch(e) {}
       }
 
-      // TẦNG 3: TỆP SNAPSHOT CỤC BỘ / SCRIPT (jira_sbsiuat_issues.js)
+      // TẦNG 4: NEXT.JS SERVERLESS API ROUTE (Chỉ gọi khi đang chạy trên giao thức HTTP/HTTPS)
+      if (!fetchSuccess && typeof window !== 'undefined' && window.location.protocol && window.location.protocol.startsWith('http')) {
+        try {
+          const ctrl = new AbortController();
+          const timer = setTimeout(() => ctrl.abort(), 2500);
+          const apiEndpoint = window.location.origin + '/api/jira-sync?t=' + Date.now();
+          const localResp = await fetch(apiEndpoint, { signal: ctrl.signal }).catch(() => null);
+          clearTimeout(timer);
+          if (localResp && localResp.ok) {
+            const data = await localResp.json();
+            const list = Array.isArray(data.issues) ? data.issues : (Array.isArray(data) ? data : []);
+            if (list.length > 0) {
+              syncedIssues = list;
+              fetchSuccess = true;
+              syncSource = 'Next.js API Serverless Route';
+            }
+          }
+        } catch(e) {}
+      }
+
+      // TẦNG 5: TỆP SNAPSHOT CỤC BỘ / SCRIPT (jira_sbsiuat_issues.js - Hoạt động 100% trên file:// offline)
       if (!fetchSuccess) {
         try {
           const scriptIssues = await loadJiraViaScript();
@@ -8814,30 +8833,7 @@ Bạn có chắc chắn muốn tiếp tục?`)) {
         } catch(e) {}
       }
 
-      // TẦNG 4: CLOUDFLARE PAGES STATIC CDN
-      if (!fetchSuccess) {
-        try {
-          const ctrl = new AbortController();
-          const timer = setTimeout(() => ctrl.abort(), 3000);
-          const cfResp = await fetch('https://misotest-01.pages.dev/jira_sbsiuat_issues.json?v=' + Date.now(), {
-            method: 'GET',
-            headers: { 'Cache-Control': 'no-cache, no-store, must-revalidate', 'Pragma': 'no-cache' },
-            cache: 'no-store',
-            signal: ctrl.signal
-          });
-          clearTimeout(timer);
-          if (cfResp.ok) {
-            const data = await cfResp.json();
-            if (data && Array.isArray(data.issues) && data.issues.length > 0) {
-              syncedIssues = data.issues;
-              fetchSuccess = true;
-              syncSource = 'Cloudflare Pages CDN';
-            }
-          }
-        } catch(e) {}
-      }
-
-      // TẦNG 5: FALLBACK BỘ DỮ LIỆU KHỞI TẠO HỆ THỐNG
+      // TẦNG 6: FALLBACK BỘ DỮ LIỆU KHỞI TẠO GỐC TRONG FILE HTML
       if (!fetchSuccess || syncedIssues.length === 0) {
         syncedIssues = [...INITIAL_MASTER_ISSUES];
         fetchSuccess = true;
