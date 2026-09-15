@@ -3,6 +3,7 @@
 
 import { kvGet, kvPut } from "@sbsi/cloudflare-kv";
 import { corsJson, corsOptions } from "@/lib/cors";
+import fallbackIssuesJson from "@/data/jira_sbsiuat_issues.json";
 
 export const dynamic = "force-dynamic";
 export const revalidate = 0;
@@ -31,7 +32,7 @@ export async function GET(request: Request) {
   if (key === "sbsi_jira_issues") {
     try {
       const kvData = await kvGet<any>("sbsi_jira_issues");
-      if (kvData) {
+      if (kvData && kvData.issues) {
         return corsJson({
           success: true,
           platform: "custom",
@@ -42,21 +43,14 @@ export async function GET(request: Request) {
       }
     } catch {}
 
-    // Fallback to local snapshot file so call never fails
-    try {
-      const fs = await import("fs/promises");
-      const path = await import("path");
-      const filePath = path.join(process.cwd(), "public", "jira_sbsiuat_issues.json");
-      const content = await fs.readFile(filePath, "utf-8");
-      const data = JSON.parse(content);
-      return corsJson({
-        success: true,
-        platform: "custom",
-        key: "sbsi_jira_issues",
-        state: data,
-        timestamp: Date.now()
-      });
-    } catch {}
+    // Fallback to bundled snapshot so call never fails
+    return corsJson({
+      success: true,
+      platform: "custom",
+      key: "sbsi_jira_issues",
+      state: fallbackIssuesJson,
+      timestamp: Date.now()
+    });
   }
 
   try {

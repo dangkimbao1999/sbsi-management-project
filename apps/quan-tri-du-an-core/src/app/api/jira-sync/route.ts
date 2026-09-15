@@ -7,6 +7,7 @@
 // just no plaintext secret committed to source.
 
 import { corsJson, corsOptions } from "@/lib/cors";
+import fallbackIssuesJson from "@/data/jira_sbsiuat_issues.json";
 
 export const dynamic = "force-dynamic";
 export const revalidate = 0;
@@ -52,25 +53,17 @@ export async function POST(request: Request) {
   return handleSync(request);
 }
 
-async function getFallbackSnapshot() {
-  try {
-    const fs = await import("fs/promises");
-    const path = await import("path");
-    const filePath = path.join(process.cwd(), "public", "jira_sbsiuat_issues.json");
-    const content = await fs.readFile(filePath, "utf-8");
-    const data = JSON.parse(content);
-    return {
-      success: true,
-      count: data.issues?.length || 0,
-      totalJira: data.total || 0,
-      allowedUsers: ALLOWED_USERS,
-      issues: data.issues || [],
-      syncedAt: data.syncedAt || new Date().toISOString(),
-      source: "SNAPSHOT_FALLBACK"
-    };
-  } catch {
-    return null;
-  }
+function getFallbackSnapshot() {
+  const data = fallbackIssuesJson as any;
+  return {
+    success: true,
+    count: data.issues?.length || 0,
+    totalJira: data.total || 0,
+    allowedUsers: ALLOWED_USERS,
+    issues: data.issues || [],
+    syncedAt: data.syncedAt || new Date().toISOString(),
+    source: "SNAPSHOT_FALLBACK"
+  };
 }
 
 async function handleSync(request: Request) {
