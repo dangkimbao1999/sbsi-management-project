@@ -10399,5 +10399,30 @@
     "status": "Fail",
     "defaultStatus": "Fail",
     "defaultTester": "BaoDK"
+  },
+  {
+    "id": "TC_WEB_ODD_001",
+    "stt": "471",
+    "tester": "BachNT",
+    "defaultTester": "BachNT",
+    "module": "Quản lý Tài sản & Báo cáo",
+    "sheet": "Danh mục đầu tư",
+    "feature": "Giao dịch cổ phiếu lô lẻ (Odd-Lot Trading)",
+    "screen": "UC_ODD_01: Giao dịch cổ phiếu lô lẻ",
+    "useCaseId": "UC_ODD_01",
+    "useCaseName": "Giao dịch cổ phiếu lô lẻ (Odd-Lot Trading)",
+    "name": "Kiểm tra Đặt lệnh Mua cổ phiếu Lô Lẻ (KL 1 - 99 CP), phong tỏa sức mua và cập nhật Danh mục đầu tư sau khớp lệnh",
+    "desc": "Tiền điều kiện: Môi trường UAT sẵn sàng. Tài khoản có sức mua khả dụng trên Web Trading. Thực hiện đặt lệnh Mua cổ phiếu lô lẻ (10 CP HPG). Kiểm tra xác thực PIN, ghi nhận sổ lệnh, phong tỏa sức mua và cập nhật cổ phiếu chờ về T+ trong Danh mục đầu tư sau khi khớp lệnh và chạy Batch EOD.",
+    "steps": "Bước 1: Đăng nhập tài khoản Web Trading (https://trading-uat.sbsi.vn/login), vào màn hình Đặt lệnh (/webtrade).\nBước 2: Chọn tiểu khoản 06 (Margin).\nBước 3: Nhập mã chứng khoán (HPG), giá đặt (20.95), nhập khối lượng lô lẻ (10 CP).\nBước 4: Nhấn nút [MUA], popup xác nhận hiển thị đầy đủ thông tin, nhập mã PIN (123456) và nhấn [Xác nhận].\nBước 5: Kiểm tra Sổ lệnh ghi nhận đúng lệnh Mua LO, KL đặt = 10, Giá đặt = 20.95, trạng thái Chờ gửi/Chờ khớp.\nBước 6: Kiểm tra Sức mua bị phong tỏa tức thì tương ứng giá trị lệnh mua (209,500đ) + phí ký quỹ (14,096đ).\nBước 7: Khi lệnh khớp và qua bù trừ cuối ngày (EOD), kiểm tra Danh mục đầu tư ghi nhận 10 CP HPG chờ về T1, tỷ trọng 100%, tính đúng giá vốn và lãi/lỗ tạm tính.\nBước 8: Kiểm tra màn hình Quản lý tài sản (/asset-total) ghi nhận tiền mặt giảm chính xác giá trị mua + phí (209,710đ), NAV cân bằng chuẩn MARIS.",
+    "expected": "1. Hệ thống cho phép đặt lệnh Mua cổ phiếu lô lẻ (1 - 99 CP) thành công trên sàn HOSE/HNX, không chặn biên độ số lượng.\n2. Sổ lệnh ghi nhận đúng thông tin lệnh Mua LO, KL = 10, Giá = 20.95, trạng thái Chờ gửi/Chờ khớp.\n3. Sức mua của tiểu khoản bị phong tỏa ngay lập tức, ngăn chặn tình trạng đặt vượt quá sức mua.\n4. Sau khớp lệnh và batch EOD, Danh mục đầu tư hiển thị mã HPG với KL chờ về T1 = 10 CP, tỷ trọng 100%, tính đúng giá vốn (20.97) và lãi/lỗ tạm tính.\n5. Tiền mặt tại MARIS khấu trừ chính xác giá trị lệnh mua + phí giao dịch, NAV cân bằng đúng theo công thức.",
+    "priority": "P1 - Blocker",
+    "testType": "Functional / Odd-Lot / E2E",
+    "testData": "TK: 088C032944 (Tiểu khoản 06) | Mã: HPG | KL: 10 CP | Giá: 20.95 | PIN: 123456",
+    "errorCode": "N/A – không phát sinh lỗi",
+    "smoke": "Yes",
+    "note": "ĐẠT (PASS) - Đã kiểm thử tự động Playwright và đối soát trực tiếp trên UAT ngày 16/09/2026. Log API và screenshot minh chứng đầy đủ.",
+    "status": "Pass",
+    "defaultStatus": "Pass",
+    "updatedAt": "17:35 16/09"
   }
 ]
