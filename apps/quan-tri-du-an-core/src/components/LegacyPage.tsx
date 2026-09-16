@@ -45,6 +45,15 @@ export function LegacyPage({ css, bodyHtml, links = [], externalScripts = [] }: 
     if (executedRef.current || !containerRef.current) return;
     executedRef.current = true;
 
+    // In Next.js SSR, browsers parse and execute all inline <script> tags delivered
+    // in the initial server HTML payload. Re-executing them on initial client hydration
+    // causes duplicate listeners, duplicate network calls, and syntax errors.
+    // We only need to replace and execute scripts if the page was rendered via client navigation.
+    if (typeof window !== "undefined" && !(window as any).__SSR_SCRIPTS_HYDRATED__) {
+      (window as any).__SSR_SCRIPTS_HYDRATED__ = true;
+      return;
+    }
+
     const scripts = Array.from(containerRef.current.querySelectorAll("script"));
     for (const oldScript of scripts) {
       const newScript = document.createElement("script");
