@@ -7178,7 +7178,7 @@ Bạn có chắc chắn muốn tiếp tục?`)) {
     }
 
     // INITIALIZATION
-    window.addEventListener('DOMContentLoaded', () => {
+    function initPortalCore() {
       initProjectStatusReport();
       initPortalTheme();
       setupShareUrl();
@@ -7194,9 +7194,9 @@ Bạn có chắc chắn muốn tiếp tục?`)) {
       // Ultra-fast metric recalculation every 250ms
       setInterval(recalculateMetrics, 250);
 
-      // Ultra-fast Sub-Second (< 1s) Cloud Server Sync every 500ms
-      let isPortalSyncing = false;
-      const triggerUltraSync = async () => {
+      // Ultra-fast Sub-Second (< 1s) Cloud Server Sync
+      var isPortalSyncing = window.isPortalSyncing || false;
+      var triggerUltraSync = window.triggerUltraSync || (async () => {
         if (isPortalSyncing) return;
         isPortalSyncing = true;
         try {
@@ -7204,17 +7204,24 @@ Bạn có chắc chắn muốn tiếp tục?`)) {
         } finally {
           isPortalSyncing = false;
         }
-      };
+      });
+      window.isPortalSyncing = isPortalSyncing;
+      window.triggerUltraSync = triggerUltraSync;
 
       triggerUltraSync();
-      setInterval(triggerUltraSync, 10 * 60 * 1000); // 10 phút (600,000ms) giảm tải request Cloudflare
+      setInterval(triggerUltraSync, 10 * 60 * 1000);
 
-      // Instant sync on tab focus or visibility
       window.addEventListener('focus', triggerUltraSync);
       document.addEventListener('visibilitychange', () => {
         if (document.visibilityState === 'visible') triggerUltraSync();
       });
-    });
+    }
+
+    if (document.readyState === 'loading') {
+      window.addEventListener('DOMContentLoaded', initPortalCore);
+    } else {
+      initPortalCore();
+    }
   
     
     
@@ -7824,7 +7831,7 @@ Bạn có chắc chắn muốn tiếp tục?`)) {
 
 
     // Listen for BroadcastChannel message for PO states
-    window.addEventListener('DOMContentLoaded', () => {
+    function initPortalModulesAndHash() {
       // Initialize PO module metrics
       ['margin', 'ci', 're', 'rm', 'uiux', 'mobile', 'web'].forEach(m => updatePoMetrics(m));
       if (typeof updateTesterProgressMatrix === 'function') updateTesterProgressMatrix();
@@ -7834,6 +7841,13 @@ Bạn có chắc chắn muốn tiếp tục?`)) {
       if (['dashboard', 'info', 'margin', 'ci', 're', 'rm', 'uiux', 'mobile', 'web', 'report', 'issues'].includes(hash)) {
         switchPortalTab(hash);
       }
+    }
+
+    if (document.readyState === 'loading') {
+      window.addEventListener('DOMContentLoaded', initPortalModulesAndHash);
+    } else {
+      initPortalModulesAndHash();
+    }
 
       // Support dynamic URL hash navigation (#issues, #web, #dashboard, etc.)
       window.addEventListener('hashchange', () => {
