@@ -6017,7 +6017,7 @@
     "errorCode": "N/A – không phát sinh thông báo lỗi",
     "smoke": "No",
     "note": "",
-    "status": "Untested",
+    "status": "Pass",
     "defaultStatus": "Untested",
     "defaultTester": "BachNT"
   },
@@ -6039,7 +6039,7 @@
     "errorCode": "N/A – không phát sinh thông báo lỗi",
     "smoke": "No",
     "note": "",
-    "status": "Untested",
+    "status": "Pass",
     "defaultStatus": "Untested",
     "defaultTester": "BachNT"
   },
@@ -6060,8 +6060,8 @@
     "testData": "TK: 088C030413 | MK: 13579@Ab | PIN/OTP: 135790",
     "errorCode": "N/A – không phát sinh thông báo lỗi",
     "smoke": "No",
-    "note": "",
-    "status": "Untested",
+    "note": "SBSIEXT-121",
+    "status": "Pass",
     "defaultStatus": "Untested",
     "defaultTester": "BachNT"
   },
@@ -6083,7 +6083,7 @@
     "errorCode": "N/A – không phát sinh thông báo lỗi",
     "smoke": "No",
     "note": "",
-    "status": "Untested",
+    "status": "Pass",
     "defaultStatus": "Untested",
     "defaultTester": "BachNT"
   },
