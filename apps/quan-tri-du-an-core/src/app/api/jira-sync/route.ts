@@ -87,7 +87,7 @@ async function handleSync(request: Request) {
   const maxResults = parseInt(url.searchParams.get("max") || "100", 10);
 
   // Xây dựng JQL: Lấy các issue được log (reporter) HOẶC được giao (assignee) bởi 9 chuyên viên SBSI
-  let jql = "project = SBSIUAT AND resolution = Unresolved";
+  let jql = "project in (SBSIUAT, SBSIEXT) AND resolution = Unresolved";
   if (!includeAll) {
     const userListStr = ALLOWED_USERS.map((r) => `"${r}"`).join(", ");
     jql += ` AND (reporter in (${userListStr}) OR assignee in (${userListStr}))`;

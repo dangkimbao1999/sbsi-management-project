@@ -52,7 +52,11 @@ export function LegacyPage({ css, bodyHtml, links = [], externalScripts = [] }: 
         newScript.setAttribute(attr.name, attr.value);
       }
       newScript.textContent = oldScript.textContent;
-      oldScript.replaceWith(newScript);
+      try {
+        oldScript.replaceWith(newScript);
+      } catch (err) {
+        console.warn("LegacyPage script execution warning:", err);
+      }
     }
   }, []);
 
