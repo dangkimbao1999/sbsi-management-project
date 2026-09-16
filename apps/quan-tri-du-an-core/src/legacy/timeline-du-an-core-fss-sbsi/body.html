@@ -355,7 +355,7 @@
             <button class="notion-db-tab" onclick="switchTab('tab-daily', this)">
               <span>🏃</span>
               <span>Sprint hiện tại</span>
-              <span class="tab-counter-badge red">07/09</span>
+              <span class="tab-counter-badge red">16/09</span>
             </button>
 
             <!-- Tab 4: Timeline / Gantt View -->
@@ -814,17 +814,17 @@
     </div>
 
 
-        <div id="tab-daily" class="tab-pane">
+        <div id="tab-daily" class="tab-pane active">
       
       <!-- Daily Header Banner -->
       <div class="uat-header-banner" style="background: linear-gradient(135deg, #0F172A 0%, #1E3A8A 50%, #0369A1 100%);">
         <div class="uat-banner-title">
           <h2>
-            <span>⚡ NHẬT KÝ CÔNG VIỆC: HÔM NAY (07/09/2026) & HÔM QUA (06/09/2026)</span>
-            <span class="status-badge live" style="font-size: 11px; padding: 4px 10px; background:#DCFCE7; color:#15803D;"><span class="status-pulse"></span> TUẦN 14 DỰ ÁN</span>
+            <span>⚡ NHẬT KÝ CÔNG VIỆC: HÔM NAY (16/09/2026) & HÔM QUA (15/09/2026)</span>
+            <span class="status-badge live" style="font-size: 11px; padding: 4px 10px; background:#DCFCE7; color:#15803D;"><span class="status-pulse"></span> TUẦN 15 DỰ ÁN (UAT VÒNG 1)</span>
           </h2>
           <p>
-            Theo dõi chi tiết các đầu mục công việc trọng yếu hàng ngày trong chiến dịch Kiểm thử người dùng (UAT Round 1) tại SBSI.
+            Theo dõi chi tiết các đầu mục công việc kiểm thử chấp nhận người dùng (UAT Round 1) và tiến độ xử lý Bug/CR thực tế hàng ngày tại SBSI.
           </p>
         </div>
         <div style="display:flex; gap:10px; flex-wrap:wrap;">
@@ -840,31 +840,31 @@
       <!-- Live Countdowns to Upcoming Milestones -->
       <div class="kpi-grid" style="grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); margin-bottom: 24px;">
         <div class="kpi-card blue" style="padding: 14px 18px;">
-          <div class="kpi-header"><span class="kpi-title">HÔM NAY (07/09)</span><span class="kpi-icon">⚡</span></div>
-          <div class="kpi-value" style="font-size: 19px; color:#0284C7;">Test MT & Tích Hợp</div>
-          <div class="kpi-desc">FSS & SBSI test tổng thể</div>
-        </div>
-
-        <div class="kpi-card amber" style="padding: 14px 18px;">
-          <div class="kpi-header"><span class="kpi-title">11/09 (CÒN 4 NGÀY)</span><span class="kpi-icon">🎨</span></div>
-          <div class="kpi-value" style="font-size: 19px; color:#D97706;">Bàn Giao UI/UX</div>
-          <div class="kpi-desc">Nhận diện thương hiệu mới</div>
+          <div class="kpi-header"><span class="kpi-title">HÔM NAY (16/09)</span><span class="kpi-icon">⚡</span></div>
+          <div class="kpi-value" style="font-size: 19px; color:#0284C7;">Sao Kê & Báo Cáo MG</div>
+          <div class="kpi-desc">Test tên file & UC68-UC72</div>
         </div>
 
         <div class="kpi-card green" style="padding: 14px 18px;">
-          <div class="kpi-header"><span class="kpi-title">14/09 (CÒN 7 NGÀY)</span><span class="kpi-icon">🔥</span></div>
-          <div class="kpi-value" style="font-size: 19px; color:#059669;">UAT 10 GAP Vòng 1</div>
+          <div class="kpi-header"><span class="kpi-title">11/09 (HOÀN THÀNH)</span><span class="kpi-icon">🎨</span></div>
+          <div class="kpi-value" style="font-size: 19px; color:#059669;">Bàn Giao UI/UX</div>
+          <div class="kpi-desc">Figma Tokens #E45F35</div>
+        </div>
+
+        <div class="kpi-card amber" style="padding: 14px 18px;">
+          <div class="kpi-header"><span class="kpi-title">14/09 (ĐANG CHẠY)</span><span class="kpi-icon">🔥</span></div>
+          <div class="kpi-value" style="font-size: 19px; color:#D97706;">UAT 10 GAP & Tích Hợp</div>
           <div class="kpi-desc">Khối Nghiệp vụ & Risk test</div>
         </div>
 
         <div class="kpi-card red" style="padding: 14px 18px;">
-          <div class="kpi-header"><span class="kpi-title">09/10 (CÒN 32 NGÀY)</span><span class="kpi-icon">🏛️</span></div>
+          <div class="kpi-header"><span class="kpi-title">09/10 (CÒN 23 NGÀY)</span><span class="kpi-icon">🏛️</span></div>
           <div class="kpi-value" style="font-size: 19px; color:#DC2626;">Sở & VSDC Kiểm Tra</div>
           <div class="kpi-desc">Kiểm tra thực địa & thi NV</div>
         </div>
 
         <div class="kpi-card purple" style="padding: 14px 18px;">
-          <div class="kpi-header"><span class="kpi-title">09/11 (CÒN 63 NGÀY)</span><span class="kpi-icon">🎯</span></div>
+          <div class="kpi-header"><span class="kpi-title">09/11 (CÒN 54 NGÀY)</span><span class="kpi-icon">🎯</span></div>
           <div class="kpi-value" style="font-size: 19px; color:#7C3AED;">CHÍNH THỨC GO-LIVE</div>
           <div class="kpi-desc">Khai trương toàn diện Core</div>
         </div>
@@ -877,86 +877,78 @@
         <div class="uat-round-card r1" style="border-top: 4px solid #2563EB;">
           <div class="uat-round-header" style="background: linear-gradient(135deg, #EFF6FF 0%, #DBEAFE 100%);">
             <div class="uat-round-title">
-              <span style="font-size: 17px;">📌 CÔNG VIỆC HÔM NAY CẦN LÀM (THỨ HAI, 07/09/2026)</span>
+              <span style="font-size: 17px;">📌 CÔNG VIỆC HÔM NAY CẦN LÀM (THỨ TƯ, 16/09/2026)</span>
             </div>
             <span class="status-badge progress"><span class="status-pulse"></span> Đang Thực Hiện</span>
           </div>
           
           <div style="padding: 18px 20px; display: flex; flex-direction: column; gap: 16px;">
             <div style="background:#EFF6FF; border:1px solid #BFDBFE; border-radius:8px; padding:12px 16px; font-size:12.5px; color:#1E40AF;">
-              🎯 <strong>Mục tiêu ngày 07/09:</strong> Test tổng thể môi trường kiểm thử UAT, xác nhận các thành phần hệ thống sẵn sàng và bắt đầu kiểm thử cấu hình tích hợp (Email, SMS, BIDV, MSB thu chi hộ, Bảng giá, Lệnh điều kiện).
+              🎯 <strong>Mục tiêu ngày 16/09:</strong> Kiểm thử & rà soát phân hệ Sao kê tiền/chứng khoán; xử lý chuẩn hóa định dạng tên file báo cáo; đồng bộ issue Jira FSS (SBSIEXT-121); tiếp tục nghiệm thu chuỗi báo cáo Môi giới và quản lý khế ước Margin.
             </div>
 
-            <!-- Team 1: IT & FSS Tech -->
+            <!-- Team 1: BachNT & Portfolio/Report -->
             <div>
               <div style="font-size: 13.5px; font-weight: 700; color: #1E3A8A; margin-bottom: 8px; display: flex; align-items: center; gap: 6px;">
-                <span>💻 1. Đội Kỹ Thuật CNTT (SBSI IT & FSS Tech)</span>
-                <span class="tag-pill fss">Ưu tiên cao</span>
+                <span>📊 1. Chuyên viên BachNT (Báo Cáo & Quản Lý Tài Sản)</span>
+                <span class="tag-pill critical">Trọng yếu</span>
               </div>
               <div style="display:flex; flex-direction:column; gap:8px;">
                 <label class="daily-check-label">
-                  <input type="checkbox" id="task_0709_1" class="task-checkbox" onchange="saveChecklistState()">
-                  <span><strong>Kiểm tra toàn diện môi trường UAT:</strong> Database Oracle, Application Server, Web Admin (<code>10.64.70.11:7171</code>), Portainer (<code>10.64.71.12:9000</code>).</span>
+                  <input type="checkbox" id="task_1609_1" class="task-checkbox" checked onchange="saveChecklistState()">
+                  <span><strong>Rà soát tính năng Sao kê tiền (UC62):</strong> Kiểm tra tra cứu theo tiểu khoản, đối chiếu số dư cuối kỳ khớp với số dư màn hình Tài sản (<code>TC_WEB_UC62_269</code>, <code>TC_WEB_UC62_272</code>).</span>
                 </label>
                 <label class="daily-check-label">
-                  <input type="checkbox" id="task_0709_2" class="task-checkbox" onchange="saveChecklistState()">
-                  <span><strong>Xác nhận trạng thái các thành phần hệ thống</strong> đã sẵn sàng cho người dùng nghiệp vụ SBSI đăng nhập test.</span>
+                  <input type="checkbox" id="task_1609_2" class="task-checkbox" checked onchange="saveChecklistState()">
+                  <span><strong>Chuẩn hóa định dạng tên file Sao kê tải về:</strong> Bắt lỗi hardcode <code>MARIS.xlsx</code>/<code>MARIS.pdf</code>, chốt chuẩn: <code>[Brand]_Sao_ke_tien_[STK]-[TieuKhoan]_[Date]</code>.</span>
                 </label>
                 <label class="daily-check-label">
-                  <input type="checkbox" id="task_0709_3" class="task-checkbox" onchange="saveChecklistState()">
-                  <span><strong>Kiểm thử cấu hình Email & SMS:</strong> Test gửi tin OTP, tin cấp mật khẩu qua Telco Brandname và SMTP mail.</span>
+                  <input type="checkbox" id="task_1609_3" class="task-checkbox" checked onchange="saveChecklistState()">
+                  <span><strong>Log Jira Issue [SBSIEXT-121]:</strong> Báo lỗi định dạng tên file sang FSS (Assignee: Trang Nguyen Thi Quynh), đồng bộ tự động lên Dashboard UAT.</span>
                 </label>
                 <label class="daily-check-label">
-                  <input type="checkbox" id="task_0709_4" class="task-checkbox" onchange="saveChecklistState()">
-                  <span><strong>Kiểm thử kết nối cổng BIDV:</strong> Kiểm tra kết nối tài khoản ngân hàng chuyên dụng và hàm nộp/rút tiền.</span>
+                  <input type="checkbox" id="task_1609_4" class="task-checkbox" onchange="saveChecklistState()">
+                  <span><strong>Kiểm thử chuỗi Báo cáo Môi giới (UC68 - UC72):</strong> Tra cứu danh sách KH bổ sung ký quỹ (Call Margin), DS còn dư nợ và DS bị xử lý Force Sell.</span>
                 </label>
                 <label class="daily-check-label">
-                  <input type="checkbox" id="task_0709_5" class="task-checkbox" onchange="saveChecklistState()">
-                  <span><strong>Kiểm thử cổng Thu chi hộ MSB:</strong> Kiểm tra cấu hình Virtual Account định danh khách hàng.</span>
-                </label>
-                <label class="daily-check-label">
-                  <input type="checkbox" id="task_0709_6" class="task-checkbox" onchange="saveChecklistState()">
-                  <span><strong>Kiểm tra luồng Bảng giá & Lệnh điều kiện:</strong> Kiểm tra feed dữ liệu giá 2 Sở và engine lệnh Stop/Trailing.</span>
+                  <input type="checkbox" id="task_1609_5" class="task-checkbox" onchange="saveChecklistState()">
+                  <span><strong>Quản lý khế ước Dư nợ Margin (UC_AST_06):</strong> Kiểm tra 12 cột thông số khế ước và điều kiện chặn gia hạn quá 2 lần (<code>TC_WEB_AST_008</code>, <code>TC_WEB_AST_009</code>).</span>
                 </label>
               </div>
             </div>
 
-            <!-- Team 2: Operations & Business -->
+            <!-- Team 2: Trading & Cash -->
             <div style="border-top: 1px dashed var(--slate-200); padding-top: 14px;">
               <div style="font-size: 13.5px; font-weight: 700; color: #1E3A8A; margin-bottom: 8px; display: flex; align-items: center; gap: 6px;">
-                <span>🏢 2. Khối Vận Hành & Dịch Vụ Tài Chính (VH&DVTC)</span>
+                <span>💼 2. NgaMTQ & AnhLL (Lệnh & Giao Dịch Tiền)</span>
                 <span class="tag-pill sbsi">Nghiệp vụ</span>
               </div>
               <div style="display:flex; flex-direction:column; gap:8px;">
                 <label class="daily-check-label">
-                  <input type="checkbox" id="task_0709_7" class="task-checkbox" onchange="saveChecklistState()">
-                  <span><strong>Đăng nhập kiểm tra tài khoản người dùng:</strong> Kiểm tra phân quyền truy cập chức năng trên Core FLEX và Web Online.</span>
+                  <input type="checkbox" id="task_1609_6" class="task-checkbox" onchange="saveChecklistState()">
+                  <span><strong>Test lệnh điều kiện nâng cao (NgaMTQ):</strong> Kiểm thử khớp lệnh Stop Loss, Trailing Stop và lệnh trước giờ (Pre-open).</span>
                 </label>
                 <label class="daily-check-label">
-                  <input type="checkbox" id="task_0709_8" class="task-checkbox" onchange="saveChecklistState()">
-                  <span><strong>Rà soát dữ liệu Convert lần 1:</strong> Kiểm tra ngẫu nhiên số dư tài khoản tiền, số dư chứng khoán ban đầu trên tiểu khoản test.</span>
-                </label>
-                <label class="daily-check-label">
-                  <input type="checkbox" id="task_0709_9" class="task-checkbox" onchange="saveChecklistState()">
-                  <span><strong>Chuẩn bị kịch bản UAT tích hợp:</strong> Sẵn sàng các kịch bản test tiền nạp/rút BIDV, MSB phối hợp cùng IT trong tuần 07/09 - 11/09.</span>
+                  <input type="checkbox" id="task_1609_7" class="task-checkbox" onchange="saveChecklistState()">
+                  <span><strong>Kiểm tra luồng Chuyển tiền ra ngoài & UTTB (AnhLL):</strong> Đối chiếu hạn mức tối thiểu, phí chuyển tiền và hạn mức UTTB ngân hàng liên kết.</span>
                 </label>
               </div>
             </div>
 
-            <!-- Team 3: Risk & PMO -->
+            <!-- Team 3: IT & System -->
             <div style="border-top: 1px dashed var(--slate-200); padding-top: 14px;">
               <div style="font-size: 13.5px; font-weight: 700; color: #1E3A8A; margin-bottom: 8px; display: flex; align-items: center; gap: 6px;">
-                <span>🛡️ 3. Khối Quản Trị Rủi Ro & Ban Dự Án (Risk & PMO)</span>
-                <span class="tag-pill critical">Điều phối</span>
+                <span>💻 3. Đội Kỹ Thuật CNTT & FSS (IT System & DevOps)</span>
+                <span class="tag-pill fss">Hạ tầng</span>
               </div>
               <div style="display:flex; flex-direction:column; gap:8px;">
                 <label class="daily-check-label">
-                  <input type="checkbox" id="task_0709_10" class="task-checkbox" onchange="saveChecklistState()">
-                  <span><strong>Quản trị rủi ro:</strong> Kiểm tra tham số tỷ lệ ký quỹ MRTYPE (<code>032005</code>), rổ cổ phiếu và room cho vay margin trên môi trường UAT.</span>
+                  <input type="checkbox" id="task_1609_8" class="task-checkbox" onchange="saveChecklistState()">
+                  <span><strong>Khắc phục lỗi điều hướng I-Broker (HTTP-404):</strong> Sửa route trên thanh Header Bar theo testcase <code>TC_WEB_REP_003</code>.</span>
                 </label>
                 <label class="daily-check-label">
-                  <input type="checkbox" id="task_0709_11" class="task-checkbox" onchange="saveChecklistState()">
-                  <span><strong>Họp giao ban đầu tuần UAT:</strong> Điểm danh nhân sự phân công kiểm thử tại các phòng ban (theo email Ban Dự Án).</span>
+                  <input type="checkbox" id="task_1609_9" class="task-checkbox" checked onchange="saveChecklistState()">
+                  <span><strong>Duy trì API Đồng bộ Jira FSS Realtime:</strong> Đảm bảo endpoint đồng bộ 64 issue thông suốt cho toàn bộ các bên theo dõi.</span>
                 </label>
               </div>
             </div>
@@ -968,59 +960,59 @@
         <div class="uat-round-card r2" style="border-top: 4px solid #059669;">
           <div class="uat-round-header" style="background: linear-gradient(135deg, #F0FDF4 0%, #DCFCE7 100%); border-bottom-color: #86EFAC;">
             <div class="uat-round-title">
-              <span style="font-size: 17px; color: #166534;">✅ CÔNG VIỆC HÔM QUA & ĐÃ HOÀN THÀNH (03/09 – 06/09)</span>
+              <span style="font-size: 17px; color: #166534;">✅ CÔNG VIỆC HÔM QUA ĐÃ HOÀN THÀNH (THỨ BA, 15/09/2026)</span>
             </div>
-            <span class="status-badge done" style="background:#DCFCE7; color:#15803D; border-color:#86EFAC;">Đã Hoàn Tất</span>
+            <span class="status-badge done" style="background:#DCFCE7; color:#15803D; border-color:#86EFAC;">Đã Hoàn Tất 100%</span>
           </div>
 
           <div style="padding: 18px 20px; display: flex; flex-direction: column; gap: 14px;">
             <div style="background:#F0FDF4; border:1px solid #BBF7D0; border-radius:8px; padding:12px 16px; font-size:12.5px; color:#166534;">
-              ✨ <strong>Kết quả đợt 03/09 - 06/09:</strong> Hạ tầng UAT đã được khởi tạo thành công, dữ liệu Convert lần 1 đã nạp vào hệ thống và thông báo kế hoạch UAT đã được gửi đến toàn thể các cấp lãnh đạo.
+              ✨ <strong>Kết quả ngày 15/09:</strong> Đã nghiệm thu thành công 03 testcase cốt lõi mảng Danh mục & Bán nhiều mã; xác minh 11/11 công thức tài chính; cập nhật trạng thái Pass trên cổng UAT.
             </div>
 
             <div class="task-item" style="border-left: 3px solid #059669; background: white;">
               <div class="task-item-top">
-                <span class="task-name" style="color:#166534;">✔️ Hoàn thành Convert Dữ Liệu Lần 1</span>
-                <span class="task-date">03/09 - 04/09</span>
+                <span class="task-name" style="color:#166534;">✔️ Nghiệm thu [Bán nhanh lô lẻ] từ Danh mục (PASS)</span>
+                <span class="task-date">15/09/2026</span>
               </div>
-              <div class="task-desc">Trích xuất dữ liệu từ Core cũ, nạp thành công vào schema Database Oracle Core FLEX mới trên môi trường UAT.</div>
-              <div class="task-tags"><span class="tag-pill fss">FSS Data</span> <span class="tag-pill sbsi">SBSI IT</span></div>
+              <div class="task-desc">Testcase <code>TC_WEB_PORT_002</code>: Bấm nút [Bán] mở form Lệnh nhanh, tự động chọn tab BÁN, điền sẵn mã và số lượng khả dụng, triệt tiêu lỗi nhảy tab MUA (Fix SBSIUAT-20).</div>
+              <div class="task-tags"><span class="tag-pill sbsi">BachNT</span> <span class="tag-pill done">Đã PASS UAT</span></div>
             </div>
 
             <div class="task-item" style="border-left: 3px solid #059669; background: white;">
               <div class="task-item-top">
-                <span class="task-name" style="color:#166534;">✔️ Khai báo Tham số, Sản phẩm & Phân quyền</span>
-                <span class="task-date">03/09 - 04/09</span>
+                <span class="task-name" style="color:#166534;">✔️ Nghiệm thu Nút [Bán nhiều mã] Disabled khi chưa chọn mã (PASS)</span>
+                <span class="task-date">15/09/2026</span>
               </div>
-              <div class="task-desc">Thiết lập tham số chi nhánh, loại hình khách hàng (CF), loại tiểu khoản (AF), biểu phí giao dịch (OD) và danh mục tài khoản người dùng test.</div>
-              <div class="task-tags"><span class="tag-pill fss">Cao Mai (FSS)</span> <span class="tag-pill sbsi">VH&DVTC</span></div>
+              <div class="task-desc">Testcase <code>TC_WEB_PORT_003</code>: Kiểm tra thuộc tính <code>disabled="true"</code> khi ở trạng thái xem Tất cả hoặc chưa tick chọn mã, chặn gửi lệnh ngoài ý muốn.</div>
+              <div class="task-tags"><span class="tag-pill sbsi">BachNT</span> <span class="tag-pill done">Đã PASS UAT</span></div>
             </div>
 
             <div class="task-item" style="border-left: 3px solid #059669; background: white;">
               <div class="task-item-top">
-                <span class="task-name" style="color:#166534;">✔️ Thiết lập Môi trường Kiểm thử UAT</span>
-                <span class="task-date">03/09 - 04/09</span>
+                <span class="task-name" style="color:#166534;">✔️ Nghiệm thu Popup Tính năng Bán nhiều mã 2 bước (PASS)</span>
+                <span class="task-date">15/09/2026</span>
               </div>
-              <div class="task-desc">Cài đặt cụm dịch vụ Core FLEX, Web Online Trading, OTP Viewer, mở thông luồng mạng kết nối nội bộ tại trụ sở SBSI.</div>
-              <div class="task-tags"><span class="tag-pill fss">FSS Infra</span> <span class="tag-pill sbsi">IT System</span></div>
+              <div class="task-desc">Testcase <code>TC_WEB_PORT_004</code>: Popup Bước 1 giải thích rõ ràng tránh hiểu lầm bán tháo; Bước 2 cho phép chọn tỷ trọng (100%, 70%, 50%) và loại giá (LO, TT).</div>
+              <div class="task-tags"><span class="tag-pill sbsi">BachNT</span> <span class="tag-pill done">Đã PASS UAT</span></div>
             </div>
 
             <div class="task-item" style="border-left: 3px solid #059669; background: white;">
               <div class="task-item-top">
-                <span class="task-name" style="color:#166534;">✔️ Kiểm tra cấu hình sơ bộ & Kết nối tích hợp</span>
-                <span class="task-date">04/09/2026</span>
+                <span class="task-name" style="color:#166534;">✔️ Kiểm thử Tự động 11/11 Công Thức Tài Chính Chuẩn (100% PASS)</span>
+                <span class="task-date">15/09/2026</span>
               </div>
-              <div class="task-desc">Kiểm tra kết nối IP, Port tới các gateway ngân hàng BIDV, MSB và dịch vụ SMS viễn thông.</div>
-              <div class="task-tags"><span class="tag-pill fss">FSS Tech</span></div>
+              <div class="task-desc">Xác nhận công thức NAV, WAC, Realtime PnL, Sức mua 01/06, Rtt Margin, Lãi vay Margin từng ngày, Phí UTTB (sàn 20k), Thuế quyền Nghị định 126.</div>
+              <div class="task-tags"><span class="tag-pill sbsi">BachNT</span> <span class="tag-pill critical">Automated 11/11</span></div>
             </div>
 
             <div class="task-item" style="border-left: 3px solid #059669; background: white;">
               <div class="task-item-top">
-                <span class="task-name" style="color:#166534;">📢 Ban Dự Án phát hành Kế Hoạch UAT & Kiểm Tra Sở</span>
-                <span class="task-date">Cuối tuần 05-06/09</span>
+                <span class="task-name" style="color:#166534;">✔️ Đồng bộ Dữ liệu Test lên Cổng Quản Trị UAT Vercel</span>
+                <span class="task-date">15/09/2026</span>
               </div>
-              <div class="task-desc">Ms. Nhung Vũ gửi email triệu tập toàn thể nhân sự các khối Risk, VH&DVTC, PTDT, PTSP, CNTT chủ động bố trí nguồn lực tham gia UAT từ 07/09.</div>
-              <div class="task-tags"><span class="tag-pill sbsi">Ms. Nhung Vũ</span> <span class="tag-pill critical">Email Mốc 2</span></div>
+              <div class="task-desc">Cập nhật <code>dataset_web_standard.json</code>, nâng tỷ lệ Pass của BachNT lên 25/81 testcases.</div>
+              <div class="task-tags"><span class="tag-pill sbsi">Portal Sync</span></div>
             </div>
 
           </div>
@@ -1028,60 +1020,51 @@
 
       </div>
 
-      <!-- UPCOMING ROADMAP FOR THIS WEEK (08/09 - 11/09) -->
+      <!-- UPCOMING ROADMAP FOR THIS WEEK (16/09 - 20/09) -->
       <div class="section-card">
         <div class="section-header-row">
           <div class="section-title">
-            <span>📅 CÔNG VIỆC TIẾP THEO TRONG TUẦN NÀY (08/09 – 11/09/2026)</span>
+            <span>📅 KẾ HOẠCH CÔNG VIỆC TIẾP THEO TRONG TUẦN 15 (16/09 – 20/09/2026)</span>
           </div>
-          <span class="status-badge progress">Kế Hoạch Tuần 14</span>
+          <span class="status-badge progress">Tuần 15 / 26</span>
         </div>
 
         <div class="task-subgrid">
           
           <div class="task-item" style="border-left: 3px solid #0284C7;">
             <div class="task-item-top">
-              <span class="task-name">08/09 (Thứ Ba): Hoàn tất Test Môi Trường</span>
-              <span class="task-date">08/09/2026</span>
+              <span class="task-name">16/09 (Hôm nay): Hoàn tất Test Sao Kê & Khế Ước Margin</span>
+              <span class="task-date">16/09/2026</span>
             </div>
-            <div class="task-desc">Ký xác nhận môi trường sẵn sàng cho UAT người dùng; hoàn thành kiểm tra luồng test tua môi trường toàn bộ hệ thống.</div>
-            <div class="task-tags"><span class="tag-pill sbsi">Ban Dự Án</span> <span class="tag-pill fss">FSS Lead</span></div>
+            <div class="task-desc">Chốt quy tắc đặt tên file báo cáo; kiểm thử phân quyền môi giới careby trên 5 báo cáo UC68-UC72.</div>
+            <div class="task-tags"><span class="tag-pill sbsi">BachNT</span> <span class="tag-pill fss">FSS Core</span></div>
           </div>
 
           <div class="task-item" style="border-left: 3px solid #2563EB;">
             <div class="task-item-top">
-              <span class="task-name">09/09 - 10/09: FSS & SBSI Kiểm thử Tích hợp sâu</span>
-              <span class="task-date">09/09 - 10/09</span>
+              <span class="task-name">17/09 (Thứ Năm): Test Cổng Tích Hợp BIDV & Thu Chi Hộ MSB</span>
+              <span class="task-date">17/09/2026</span>
             </div>
-            <div class="task-desc">Kiểm thử chuyên sâu luồng giao dịch tiền BIDV, thu chi hộ MSB, bảng giá và lệnh điều kiện (Stop Order/Trailing Stop).</div>
-            <div class="task-tags"><span class="tag-pill sbsi">IT & DVTC</span> <span class="tag-pill external">BIDV / MSB</span></div>
+            <div class="task-desc">Kiểm thử chuyên sâu luồng giao dịch tiền nộp/rút ngân hàng BIDV và nạp tiền định danh tự động qua Virtual Account MSB.</div>
+            <div class="task-tags"><span class="tag-pill sbsi">AnhLL & IT</span> <span class="tag-pill external">BIDV / MSB</span></div>
           </div>
 
           <div class="task-item" style="border-left: 3px solid #059669;">
             <div class="task-item-top">
-              <span class="task-name">09/09 - 15/09: Rà soát Transtype Kế toán Bravo</span>
-              <span class="task-date">09/09 - 15/09</span>
+              <span class="task-name">18/09 (Thứ Sáu): Test Phân Quyền & Bảo Mật Phiên</span>
+              <span class="task-date">18/09/2026</span>
             </div>
-            <div class="task-desc">Khối Kế toán SBSI xác định và chốt toàn bộ danh sách mã Transtype Bravo chuẩn bị cho đợt UAT kế toán từ 14/09.</div>
-            <div class="task-tags"><span class="tag-pill sbsi">Kế toán Bravo</span> <span class="tag-pill sbsi">DVTC</span></div>
-          </div>
-
-          <div class="task-item" style="border-left: 3px solid #7C3AED;">
-            <div class="task-item-top">
-              <span class="task-name">⭐ 11/09 (Thứ Sáu): Bàn giao Nhận diện Thương hiệu UI/UX</span>
-              <span class="task-date">11/09/2026</span>
-            </div>
-            <div class="task-desc">FSS bàn giao các thay đổi giao diện theo nhận diện thương hiệu SBSI mới trên Web và Mobile Trading để nghiệm thu.</div>
-            <div class="task-tags"><span class="tag-pill fss">FSS Design</span> <span class="tag-pill critical">Mốc Bàn Giao</span></div>
+            <div class="task-desc">Kiểm thử Single-Session đăng nhập đa thiết bị, tính năng Privacy Eye che số dư và cơ chế timeout phiên xác thực PIN/OTP.</div>
+            <div class="task-tags"><span class="tag-pill sbsi">BaoDK</span> <span class="tag-pill sbsi">BachNT</span></div>
           </div>
 
           <div class="task-item" style="border-left: 3px solid #EA580C; grid-column: span 2;">
             <div class="task-item-top">
-              <span class="task-name">🚀 14/09 (Thứ Hai tuần tới): KHỞI ĐỘNG UAT 10 GAP & UAT TÍCH HỢP DIỆN RỘNG</span>
-              <span class="task-date" style="background:#EA580C; color:white;">14/09/2026</span>
+              <span class="task-name">🚀 19/09 - 20/09 (Cuối tuần): CHẠY BATCH EOD & ĐỐI SOÁT TỔNG THỂ CUỐI TUẦN 15</span>
+              <span class="task-date" style="background:#EA580C; color:white;">19/09 - 20/09</span>
             </div>
-            <div class="task-desc">Toàn bộ nhân sự các khối Risk, VH&DVTC, PTDT, PTSP, Kế toán đồng loạt tham gia kiểm thử 10 module GAP trọng yếu và liên thông 6 hệ thống tích hợp (Email/SMS, BIDV, MSB, Bravo, FIIN, Bảng giá).</div>
-            <div class="task-tags"><span class="tag-pill sbsi">Toàn Thể SBSI</span> <span class="tag-pill critical">UAT R1 Chính Thức</span></div>
+            <div class="task-desc">Chạy luồng xử lý cuối ngày Batch EOD, tính lãi vay Margin dồn tích, trích nợ phí lưu ký VSDC và đối chiếu khớp đúng 100% giữa Web/App Trading và Core FLEX BackOffice.</div>
+            <div class="task-tags"><span class="tag-pill sbsi">Toàn Thể Đội UAT</span> <span class="tag-pill critical">Chốt Tuần 15</span></div>
           </div>
 
         </div>
@@ -1089,7 +1072,7 @@
 
     </div>
 
-        <div id="tab-overview" class="tab-pane">
+    <div id="tab-overview" class="tab-pane">
       <div class="timeline-container">
         <div class="timeline-spine"></div>
 
@@ -4689,7 +4672,7 @@
     }
 
     // Attach to DOMContentLoaded
-    const origDomLoad = window.onload;
+    var origDomLoad = window.onload;
     window.addEventListener('DOMContentLoaded', () => {
       loadAllocChecklist();
     });
