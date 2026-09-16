@@ -4152,16 +4152,16 @@
                 <span class="live-pulse" style="background:#FFF;"></span> GIAI ĐOẠN ĐANG HOẠT ĐỘNG
               </span>
               <span style="font-size: 12.5px; color: var(--text-muted);">Hôm nay:</span>
-              <span style="font-size: 13.5px; font-weight: 800; color: #38BDF8; background: rgba(56, 189, 248, 0.15); padding: 3px 12px; border-radius: 6px; border: 1px solid rgba(56, 189, 248, 0.4);">
-                📅 Thứ Sáu, 11/09/2026
+              <span id="info_today_date_badge" style="font-size: 13.5px; font-weight: 800; color: #38BDF8; background: rgba(56, 189, 248, 0.15); padding: 3px 12px; border-radius: 6px; border: 1px solid rgba(56, 189, 248, 0.4);">
+                📅 Thứ Tư, 16/09/2026
               </span>
             </div>
             <div style="font-size: 18px; font-weight: 800; color: var(--text-white); display: flex; align-items: center; gap: 10px; flex-wrap: wrap;">
               <span>UAT ROUND 1 (03/09/2026 – 09/10/2026)</span>
               <span style="font-size: 12px; font-weight: 800; color: #10B981; background: rgba(16, 185, 129, 0.2); border: 1px solid #10B981; padding: 2px 10px; border-radius: 4px;">🟢 ROUND ĐANG CHẠY</span>
             </div>
-            <div style="font-size: 13px; color: var(--text-secondary); margin-top: 5px; line-height: 1.5;">
-              ⚡ <strong>Trọng tâm ngày hôm nay (11/09/2026):</strong> FSS bàn giao nhận diện thương hiệu UI/UX & Chốt đợt kiểm thử tích hợp cấu hình (Email, SMS, BIDV, MSB, Bảng giá, Lệnh điều kiện).
+            <div id="info_today_focus_text" style="font-size: 13px; color: var(--text-secondary); margin-top: 5px; line-height: 1.5;">
+              ⚡ <strong>Trọng tâm ngày hôm nay (16/09/2026):</strong> UAT Vòng 1 & Kiểm thử 10 kịch bản GAP (Chuẩn hóa tên file Sao kê tiền SBSIEXT-121, Báo cáo môi giới UC68-72, Gia hạn nợ Margin, Tích hợp SMS/Email/Ngân hàng BIDV & MSB).
             </div>
           </div>
         </div>
@@ -4169,7 +4169,7 @@
         <div style="display: flex; gap: 14px; align-items: center; flex-wrap: wrap;">
           <div style="text-align: right; padding-right: 14px; border-right: 1px solid rgba(255,255,255,0.15);">
             <div style="font-size: 11px; color: var(--text-muted); text-transform: uppercase; font-weight: 700;">Mốc Dự Kiến Go-Live</div>
-            <div style="font-size: 16px; font-weight: 800; color: #F59E0B;">09/11/2026</div>
+            <div id="info_golive_countdown" style="font-size: 16px; font-weight: 800; color: #F59E0B;">09/11/2026 (Còn 54 ngày)</div>
           </div>
           <a href="#uat_round_1_active" onclick="document.getElementById('uat_round_1_active')?.scrollIntoView({behavior:'smooth'})" class="btn btn-orange" style="font-size: 12.5px; font-weight: 700; padding: 10px 18px; border-radius: var(--radius-pill); text-decoration: none; display: flex; align-items: center; gap: 6px;">
             <span>🔍</span> Xem Chi Tiết Round 1 ↓
@@ -4426,15 +4426,19 @@
               <div style="display: inline-flex; align-items: center; gap: 8px; padding: 7px 20px; border-radius: var(--radius-pill); background: #10B981; color: #FFF; font-size: 14px; font-weight: 800; box-shadow: 0 4px 14px rgba(16, 185, 129, 0.4);">
                 <span class="live-pulse" style="background:#FFF;"></span> 🔥 1. UAT ROUND 1 (03/09/2026 – 09/10/2026) • [🟢 ĐANG HOẠT ĐỘNG • ROUND HIỆN TẠI]
               </div>
-              <div style="display: inline-flex; align-items: center; gap: 8px; background: rgba(56, 189, 248, 0.15); border: 1px solid rgba(56, 189, 248, 0.4); padding: 6px 14px; border-radius: var(--radius-pill); font-size: 12.5px; font-weight: 700; color: #38BDF8;">
-                📍 Hôm nay: 11/09/2026 (Ngày 9 / 37 của Round 1)
+              <div id="info_round1_day_progress" style="display: inline-flex; align-items: center; gap: 8px; background: rgba(56, 189, 248, 0.15); border: 1px solid rgba(56, 189, 248, 0.4); padding: 6px 14px; border-radius: var(--radius-pill); font-size: 12.5px; font-weight: 700; color: #38BDF8;">
+                📍 Hôm nay: 16/09/2026 (Ngày 14 / 37 của Round 1 • 38%)
               </div>
             </div>
 
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 14px;">
+            <div id="info_round1_cards_grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 14px;">
               
-              <div style="background: var(--bg-card-sub); border-left: 4px solid #F97316; padding: 14px 16px; border-radius: 0 8px 8px 0;">
-                <div style="font-size: 13px; font-weight: 800; color: var(--sbsi-orange);">03/09 – 04/09/2026</div>
+              <!-- Card 1 -->
+              <div class="info-milestone-card" data-m-start="2026-09-03" data-m-end="2026-09-04" style="background: var(--bg-card-sub); border: 1px solid var(--border-card); border-left: 4px solid #10B981; padding: 14px 16px; border-radius: 0 8px 8px 0; opacity: 0.85;">
+                <div style="display:flex; justify-content:space-between; align-items:center;">
+                  <div style="font-size: 13px; font-weight: 800; color: var(--sbsi-orange);">03/09 – 04/09/2026</div>
+                  <div class="milestone-status-badge"><span style="font-size:10px; font-weight:800; color:#10B981; background:rgba(16,185,129,0.15); padding:2px 8px; border-radius:4px;">✔ ĐÃ HOÀN THÀNH</span></div>
+                </div>
                 <ul style="margin: 6px 0 0 16px; padding: 0; font-size: 12.5px; color: var(--text-secondary); line-height: 1.5;">
                   <li>Khai báo tham số, sản phẩm, phân quyền người dùng.</li>
                   <li>Thiết lập môi trường kiểm thử.</li>
@@ -4443,57 +4447,79 @@
                 </ul>
               </div>
 
-              <div style="background: var(--bg-card-sub); border-left: 4px solid #3B82F6; padding: 14px 16px; border-radius: 0 8px 8px 0;">
-                <div style="font-size: 13px; font-weight: 800; color: #3B82F6;">07/09 – 08/09/2026</div>
+              <!-- Card 2 -->
+              <div class="info-milestone-card" data-m-start="2026-09-07" data-m-end="2026-09-08" style="background: var(--bg-card-sub); border: 1px solid var(--border-card); border-left: 4px solid #10B981; padding: 14px 16px; border-radius: 0 8px 8px 0; opacity: 0.85;">
+                <div style="display:flex; justify-content:space-between; align-items:center;">
+                  <div style="font-size: 13px; font-weight: 800; color: #3B82F6;">07/09 – 08/09/2026</div>
+                  <div class="milestone-status-badge"><span style="font-size:10px; font-weight:800; color:#10B981; background:rgba(16,185,129,0.15); padding:2px 8px; border-radius:4px;">✔ ĐÃ HOÀN THÀNH</span></div>
+                </div>
                 <ul style="margin: 6px 0 0 16px; padding: 0; font-size: 12.5px; color: var(--text-secondary); line-height: 1.5;">
                   <li>Test tổng thể môi trường.</li>
                   <li>Xác nhận các thành phần hệ thống sẵn sàng cho UAT.</li>
                 </ul>
               </div>
 
-              <div style="background: rgba(16, 185, 129, 0.12); border: 2px solid #10B981; border-left: 5px solid #10B981; padding: 14px 16px; border-radius: 8px; box-shadow: 0 0 16px rgba(16, 185, 129, 0.22);">
+              <!-- Card 3 -->
+              <div class="info-milestone-card" data-m-start="2026-09-07" data-m-end="2026-09-11" style="background: var(--bg-card-sub); border: 1px solid var(--border-card); border-left: 4px solid #10B981; padding: 14px 16px; border-radius: 0 8px 8px 0; opacity: 0.85;">
                 <div style="display:flex; justify-content:space-between; align-items:center;">
                   <div style="font-size: 13.5px; font-weight: 800; color: #10B981;">07/09 – 11/09/2026</div>
-                  <span style="font-size:10px; font-weight:800; color:#FFF; background:#10B981; padding:2px 8px; border-radius:var(--radius-pill);">📍 ĐANG CHẠY • CHỐT HÔM NAY</span>
+                  <div class="milestone-status-badge"><span style="font-size:10px; font-weight:800; color:#10B981; background:rgba(16,185,129,0.15); padding:2px 8px; border-radius:4px;">✔ ĐÃ HOÀN THÀNH</span></div>
                 </div>
-                <ul style="margin: 6px 0 0 16px; padding: 0; font-size: 12.5px; color: var(--text-white); line-height: 1.5; font-weight: 500;">
+                <ul style="margin: 6px 0 0 16px; padding: 0; font-size: 12.5px; color: var(--text-secondary); line-height: 1.5; font-weight: 500;">
                   <li>FSS, SBSI kiểm thử nội dung cấu hình tích hợp: Email, SMS, BIDV, Thu chi hộ MSB, Bảng giá, Lệnh điều kiện.</li>
                 </ul>
               </div>
 
-              <div style="background: rgba(139, 92, 246, 0.15); border: 2px solid #8B5CF6; border-left: 5px solid #8B5CF6; padding: 14px 16px; border-radius: 8px; box-shadow: 0 0 18px rgba(139, 92, 246, 0.3);">
+              <!-- Card 4 -->
+              <div class="info-milestone-card" data-m-start="2026-09-11" data-m-end="2026-09-11" style="background: var(--bg-card-sub); border: 1px solid var(--border-card); border-left: 4px solid #8B5CF6; padding: 14px 16px; border-radius: 0 8px 8px 0; opacity: 0.85;">
                 <div style="display:flex; justify-content:space-between; align-items:center;">
-                  <div style="font-size: 13.5px; font-weight: 800; color: #A78BFA;">11/09/2026 (HÔM NAY)</div>
-                  <span style="font-size:10px; font-weight:800; color:#FFF; background:#8B5CF6; padding:2px 8px; border-radius:var(--radius-pill);">⭐ TRỌNG TÂM HÔM NAY</span>
+                  <div style="font-size: 13.5px; font-weight: 800; color: #A78BFA;">11/09/2026</div>
+                  <div class="milestone-status-badge"><span style="font-size:10px; font-weight:800; color:#8B5CF6; background:rgba(139,92,246,0.15); padding:2px 8px; border-radius:4px;">✔ ĐÃ BÀN GIAO UI/UX</span></div>
                 </div>
-                <ul style="margin: 6px 0 0 16px; padding: 0; font-size: 12.5px; color: var(--text-white); line-height: 1.5; font-weight: 500;">
-                  <li><strong>FSS bàn giao các thay đổi về nhận diện thương hiệu (UI/UX).</strong></li>
+                <ul style="margin: 6px 0 0 16px; padding: 0; font-size: 12.5px; color: var(--text-secondary); line-height: 1.5; font-weight: 500;">
+                  <li><strong>FSS bàn giao các thay đổi về nhận diện thương hiệu (UI/UX 36 màn hình).</strong></li>
                 </ul>
               </div>
 
-              <div style="background: var(--bg-card-sub); border-left: 4px solid #EC4899; padding: 14px 16px; border-radius: 0 8px 8px 0;">
-                <div style="font-size: 13px; font-weight: 800; color: #EC4899;">14/09 – 25/09/2026</div>
-                <ul style="margin: 6px 0 0 16px; padding: 0; font-size: 12.5px; color: var(--text-secondary); line-height: 1.5;">
+              <!-- Card 5 -->
+              <div class="info-milestone-card" data-m-start="2026-09-14" data-m-end="2026-09-25" style="background: rgba(16, 185, 129, 0.12); border: 2px solid #10B981; border-left: 5px solid #10B981; padding: 14px 16px; border-radius: 8px; box-shadow: 0 0 18px rgba(16, 185, 129, 0.25);">
+                <div style="display:flex; justify-content:space-between; align-items:center;">
+                  <div style="font-size: 13px; font-weight: 800; color: #10B981;">14/09 – 25/09/2026</div>
+                  <div class="milestone-status-badge"><span style="font-size:10px; font-weight:800; color:#FFF; background:#10B981; padding:2px 8px; border-radius:var(--radius-pill); box-shadow:0 0 10px rgba(16,185,129,0.5);"><span class="live-pulse" style="background:#FFF;"></span> 📍 ĐANG DIỄN RA (HÔM NAY)</span></div>
+                </div>
+                <ul style="margin: 6px 0 0 16px; padding: 0; font-size: 12.5px; color: var(--text-white); line-height: 1.5;">
                   <li>SBSI kiểm thử UAT nội dung tích hợp: Email, SMS, BIDV, Thu chi hộ MSB, Bảng giá, Lệnh điều kiện, Bravo, FIIN.</li>
                 </ul>
               </div>
 
-              <div style="background: var(--bg-card-sub); border-left: 4px solid #F59E0B; padding: 14px 16px; border-radius: 0 8px 8px 0;">
-                <div style="font-size: 13px; font-weight: 800; color: #F59E0B;">14/09 – 02/10/2026</div>
-                <ul style="margin: 6px 0 0 16px; padding: 0; font-size: 12.5px; color: var(--text-secondary); line-height: 1.5;">
+              <!-- Card 6 -->
+              <div class="info-milestone-card" data-m-start="2026-09-14" data-m-end="2026-10-02" style="background: rgba(245, 158, 11, 0.12); border: 2px solid #F59E0B; border-left: 5px solid #F59E0B; padding: 14px 16px; border-radius: 8px; box-shadow: 0 0 18px rgba(245, 158, 11, 0.25);">
+                <div style="display:flex; justify-content:space-between; align-items:center;">
+                  <div style="font-size: 13px; font-weight: 800; color: #F59E0B;">14/09 – 02/10/2026</div>
+                  <div class="milestone-status-badge"><span style="font-size:10px; font-weight:800; color:#FFF; background:#F59E0B; padding:2px 8px; border-radius:var(--radius-pill); box-shadow:0 0 10px rgba(245,158,11,0.5);"><span class="live-pulse" style="background:#FFF;"></span> 📍 ĐANG DIỄN RA (HÔM NAY)</span></div>
+                </div>
+                <ul style="margin: 6px 0 0 16px; padding: 0; font-size: 12.5px; color: var(--text-white); line-height: 1.5;">
                   <li>SBSI kiểm thử GAP vòng 1: Thu lãi/ghi nợ cuối tháng, Chính sách vay, eKYC, Mở TK CTV, Cập nhật CCCD, STR, Hoa hồng CTV, App Advisor, Noti/Email/SMS, Báo cáo vận hành, Nhận diện thương hiệu.</li>
                 </ul>
               </div>
 
-              <div style="background: var(--bg-card-sub); border-left: 4px solid #06B6D4; padding: 14px 16px; border-radius: 0 8px 8px 0;">
-                <div style="font-size: 13px; font-weight: 800; color: #06B6D4;">14/09 – 09/10/2026</div>
-                <ul style="margin: 6px 0 0 16px; padding: 0; font-size: 12.5px; color: var(--text-secondary); line-height: 1.5;">
+              <!-- Card 7 -->
+              <div class="info-milestone-card" data-m-start="2026-09-14" data-m-end="2026-10-09" style="background: rgba(6, 182, 212, 0.12); border: 2px solid #06B6D4; border-left: 5px solid #06B6D4; padding: 14px 16px; border-radius: 8px; box-shadow: 0 0 18px rgba(6, 182, 212, 0.25);">
+                <div style="display:flex; justify-content:space-between; align-items:center;">
+                  <div style="font-size: 13px; font-weight: 800; color: #06B6D4;">14/09 – 09/10/2026</div>
+                  <div class="milestone-status-badge"><span style="font-size:10px; font-weight:800; color:#FFF; background:#06B6D4; padding:2px 8px; border-radius:var(--radius-pill); box-shadow:0 0 10px rgba(6,182,212,0.5);"><span class="live-pulse" style="background:#FFF;"></span> 📍 ĐANG DIỄN RA (HÔM NAY)</span></div>
+                </div>
+                <ul style="margin: 6px 0 0 16px; padding: 0; font-size: 12.5px; color: var(--text-white); line-height: 1.5;">
                   <li>Kiểm thử nghiệp vụ Sở Giao dịch, VCB và VSDC: Đặt/Hủy/Sửa lệnh, Thanh toán bù trừ, TPRL.</li>
                 </ul>
               </div>
 
-              <div style="background: var(--bg-card-sub); border-left: 4px solid #14B8A6; padding: 14px 16px; border-radius: 0 8px 8px 0;">
-                <div style="font-size: 13px; font-weight: 800; color: #14B8A6;">19/09/2026</div>
+              <!-- Card 8 -->
+              <div class="info-milestone-card" data-m-start="2026-09-19" data-m-end="2026-09-19" style="background: var(--bg-card-sub); border: 1px solid var(--border-card); border-left: 4px solid #14B8A6; padding: 14px 16px; border-radius: 0 8px 8px 0; opacity: 0.85;">
+                <div style="display:flex; justify-content:space-between; align-items:center;">
+                  <div style="font-size: 13px; font-weight: 800; color: #14B8A6;">19/09/2026</div>
+                  <div class="milestone-status-badge"><span style="font-size:10px; font-weight:700; color:#94A3B8; background:rgba(148,163,184,0.15); padding:2px 8px; border-radius:4px;">⏳ SẮP TỚI</span></div>
+                </div>
                 <ul style="margin: 6px 0 0 16px; padding: 0; font-size: 12.5px; color: var(--text-secondary); line-height: 1.5;">
                   <li>SBSI test Báo cáo TPRL và các báo cáo vận hành.</li>
                 </ul>
@@ -4682,7 +4708,7 @@
           </div>
           <div class="report-meta-item">
             <span class="report-meta-label">Kỳ Báo Cáo</span>
-            <span class="report-meta-val">Tuần 14 / 26 (UAT R1)</span>
+            <span id="rep_report_week_val" class="report-meta-val">Tuần 15 / 26 (UAT R1)</span>
           </div>
           <div class="report-meta-item">
             <span class="report-meta-label">Project Sponsor</span>
@@ -5623,6 +5649,8 @@
         if (typeof renderPortalIssues === 'function') renderPortalIssues(); if (typeof syncJiraFssIssues === 'function') syncJiraFssIssues(true);
       } else if (tabId === 'dashboard') {
         if (typeof updateAllDashboardMetrics === 'function') updateAllDashboardMetrics();
+      } else if (tabId === 'info') {
+        if (typeof updateProjectInfoDynamic === 'function') updateProjectInfoDynamic();
       } else if (tabId === 'report') {
         if (typeof initProjectStatusReport === 'function') initProjectStatusReport();
       }
@@ -7178,7 +7206,121 @@ Bạn có chắc chắn muốn tiếp tục?`)) {
     }
 
     // INITIALIZATION
+    // =========================================================================
+    // DYNAMIC PROJECT INFO & TIMELINE CALCULATION (RULE: TÍNH THEO TODAY)
+    // =========================================================================
+    function updateProjectInfoDynamic(currentDate = new Date()) {
+      try {
+        const now = currentDate instanceof Date ? currentDate : new Date(currentDate);
+        const daysOfWeek = ['Chủ Nhật', 'Thứ Hai', 'Thứ Ba', 'Thứ Tư', 'Thứ Năm', 'Thứ Sáu', 'Thứ Bảy'];
+        const dayName = daysOfWeek[now.getDay()];
+        const d = String(now.getDate()).padStart(2, '0');
+        const m = String(now.getMonth() + 1).padStart(2, '0');
+        const y = now.getFullYear();
+        const dateStr = `${d}/${m}/${y}`;
+        const fullDateStr = `📅 ${dayName}, ${dateStr}`;
+
+        // 1. Update Hero Date Badge in Info Tab
+        const elDateBadge = document.getElementById('info_today_date_badge');
+        if (elDateBadge) elDateBadge.innerText = fullDateStr;
+
+        // 2. Go-Live countdown (09/11/2026)
+        const goLiveDate = new Date('2026-11-09T08:00:00');
+        const diffGoLiveDays = Math.ceil((goLiveDate - now) / (1000 * 60 * 60 * 24));
+        const elGoLive = document.getElementById('info_golive_countdown');
+        if (elGoLive) {
+          elGoLive.innerText = `09/11/2026 (Còn ${diffGoLiveDays > 0 ? diffGoLiveDays : 0} ngày)`;
+        }
+
+        // 3. Round 1 Progress (03/09/2026 - 09/10/2026 = 37 days)
+        const r1Start = new Date('2026-09-03T00:00:00');
+        const r1End = new Date('2026-10-09T23:59:59');
+        const r1TotalDays = 37;
+        const r1CurrentDay = Math.min(r1TotalDays, Math.max(1, Math.floor((now - r1Start) / (1000 * 60 * 60 * 24)) + 1));
+        const r1Pct = Math.round((r1CurrentDay / r1TotalDays) * 100);
+
+        const elR1Prog = document.getElementById('info_round1_day_progress');
+        if (elR1Prog) {
+          elR1Prog.innerHTML = `📍 Hôm nay: <strong>${dateStr}</strong> (Ngày ${r1CurrentDay} / ${r1TotalDays} của Round 1 • ${r1Pct}%)`;
+        }
+
+        // 4. Update Project Week in SteerCo Report (Week 14 began on 07/09/2026)
+        const uatR1Week14Start = new Date('2026-09-07T00:00:00');
+        const diffWeeks = Math.floor((now - uatR1Week14Start) / (7 * 24 * 60 * 60 * 1000));
+        const curWeek = 14 + diffWeeks;
+        const elWeek = document.getElementById('rep_report_week_val');
+        if (elWeek) {
+          elWeek.innerText = `Tuần ${curWeek} / 26 (UAT R1)`;
+        }
+
+        // 5. Update Today Focus Text dynamically
+        const elFocus = document.getElementById('info_today_focus_text');
+        if (elFocus) {
+          let focusHtml = '';
+          if (dateStr === '16/09/2026') {
+            focusHtml = `⚡ <strong>Trọng tâm ngày hôm nay (${dateStr}):</strong> UAT Vòng 1 & Kiểm thử 10 kịch bản GAP (Chuẩn hóa tên file Sao kê tiền SBSIEXT-121, Báo cáo môi giới UC68-72, Gia hạn nợ Margin, Tích hợp SMS/Email/Ngân hàng BIDV & MSB).`;
+          } else if (now >= new Date('2026-09-14') && now <= new Date('2026-09-25')) {
+            focusHtml = `⚡ <strong>Trọng tâm ngày hôm nay (${dateStr}):</strong> UAT Vòng 1 — Kiểm thử tích hợp hệ sinh thái (Email, SMS, BIDV, MSB, Bảng giá, Lệnh điều kiện, Bravo, FIIN) và 10 kịch bản GAP trọng yếu.`;
+          } else if (now > new Date('2026-09-25') && now <= new Date('2026-10-09')) {
+            focusHtml = `⚡ <strong>Trọng tâm ngày hôm nay (${dateStr}):</strong> Đợt cao điểm nghiệm thu UAT Vòng 1, kiểm thử liên thông Sở Giao dịch (HSX, HNX, UPCoM), VCB, VSDC và chuẩn bị Mock Cutover.`;
+          } else {
+            focusHtml = `⚡ <strong>Trọng tâm ngày hôm nay (${dateStr}):</strong> Tiến độ dự án chuyển đổi Core FSS & Hệ thống giao dịch số SBSI (UAT Round 1).`;
+          }
+          elFocus.innerHTML = focusHtml;
+        }
+
+        // 6. Update Milestone Cards in Round 1 Grid
+        const milestoneCards = document.querySelectorAll('.info-milestone-card');
+        milestoneCards.forEach(card => {
+          const sStr = card.getAttribute('data-m-start');
+          const eStr = card.getAttribute('data-m-end');
+          if (!sStr || !eStr) return;
+
+          const sDate = new Date(sStr + 'T00:00:00');
+          const eDate = new Date(eStr + 'T23:59:59');
+          const badgeContainer = card.querySelector('.milestone-status-badge');
+
+          if (now > eDate) {
+            // Completed
+            card.style.background = 'var(--bg-card-sub)';
+            card.style.border = '1px solid var(--border-card)';
+            card.style.borderLeft = '4px solid #10B981';
+            card.style.opacity = '0.85';
+            card.style.boxShadow = 'none';
+            if (badgeContainer) {
+              badgeContainer.innerHTML = '<span style="font-size:10px; font-weight:800; color:#10B981; background:rgba(16,185,129,0.15); padding:2px 8px; border-radius:4px;">✔ ĐÃ HOÀN THÀNH</span>';
+            }
+          } else if (now >= sDate && now <= eDate) {
+            // Currently Active Today
+            card.style.background = 'rgba(16, 185, 129, 0.12)';
+            card.style.border = '2px solid #10B981';
+            card.style.borderLeft = '5px solid #10B981';
+            card.style.opacity = '1';
+            card.style.boxShadow = '0 0 18px rgba(16, 185, 129, 0.25)';
+            if (badgeContainer) {
+              badgeContainer.innerHTML = '<span style="font-size:10px; font-weight:800; color:#FFF; background:#10B981; padding:2px 8px; border-radius:var(--radius-pill); box-shadow:0 0 10px rgba(16,185,129,0.5);"><span class="live-pulse" style="background:#FFF;"></span> 📍 ĐANG DIỄN RA (HÔM NAY)</span>';
+            }
+          } else {
+            // Upcoming
+            card.style.background = 'var(--bg-card-sub)';
+            card.style.border = '1px solid var(--border-card)';
+            card.style.borderLeft = '4px solid #F59E0B';
+            card.style.opacity = '0.75';
+            card.style.boxShadow = 'none';
+            if (badgeContainer) {
+              badgeContainer.innerHTML = '<span style="font-size:10px; font-weight:700; color:#94A3B8; background:rgba(148,163,184,0.15); padding:2px 8px; border-radius:4px;">⏳ SẮP TỚI</span>';
+            }
+          }
+        });
+
+      } catch(err) {
+        console.warn('updateProjectInfoDynamic warning:', err);
+      }
+    }
+    window.updateProjectInfoDynamic = updateProjectInfoDynamic;
+
     function initPortalCore() {
+      updateProjectInfoDynamic();
       initProjectStatusReport();
       initPortalTheme();
       setupShareUrl();
@@ -7880,7 +8022,6 @@ Bạn có chắc chắn muốn tiếp tục?`)) {
           });
         }
       } catch(e) {}
-    });
 
   
     // Manual Sync Trigger (1-Click on-demand Cloud Pull)
