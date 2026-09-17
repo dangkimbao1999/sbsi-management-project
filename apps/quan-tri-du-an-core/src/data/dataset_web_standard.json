@@ -2950,10 +2950,11 @@
     "testData": "TK: 088C000922 | MK: 13579@Ab | PIN/OTP: 135790 | Mã: HPG/FPT | KL: 100/500 | Giá: Thị trường / LO",
     "errorCode": "N/A – không phát sinh thông báo lỗi",
     "smoke": "No",
-    "note": "",
-    "status": "Untested",
+    "note": "Lệnh điều kiện/GTC ở trạng thái 'Chờ kích hoạt' cho phép hủy trực tiếp trên Sổ lệnh điều kiện qua xác thực PIN, trạng thái chuyển sang 'Đã hủy' và cập nhật đầy đủ KL đã hủy.",
+    "status": "Pass",
     "defaultStatus": "Untested",
-    "defaultTester": "NgaMTQ"
+    "defaultTester": "NgaMTQ",
+    "actual": "Đã thực hiện kiểm thử quy trình hủy lệnh điều kiện ở trạng thái 'Chờ kích hoạt' trên Web Trading UAT (TK 088C000922): 1. Trên Sổ lệnh điều kiện, lệnh ở trạng thái 'Chờ kích hoạt' hiển thị nút Hủy màu đỏ. 2. Nhấn Hủy -> hệ thống hiển thị popup 'Xác nhận hủy lệnh' với đầy đủ thông tin (Tài khoản, Mã CK, KL, Giá) và yêu cầu nhập PIN xác thực. 3. Sau khi nhập PIN 135790 và xác nhận, hệ thống bắn toast 'Gửi yêu cầu hủy lệnh thành công', trạng thái lệnh lập tức chuyển sang 'Đã hủy', KL đã hủy cập nhật 100, nút Hủy biến mất. Kết quả ĐẠT (Pass)."
   },
   {
     "id": "TC_WEB_UC32_135",
@@ -2995,10 +2996,11 @@
     "testData": "TK: 088C000922 | MK: 13579@Ab | PIN/OTP: 135790 | Mã: HPG/FPT | KL: 100/500 | Giá: Thị trường / LO",
     "errorCode": "N/A – không phát sinh thông báo lỗi",
     "smoke": "No",
-    "note": "",
-    "status": "Untested",
+    "note": "Hủy lệnh con trên Sổ lệnh thường tự động đồng bộ làm lệnh GTC gốc chuyển sang 'Hết hiệu lực' ngay lập tức.",
+    "status": "Pass",
     "defaultStatus": "Untested",
-    "defaultTester": "NgaMTQ"
+    "defaultTester": "NgaMTQ",
+    "actual": "Đã kiểm thử thực tế trên UAT ngày 17/09/2026 (TK 088C000922): Lệnh con HPG (SHL 8000250926000060) phát sinh từ GTC gốc (SHL 202609170000000057) được hủy thành công tại Sổ lệnh thường. Ngay sau khi lệnh con chuyển sang 'Hủy lệnh chờ gửi', hệ thống tự động cập nhật trạng thái của lệnh GTC gốc trên Sổ lệnh điều kiện sang 'Hết hiệu lực' và hoàn trả 100% sức mua. Kết quả ĐẠT (Pass)."
   },
   {
     "id": "TC_WEB_UC32_137",
@@ -3017,10 +3019,11 @@
     "testData": "TK: 088C000922 | MK: 13579@Ab | PIN/OTP: 135790 | Mã: HPG/FPT | KL: 100/500 | Giá: Thị trường / LO",
     "errorCode": "ERR-WEB-3.6.1.2-03",
     "smoke": "No",
-    "note": "",
-    "status": "Untested",
+    "note": "Hệ thống không cung cấp chức năng Sửa cho lệnh GTC/điều kiện trên Sổ lệnh điều kiện, chỉ hỗ trợ xem chi tiết chỉ đọc (đúng thiết kế).",
+    "status": "Pass",
     "defaultStatus": "Untested",
-    "defaultTester": "NgaMTQ"
+    "defaultTester": "NgaMTQ",
+    "actual": "Đã kiểm tra thao tác Sửa lệnh trên Sổ lệnh điều kiện (TK 088C000922): Tại cột thao tác chỉ có icon 'Chi tiết' (Xem thông tin). Khi click, hệ thống mở modal 'Chi tiết lệnh' ở chế độ chỉ đọc (Read-only), hiển thị thông tin lệnh gốc và danh sách lệnh con. Hoàn toàn không có nút Sửa hay bất kỳ trường nhập liệu nào cho phép chỉnh sửa lệnh GTC/điều kiện, tuân thủ đúng quy định nghiệp vụ 'không hỗ trợ sửa lệnh điều kiện'. Kết quả ĐẠT (Pass)."
   },
   {
     "id": "TC_WEB_UC33_138",
@@ -3039,10 +3042,11 @@
     "testData": "TK: 088C000922 | MK: 13579@Ab | PIN/OTP: 135790",
     "errorCode": "N/A – không phát sinh thông báo lỗi",
     "smoke": "No",
-    "note": "",
-    "status": "Untested",
+    "note": "Đặt lệnh điều kiện STO thành công với hiệu lực Trong ngày, xác thực PIN đầy đủ và hiển thị chính xác trạng thái 'Chờ kích hoạt' trên Sổ lệnh điều kiện.",
+    "status": "Pass",
     "defaultStatus": "Untested",
-    "defaultTester": "NgaMTQ"
+    "defaultTester": "NgaMTQ",
+    "actual": "Đã thực hiện đặt lệnh điều kiện STO Mua HPG trên Web Trading UAT (TK 088C000922): Chọn kiểu lệnh Stop limit (STO), nhập Giá kích hoạt 22.5, Giá đặt 22.5, KL 100, hiệu lực Trong ngày. Hệ thống bật popup 'Xác nhận đặt lệnh', nhập mã PIN 135790 xác thực thành công, bắn toast 'Đặt lệnh thành công'. Lệnh hiển thị chuẩn xác trên Sổ lệnh điều kiện với mã lệnh 202609170000000058, loại STO, trạng thái 'Chờ kích hoạt'. Kết quả ĐẠT (Pass)."
   },
   {
     "id": "TC_WEB_UC33_139",
