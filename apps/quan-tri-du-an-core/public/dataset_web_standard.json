@@ -3042,11 +3042,11 @@
     "testData": "TK: 088C000922 | MK: 13579@Ab | PIN/OTP: 135790",
     "errorCode": "N/A – không phát sinh thông báo lỗi",
     "smoke": "No",
-    "note": "Đặt lệnh điều kiện STO thành công với hiệu lực Trong ngày, xác thực PIN đầy đủ và hiển thị chính xác trạng thái 'Chờ kích hoạt' trên Sổ lệnh điều kiện.",
+    "note": "Hoàn tất kiểm thử thực tế toàn bộ các loại lệnh điều kiện (STO, TSO, OCO Mua/Bán) với hiệu lực Trong ngày, xác thực PIN đầy đủ và hiển thị chính xác trạng thái 'Chờ kích hoạt' trên Sổ lệnh điều kiện.",
     "status": "Pass",
     "defaultStatus": "Untested",
     "defaultTester": "NgaMTQ",
-    "actual": "Đã thực hiện đặt lệnh điều kiện STO Mua HPG trên Web Trading UAT (TK 088C000922): Chọn kiểu lệnh Stop limit (STO), nhập Giá kích hoạt 22.5, Giá đặt 22.5, KL 100, hiệu lực Trong ngày. Hệ thống bật popup 'Xác nhận đặt lệnh', nhập mã PIN 135790 xác thực thành công, bắn toast 'Đặt lệnh thành công'. Lệnh hiển thị chuẩn xác trên Sổ lệnh điều kiện với mã lệnh 202609170000000058, loại STO, trạng thái 'Chờ kích hoạt'. Kết quả ĐẠT (Pass)."
+    "actual": "Đã thực hiện kiểm thử đặt thành công toàn bộ các loại lệnh điều kiện với hiệu lực Trong ngày trên Web Trading UAT (TK 088C000922): 1. Lệnh Stop limit (STO): Đặt full 10 lệnh mua các mã lớn (FPT, SSI, MBB, TCB, VNM, VIC, VHM, ACB, MSB, STB, HPG). 2. Lệnh Trailing Stop (TSO): Đặt Mua HPG với Biên độ 1.0, Bước giá 0.1, KL 100 thành công (SHL 202609170000000074). 3. Lệnh OCO Mua: Đặt FPT với LO 71.7, Stop Limit kích hoạt >= 73.7, giá 73.7, KL 100 thành công (SHL 202609170000000075). 4. Lệnh OCO Bán: Đặt HPG với LO chốt lời 22.0, Stop Limit cắt lỗ <= 20.4, giá 20.4, KL 100 thành công (SHL 202609170000000077). Toàn bộ các lệnh đều xác thực PIN 135790 thành công và hiển thị chính xác trạng thái 'Chờ kích hoạt' trên Sổ lệnh điều kiện. Kết quả ĐẠT (Pass)."
   },
   {
     "id": "TC_WEB_UC33_139",
@@ -3065,10 +3065,11 @@
     "testData": "TK: 088C000922 | MK: 13579@Ab | PIN/OTP: 135790",
     "errorCode": "N/A – không phát sinh thông báo lỗi",
     "smoke": "No",
-    "note": "",
-    "status": "Untested",
+    "note": "Hệ thống tự động chuyển từ Mua sang Bán ngay khi người dùng chọn loại lệnh TPSL, đúng chuẩn quy tắc nghiệp vụ BRD.",
+    "status": "Pass",
     "defaultStatus": "Untested",
-    "defaultTester": "NgaMTQ"
+    "defaultTester": "NgaMTQ",
+    "actual": "Đã kiểm thử thực tế tính năng tự động chuyển chiều lệnh trên Web Trading UAT (TK 088C000922): Tại màn hình Đặt lệnh điều kiện, khi đang chọn tab 'MUA', người dùng chọn kiểu lệnh 'Take profit/Stop loss (TP/SL)' từ combobox. Hệ thống lập tức tự động hủy kích hoạt tab 'MUA' và tự động chuyển sang kích hoạt tab 'BÁN' (do lệnh TPSL theo đặc tả BRD chỉ áp dụng cho chiều Bán đóng vị thế/chốt lời cắt lỗ). Kết quả ĐẠT (Pass)."
   },
   {
     "id": "TC_WEB_UC33_140",
@@ -3087,10 +3088,11 @@
     "testData": "TK: 088C000922 | MK: 13579@Ab | PIN/OTP: 135790",
     "errorCode": "N/A – không phát sinh thông báo lỗi",
     "smoke": "No",
-    "note": "",
-    "status": "Untested",
+    "note": "Lệnh điều kiện hiệu lực Nhiều ngày đặt thành công, lưu trữ đầy đủ khoảng thời gian hiệu lực và hiển thị trạng thái 'Chờ kích hoạt' trên Sổ lệnh điều kiện.",
+    "status": "Pass",
     "defaultStatus": "Untested",
-    "defaultTester": "NgaMTQ"
+    "defaultTester": "NgaMTQ",
+    "actual": "Đã thực hiện kiểm thử đặt lệnh điều kiện với hiệu lực Nhiều ngày trên Web Trading UAT (TK 088C000922): 1. Chọn mã HPG, kiểu lệnh STO, nhập Giá kích hoạt 21.2, Giá đặt 21.2, KL 100. 2. Chọn radio 'Nhiều ngày', chọn ngày kết thúc hiệu lực là 25/09/2026. 3. Nhấn Mua -> popup xác nhận hiển thị đầy đủ thông tin thời hạn hiệu lực -> nhập PIN 135790 và xác nhận. 4. Hệ thống thông báo 'Đặt lệnh thành công'. Lệnh hiển thị trong Sổ lệnh điều kiện với Từ ngày: 17/09/2026, Đến ngày: 25/09/2026 và trạng thái 'Chờ kích hoạt'. Kết quả ĐẠT (Pass)."
   },
   {
     "id": "TC_WEB_UC33_141",
@@ -3109,10 +3111,11 @@
     "testData": "TK: 088C000922 | MK: 13579@Ab | PIN/OTP: 135790",
     "errorCode": "N/A – không phát sinh thông báo lỗi",
     "smoke": "No",
-    "note": "",
-    "status": "Untested",
+    "note": "Đúng theo đặc tả BRD: Lệnh điều kiện không kiểm tra số dư cổ phiếu/sức mua tại thời điểm đặt lệnh, chỉ kiểm tra khi điều kiện được thỏa mãn và kích hoạt lệnh vào Core.",
+    "status": "Pass",
     "defaultStatus": "Untested",
-    "defaultTester": "NgaMTQ"
+    "defaultTester": "NgaMTQ",
+    "actual": "Đã kiểm thử nghiệp vụ không kiểm tra số dư tại thời điểm đặt trên Web Trading UAT (TK 088C000922): Tài khoản có số dư cổ phiếu HPG khả dụng bằng 0. Thực hiện đặt lệnh OCO BÁN HPG với KL 100 (LO Chốt lời 22.0, Stop limit Cắt lỗ 20.4). Hệ thống không chặn số dư khả dụng ở bước đặt, hiển thị popup xác thực PIN, người dùng xác nhận và hệ thống ghi nhận lệnh thành công (SHL 202609170000000077), chuyển vào trạng thái 'Chờ kích hoạt' trên Sổ lệnh điều kiện đúng theo BRD. Kết quả ĐẠT (Pass)."
   },
   {
     "id": "TC_WEB_UC33_142",
@@ -3153,10 +3156,11 @@
     "testData": "TK: 088C000922 | MK: 13579@Ab | PIN/OTP: 135790",
     "errorCode": "N/A – không phát sinh thông báo lỗi",
     "smoke": "No",
-    "note": "",
-    "status": "Untested",
+    "note": "Cho phép hủy trực tiếp lệnh điều kiện ở trạng thái 'Chờ kích hoạt' trên Sổ lệnh điều kiện với xác thực bảo mật PIN đầy đủ.",
+    "status": "Pass",
     "defaultStatus": "Untested",
-    "defaultTester": "NgaMTQ"
+    "defaultTester": "NgaMTQ",
+    "actual": "Đã kiểm thử thao tác Hủy lệnh điều kiện đang ở trạng thái 'Chờ kích hoạt' trên Sổ lệnh điều kiện Web Trading UAT (TK 088C000922): 1. Các lệnh điều kiện ở trạng thái 'Chờ kích hoạt' đều có nút 'Hủy' màu đỏ tại cột đầu tiên. 2. Nhấn 'Hủy' -> hệ thống hiển thị popup 'Xác nhận hủy lệnh' với thông tin mã lệnh, tài khoản, mã CK, khối lượng, giá và ô nhập PIN. 3. Nhập mã PIN 135790 và nhấn Xác nhận -> hệ thống bắn toast thông báo 'Gửi yêu cầu hủy lệnh thành công'. 4. Lập tức trạng thái lệnh cập nhật sang 'Đã hủy', KL hủy cập nhật bằng KL đặt, nút Hủy được thu hồi. Kết quả ĐẠT (Pass)."
   },
   {
     "id": "TC_WEB_UC33_144",
