@@ -2972,10 +2972,11 @@
     "testData": "TK: 088C000922 | MK: 13579@Ab | PIN/OTP: 135790 | Mã: HPG/FPT | KL: 100/500 | Giá: Thị trường / LO",
     "errorCode": "N/A – không phát sinh thông báo lỗi",
     "smoke": "No",
-    "note": "",
-    "status": "Untested",
+    "note": "Lệnh GTC đã kích hoạt không thể hủy trực tiếp tại Sổ lệnh điều kiện (đúng thiết kế). Việc hủy lệnh con tại Sổ lệnh thường tự động đồng bộ chuyển trạng thái lệnh GTC gốc sang 'Hết hiệu lực' và hoàn trả trọn vẹn sức mua.",
+    "status": "Pass",
     "defaultStatus": "Untested",
-    "defaultTester": "NgaMTQ"
+    "defaultTester": "NgaMTQ",
+    "actual": "Đã thực hiện kiểm thử thực tế trên UAT webtrade ngày 17/09/2026 với TK 088C000922: 1. Trên Sổ lệnh điều kiện, lệnh GTC mã HPG khi đã ở trạng thái 'Đã kích hoạt' thì cột Hủy không hiển thị nút Hủy/vô hiệu hóa hủy trực tiếp. 2. Để hủy, người dùng thực hiện hủy lệnh con sinh ra trên tab 'Lệnh hoạt động' (SHL 8000250926000060), nhập mã PIN 135790 xác nhận. Hệ thống báo hủy thành công, hoàn trả ngay lập tức 2,102,100 VNĐ sức mua (từ 375,068,773 lên 377,170,873 VNĐ), chuyển lệnh con sang 'Hủy lệnh chờ gửi' và cập nhật lệnh GTC gốc sang trạng thái 'Hết hiệu lực' (KL đã hủy: 100). Kết quả ĐẠT (Pass)."
   },
   {
     "id": "TC_WEB_UC32_136",
