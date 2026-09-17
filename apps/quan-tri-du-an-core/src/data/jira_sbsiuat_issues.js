@@ -1,6 +1,6 @@
 window.__SBSI_JIRA_DATA__ = {
-  "syncedAt": "2026-09-17 18:35:51",
-  "total": 166,
+  "syncedAt": "2026-09-17 19:16:22",
+  "total": 167,
   "allowedUsers": [
     "anhll.sbsi",
     "anntt.sbsi",
@@ -25,9 +25,29 @@ window.__SBSI_JIRA_DATA__ = {
   ],
   "issues": [
     {
+      "id": "SBSIEXT-174",
+      "platform": "web",
+      "title": "[Web Trading][Chi tiết lệnh] Lỗi nháy giá trong chi tiết lệnh",
+      "type": "External Bug",
+      "priority": "Medium",
+      "status": "Open",
+      "assignee": "Trang Nguyen Thi Quynh(KT-CK-HN)",
+      "assigneeUser": "trang.nguyenthiquynh",
+      "reporter": "Bách Nguyen Tung(SBSI)",
+      "reporterUser": "bachnt.sbsi",
+      "reporterNick": "BachNT",
+      "ba": "",
+      "desc": "h3. 1. Mô tả lỗi:\n* Tại màn hình Web Trading SBSI -> Sổ lệnh (Sổ lệnh thường / Sổ lệnh điều kiện), khi người dùng click xem popup *Chi tiết lệnh*:\n* Khi có socket cập nhật dữ liệu hoặc hệ thống render thông tin chi tiết lệnh và bảng Danh sách lệnh con, các trường dữ liệu và giá đặt/giá khớp bị hiện tượng *nhấp nháy / chớp giật liên tục (flicker)*.\n* Hiện tượng này làm giao diện không ổn định, gây rối mắt và ảnh hưởng nghiêm trọng đến trải nghiệm theo dõi trạng thái lệnh của khách hàng.\n\nh3. 2. Chi tiết ghi nhận tại video:\n* Lệnh test: Lệnh điều kiện GTC HID - Số hiệu lệnh: 202609160000000051 (TK: 088C032944 - Tiểu khoản: 088C032944.01).\n* Bảng danh sách lệnh con và các trường giá bị chớp nháy liên tục khi mở chi tiết.\n* Video đính kèm:\n[Lỗi nháy giá trong chi tiết lệnh.mp4|https://sbsivn-my.sharepoint.com/:v:/g/personal/bachnt_sbsi_vn/IQBcfvPv1foFR5rKDKn_5baqAflKkAkBc8CAdiCqWLkdXlc?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=D7g5ct]\n\n!chi_tiet_lenh_nhay_gia.png|thumbnail!\n\nh3. 3. Kết quả mong đợi:\n* Dữ liệu trong popup Chi tiết lệnh hiển thị ổn định, chỉ cập nhật khi thực sự có thay đổi trạng thái hoặc biến động giá mới, không bị re-render nháy giật giao diện.",
+      "relatedTc": "",
+      "jiraUrl": "https://projects.fss.com.vn/browse/SBSIEXT-174",
+      "createdAt": "2026-09-17 19:15",
+      "updatedAt": "2026-09-17 19:16",
+      "source": "JIRA_FSS"
+    },
+    {
       "id": "SBSIEXT-173",
-      "platform": "uiux",
-      "title": "[Webtrading][UI/UX] Tối ưu khoảng thời gian mặc định (Từ ngày - Đến ngày) tại các màn hình Báo cáo & Sao kê",
+      "platform": "web",
+      "title": "[Webtrading][Sao kê tiền/chứng] Tối ưu khoảng thời gian mặc định (Từ ngày - Đến ngày)",
       "type": "Vấn đề phát sinh",
       "priority": "Medium",
       "status": "Open",
@@ -37,11 +57,11 @@ window.__SBSI_JIRA_DATA__ = {
       "reporterUser": "bachnt.sbsi",
       "reporterNick": "BachNT",
       "ba": "",
-      "desc": "1. Thực trạng & Vấn đề UI/UX:\n- Hiện tại, tại tất cả các màn hình báo cáo, sao kê và tra cứu lịch sử trên Web Trading (gồm: Lãi/Lỗ đã thực hiện, Sao kê tiền, Sao kê chứng khoán, Tổng hợp lệnh khớp, Tra cứu thông tin quyền):\n  + Hệ thống đang để mặc định: Từ ngày = Ngày hiện tại (Today) — Đến ngày = Ngày hiện tại (Today).\n- Hệ quả đối với trải nghiệm người dùng (UX):\n  + Empty State Misunderstanding: Phần lớn thời gian (đặc biệt đầu phiên sáng, cuối tuần, ngày nghỉ hoặc tài khoản chưa phát sinh lệnh mới trong ngày), dữ liệu giao dịch trong ngày là bằng 0 -> Bảng dữ liệu hiển thị hoàn toàn trống trơn. Điều này gây hiểu lầm và hoang mang cho khách hàng, tưởng rằng hệ thống bị lỗi kết nối hoặc bị mất dữ liệu tài khoản.\n  + Thao tác thừa (High Friction): Nhu cầu chính của nhà đầu tư khi vào các màn hình Sao kê / Lãi lỗ là để đối soát các giao dịch đã diễn ra trong quá khứ. Việc luôn mặc định Today - Today buộc khách hàng mỗi lần mở màn hình đều phải click vào lịch, gõ lùi ngày rồi bấm nút Tìm kiếm thì mới xem được dữ liệu.\n\n2. Đề xuất cải thiện (Chuẩn hóa mặc định thời gian):\n- Đối với các màn hình Lãi/Lỗ đã thực hiện, Sao kê tiền, Sao kê chứng khoán, Tổng hợp lệnh khớp:\n  + Cấu hình mặc định khi mở màn hình là 30 ngày gần nhất:\n    * Từ ngày = Today - 30 ngày (1 tháng trước).\n    * Đến ngày = Today (Ngày hiện tại).\n  + Lợi ích: Vừa mở màn hình là hiển thị ngay dữ liệu giao dịch phát sinh gần nhất (Immediate Data Visibility), tránh màn hình rỗng gây hiểu lầm.\n- Đối với màn hình Tra cứu thông tin quyền:\n  + Cấu hình mặc định:\n    * Từ ngày = Ngày đầu tiên của tháng trước.\n    * Đến ngày = Ngày cuối cùng của tháng sau.\n  + Lợi ích: Bao quát cả các quyền vừa chốt danh sách và các quyền sắp thực hiện trong kỳ.\n- Ràng buộc nghiệp vụ:\n  + Vẫn giữ nguyên quy tắc chặn khoảng thời gian tra cứu không được vượt quá 6 tháng (mã lỗi FO60004) để đảm bảo hiệu năng tải của hệ thống.\n\n(Đính kèm hình ảnh:\n- realized_pnl_initial.png: Màn hình mặc định Today - Today trả về bảng rỗng.\n- realized_pnl_past_1m.png: Màn hình khi tra cứu khoảng thời gian 1 tháng tải đầy đủ dữ liệu).",
-      "relatedTc": "",
+      "desc": "*1. Thực trạng & Vấn đề UI/UX:*\r\n - Hiện tại, tại tất cả các màn hình báo cáo, sao kê và tra cứu lịch sử trên Web Trading (gồm: Lãi/Lỗ đã thực hiện, Sao kê tiền, Sao kê chứng khoán, Tổng hợp lệnh khớp, Tra cứu thông tin quyền):\r\n+ Hệ thống đang để mặc định: Từ ngày = Ngày hiện tại (Today) — Đến ngày = Ngày hiện tại (Today).\r\n - Hệ quả đối với trải nghiệm người dùng (UX):\r\n+ Empty State Misunderstanding: Phần lớn thời gian (đặc biệt đầu phiên sáng, cuối tuần, ngày nghỉ hoặc tài khoản chưa phát sinh lệnh mới trong ngày), dữ liệu giao dịch trong ngày là bằng 0 -> Bảng dữ liệu hiển thị hoàn toàn trống trơn. Điều này gây hiểu lầm và hoang mang cho khách hàng, tưởng rằng hệ thống bị lỗi kết nối hoặc bị mất dữ liệu tài khoản.\r\n+ Thao tác thừa (High Friction): Nhu cầu chính của nhà đầu tư khi vào các màn hình Sao kê / Lãi lỗ là để đối soát các giao dịch đã diễn ra trong quá khứ. Việc luôn mặc định Today - Today buộc khách hàng mỗi lần mở màn hình đều phải click vào lịch, gõ lùi ngày rồi bấm nút Tìm kiếm thì mới xem được dữ liệu.\r\n\r\n*2. Đề xuất cải thiện (Chuẩn hóa mặc định thời gian):*\r\n - Đối với các màn hình Lãi/Lỗ đã thực hiện, Sao kê tiền, Sao kê chứng khoán, Tổng hợp lệnh khớp:\r\n+ Cấu hình mặc định khi mở màn hình là 30 ngày gần nhất:\r\n\r\n * Từ ngày = Today - 30 ngày (1 tháng trước).\r\n * Đến ngày = Today (Ngày hiện tại).\r\n+ Lợi ích: Vừa mở màn hình là hiển thị ngay dữ liệu giao dịch phát sinh gần nhất (Immediate Data Visibility), tránh màn hình rỗng gây hiểu lầm.\r\n\r\n - Đối với màn hình Tra cứu thông tin quyền:\r\n+ Cấu hình mặc định:\r\n\r\n * Từ ngày = Ngày đầu tiên của tháng trước.\r\n * Đến ngày = Ngày cuối cùng của tháng sau.\r\n+ Lợi ích: Bao quát cả các quyền vừa chốt danh sách và các quyền sắp thực hiện trong kỳ.\r\n\r\n - Ràng buộc nghiệp vụ:\r\n+ Vẫn giữ nguyên quy tắc chặn khoảng thời gian tra cứu không được vượt quá 6 tháng (mã lỗi FO60004) để đảm bảo hiệu năng tải của hệ thống.\r\n\r\nĐính kèm hình ảnh:\r\n - Màn hình mặc định Today - Today trả về bảng rỗng.\r\n - Màn hình khi tra cứu khoảng thời gian 1 tháng tải đầy đủ dữ liệu).",
+      "relatedTc": "TC_WEB_UC62_270",
       "jiraUrl": "https://projects.fss.com.vn/browse/SBSIEXT-173",
       "createdAt": "2026-09-17 18:35",
-      "updatedAt": "2026-09-17 18:35",
+      "updatedAt": "2026-09-17 18:46",
       "source": "JIRA_FSS"
     },
     {
@@ -2081,7 +2101,7 @@ window.__SBSI_JIRA_DATA__ = {
       "relatedTc": "",
       "jiraUrl": "https://projects.fss.com.vn/browse/SBSIEXT-64",
       "createdAt": "2026-09-14 16:21",
-      "updatedAt": "2026-09-17 18:03",
+      "updatedAt": "2026-09-17 18:47",
       "source": "JIRA_FSS"
     },
     {
