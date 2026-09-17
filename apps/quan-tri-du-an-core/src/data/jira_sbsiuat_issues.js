@@ -1,6 +1,6 @@
 window.__SBSI_JIRA_DATA__ = {
-  "syncedAt": "2026-09-17 17:00:30",
-  "total": 163,
+  "syncedAt": "2026-09-17 18:35:51",
+  "total": 166,
   "allowedUsers": [
     "anhll.sbsi",
     "anntt.sbsi",
@@ -25,12 +25,72 @@ window.__SBSI_JIRA_DATA__ = {
   ],
   "issues": [
     {
+      "id": "SBSIEXT-173",
+      "platform": "uiux",
+      "title": "[Webtrading][UI/UX] Tối ưu khoảng thời gian mặc định (Từ ngày - Đến ngày) tại các màn hình Báo cáo & Sao kê",
+      "type": "Vấn đề phát sinh",
+      "priority": "Medium",
+      "status": "Open",
+      "assignee": "Trang Nguyen Thi Quynh(KT-CK-HN)",
+      "assigneeUser": "trang.nguyenthiquynh",
+      "reporter": "Bách Nguyen Tung(SBSI)",
+      "reporterUser": "bachnt.sbsi",
+      "reporterNick": "BachNT",
+      "ba": "",
+      "desc": "1. Thực trạng & Vấn đề UI/UX:\n- Hiện tại, tại tất cả các màn hình báo cáo, sao kê và tra cứu lịch sử trên Web Trading (gồm: Lãi/Lỗ đã thực hiện, Sao kê tiền, Sao kê chứng khoán, Tổng hợp lệnh khớp, Tra cứu thông tin quyền):\n  + Hệ thống đang để mặc định: Từ ngày = Ngày hiện tại (Today) — Đến ngày = Ngày hiện tại (Today).\n- Hệ quả đối với trải nghiệm người dùng (UX):\n  + Empty State Misunderstanding: Phần lớn thời gian (đặc biệt đầu phiên sáng, cuối tuần, ngày nghỉ hoặc tài khoản chưa phát sinh lệnh mới trong ngày), dữ liệu giao dịch trong ngày là bằng 0 -> Bảng dữ liệu hiển thị hoàn toàn trống trơn. Điều này gây hiểu lầm và hoang mang cho khách hàng, tưởng rằng hệ thống bị lỗi kết nối hoặc bị mất dữ liệu tài khoản.\n  + Thao tác thừa (High Friction): Nhu cầu chính của nhà đầu tư khi vào các màn hình Sao kê / Lãi lỗ là để đối soát các giao dịch đã diễn ra trong quá khứ. Việc luôn mặc định Today - Today buộc khách hàng mỗi lần mở màn hình đều phải click vào lịch, gõ lùi ngày rồi bấm nút Tìm kiếm thì mới xem được dữ liệu.\n\n2. Đề xuất cải thiện (Chuẩn hóa mặc định thời gian):\n- Đối với các màn hình Lãi/Lỗ đã thực hiện, Sao kê tiền, Sao kê chứng khoán, Tổng hợp lệnh khớp:\n  + Cấu hình mặc định khi mở màn hình là 30 ngày gần nhất:\n    * Từ ngày = Today - 30 ngày (1 tháng trước).\n    * Đến ngày = Today (Ngày hiện tại).\n  + Lợi ích: Vừa mở màn hình là hiển thị ngay dữ liệu giao dịch phát sinh gần nhất (Immediate Data Visibility), tránh màn hình rỗng gây hiểu lầm.\n- Đối với màn hình Tra cứu thông tin quyền:\n  + Cấu hình mặc định:\n    * Từ ngày = Ngày đầu tiên của tháng trước.\n    * Đến ngày = Ngày cuối cùng của tháng sau.\n  + Lợi ích: Bao quát cả các quyền vừa chốt danh sách và các quyền sắp thực hiện trong kỳ.\n- Ràng buộc nghiệp vụ:\n  + Vẫn giữ nguyên quy tắc chặn khoảng thời gian tra cứu không được vượt quá 6 tháng (mã lỗi FO60004) để đảm bảo hiệu năng tải của hệ thống.\n\n(Đính kèm hình ảnh:\n- realized_pnl_initial.png: Màn hình mặc định Today - Today trả về bảng rỗng.\n- realized_pnl_past_1m.png: Màn hình khi tra cứu khoảng thời gian 1 tháng tải đầy đủ dữ liệu).",
+      "relatedTc": "",
+      "jiraUrl": "https://projects.fss.com.vn/browse/SBSIEXT-173",
+      "createdAt": "2026-09-17 18:35",
+      "updatedAt": "2026-09-17 18:35",
+      "source": "JIRA_FSS"
+    },
+    {
+      "id": "SBSIEXT-172",
+      "platform": "uiux",
+      "title": "[UI/UX] Onboarding bước 7",
+      "type": "External Bug",
+      "priority": "Medium",
+      "status": "Open",
+      "assignee": "Trang Nguyen Thi Quynh(KT-CK-HN)",
+      "assigneeUser": "trang.nguyenthiquynh",
+      "reporter": "Vinh Tran Quang(SBSI)",
+      "reporterUser": "vinhtq.sbsi",
+      "reporterNick": "VinhTQ",
+      "ba": "",
+      "desc": "# Yêu cầu rà soát thay lại toàn bộ Icon Dialog thuộc luồng Onboarding: [https://www.figma.com/design/yVev94EYJep30wVunvmmDk/MARIS-Design-System-v1.0.0?node-id=10427-4153&t=G22nm3NZCqtmvsVa-4]\r\n\r\n\r\n2. Tại bước 7 sửa lại style Radio button, Checkbox theo design system: [https://www.figma.com/design/yVev94EYJep30wVunvmmDk/MARIS-Design-System-v1.0.0?node-id=407-439&t=G22nm3NZCqtmvsVa-4]\r\n\r\n\r\n!image-2026-09-17-17-26-13-395.png|width=363,height=785!\r\n!image-2026-09-17-17-26-37-465.png|width=361,height=781!",
+      "relatedTc": "",
+      "jiraUrl": "https://projects.fss.com.vn/browse/SBSIEXT-172",
+      "createdAt": "2026-09-17 17:27",
+      "updatedAt": "2026-09-17 17:27",
+      "source": "JIRA_FSS"
+    },
+    {
+      "id": "SBSIEXT-171",
+      "platform": "general",
+      "title": "Bị gửi double email thông báo mở tài khoản",
+      "type": "Sub-internal-bug",
+      "priority": "Medium",
+      "status": "In-progress",
+      "assignee": "Thang Tran Nhat(LTV-CK-HN)",
+      "assigneeUser": "thang.trannhat",
+      "reporter": "Mai Cao Thi(KT-CK-HN)",
+      "reporterUser": "mai.cao",
+      "reporterNick": "Mai.Cao",
+      "ba": "",
+      "desc": "Case: \r\n # Mở tài khoản chọn đăng ký DVTT = Có\r\n # Sang tab TT đăng ký DVTT thêm phương thức PIN\r\n # Xóa phương thức \r\n # Thêm lại phương thức SMS OTP\r\n # Duyệt mở tài khoản \r\n\r\n==> bị gửi double email thông báo mở tài khoản, mail thông báo mật khẩu",
+      "relatedTc": "",
+      "jiraUrl": "https://projects.fss.com.vn/browse/SBSIEXT-171",
+      "createdAt": "2026-09-17 17:22",
+      "updatedAt": "2026-09-17 18:05",
+      "source": "JIRA_FSS"
+    },
+    {
       "id": "SBSIEXT-170",
       "platform": "general",
       "title": "SMS OTP",
       "type": "External Bug",
       "priority": "High",
-      "status": "Open",
+      "status": "Suspended",
       "assignee": "Trang Nguyen Thi Quynh(KT-CK-HN)",
       "assigneeUser": "trang.nguyenthiquynh",
       "reporter": "Vinh Tran Quang(SBSI)",
@@ -41,16 +101,16 @@ window.__SBSI_JIRA_DATA__ = {
       "relatedTc": "",
       "jiraUrl": "https://projects.fss.com.vn/browse/SBSIEXT-170",
       "createdAt": "2026-09-17 16:58",
-      "updatedAt": "2026-09-17 16:58",
+      "updatedAt": "2026-09-17 17:55",
       "source": "JIRA_FSS"
     },
     {
       "id": "SBSIEXT-169",
       "platform": "mobile",
       "title": "[Mobile app] Quy tắc thiết lập mật khẩu Smart-OTP chưa đúng",
-      "type": "External Bug",
+      "type": "Requirement",
       "priority": "Medium",
-      "status": "Open",
+      "status": "Suspended",
       "assignee": "Trang Nguyen Thi Quynh(KT-CK-HN)",
       "assigneeUser": "trang.nguyenthiquynh",
       "reporter": "Bao Dang Kim(SBSI)",
@@ -61,7 +121,7 @@ window.__SBSI_JIRA_DATA__ = {
       "relatedTc": "",
       "jiraUrl": "https://projects.fss.com.vn/browse/SBSIEXT-169",
       "createdAt": "2026-09-17 15:45",
-      "updatedAt": "2026-09-17 15:45",
+      "updatedAt": "2026-09-17 17:40",
       "source": "JIRA_FSS"
     },
     {
@@ -71,8 +131,8 @@ window.__SBSI_JIRA_DATA__ = {
       "type": "Requirement",
       "priority": "Medium",
       "status": "Open",
-      "assignee": "Trang Nguyen Thi Quynh(KT-CK-HN)",
-      "assigneeUser": "trang.nguyenthiquynh",
+      "assignee": "Vo Pham Tien(LTV-CK-HN)",
+      "assigneeUser": "vo.pham",
       "reporter": "Bao Dang Kim(SBSI)",
       "reporterUser": "baodk.sbsi",
       "reporterNick": "BaoDK",
@@ -81,7 +141,7 @@ window.__SBSI_JIRA_DATA__ = {
       "relatedTc": "",
       "jiraUrl": "https://projects.fss.com.vn/browse/SBSIEXT-168",
       "createdAt": "2026-09-17 15:06",
-      "updatedAt": "2026-09-17 16:42",
+      "updatedAt": "2026-09-17 17:41",
       "source": "JIRA_FSS"
     },
     {
@@ -141,7 +201,7 @@ window.__SBSI_JIRA_DATA__ = {
       "relatedTc": "",
       "jiraUrl": "https://projects.fss.com.vn/browse/SBSIEXT-165",
       "createdAt": "2026-09-17 14:14",
-      "updatedAt": "2026-09-17 14:15",
+      "updatedAt": "2026-09-17 17:01",
       "source": "JIRA_FSS"
     },
     {
@@ -190,9 +250,9 @@ window.__SBSI_JIRA_DATA__ = {
       "title": "[UI/UX] [System] quy định Icon ",
       "type": "External Bug",
       "priority": "Medium",
-      "status": "Open",
-      "assignee": "Trang Nguyen Thi Quynh(KT-CK-HN)",
-      "assigneeUser": "trang.nguyenthiquynh",
+      "status": "Reviewed",
+      "assignee": "Vo Pham Tien(LTV-CK-HN)",
+      "assigneeUser": "vo.pham",
       "reporter": "Quoc Pham Bao(SBSI)",
       "reporterUser": "quocpb.sbsi",
       "reporterNick": "QuocPB",
@@ -201,7 +261,7 @@ window.__SBSI_JIRA_DATA__ = {
       "relatedTc": "",
       "jiraUrl": "https://projects.fss.com.vn/browse/SBSIEXT-162",
       "createdAt": "2026-09-17 13:32",
-      "updatedAt": "2026-09-17 13:32",
+      "updatedAt": "2026-09-17 18:27",
       "source": "JIRA_FSS"
     },
     {
@@ -221,7 +281,7 @@ window.__SBSI_JIRA_DATA__ = {
       "relatedTc": "",
       "jiraUrl": "https://projects.fss.com.vn/browse/SBSIEXT-161",
       "createdAt": "2026-09-17 13:25",
-      "updatedAt": "2026-09-17 14:56",
+      "updatedAt": "2026-09-17 17:04",
       "source": "JIRA_FSS"
     },
     {
@@ -241,7 +301,7 @@ window.__SBSI_JIRA_DATA__ = {
       "relatedTc": "",
       "jiraUrl": "https://projects.fss.com.vn/browse/SBSIEXT-159",
       "createdAt": "2026-09-17 11:21",
-      "updatedAt": "2026-09-17 11:21",
+      "updatedAt": "2026-09-17 17:04",
       "source": "JIRA_FSS"
     },
     {
@@ -370,7 +430,7 @@ window.__SBSI_JIRA_DATA__ = {
       "title": "RMR3007 lệch SL CK giao dịch",
       "type": "External Bug",
       "priority": "Medium",
-      "status": "Open",
+      "status": "Suspended",
       "assignee": "Mai Cao Thi(KT-CK-HN)",
       "assigneeUser": "mai.cao",
       "reporter": "Thao Nguyen Phuong(SBSI)",
@@ -381,7 +441,7 @@ window.__SBSI_JIRA_DATA__ = {
       "relatedTc": "",
       "jiraUrl": "https://projects.fss.com.vn/browse/SBSIEXT-151",
       "createdAt": "2026-09-16 17:16",
-      "updatedAt": "2026-09-17 09:22",
+      "updatedAt": "2026-09-17 17:09",
       "source": "JIRA_FSS"
     },
     {
@@ -481,7 +541,7 @@ window.__SBSI_JIRA_DATA__ = {
       "relatedTc": "",
       "jiraUrl": "https://projects.fss.com.vn/browse/SBSIEXT-146",
       "createdAt": "2026-09-16 16:10",
-      "updatedAt": "2026-09-17 16:28",
+      "updatedAt": "2026-09-17 17:11",
       "source": "JIRA_FSS"
     },
     {
@@ -530,9 +590,9 @@ window.__SBSI_JIRA_DATA__ = {
       "title": "[Webtrading] Notification đang không có hiện indicator báo có thông tin mới",
       "type": "External Bug",
       "priority": "Medium",
-      "status": "Open",
-      "assignee": "Trang Nguyen Thi Quynh(KT-CK-HN)",
-      "assigneeUser": "trang.nguyenthiquynh",
+      "status": "Reviewed",
+      "assignee": "Vo Pham Tien(LTV-CK-HN)",
+      "assigneeUser": "vo.pham",
       "reporter": "Bao Dang Kim(SBSI)",
       "reporterUser": "baodk.sbsi",
       "reporterNick": "BaoDK",
@@ -541,16 +601,16 @@ window.__SBSI_JIRA_DATA__ = {
       "relatedTc": "",
       "jiraUrl": "https://projects.fss.com.vn/browse/SBSIEXT-143",
       "createdAt": "2026-09-16 15:11",
-      "updatedAt": "2026-09-17 14:57",
+      "updatedAt": "2026-09-17 18:11",
       "source": "JIRA_FSS"
     },
     {
       "id": "SBSIEXT-142",
       "platform": "general",
       "title": "[ln0001] sai ngày thanh toán món vay",
-      "type": "External Bug",
+      "type": "Requirement",
       "priority": "Medium",
-      "status": "In-progress",
+      "status": "Analysed",
       "assignee": "Thao Tran Thi Phuong(LTV-CK-HN)",
       "assigneeUser": "thao.tranphuong",
       "reporter": "Tra Chu Thi Thu(SBSI)",
@@ -561,7 +621,7 @@ window.__SBSI_JIRA_DATA__ = {
       "relatedTc": "",
       "jiraUrl": "https://projects.fss.com.vn/browse/SBSIEXT-142",
       "createdAt": "2026-09-16 14:42",
-      "updatedAt": "2026-09-17 16:56",
+      "updatedAt": "2026-09-17 17:16",
       "source": "JIRA_FSS"
     },
     {
@@ -610,7 +670,7 @@ window.__SBSI_JIRA_DATA__ = {
       "title": "[Webtrading] Khi đổi mã PIN, đang bị logout và phải login lại",
       "type": "External Bug",
       "priority": "Medium",
-      "status": "Open",
+      "status": "Won't fix",
       "assignee": "Trang Nguyen Thi Quynh(KT-CK-HN)",
       "assigneeUser": "trang.nguyenthiquynh",
       "reporter": "Bao Dang Kim(SBSI)",
@@ -621,7 +681,7 @@ window.__SBSI_JIRA_DATA__ = {
       "relatedTc": "",
       "jiraUrl": "https://projects.fss.com.vn/browse/SBSIEXT-139",
       "createdAt": "2026-09-16 14:07",
-      "updatedAt": "2026-09-17 08:26",
+      "updatedAt": "2026-09-17 17:15",
       "source": "JIRA_FSS"
     },
     {
@@ -770,7 +830,7 @@ window.__SBSI_JIRA_DATA__ = {
       "title": "[OD] pp0 không khớp giữ mh 111108 và Màn hình đặt lệnh môi giới (F2)",
       "type": "External Bug",
       "priority": "Medium",
-      "status": "Open",
+      "status": "Suspended",
       "assignee": "Chưa gán",
       "assigneeUser": "",
       "reporter": "Hung Bui Quang(SBSI)",
@@ -781,7 +841,7 @@ window.__SBSI_JIRA_DATA__ = {
       "relatedTc": "",
       "jiraUrl": "https://projects.fss.com.vn/browse/SBSIEXT-131",
       "createdAt": "2026-09-16 11:31",
-      "updatedAt": "2026-09-16 16:01",
+      "updatedAt": "2026-09-17 17:22",
       "source": "JIRA_FSS"
     },
     {
@@ -901,7 +961,7 @@ window.__SBSI_JIRA_DATA__ = {
       "relatedTc": "",
       "jiraUrl": "https://projects.fss.com.vn/browse/SBSIEXT-125",
       "createdAt": "2026-09-16 10:27",
-      "updatedAt": "2026-09-16 17:04",
+      "updatedAt": "2026-09-17 17:08",
       "source": "JIRA_FSS"
     },
     {
@@ -941,7 +1001,7 @@ window.__SBSI_JIRA_DATA__ = {
       "relatedTc": "",
       "jiraUrl": "https://projects.fss.com.vn/browse/SBSIEXT-118",
       "createdAt": "2026-09-16 09:38",
-      "updatedAt": "2026-09-16 11:30",
+      "updatedAt": "2026-09-17 17:23",
       "source": "JIRA_FSS"
     },
     {
@@ -961,7 +1021,7 @@ window.__SBSI_JIRA_DATA__ = {
       "relatedTc": "",
       "jiraUrl": "https://projects.fss.com.vn/browse/SBSIEXT-117",
       "createdAt": "2026-09-16 09:14",
-      "updatedAt": "2026-09-17 08:56",
+      "updatedAt": "2026-09-17 17:23",
       "source": "JIRA_FSS"
     },
     {
@@ -1021,7 +1081,7 @@ window.__SBSI_JIRA_DATA__ = {
       "relatedTc": "",
       "jiraUrl": "https://projects.fss.com.vn/browse/SBSIEXT-114",
       "createdAt": "2026-09-15 17:23",
-      "updatedAt": "2026-09-16 18:52",
+      "updatedAt": "2026-09-17 17:47",
       "source": "JIRA_FSS"
     },
     {
@@ -1041,7 +1101,7 @@ window.__SBSI_JIRA_DATA__ = {
       "relatedTc": "",
       "jiraUrl": "https://projects.fss.com.vn/browse/SBSIEXT-113",
       "createdAt": "2026-09-15 17:19",
-      "updatedAt": "2026-09-16 11:24",
+      "updatedAt": "2026-09-17 17:10",
       "source": "JIRA_FSS"
     },
     {
@@ -1101,7 +1161,7 @@ window.__SBSI_JIRA_DATA__ = {
       "relatedTc": "",
       "jiraUrl": "https://projects.fss.com.vn/browse/SBSIEXT-110",
       "createdAt": "2026-09-15 16:55",
-      "updatedAt": "2026-09-16 17:25",
+      "updatedAt": "2026-09-17 17:28",
       "source": "JIRA_FSS"
     },
     {
@@ -1181,7 +1241,7 @@ window.__SBSI_JIRA_DATA__ = {
       "relatedTc": "",
       "jiraUrl": "https://projects.fss.com.vn/browse/SBSIEXT-106",
       "createdAt": "2026-09-15 16:29",
-      "updatedAt": "2026-09-17 08:54",
+      "updatedAt": "2026-09-17 17:28",
       "source": "JIRA_FSS"
     },
     {
@@ -1201,7 +1261,7 @@ window.__SBSI_JIRA_DATA__ = {
       "relatedTc": "",
       "jiraUrl": "https://projects.fss.com.vn/browse/SBSIEXT-105",
       "createdAt": "2026-09-15 16:11",
-      "updatedAt": "2026-09-17 15:01",
+      "updatedAt": "2026-09-17 17:28",
       "source": "JIRA_FSS"
     },
     {
@@ -1241,7 +1301,7 @@ window.__SBSI_JIRA_DATA__ = {
       "relatedTc": "",
       "jiraUrl": "https://projects.fss.com.vn/browse/SBSIEXT-103",
       "createdAt": "2026-09-15 15:37",
-      "updatedAt": "2026-09-15 15:37",
+      "updatedAt": "2026-09-17 17:29",
       "source": "JIRA_FSS"
     },
     {
@@ -1261,7 +1321,7 @@ window.__SBSI_JIRA_DATA__ = {
       "relatedTc": "",
       "jiraUrl": "https://projects.fss.com.vn/browse/SBSIEXT-102",
       "createdAt": "2026-09-15 15:35",
-      "updatedAt": "2026-09-17 09:33",
+      "updatedAt": "2026-09-17 17:29",
       "source": "JIRA_FSS"
     },
     {
@@ -1270,7 +1330,7 @@ window.__SBSI_JIRA_DATA__ = {
       "title": "Luồng giao dịch thu hộ tự động",
       "type": "Requirement",
       "priority": "High",
-      "status": "Analysed",
+      "status": "Fixed",
       "assignee": "Trung Tran Manh(LTV-CK-HN)",
       "assigneeUser": "trung.tranmanh",
       "reporter": "Tuan Nguyen Anh(SBSI)",
@@ -1281,7 +1341,7 @@ window.__SBSI_JIRA_DATA__ = {
       "relatedTc": "",
       "jiraUrl": "https://projects.fss.com.vn/browse/SBSIEXT-101",
       "createdAt": "2026-09-15 15:27",
-      "updatedAt": "2026-09-17 16:54",
+      "updatedAt": "2026-09-17 17:16",
       "source": "JIRA_FSS"
     },
     {
@@ -1801,7 +1861,7 @@ window.__SBSI_JIRA_DATA__ = {
       "relatedTc": "",
       "jiraUrl": "https://projects.fss.com.vn/browse/SBSIEXT-75",
       "createdAt": "2026-09-15 09:46",
-      "updatedAt": "2026-09-17 14:58",
+      "updatedAt": "2026-09-17 17:31",
       "source": "JIRA_FSS"
     },
     {
@@ -1850,7 +1910,7 @@ window.__SBSI_JIRA_DATA__ = {
       "title": "[WebTrading] Chưa hiện thông báo khi khách hàng ấn đăng nhập mà chưa input field Mật khẩu hoặc tên đăng nhập",
       "type": "External Bug",
       "priority": "Medium",
-      "status": "Open",
+      "status": "Suspended",
       "assignee": "Trang Nguyen Thi Quynh(KT-CK-HN)",
       "assigneeUser": "trang.nguyenthiquynh",
       "reporter": "Bao Dang Kim(SBSI)",
@@ -1861,7 +1921,7 @@ window.__SBSI_JIRA_DATA__ = {
       "relatedTc": "",
       "jiraUrl": "https://projects.fss.com.vn/browse/SBSIEXT-72",
       "createdAt": "2026-09-15 09:18",
-      "updatedAt": "2026-09-15 14:30",
+      "updatedAt": "2026-09-17 18:01",
       "source": "JIRA_FSS"
     },
     {
@@ -1948,9 +2008,9 @@ window.__SBSI_JIRA_DATA__ = {
       "id": "SBSIEXT-67",
       "platform": "uiux",
       "title": "[UI/UX] [ĐĂNG KÝ] Bảng Danh mục sở hữu | Theo dõi | Khuyến nghị",
-      "type": "Vấn đề phát sinh",
+      "type": "External Bug",
       "priority": "Medium",
-      "status": "Open",
+      "status": "Suspended",
       "assignee": "Trang Nguyen Thi Quynh(KT-CK-HN)",
       "assigneeUser": "trang.nguyenthiquynh",
       "reporter": "Huy Pham Ngoc(SBSI)",
@@ -1961,7 +2021,7 @@ window.__SBSI_JIRA_DATA__ = {
       "relatedTc": "",
       "jiraUrl": "https://projects.fss.com.vn/browse/SBSIEXT-67",
       "createdAt": "2026-09-14 16:45",
-      "updatedAt": "2026-09-14 16:45",
+      "updatedAt": "2026-09-17 18:04",
       "source": "JIRA_FSS"
     },
     {
@@ -2010,9 +2070,9 @@ window.__SBSI_JIRA_DATA__ = {
       "title": "[UI/UX] [Login] Button liên hệ",
       "type": "Requirement",
       "priority": "Low",
-      "status": "Open",
-      "assignee": "Chưa gán",
-      "assigneeUser": "",
+      "status": "Reviewed",
+      "assignee": "Nguyen Duc Minh(LTV-CK-HN)",
+      "assigneeUser": "minh.nguyenduc",
       "reporter": "Huy Pham Ngoc(SBSI)",
       "reporterUser": "huypn.sbsi",
       "reporterNick": "HuyPN",
@@ -2021,7 +2081,7 @@ window.__SBSI_JIRA_DATA__ = {
       "relatedTc": "",
       "jiraUrl": "https://projects.fss.com.vn/browse/SBSIEXT-64",
       "createdAt": "2026-09-14 16:21",
-      "updatedAt": "2026-09-14 18:05",
+      "updatedAt": "2026-09-17 18:03",
       "source": "JIRA_FSS"
     },
     {
@@ -2070,9 +2130,9 @@ window.__SBSI_JIRA_DATA__ = {
       "title": "[Web] [UI/UX] [Hệ thống] Icon Favicon web",
       "type": "Requirement",
       "priority": "Medium",
-      "status": "Open",
-      "assignee": "Trang Nguyen Thi Quynh(KT-CK-HN)",
-      "assigneeUser": "trang.nguyenthiquynh",
+      "status": "Reviewed",
+      "assignee": "Vo Pham Tien(LTV-CK-HN)",
+      "assigneeUser": "vo.pham",
       "reporter": "Quoc Pham Bao(SBSI)",
       "reporterUser": "quocpb.sbsi",
       "reporterNick": "QuocPB",
@@ -2081,7 +2141,7 @@ window.__SBSI_JIRA_DATA__ = {
       "relatedTc": "",
       "jiraUrl": "https://projects.fss.com.vn/browse/SBSIEXT-61",
       "createdAt": "2026-09-14 16:08",
-      "updatedAt": "2026-09-15 14:55",
+      "updatedAt": "2026-09-17 18:02",
       "source": "JIRA_FSS"
     },
     {
@@ -2150,7 +2210,7 @@ window.__SBSI_JIRA_DATA__ = {
       "title": "[Web] [UI/UX] [Header] Chọn tài khoản",
       "type": "External Bug",
       "priority": "Medium",
-      "status": "Reviewed",
+      "status": "Fixed",
       "assignee": "Vo Pham Tien(LTV-CK-HN)",
       "assigneeUser": "vo.pham",
       "reporter": "Quoc Pham Bao(SBSI)",
@@ -2161,7 +2221,7 @@ window.__SBSI_JIRA_DATA__ = {
       "relatedTc": "",
       "jiraUrl": "https://projects.fss.com.vn/browse/SBSIEXT-57",
       "createdAt": "2026-09-14 15:51",
-      "updatedAt": "2026-09-14 17:42",
+      "updatedAt": "2026-09-17 18:03",
       "source": "JIRA_FSS"
     },
     {
@@ -2250,9 +2310,9 @@ window.__SBSI_JIRA_DATA__ = {
       "title": "[Web] [UI/UX] [Hệ thống] Chọn lịch",
       "type": "External Bug",
       "priority": "Medium",
-      "status": "Open",
-      "assignee": "Trang Nguyen Thi Quynh(KT-CK-HN)",
-      "assigneeUser": "trang.nguyenthiquynh",
+      "status": "Reviewed",
+      "assignee": "Vo Pham Tien(LTV-CK-HN)",
+      "assigneeUser": "vo.pham",
       "reporter": "Quoc Pham Bao(SBSI)",
       "reporterUser": "quocpb.sbsi",
       "reporterNick": "QuocPB",
@@ -2261,7 +2321,7 @@ window.__SBSI_JIRA_DATA__ = {
       "relatedTc": "",
       "jiraUrl": "https://projects.fss.com.vn/browse/SBSIEXT-52",
       "createdAt": "2026-09-14 15:19",
-      "updatedAt": "2026-09-15 14:32",
+      "updatedAt": "2026-09-17 18:14",
       "source": "JIRA_FSS"
     },
     {
@@ -2310,7 +2370,7 @@ window.__SBSI_JIRA_DATA__ = {
       "title": "Báo cáo RMR0090 thiếu mã chứng khoán ",
       "type": "External Bug",
       "priority": "Medium",
-      "status": "Open",
+      "status": "Reviewed",
       "assignee": "Mai Cao Thi(KT-CK-HN)",
       "assigneeUser": "mai.cao",
       "reporter": "Tra Chu Thi Thu(SBSI)",
@@ -2321,7 +2381,7 @@ window.__SBSI_JIRA_DATA__ = {
       "relatedTc": "",
       "jiraUrl": "https://projects.fss.com.vn/browse/SBSIEXT-49",
       "createdAt": "2026-09-14 15:13",
-      "updatedAt": "2026-09-14 16:22",
+      "updatedAt": "2026-09-17 17:34",
       "source": "JIRA_FSS"
     },
     {
@@ -2370,7 +2430,7 @@ window.__SBSI_JIRA_DATA__ = {
       "title": "[WebTrading][ \"Lỗi hiển thị sai bộ giá Trần/Sàn/Tham chiếu và nhân sai 1,000 lần tỷ lệ % biến động giá tại màn hình Chi tiết mã chứng khoán\".",
       "type": "External Bug",
       "priority": "Medium",
-      "status": "Fixed",
+      "status": "Reviewed Code",
       "assignee": "Hanh Le Hong(LTV-CK-HN)",
       "assigneeUser": "hanh.le",
       "reporter": "Bách Nguyen Tung(SBSI)",
@@ -2381,7 +2441,7 @@ window.__SBSI_JIRA_DATA__ = {
       "relatedTc": "",
       "jiraUrl": "https://projects.fss.com.vn/browse/SBSIEXT-46",
       "createdAt": "2026-09-14 15:08",
-      "updatedAt": "2026-09-17 16:18",
+      "updatedAt": "2026-09-17 17:10",
       "source": "JIRA_FSS"
     },
     {
@@ -2501,7 +2561,7 @@ window.__SBSI_JIRA_DATA__ = {
       "relatedTc": "",
       "jiraUrl": "https://projects.fss.com.vn/browse/SBSIEXT-40",
       "createdAt": "2026-09-14 13:58",
-      "updatedAt": "2026-09-14 18:36",
+      "updatedAt": "2026-09-17 17:13",
       "source": "JIRA_FSS"
     },
     {
@@ -2550,9 +2610,9 @@ window.__SBSI_JIRA_DATA__ = {
       "title": "[WebTradng][Bảng giá] Lỗi vỡ layout responsive trên Laptop (Viewport < 1536px): Đè tab Header, mất cột Thống kê và mất 3 cột Khối ngoại (NN Mua/Bán/Room)",
       "type": "External Bug",
       "priority": "Medium",
-      "status": "Open",
-      "assignee": "Mai Cao Thi(KT-CK-HN)",
-      "assigneeUser": "mai.cao",
+      "status": "Reviewed",
+      "assignee": "Vo Pham Tien(LTV-CK-HN)",
+      "assigneeUser": "vo.pham",
       "reporter": "Bách Nguyen Tung(SBSI)",
       "reporterUser": "bachnt.sbsi",
       "reporterNick": "BachNT",
@@ -2561,7 +2621,7 @@ window.__SBSI_JIRA_DATA__ = {
       "relatedTc": "TC_WEB_PRC_001",
       "jiraUrl": "https://projects.fss.com.vn/browse/SBSIEXT-37",
       "createdAt": "2026-09-14 13:53",
-      "updatedAt": "2026-09-14 13:53",
+      "updatedAt": "2026-09-17 18:15",
       "source": "JIRA_FSS"
     },
     {
@@ -2641,7 +2701,7 @@ window.__SBSI_JIRA_DATA__ = {
       "relatedTc": "",
       "jiraUrl": "https://projects.fss.com.vn/browse/SBSIEXT-33",
       "createdAt": "2026-09-14 13:12",
-      "updatedAt": "2026-09-17 09:03",
+      "updatedAt": "2026-09-17 17:36",
       "source": "JIRA_FSS"
     },
     {
@@ -2661,7 +2721,7 @@ window.__SBSI_JIRA_DATA__ = {
       "relatedTc": "",
       "jiraUrl": "https://projects.fss.com.vn/browse/SBSIEXT-32",
       "createdAt": "2026-09-14 13:09",
-      "updatedAt": "2026-09-17 14:16",
+      "updatedAt": "2026-09-17 17:37",
       "source": "JIRA_FSS"
     },
     {
@@ -2681,7 +2741,7 @@ window.__SBSI_JIRA_DATA__ = {
       "relatedTc": "TC_WEB_REP_001",
       "jiraUrl": "https://projects.fss.com.vn/browse/SBSIEXT-31",
       "createdAt": "2026-09-14 12:16",
-      "updatedAt": "2026-09-17 13:42",
+      "updatedAt": "2026-09-17 17:39",
       "source": "JIRA_FSS"
     },
     {
@@ -2801,7 +2861,7 @@ window.__SBSI_JIRA_DATA__ = {
       "relatedTc": "",
       "jiraUrl": "https://projects.fss.com.vn/browse/SBSIEXT-25",
       "createdAt": "2026-09-14 10:14",
-      "updatedAt": "2026-09-16 21:26",
+      "updatedAt": "2026-09-17 17:39",
       "source": "JIRA_FSS"
     },
     {
@@ -2841,7 +2901,7 @@ window.__SBSI_JIRA_DATA__ = {
       "relatedTc": "",
       "jiraUrl": "https://projects.fss.com.vn/browse/SBSIEXT-23",
       "createdAt": "2026-09-14 09:20",
-      "updatedAt": "2026-09-16 21:26",
+      "updatedAt": "2026-09-17 17:42",
       "source": "JIRA_FSS"
     },
     {
@@ -3130,9 +3190,9 @@ window.__SBSI_JIRA_DATA__ = {
       "title": "Email mở tài khoản thành công hiển thị mã CSS trong nội dung.",
       "type": "External Bug",
       "priority": "Medium",
-      "status": "Reviewed",
-      "assignee": "Mai Nguyen Thanh(LTV-CK-HN)",
-      "assigneeUser": "mai.nguyenthanh",
+      "status": "In-progress",
+      "assignee": "Kien Pham Trung(LTV-CK-HN)",
+      "assigneeUser": "kien.phamtrung",
       "reporter": "Huong Luong Thi(SBSI)",
       "reporterUser": "huonglt1.sbsi",
       "reporterNick": "HuongLT",
@@ -3141,7 +3201,7 @@ window.__SBSI_JIRA_DATA__ = {
       "relatedTc": "",
       "jiraUrl": "https://projects.fss.com.vn/browse/SBSIEXT-8",
       "createdAt": "2026-09-10 16:54",
-      "updatedAt": "2026-09-17 16:59",
+      "updatedAt": "2026-09-17 17:33",
       "source": "JIRA_FSS"
     },
     {
