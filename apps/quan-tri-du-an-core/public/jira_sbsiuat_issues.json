@@ -1,6 +1,6 @@
 {
-  "syncedAt": "2026-09-16 18:24:38",
-  "total": 76,
+  "syncedAt": "2026-09-17 10:24:59",
+  "total": 77,
   "allowedUsers": [
     "cuongnt.sbsi",
     "anhll.sbsi",
@@ -13,6 +13,26 @@
     "vinhtq.sbsi"
   ],
   "issues": [
+    {
+      "id": "SBSIEXT-154",
+      "platform": "web",
+      "title": "[Webtrading][Chuyển chứng khoán] Cải thiện hiển thị Khối lượng sở hữu đối với chứng khoán chờ về (T+1/T+2)",
+      "type": "Vấn đề phát sinh",
+      "priority": "Medium",
+      "status": "Open",
+      "assignee": "Trang Nguyen Thi Quynh(KT-CK-HN)",
+      "assigneeUser": "trang.nguyenthiquynh",
+      "reporter": "Bách Nguyen Tung(SBSI)",
+      "reporterUser": "bachnt.sbsi",
+      "reporterNick": "BachNT",
+      "ba": "",
+      "desc": "1. Thực trạng & Vấn đề UI/UX:\n- Tại màn hình Quản lý tài sản (asset-total), khách hàng sở hữu chứng khoán (ví dụ: mã HID có Tổng KL: 200, trong đó Chờ về T+1: 200, Khả dụng: 0).\n- Tuy nhiên khi sang màn hình Chuyển chứng khoán, bảng Danh mục chứng khoán lại hiển thị:\n  + Mã CK: HID | Khối lượng sở hữu: 0 | Khối lượng có thể chuyển: 0\n- Việc hiển thị \"Khối lượng sở hữu: 0\" gây hiểu lầm và hoang mang cho khách hàng, tưởng rằng hệ thống bị lỗi hoặc bị mất chứng khoán của tài khoản.\n\n2. Về mặt nghiệp vụ:\n- \"Khối lượng có thể chuyển = 0\" là hoàn toàn chính xác do cổ phiếu đang chờ về T+1 (chưa thanh toán bù trừ T+2 tại VSDC).\n- Tuy nhiên cột \"Khối lượng sở hữu\" cần đồng nhất với thông tin tài sản khách hàng đang sở hữu.\n\n3. Đề xuất cải thiện UI/UX:\n- Phương án tối ưu:\n  + Cột \"Khối lượng sở hữu\": Hiển thị đúng 200 cp HID (đồng bộ với Tổng KL tại màn hình Tài sản).\n  + Cột \"Khối lượng có thể chuyển\": Hiển thị 0.\n  + Bổ sung Tooltip hoặc ghi chú phụ: \"200 cp đang chờ về T+1, chưa thể chuyển\".\n- Phương án thay thế: Nếu vẫn giữ cách tính hiện tại, đề nghị đổi tên cột \"Khối lượng sở hữu\" thành \"Khối lượng tại kho\" hoặc \"Khối lượng sẵn sàng\" để tránh gây hiểu lầm cho người dùng.\n\n(Ảnh đính kèm: transfer_screen_now_tk01.png)",
+      "relatedTc": "",
+      "jiraUrl": "https://projects.fss.com.vn/browse/SBSIEXT-154",
+      "createdAt": "2026-09-17 10:24",
+      "updatedAt": "2026-09-17 10:24",
+      "source": "JIRA_FSS"
+    },
     {
       "id": "SBSIEXT-148",
       "platform": "ekyc",
@@ -30,7 +50,7 @@
       "relatedTc": "",
       "jiraUrl": "https://projects.fss.com.vn/browse/SBSIEXT-148",
       "createdAt": "2026-09-16 16:25",
-      "updatedAt": "2026-09-16 17:24",
+      "updatedAt": "2026-09-17 09:33",
       "source": "JIRA_FSS"
     },
     {
@@ -50,7 +70,7 @@
       "relatedTc": "",
       "jiraUrl": "https://projects.fss.com.vn/browse/SBSIEXT-144",
       "createdAt": "2026-09-16 15:56",
-      "updatedAt": "2026-09-16 18:18",
+      "updatedAt": "2026-09-17 08:35",
       "source": "JIRA_FSS"
     },
     {
@@ -90,7 +110,7 @@
       "relatedTc": "",
       "jiraUrl": "https://projects.fss.com.vn/browse/SBSIEXT-139",
       "createdAt": "2026-09-16 14:07",
-      "updatedAt": "2026-09-16 16:08",
+      "updatedAt": "2026-09-17 08:26",
       "source": "JIRA_FSS"
     },
     {
@@ -99,7 +119,7 @@
       "title": "[Webtrading] Không cập nhật được email cá nhân",
       "type": "External Bug",
       "priority": "Medium",
-      "status": "Open",
+      "status": "Won't fix",
       "assignee": "Trang Nguyen Thi Quynh(KT-CK-HN)",
       "assigneeUser": "trang.nguyenthiquynh",
       "reporter": "Bao Dang Kim(SBSI)",
@@ -110,7 +130,7 @@
       "relatedTc": "",
       "jiraUrl": "https://projects.fss.com.vn/browse/SBSIEXT-137",
       "createdAt": "2026-09-16 13:46",
-      "updatedAt": "2026-09-16 16:08",
+      "updatedAt": "2026-09-16 18:32",
       "source": "JIRA_FSS"
     },
     {
@@ -119,7 +139,7 @@
       "title": "[Webtrading] Thời gian countdown của khung điền OTP và tin nhắn SMS-OTP đang không khớp trong màn đổi mật khẩu/PIN",
       "type": "External Bug",
       "priority": "Medium",
-      "status": "Open",
+      "status": "Won't fix",
       "assignee": "Trang Nguyen Thi Quynh(KT-CK-HN)",
       "assigneeUser": "trang.nguyenthiquynh",
       "reporter": "Bao Dang Kim(SBSI)",
@@ -130,14 +150,14 @@
       "relatedTc": "",
       "jiraUrl": "https://projects.fss.com.vn/browse/SBSIEXT-134",
       "createdAt": "2026-09-16 13:30",
-      "updatedAt": "2026-09-16 16:08",
+      "updatedAt": "2026-09-16 18:36",
       "source": "JIRA_FSS"
     },
     {
       "id": "SBSIEXT-132",
       "platform": "web",
       "title": "[Webtrading] Khi đổi mật khẩu thành công, không quay lại màn hình đăng nhập",
-      "type": "External Bug",
+      "type": "Requirement",
       "priority": "Medium",
       "status": "Open",
       "assignee": "Trang Nguyen Thi Quynh(KT-CK-HN)",
@@ -150,7 +170,7 @@
       "relatedTc": "",
       "jiraUrl": "https://projects.fss.com.vn/browse/SBSIEXT-132",
       "createdAt": "2026-09-16 13:23",
-      "updatedAt": "2026-09-16 16:09",
+      "updatedAt": "2026-09-16 18:28",
       "source": "JIRA_FSS"
     },
     {
@@ -260,8 +280,8 @@
       "type": "Requirement",
       "priority": "Medium",
       "status": "Reviewed",
-      "assignee": "Trang Nguyen Thi Quynh(KT-CK-HN)",
-      "assigneeUser": "trang.nguyenthiquynh",
+      "assignee": "Vo Pham Tien(LTV-CK-HN)",
+      "assigneeUser": "vo.pham",
       "reporter": "Bách Nguyen Tung(SBSI)",
       "reporterUser": "bachnt.sbsi",
       "reporterNick": "BachNT",
@@ -270,7 +290,7 @@
       "relatedTc": "TC_WEB_UC62_270",
       "jiraUrl": "https://projects.fss.com.vn/browse/SBSIEXT-121",
       "createdAt": "2026-09-16 09:51",
-      "updatedAt": "2026-09-16 14:51",
+      "updatedAt": "2026-09-17 09:22",
       "source": "JIRA_FSS"
     },
     {
@@ -290,7 +310,7 @@
       "relatedTc": "",
       "jiraUrl": "https://projects.fss.com.vn/browse/SBSIEXT-114",
       "createdAt": "2026-09-15 17:23",
-      "updatedAt": "2026-09-16 09:37",
+      "updatedAt": "2026-09-16 18:52",
       "source": "JIRA_FSS"
     },
     {
@@ -380,17 +400,17 @@
       "type": "External Bug",
       "priority": "Medium",
       "status": "Reviewed",
-      "assignee": "Vo Pham Tien(LTV-CK-HN)",
-      "assigneeUser": "vo.pham",
+      "assignee": "Hanh Le Hong(LTV-CK-HN)",
+      "assigneeUser": "hanh.le",
       "reporter": "Bao Dang Kim(SBSI)",
       "reporterUser": "baodk.sbsi",
       "reporterNick": "BaoDK",
       "ba": "",
-      "desc": "Sau khi đăng xuất, và đăng nhập lại cùng tài khoản và browser, bị reset về VN, không giữ ngôn ngữ đã chọn",
+      "desc": "Sau khi đăng xuất, và đăng nhập lại cùng tài khoản và browser, bị reset về VN, không giữ ngôn ngữ đã chọn.\r\n\r\nExpect là sau khi logout và đăng nhập lại, vẫn sẽ giữ ngôn ngữ cũ của tài khoản đó",
       "relatedTc": "",
       "jiraUrl": "https://projects.fss.com.vn/browse/SBSIEXT-107",
       "createdAt": "2026-09-15 16:38",
-      "updatedAt": "2026-09-16 17:56",
+      "updatedAt": "2026-09-17 09:25",
       "source": "JIRA_FSS"
     },
     {
@@ -839,7 +859,7 @@
       "title": "[UI/UX] Lề dưới Màn đặt lệnh, Sổ lệnh",
       "type": "External Bug",
       "priority": "High",
-      "status": "Reviewed",
+      "status": "Reviewed Code",
       "assignee": "Nguyen Duc Minh(LTV-CK-HN)",
       "assigneeUser": "minh.nguyenduc",
       "reporter": "Vinh Tran Quang(SBSI)",
@@ -850,7 +870,7 @@
       "relatedTc": "",
       "jiraUrl": "https://projects.fss.com.vn/browse/SBSIEXT-65",
       "createdAt": "2026-09-14 16:35",
-      "updatedAt": "2026-09-16 16:44",
+      "updatedAt": "2026-09-17 09:25",
       "source": "JIRA_FSS"
     },
     {
@@ -1120,8 +1140,8 @@
       "type": "External Bug",
       "priority": "Medium",
       "status": "Reviewed",
-      "assignee": "Vo Pham Tien(LTV-CK-HN)",
-      "assigneeUser": "vo.pham",
+      "assignee": "Hanh Le Hong(LTV-CK-HN)",
+      "assigneeUser": "hanh.le",
       "reporter": "Bách Nguyen Tung(SBSI)",
       "reporterUser": "bachnt.sbsi",
       "reporterNick": "BachNT",
@@ -1130,7 +1150,7 @@
       "relatedTc": "",
       "jiraUrl": "https://projects.fss.com.vn/browse/SBSIEXT-46",
       "createdAt": "2026-09-14 15:08",
-      "updatedAt": "2026-09-14 17:45",
+      "updatedAt": "2026-09-17 09:04",
       "source": "JIRA_FSS"
     },
     {
@@ -1139,7 +1159,7 @@
       "title": "[UI/UX] Bottom sheet Xác nhận lệnh, Nộp tiền",
       "type": "External Bug",
       "priority": "Medium",
-      "status": "Reviewed",
+      "status": "Reviewed Code",
       "assignee": "Nguyen Duc Minh(LTV-CK-HN)",
       "assigneeUser": "minh.nguyenduc",
       "reporter": "Vinh Tran Quang(SBSI)",
@@ -1150,7 +1170,7 @@
       "relatedTc": "",
       "jiraUrl": "https://projects.fss.com.vn/browse/SBSIEXT-43",
       "createdAt": "2026-09-14 14:17",
-      "updatedAt": "2026-09-16 16:51",
+      "updatedAt": "2026-09-17 09:07",
       "source": "JIRA_FSS"
     },
     {
@@ -1370,7 +1390,7 @@
       "relatedTc": "",
       "jiraUrl": "https://projects.fss.com.vn/browse/SBSIEXT-29",
       "createdAt": "2026-09-14 11:25",
-      "updatedAt": "2026-09-15 17:33",
+      "updatedAt": "2026-09-16 21:24",
       "source": "JIRA_FSS"
     },
     {
@@ -1379,7 +1399,7 @@
       "title": "[UI/UX] Yêu cầu rà soát lại toàn bộ font weight, color button toàn bộ màn đặt lệnh",
       "type": "External Bug",
       "priority": "High",
-      "status": "Reviewed",
+      "status": "Reviewed Code",
       "assignee": "Nguyen Duc Minh(LTV-CK-HN)",
       "assigneeUser": "minh.nguyenduc",
       "reporter": "Vinh Tran Quang(SBSI)",
@@ -1390,7 +1410,7 @@
       "relatedTc": "",
       "jiraUrl": "https://projects.fss.com.vn/browse/SBSIEXT-27",
       "createdAt": "2026-09-14 11:13",
-      "updatedAt": "2026-09-16 17:09",
+      "updatedAt": "2026-09-17 09:31",
       "source": "JIRA_FSS"
     },
     {
@@ -1430,7 +1450,7 @@
       "relatedTc": "TC_WEB_AST_001",
       "jiraUrl": "https://projects.fss.com.vn/browse/SBSIEXT-20",
       "createdAt": "2026-09-11 16:32",
-      "updatedAt": "2026-09-15 17:33",
+      "updatedAt": "2026-09-16 21:27",
       "source": "JIRA_FSS"
     },
     {
@@ -1470,7 +1490,7 @@
       "relatedTc": "",
       "jiraUrl": "https://projects.fss.com.vn/browse/SBSIEXT-17",
       "createdAt": "2026-09-11 14:44",
-      "updatedAt": "2026-09-15 17:33",
+      "updatedAt": "2026-09-16 21:27",
       "source": "JIRA_FSS"
     },
     {
