@@ -6272,8 +6272,8 @@
     "testData": "TK: 088C030413 | MK: 13579@Ab | PIN/OTP: 135790",
     "errorCode": "N/A – không phát sinh thông báo lỗi",
     "smoke": "No",
-    "note": "",
-    "status": "Untested",
+    "note": "Đã test thực tế trên tài khoản 088C032944 (tiểu khoản 01): Chọn 'Từ ngày' ở quá khứ (25/08/2026 - 25/09/2026), hệ thống hiển thị chính xác 2 giao dịch bán chốt lời mã A32 ngày 10/09/2026 (lần lượt 300 CP và 200 CP). Thử nghiệm lùi 6 tháng (25/03/2026) dữ liệu tải đầy đủ; hệ thống áp dụng giới hạn tra cứu tối đa 6 tháng theo thiết kế FO60004.",
+    "status": "Pass",
     "defaultStatus": "Untested",
     "defaultTester": "BachNT"
   },
@@ -6294,8 +6294,8 @@
     "testData": "TK: 088C030413 | MK: 13579@Ab | PIN/OTP: 135790",
     "errorCode": "N/A – không phát sinh thông báo lỗi",
     "smoke": "No",
-    "note": "",
-    "status": "Untested",
+    "note": "Kiểm thử thành công tính năng 'Kết xuất báo cáo' tại màn hình Lãi/Lỗ đã thực hiện: Menu dropdown gồm 2 định dạng 'Export PDF' và 'Export Excel'. Tải thành công file PDF (MARIS.pdf - 88KB) và file Excel (MARIS.xlsx - 14KB). Nội dung file Excel có đầy đủ Header công ty, số tài khoản, khoảng thời gian và bảng dữ liệu 2 dòng mã A32 khớp 100% với màn hình tra cứu.",
+    "status": "Pass",
     "defaultStatus": "Untested",
     "defaultTester": "BachNT"
   },
@@ -6316,8 +6316,8 @@
     "testData": "TK: 088C030413 | MK: 13579@Ab | PIN/OTP: 135790",
     "errorCode": "N/A – không phát sinh thông báo lỗi",
     "smoke": "No",
-    "note": "",
-    "status": "Untested",
+    "note": "Số liệu Lãi/Lỗ tính chuẩn xác theo giá vốn bình quân (1đ/CP) và giá khớp lệnh thực tế trên sàn (34,500đ/CP). Giao dịch bán chốt lời mã A32 hiển thị đầy đủ, màu sắc trực quan (+ Xanh lá) thể hiện đúng trạng thái lãi ròng sau khi trừ toàn bộ thuế TNCN và phí giao dịch.",
+    "status": "Pass",
     "defaultStatus": "Untested",
     "defaultTester": "BachNT"
   },
@@ -9131,8 +9131,8 @@
     "testData": "Màn hình Lãi/Lỗ đã thực hiện",
     "errorCode": "N/A – không phát sinh lỗi",
     "smoke": "Yes",
-    "note": "Hiệu quả đầu tư thực tế của NĐT",
-    "status": "Untested",
+    "note": "Khớp công thức 100% từng đồng với giao dịch mã A32 ngày 10/09/2026: Gross Value (300 CP * 34,500 = 10,350,000đ); Thuế TNCN bán 0.1% = 10,350đ; Phí GD bán 0.15% = 15,525đ; Tổng thuế+phí = 25,875đ. Giá trị bán ròng = 10,350,000 - 25,875 = 10,324,125đ. Giá vốn 1đ (Giá trị vốn = 300đ). Lãi/lỗ ròng = 10,324,125 - 300 = +10,323,825đ (xanh lá). % Lãi/lỗ = +3,441,275%. Dòng 2 (200 CP) và dòng Tổng (500 CP, Tổng Lãi ròng +17,206,375đ) đều khớp tuyệt đối.",
+    "status": "Pass",
     "defaultStatus": "Untested"
   },
   {
