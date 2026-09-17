@@ -5815,7 +5815,7 @@
     "errorCode": "N/A – không phát sinh thông báo lỗi",
     "smoke": "No",
     "note": "",
-    "status": "Untested",
+    "status": "Pass",
     "defaultStatus": "Untested",
     "defaultTester": "BachNT"
   },
