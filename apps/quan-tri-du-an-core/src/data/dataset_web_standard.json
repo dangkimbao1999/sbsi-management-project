@@ -6338,10 +6338,11 @@
     "testData": "TK: 088C030413 | MK: 13579@Ab | PIN/OTP: 135790",
     "errorCode": "N/A – không phát sinh thông báo lỗi",
     "smoke": "No",
-    "note": "",
-    "status": "Untested",
+    "note": "Màn hình Báo cáo tổng hợp tra cứu chính xác số liệu lãi lỗ và chi phí theo từng tiểu khoản và khoảng thời gian.",
+    "status": "Pass",
     "defaultStatus": "Untested",
-    "defaultTester": "BachNT"
+    "defaultTester": "BachNT",
+    "actual": "Đã thực hiện tra cứu Báo cáo tổng hợp lãi lỗ trên Web Trading UAT (TK 088C030413): Vào Menu > Quản lý tài khoản > Báo cáo tổng hợp, chọn tiểu khoản 'Tất cả' / '01', khoảng thời gian ngày hiện tại, nhấn 'Tìm kiếm'. Hệ thống hiển thị bảng số liệu chi tiết gồm: Số tiểu khoản, GT lãi/lỗ đã thực hiện, Lãi không kỳ hạn, Chi phí (Phí giao dịch, Thuế, Phí Margin, Phí ứng trước, Phí khác) và dòng Tổng cộng rõ ràng, tải dữ liệu chính xác. Kết quả ĐẠT (Pass)."
   },
   {
     "id": "TC_WEB_UC67_288",
@@ -6360,10 +6361,11 @@
     "testData": "TK: 088C030413 | MK: 13579@Ab | PIN/OTP: 135790",
     "errorCode": "N/A – không phát sinh thông báo lỗi",
     "smoke": "No",
-    "note": "",
-    "status": "Untested",
+    "note": "Tính năng tải file Báo cáo tổng hợp hoạt động hoàn hảo, hỗ trợ kết xuất đồng thời cả định dạng Excel (MARIS.xlsx) và PDF (MARIS.pdf) đúng theo dữ liệu hiển thị.",
+    "status": "Pass",
     "defaultStatus": "Untested",
-    "defaultTester": "BachNT"
+    "defaultTester": "BachNT",
+    "actual": "Đã thực hiện kiểm thử tải file Báo cáo tổng hợp trên Web Trading UAT (TK 088C030413): 1. Truy cập Menu > Quản lý tài khoản > Báo cáo tổng hợp. 2. Nhấn 'Tìm kiếm' để tra cứu dữ liệu theo tiểu khoản và khoảng thời gian. 3. Click biểu tượng tải file báo cáo (#toolTipExportBtn), menu 'Kết xuất báo cáo' hiển thị 2 tùy chọn 'Export Excel' và 'Export PDF'. 4. Kiểm thử tải file 'Export Excel' -> file MARIS.xlsx tải về thành công (13.8 KB), định dạng chuẩn bảng tính, khớp đúng tiêu đề 'BÁO CÁO TỔNG HỢP', số tài khoản 088C030413, tiểu khoản 01 và các cột số liệu chi phí lãi lỗ. 5. Kiểm thử tải file 'Export PDF' -> file MARIS.pdf tải về thành công (87.7 KB). Kết quả ĐẠT (Pass)."
   },
   {
     "id": "TC_WEB_UC67_289",
