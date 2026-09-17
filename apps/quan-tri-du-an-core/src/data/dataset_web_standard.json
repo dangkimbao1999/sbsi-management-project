@@ -5737,7 +5737,7 @@
     "errorCode": "N/A – không phát sinh thông báo lỗi",
     "smoke": "No",
     "note": "",
-    "status": "Untested",
+    "status": "Pass",
     "defaultStatus": "Untested",
     "defaultTester": "BachNT"
   },
@@ -5804,7 +5804,7 @@
     "errorCode": "N/A – không phát sinh thông báo lỗi",
     "smoke": "No",
     "note": "",
-    "status": "Untested",
+    "status": "Pass",
     "defaultStatus": "Untested",
     "defaultTester": "BachNT"
   },
@@ -5891,8 +5891,8 @@
     "testData": "TK: 088C030413 | MK: 13579@Ab | PIN/OTP: 135790",
     "errorCode": "ERR-WEB-3.6.6.2-02",
     "smoke": "No",
-    "note": "",
-    "status": "Untested",
+    "note": "Defect: Nút Gia hạn không bị disable khi chưa đến ngày được phép gia hạn.",
+    "status": "Fail",
     "defaultStatus": "Untested",
     "defaultTester": "BachNT"
   },
@@ -9084,7 +9084,7 @@
     "errorCode": "N/A – không phát sinh lỗi",
     "smoke": "No",
     "note": "Quản lý khế ước vay Margin",
-    "status": "Untested",
+    "status": "Pass",
     "defaultStatus": "Untested"
   },
   {
@@ -9449,7 +9449,7 @@
     "errorCode": "N/A – không phát sinh lỗi",
     "smoke": "Yes",
     "note": "Kiểm tra độ chính xác lãi vay khế ước ký quỹ",
-    "status": "Untested",
+    "status": "Pass",
     "defaultStatus": "Untested",
     "cjStage": "CJ01"
   },
