@@ -2882,10 +2882,11 @@
     "testData": "TK: 088C000922 | MK: 13579@Ab | PIN/OTP: 135790 | Mã: HPG/FPT | KL: 100/500 | Giá: Thị trường / LO",
     "errorCode": "N/A – không phát sinh thông báo lỗi",
     "smoke": "No",
-    "note": "",
-    "status": "Untested",
+    "note": "Lệnh GTC đặt thành công và tự động kích hoạt vào phiên giao dịch khớp lệnh liên tục. Thông tin hiển thị chuẩn xác trên Sổ lệnh điều kiện.",
+    "status": "Pass",
     "defaultStatus": "Untested",
-    "defaultTester": "NgaMTQ"
+    "defaultTester": "NgaMTQ",
+    "actual": "Đã thực hiện kiểm thử thực tế trên UAT webtrade ngày 17/09/2026 với TK 088C000922: Đặt lệnh Mua GTC mã HPG, Giá 21.0, KL 100, Hiệu lực Nhiều ngày (đến 14/11/2026). Nhập mã PIN 135790 tại popup xác nhận đặt lệnh thành công. Hệ thống gửi lệnh thành công (Mã lệnh 25/09/20260000000455, SHL gốc 202609170000000057) và hiển thị ngay trên Sổ lệnh điều kiện với trạng thái 'Đã kích hoạt', đầy đủ thông tin Mua HPG 100 Giá 21. Kết quả ĐẠT (Pass)."
   },
   {
     "id": "TC_WEB_UC32_132",
