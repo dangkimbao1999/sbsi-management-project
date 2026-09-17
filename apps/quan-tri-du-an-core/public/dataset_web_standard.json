@@ -5836,8 +5836,8 @@
     "testData": "TK: 088C030413 | MK: 13579@Ab | PIN/OTP: 135790",
     "errorCode": "N/A – không phát sinh thông báo lỗi",
     "smoke": "No",
-    "note": "",
-    "status": "Untested",
+    "note": "Defect: Chưa đến hạn gia hạn nhưng nút Gia hạn vẫn active; Lỗi 'Mã sự kiện không tồn tại'",
+    "status": "Fail",
     "defaultStatus": "Untested",
     "defaultTester": "BachNT"
   },
