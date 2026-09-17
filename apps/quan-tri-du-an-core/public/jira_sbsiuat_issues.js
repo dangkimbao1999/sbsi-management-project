@@ -1,5 +1,5 @@
 window.__SBSI_JIRA_DATA__ = {
-  "syncedAt": "2026-09-17 10:42:16",
+  "syncedAt": "2026-09-17 11:06:06",
   "total": 77,
   "allowedUsers": [
     "cuongnt.sbsi",
@@ -17,7 +17,7 @@ window.__SBSI_JIRA_DATA__ = {
       "id": "SBSIEXT-154",
       "platform": "web",
       "title": "[Webtrading][Chuyển chứng khoán] Cải thiện hiển thị Khối lượng sở hữu đối với chứng khoán chờ về (T+1/T+2)",
-      "type": "Vấn đề phát sinh",
+      "type": "Requirement",
       "priority": "Medium",
       "status": "Open",
       "assignee": "Trang Nguyen Thi Quynh(KT-CK-HN)",
@@ -26,11 +26,11 @@ window.__SBSI_JIRA_DATA__ = {
       "reporterUser": "bachnt.sbsi",
       "reporterNick": "BachNT",
       "ba": "",
-      "desc": "h3. 1. Thực trạng & Vấn đề UI/UX:\n* Tại màn hình *Quản lý tài sản* (asset-total), khách hàng sở hữu chứng khoán (ví dụ: mã *HID* có Tổng KL: 200, trong đó Chờ về T+1: 200, Khả dụng: 0).\n* Tuy nhiên khi sang màn hình *Chuyển chứng khoán*, bảng Danh mục chứng khoán lại hiển thị:\n** Mã CK: *HID* | Khối lượng sở hữu: *0* | Khối lượng có thể chuyển: *0*\n* *Vấn đề UI/UX:*\n** Việc hiển thị một mã chứng khoán nhưng cả 2 cột đều là số 0 tạo rác giao diện (clutter) không cần thiết.\n** Việc hiển thị \"Khối lượng sở hữu: 0\" gây hiểu lầm và hoang mang cho khách hàng, tưởng rằng hệ thống bị lỗi dữ liệu hoặc tài khoản bị mất chứng khoán.\n** Khách hàng không thể thao tác bất kỳ lệnh chuyển nào với mã này tại thời điểm hiện tại.\n\nh3. 2. Về mặt nghiệp vụ:\n* \"Khối lượng có thể chuyển = 0\" là hoàn toàn chính xác do cổ phiếu đang chờ về T+1 (chưa thanh toán bù trừ T+2 tại VSDC).\n* Tuy nhiên, màn hình Chuyển chứng khoán là màn hình tác vụ (actionable), chỉ nên phục vụ việc luân chuyển các mã chứng khoán thực sự khả dụng để giao dịch/chuyển khoản.\n\nh3. 3. Đề xuất giải pháp (Chốt theo Phương án 1 - Ẩn các mã chưa được phép chuyển):\n* *Quy tắc lọc dữ liệu (Filter Logic):*\n** Bảng \"Danh mục chứng khoán\" và Dropdown \"Mã chứng khoán\" tại màn hình Chuyển chứng khoán *chỉ truy vấn và hiển thị các mã có Khối lượng có thể chuyển > 0*.\n** *Ẩn hoàn toàn* các mã chứng khoán có Khối lượng có thể chuyển = 0 (bao gồm chứng khoán mua chờ về T+1/T+2, hoặc mã đang bị phong tỏa 100%) khỏi bảng Danh mục và Dropdown.\n** (Chi tiết giao diện đề xuất xem ảnh đính kèm: !sbsiext154_phuong_an_1_khong_can_hien_thi.png|thumbnail!)\n\n* *Bổ sung Helper Text hướng dẫn khách hàng (UX):*\n** Thêm 1 dòng ghi chú nhỏ bên dưới bảng Danh mục:\n_{color:#707070}\"Lưu ý: Hệ thống chỉ hiển thị chứng khoán khả dụng để chuyển. Chứng khoán mua chờ về (T+1/T+2) sẽ hiển thị sau khi hoàn tất thanh toán bù trừ.\"{color}_\n\n* *Lợi ích mang lại:*\n** Giao diện tinh gọn, tập trung đúng vào các mã khả dụng chuyển.\n** Loại bỏ hoàn toàn sự hoang mang vì số 0, giảm thiểu thắc mắc và khiếu nại tới bộ phận CSKH.",
+      "desc": "h3. 1. Thực trạng & Vấn đề UI/UX:\r\n * Tại màn hình *Quản lý tài sản* (asset-total), khách hàng sở hữu chứng khoán (ví dụ: mã *HID* có Tổng KL: 200, trong đó Chờ về T+1: 200, Khả dụng: 0).\r\n * Tuy nhiên khi sang màn hình {*}Chuyển chứng khoán{*}, bảng Danh mục chứng khoán lại hiển thị:\r\n ** Mã CK: *HID* | Khối lượng sở hữu: *0* | Khối lượng có thể chuyển: *0*\r\n * *Vấn đề UI/UX:*\r\n ** Việc hiển thị một mã chứng khoán nhưng cả 2 cột đều là số 0 tạo rác giao diện (clutter) không cần thiết.\r\n ** Việc hiển thị \"Khối lượng sở hữu: 0\" gây hiểu lầm và hoang mang cho khách hàng, tưởng rằng hệ thống bị lỗi dữ liệu hoặc tài khoản bị mất chứng khoán.\r\n ** Khách hàng không thể thao tác bất kỳ lệnh chuyển nào với mã này tại thời điểm hiện tại.\r\n\r\nh3. 2. Về mặt nghiệp vụ:\r\n * \"Khối lượng có thể chuyển = 0\" là hoàn toàn chính xác do cổ phiếu đang chờ về T+1 (chưa thanh toán bù trừ T+2 tại VSDC).\r\n * Tuy nhiên, màn hình Chuyển chứng khoán là màn hình tác vụ (actionable), chỉ nên phục vụ việc luân chuyển các mã chứng khoán thực sự khả dụng để giao dịch/chuyển khoản.\r\n\r\nh3. 3. Đề xuất giải pháp ( Ẩn các mã chưa được phép chuyển):\r\n * *Quy tắc lọc dữ liệu (Filter Logic):*\r\n ** Bảng \"Danh mục chứng khoán\" và Dropdown \"Mã chứng khoán\" tại màn hình Chuyển chứng khoán {*}chỉ truy vấn và hiển thị các mã có Khối lượng có thể chuyển > 0{*}.\r\n ** *Ẩn hoàn toàn* các mã chứng khoán có Khối lượng có thể chuyển = 0 (bao gồm chứng khoán mua chờ về T+1/T+2, hoặc mã đang bị phong tỏa 100%) khỏi bảng Danh mục và Dropdown.\r\n ** (Chi tiết giao diện đề xuất xem ảnh đính kèm: !sbsiext154_phuong_an_1_khong_can_hien_thi.png|thumbnail!)\r\n\r\n * *Bổ sung Text hướng dẫn khách hàng (UX):*\r\n ** Thêm 1 dòng ghi chú nhỏ bên dưới bảng Danh mục:\r\n_{color:#707070}\"Lưu ý: Hệ thống chỉ hiển thị chứng khoán khả dụng để chuyển. Chứng khoán mua chờ về (T+1/T+2) sẽ hiển thị sau khi hoàn tất thanh toán bù trừ.\"{color}_\r\n\r\n * *Lợi ích mang lại:*\r\n ** Giao diện tinh gọn, tập trung đúng vào các mã khả dụng chuyển.\r\n ** Loại bỏ hoàn toàn sự hoang mang vì số 0, giảm thiểu thắc mắc và khiếu nại tới bộ phận CSKH.",
       "relatedTc": "",
       "jiraUrl": "https://projects.fss.com.vn/browse/SBSIEXT-154",
       "createdAt": "2026-09-17 10:24",
-      "updatedAt": "2026-09-17 10:42",
+      "updatedAt": "2026-09-17 11:06",
       "source": "JIRA_FSS"
     },
     {
@@ -1066,11 +1066,11 @@ window.__SBSI_JIRA_DATA__ = {
       "reporterUser": "quocpb.sbsi",
       "reporterNick": "QuocPB",
       "ba": "",
-      "desc": "1: thiếu đường line\r\n2: sai icon đặt lệnh\r\n3: icon thu nhỏ cho xuống dưới\r\n\r\n!image-2026-09-14-15-31-56-233.png!",
+      "desc": "1: thiếu đường line\r\n2: sai icon đặt lệnh (review lại toàn bộ icon \"Size, hình dạng\")\r\n3: icon thu nhỏ cho xuống dưới\r\n\r\n!image-2026-09-14-15-31-56-233.png!",
       "relatedTc": "",
       "jiraUrl": "https://projects.fss.com.vn/browse/SBSIEXT-54",
       "createdAt": "2026-09-14 15:32",
-      "updatedAt": "2026-09-16 13:54",
+      "updatedAt": "2026-09-17 11:05",
       "source": "JIRA_FSS"
     },
     {
