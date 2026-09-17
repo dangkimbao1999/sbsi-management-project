@@ -2926,10 +2926,11 @@
     "testData": "TK: 088C000922 | MK: 13579@Ab | PIN/OTP: 135790 | Mã: HPG/FPT | KL: 100/500 | Giá: Thị trường / LO",
     "errorCode": "ERR-WEB-3.6.1.2-01",
     "smoke": "No",
-    "note": "",
-    "status": "Untested",
+    "note": "Hệ thống validate chính xác và hiển thị toast: 'Ngày kết thúc phải lớn hơn ngày hiện tại'. Khuyến nghị UX: cấu hình minDate trên datepicker flatpickr để vô hiệu hóa trực tiếp các ngày trong quá khứ trên giao diện lịch.",
+    "status": "Pass",
     "defaultStatus": "Untested",
-    "defaultTester": "NgaMTQ"
+    "defaultTester": "NgaMTQ",
+    "actual": "Đã thực hiện kiểm thử thực tế trên UAT webtrade ngày 17/09/2026 với TK 088C000922: Khi chọn lệnh Nhiều ngày (GTC) với ngày kết thúc là 10/09/2026 (trước ngày hiện tại 17/09/2026) và nhấn Mua HPG giá 21.3 KL 100, hệ thống chặn gửi lệnh và hiển thị cảnh báo đỏ dạng toast góc trên bên phải: 'Ngày kết thúc phải lớn hơn ngày hiện tại'. Kết quả ĐẠT (Pass)."
   },
   {
     "id": "TC_WEB_UC32_134",
