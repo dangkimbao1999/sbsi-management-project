@@ -1,5 +1,5 @@
 {
-  "syncedAt": "2026-09-17 10:37:13",
+  "syncedAt": "2026-09-17 10:42:16",
   "total": 77,
   "allowedUsers": [
     "cuongnt.sbsi",
@@ -26,11 +26,11 @@
       "reporterUser": "bachnt.sbsi",
       "reporterNick": "BachNT",
       "ba": "",
-      "desc": "1. Thực trạng & Vấn đề UI/UX:\n- Tại màn hình Quản lý tài sản (asset-total), khách hàng sở hữu chứng khoán (ví dụ: mã HID có Tổng KL: 200, trong đó Chờ về T+1: 200, Khả dụng: 0).\n- Tuy nhiên khi sang màn hình Chuyển chứng khoán, bảng Danh mục chứng khoán lại hiển thị:\n  + Mã CK: HID | Khối lượng sở hữu: 0 | Khối lượng có thể chuyển: 0\n- Việc hiển thị \"Khối lượng sở hữu: 0\" gây hiểu lầm và hoang mang cho khách hàng, tưởng rằng hệ thống bị lỗi hoặc bị mất chứng khoán của tài khoản.\n\n2. Về mặt nghiệp vụ:\n- \"Khối lượng có thể chuyển = 0\" là hoàn toàn chính xác do cổ phiếu đang chờ về T+1 (chưa thanh toán bù trừ T+2 tại VSDC).\n- Tuy nhiên cột \"Khối lượng sở hữu\" cần đồng nhất với thông tin tài sản khách hàng đang sở hữu.\n\n3. Đề xuất cải thiện UI/UX:\n- Phương án tối ưu:\n  + Cột \"Khối lượng sở hữu\": Hiển thị đúng 200 cp HID (đồng bộ với Tổng KL tại màn hình Tài sản).\n  + Cột \"Khối lượng có thể chuyển\": Hiển thị 0.\n  + Bổ sung Tooltip hoặc ghi chú phụ: \"200 cp đang chờ về T+1, chưa thể chuyển\".\n- Phương án thay thế: Nếu vẫn giữ cách tính hiện tại, đề nghị đổi tên cột \"Khối lượng sở hữu\" thành \"Khối lượng tại kho\" hoặc \"Khối lượng sẵn sàng\" để tránh gây hiểu lầm cho người dùng.\n\n(Ảnh đính kèm: transfer_screen_now_tk01.png)",
+      "desc": "h3. 1. Thực trạng & Vấn đề UI/UX:\n* Tại màn hình *Quản lý tài sản* (asset-total), khách hàng sở hữu chứng khoán (ví dụ: mã *HID* có Tổng KL: 200, trong đó Chờ về T+1: 200, Khả dụng: 0).\n* Tuy nhiên khi sang màn hình *Chuyển chứng khoán*, bảng Danh mục chứng khoán lại hiển thị:\n** Mã CK: *HID* | Khối lượng sở hữu: *0* | Khối lượng có thể chuyển: *0*\n* *Vấn đề UI/UX:*\n** Việc hiển thị một mã chứng khoán nhưng cả 2 cột đều là số 0 tạo rác giao diện (clutter) không cần thiết.\n** Việc hiển thị \"Khối lượng sở hữu: 0\" gây hiểu lầm và hoang mang cho khách hàng, tưởng rằng hệ thống bị lỗi dữ liệu hoặc tài khoản bị mất chứng khoán.\n** Khách hàng không thể thao tác bất kỳ lệnh chuyển nào với mã này tại thời điểm hiện tại.\n\nh3. 2. Về mặt nghiệp vụ:\n* \"Khối lượng có thể chuyển = 0\" là hoàn toàn chính xác do cổ phiếu đang chờ về T+1 (chưa thanh toán bù trừ T+2 tại VSDC).\n* Tuy nhiên, màn hình Chuyển chứng khoán là màn hình tác vụ (actionable), chỉ nên phục vụ việc luân chuyển các mã chứng khoán thực sự khả dụng để giao dịch/chuyển khoản.\n\nh3. 3. Đề xuất giải pháp (Chốt theo Phương án 1 - Ẩn các mã chưa được phép chuyển):\n* *Quy tắc lọc dữ liệu (Filter Logic):*\n** Bảng \"Danh mục chứng khoán\" và Dropdown \"Mã chứng khoán\" tại màn hình Chuyển chứng khoán *chỉ truy vấn và hiển thị các mã có Khối lượng có thể chuyển > 0*.\n** *Ẩn hoàn toàn* các mã chứng khoán có Khối lượng có thể chuyển = 0 (bao gồm chứng khoán mua chờ về T+1/T+2, hoặc mã đang bị phong tỏa 100%) khỏi bảng Danh mục và Dropdown.\n** (Chi tiết giao diện đề xuất xem ảnh đính kèm: !sbsiext154_phuong_an_1_khong_can_hien_thi.png|thumbnail!)\n\n* *Bổ sung Helper Text hướng dẫn khách hàng (UX):*\n** Thêm 1 dòng ghi chú nhỏ bên dưới bảng Danh mục:\n_{color:#707070}\"Lưu ý: Hệ thống chỉ hiển thị chứng khoán khả dụng để chuyển. Chứng khoán mua chờ về (T+1/T+2) sẽ hiển thị sau khi hoàn tất thanh toán bù trừ.\"{color}_\n\n* *Lợi ích mang lại:*\n** Giao diện tinh gọn, tập trung đúng vào các mã khả dụng chuyển.\n** Loại bỏ hoàn toàn sự hoang mang vì số 0, giảm thiểu thắc mắc và khiếu nại tới bộ phận CSKH.",
       "relatedTc": "",
       "jiraUrl": "https://projects.fss.com.vn/browse/SBSIEXT-154",
       "createdAt": "2026-09-17 10:24",
-      "updatedAt": "2026-09-17 10:37",
+      "updatedAt": "2026-09-17 10:42",
       "source": "JIRA_FSS"
     },
     {
