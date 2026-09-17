@@ -1,5 +1,5 @@
 window.__SBSI_JIRA_DATA__ = {
-  "syncedAt": "2026-09-17 10:24:59",
+  "syncedAt": "2026-09-17 10:37:13",
   "total": 77,
   "allowedUsers": [
     "cuongnt.sbsi",
@@ -30,7 +30,7 @@ window.__SBSI_JIRA_DATA__ = {
       "relatedTc": "",
       "jiraUrl": "https://projects.fss.com.vn/browse/SBSIEXT-154",
       "createdAt": "2026-09-17 10:24",
-      "updatedAt": "2026-09-17 10:24",
+      "updatedAt": "2026-09-17 10:37",
       "source": "JIRA_FSS"
     },
     {
@@ -1279,7 +1279,7 @@ window.__SBSI_JIRA_DATA__ = {
       "title": "[Web] [UI/UX] [Header] Icon sai định dạng ",
       "type": "External Bug",
       "priority": "Medium",
-      "status": "Reviewed",
+      "status": "Fixed",
       "assignee": "Vo Pham Tien(LTV-CK-HN)",
       "assigneeUser": "vo.pham",
       "reporter": "Quoc Pham Bao(SBSI)",
@@ -1290,7 +1290,7 @@ window.__SBSI_JIRA_DATA__ = {
       "relatedTc": "",
       "jiraUrl": "https://projects.fss.com.vn/browse/SBSIEXT-36",
       "createdAt": "2026-09-14 13:47",
-      "updatedAt": "2026-09-16 17:23",
+      "updatedAt": "2026-09-17 10:33",
       "source": "JIRA_FSS"
     },
     {
@@ -1299,7 +1299,7 @@ window.__SBSI_JIRA_DATA__ = {
       "title": "UIUX (Bảng giá) size ô bảng giá",
       "type": "Requirement",
       "priority": "Medium",
-      "status": "Reviewed",
+      "status": "Fixed",
       "assignee": "Vo Pham Tien(LTV-CK-HN)",
       "assigneeUser": "vo.pham",
       "reporter": "Quoc Pham Bao(SBSI)",
@@ -1310,7 +1310,7 @@ window.__SBSI_JIRA_DATA__ = {
       "relatedTc": "",
       "jiraUrl": "https://projects.fss.com.vn/browse/SBSIEXT-35",
       "createdAt": "2026-09-14 13:34",
-      "updatedAt": "2026-09-14 18:32",
+      "updatedAt": "2026-09-17 10:34",
       "source": "JIRA_FSS"
     },
     {
