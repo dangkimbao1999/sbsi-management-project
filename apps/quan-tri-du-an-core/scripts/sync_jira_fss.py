@@ -107,6 +107,8 @@ def sync_jira():
             related_tc = "TC_WEB_PRC_001"
         elif any(k in summary_lower for k in ["định dạng tên", "tên báo cáo", "tên file", "sao kê tiền", "sao kê chứng khoán"]):
             related_tc = "TC_WEB_UC62_270"
+        elif any(k in summary_lower for k in ["đổi tên danh mục", "danh mục yêu thích trùng", "trùng với danh mục đã có", "sbsiext-215"]):
+            related_tc = "TC_WEB_UC08_038"
 
         priority = "Medium"
         pri_name = (f.get("priority") or {}).get("name", "Medium")
