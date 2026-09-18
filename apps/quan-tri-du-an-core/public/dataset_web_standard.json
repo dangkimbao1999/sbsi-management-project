@@ -1738,10 +1738,11 @@
     "testData": "TK: 088C096969 | MK: 13579@Ab | PIN/OTP: 135790",
     "errorCode": "N/A – không phát sinh thông báo lỗi",
     "smoke": "No",
-    "note": "",
-    "status": "Untested",
-    "defaultStatus": "Untested",
-    "defaultTester": "BaoDK"
+    "note": "ĐẠT (PASS) - Đã kiểm thử tự động Playwright trên UAT ngày 18/09/2026. Tài khoản Khách hàng 088C096969 click icon Quả Chuông trên Header, xem đầy đủ 4 tab thông báo (Giao dịch, Biến động số dư, Cảnh báo, Khác). Tab Cảnh báo tải mượt mà và hiển thị chuẩn xác các cảnh báo đã kích hoạt.",
+    "status": "Pass",
+    "defaultStatus": "Pass",
+    "defaultTester": "BaoDK",
+    "updatedAt": "10:30 18/09"
   },
   {
     "id": "TC_WEB_UC17_080",
@@ -1804,10 +1805,11 @@
     "testData": "TK: 088C096969 | MK: 13579@Ab | PIN/OTP: 135790",
     "errorCode": "N/A – không phát sinh thông báo lỗi",
     "smoke": "No",
-    "note": "",
-    "status": "Untested",
-    "defaultStatus": "Untested",
-    "defaultTester": "BaoDK"
+    "note": "ĐẠT (PASS) - Đã kiểm thử tự động Playwright trên UAT ngày 18/09/2026. Biểu tượng Quả Chuông trên Header cập nhật realtime badge đỏ hiển thị số lượng thông báo chưa đọc khi có cảnh báo cổ phiếu mới kích hoạt từ hệ thống.",
+    "status": "Pass",
+    "defaultStatus": "Pass",
+    "defaultTester": "BaoDK",
+    "updatedAt": "10:30 18/09"
   },
   {
     "id": "TC_WEB_UC18_083",
@@ -5722,6 +5724,29 @@
     "defaultStatus": "Pass",
     "defaultTester": "BaoDK",
     "updatedAt": "09:35 18/09"
+  },
+  {
+    "id": "TC_WEB_UC59_260",
+    "stt": "260",
+    "tester": "BaoDK",
+    "module": "Bảng giá & Thị trường",
+    "screen": "UC59: 3.6.5.6 Cảnh báo giá",
+    "useCaseId": "UC59",
+    "useCaseName": "3.6.5.6 Cảnh báo giá",
+    "name": "Cảnh báo giá và khối lượng kích hoạt đúng khi thị trường khớp lệnh chạm ngưỡng",
+    "desc": "Tiền điều kiện: Môi trường UAT sẵn sàng. Tài khoản 088C096969 đã thiết lập cảnh báo giá/khối lượng cho các mã cổ phiếu. | Dữ liệu test: TK: 088C096969 | MK: 13579@Ab | PIN/OTP: 135790 | Loại kiểm thử: Functional / Realtime | Độ ưu tiên: P1 - High",
+    "steps": "Bước 1: Thiết lập các điều kiện cảnh báo giá và khối lượng cho các mã cổ phiếu (FPT, HPG, SSI, TCB, VHM, SHS, MBS, PVS, BSR, OIL).\nBước 2: Chờ thị trường khớp lệnh trong phiên đạt/chạm ngưỡng điều kiện đã cấu hình.\nBước 3: Quan sát phản hồi hệ thống tại biểu tượng Quả Chuông thông báo trên Header và kiểm tra danh sách thông báo tab Cảnh báo.",
+    "expected": "1. Hệ thống tự động bắt khớp điều kiện và kích hoạt cảnh báo realtime khi giá/khối lượng thị trường chạm ngưỡng.\n2. Biểu tượng Quả Chuông cập nhật badge đỏ số lượng thông báo chưa đọc.\n3. Tab Cảnh báo hiển thị đầy đủ chi tiết thông báo cảnh báo đã kích hoạt.",
+    "priority": "P1 - High",
+    "testType": "Functional / Realtime",
+    "testData": "TK: 088C096969 | MK: 13579@Ab | PIN/OTP: 135790",
+    "errorCode": "N/A – không phát sinh thông báo lỗi",
+    "smoke": "No",
+    "note": "ĐẠT (PASS) - Đã kiểm thử tự động Playwright và đối soát realtime trên UAT ngày 18/09/2026. 10 cảnh báo cổ phiếu (HSX/HNX/UPCOM) khớp lệnh chạm ngưỡng, hệ thống kích hoạt chuẩn xác, trả về API notify/account/message và hiển thị thông báo tức thì trên Quả Chuông tab Cảnh báo.",
+    "status": "Pass",
+    "defaultStatus": "Pass",
+    "defaultTester": "BaoDK",
+    "updatedAt": "10:30 18/09"
   },
   {
     "id": "TC_WEB_UC60_260",
