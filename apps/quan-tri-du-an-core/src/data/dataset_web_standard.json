@@ -5626,10 +5626,11 @@
     "testData": "TK: 088C096969 | MK: 13579@Ab | PIN/OTP: 135790",
     "errorCode": "N/A – không phát sinh thông báo lỗi",
     "smoke": "No",
-    "note": "",
-    "status": "Untested",
-    "defaultStatus": "Untested",
-    "defaultTester": "BaoDK"
+    "note": "ĐẠT (PASS) - Đã kiểm thử tự động Playwright và đối soát trực tiếp trên UAT ngày 18/09/2026. Thiết lập thành công cảnh báo giá cho 5 mã HSX (FPT, HPG, SSI, TCB, VHM). Bảng danh sách ghi nhận đầy đủ, toast 'Lưu thành công'.",
+    "status": "Pass",
+    "defaultStatus": "Pass",
+    "defaultTester": "BaoDK",
+    "updatedAt": "09:35 18/09"
   },
   {
     "id": "TC_WEB_UC59_256",
@@ -5648,10 +5649,11 @@
     "testData": "TK: 088C096969 | MK: 13579@Ab | PIN/OTP: 135790",
     "errorCode": "N/A – không phát sinh thông báo lỗi",
     "smoke": "No",
-    "note": "",
-    "status": "Untested",
-    "defaultStatus": "Untested",
-    "defaultTester": "BaoDK"
+    "note": "ĐẠT (PASS) - Đã kiểm thử tự động Playwright trên UAT ngày 18/09/2026. Thiết lập thành công cảnh báo theo Khối lượng (HPG: 1,000,000 CP) và theo Giá trị (SSI: 50 Tỷ VNĐ). Dữ liệu hiển thị chuẩn xác trên Danh sách cảnh báo.",
+    "status": "Pass",
+    "defaultStatus": "Pass",
+    "defaultTester": "BaoDK",
+    "updatedAt": "09:35 18/09"
   },
   {
     "id": "TC_WEB_UC59_257",
@@ -5692,10 +5694,11 @@
     "testData": "TK: 088C096969 | MK: 13579@Ab | PIN/OTP: 135790",
     "errorCode": "N/A – không phát sinh thông báo lỗi",
     "smoke": "No",
-    "note": "",
-    "status": "Untested",
-    "defaultStatus": "Untested",
-    "defaultTester": "BaoDK"
+    "note": "ĐẠT (PASS) - Đã kiểm thử tự động Playwright trên UAT ngày 18/09/2026. Bấm nút [Xóa] trên dòng cảnh báo, toast 'Xóa thành công', bản ghi lập tức được loại bỏ khỏi Danh sách cảnh báo.",
+    "status": "Pass",
+    "defaultStatus": "Pass",
+    "defaultTester": "BaoDK",
+    "updatedAt": "09:35 18/09"
   },
   {
     "id": "TC_WEB_UC59_259",
@@ -5714,10 +5717,11 @@
     "testData": "TK: 088C096969 | MK: 13579@Ab | PIN/OTP: 135790",
     "errorCode": "ERR-WEB-3.6.5.6-01",
     "smoke": "No",
-    "note": "",
-    "status": "Untested",
-    "defaultStatus": "Untested",
-    "defaultTester": "BaoDK"
+    "note": "ĐẠT (PASS) - Đã kiểm thử tự động Playwright trên UAT ngày 18/09/2026. Khi chọn Đến ngày (15/09/2026) nhỏ hơn Từ ngày (28/09/2026), hệ thống chặn tạo và hiển thị thông báo lỗi 'Khoảng thời gian không hợp lệ'.",
+    "status": "Pass",
+    "defaultStatus": "Pass",
+    "defaultTester": "BaoDK",
+    "updatedAt": "09:35 18/09"
   },
   {
     "id": "TC_WEB_UC60_260",
