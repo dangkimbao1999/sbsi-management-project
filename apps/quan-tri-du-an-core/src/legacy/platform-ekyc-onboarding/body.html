@@ -762,6 +762,8 @@
       renderActiveView();
       renderIssues();
       updateMetrics();
+      initBroadcastChannel();
+      syncEkycFromServer(false);
     });
 
     function toggleAppTheme() {
@@ -789,7 +791,6 @@
 
     function toggleTcCheckbox(id, checked) {
       setStatus(id, checked ? 'Pass' : 'Untested');
-      renderActiveView();
     }
 
     async function syncEkycFromServer(manual) {
@@ -813,6 +814,20 @@
           for (const id in remoteState) {
             if (id === 'EKYC_002' || !validIds.has(id)) continue;
             const rec = remoteState[id];
+            const localRec = ekyc_state[id];
+
+            // Stale data protection: if locally modified recently (< 15s), do not overwrite with stale remote data
+            if (localRec && localRec._localTs && (Date.now() - localRec._localTs < 15000)) {
+              continue;
+            }
+
+            // Stale data protection: if local is Pass/Fail and remote is Untested, protect local state
+            const remoteStatus = (typeof rec === 'object' && rec !== null) ? (rec.status || '') : String(rec || '');
+            const localStatus = (typeof localRec === 'object' && localRec !== null) ? (localRec.status || '') : String(localRec || '');
+            if (['pass', 'passed', 'fail', 'failed'].includes(localStatus.toLowerCase()) && (remoteStatus.toLowerCase() === 'untested' || !remoteStatus)) {
+              continue;
+            }
+
             ekyc_state[id] = (typeof rec === 'object' && rec !== null) ? rec : { status: rec };
             mergedCount++;
           }
@@ -898,11 +913,7 @@
           };
         });
       }
-      
-      // Auto trigger background sync with Cloudflare KV Server DB
-      setTimeout(() => {
-        syncEkycFromServer(false);
-      }, 50);
+      // Note: background server sync is triggered once on DOMContentLoaded, NOT on every local load
     }
 
     function saveState(tcId) {
@@ -915,14 +926,16 @@
         localStorage.setItem('SBSI_PO_STATE_EKYC', str);
         
         if (typeof BroadcastChannel !== 'undefined') {
-          if (!window._sbsiUatBc) window._sbsiUatBc = new BroadcastChannel('sbsi_uat_sync_channel');
-          window._sbsiUatBc.postMessage({
-            type: 'SBSI_STATE_UPDATED',
-            platform: 'ekyc',
-            tcId: tcId,
-            state: ekyc_state,
-            timestamp: Date.now()
-          });
+          initBroadcastChannel();
+          if (window._sbsiUatBc) {
+            window._sbsiUatBc.postMessage({
+              type: 'SBSI_STATE_UPDATED',
+              platform: 'ekyc',
+              tcId: tcId,
+              state: ekyc_state,
+              timestamp: Date.now()
+            });
+          }
         }
       } catch(e) {}
 
@@ -971,16 +984,36 @@
       }
     }
 
-    // Realtime BroadcastChannel sync listener
-    if (typeof BroadcastChannel !== 'undefined') {
-      const _bcSync = new BroadcastChannel('sbsi_uat_sync_channel');
-      _bcSync.onmessage = function(ev) {
-        if (ev.data && (ev.data.platform === 'ekyc' || ev.data.type === 'REFRESH_ALL')) {
-          loadSavedState();
-          renderActiveView();
-          updateMetrics();
-        }
-      };
+    // Realtime BroadcastChannel cross-tab sync
+    function initBroadcastChannel() {
+      if (typeof BroadcastChannel === 'undefined' || window._sbsiUatBc) return;
+      try {
+        window._sbsiUatBc = new BroadcastChannel('sbsi_uat_sync_channel');
+        window._sbsiUatBc.onmessage = function(ev) {
+          if (!ev.data) return;
+          if (ev.data.platform === 'ekyc' || ev.data.type === 'REFRESH_ALL') {
+            if (ev.data.state && typeof ev.data.state === 'object') {
+              for (const k in ev.data.state) {
+                const remoteRec = ev.data.state[k];
+                const localRec = ekyc_state[k];
+                if (localRec && localRec._localTs && (Date.now() - localRec._localTs < 15000)) continue;
+                ekyc_state[k] = remoteRec;
+              }
+              try {
+                const str = JSON.stringify(ekyc_state);
+                localStorage.setItem(ekyc_storageKey, str);
+                localStorage.setItem('sbsi_ekyc_uat_state_v3', str);
+              } catch(e) {}
+              updateMetrics();
+              renderActiveView();
+            } else {
+              loadSavedState();
+              renderActiveView();
+              updateMetrics();
+            }
+          }
+        };
+      } catch(e) {}
     }
 
     function saveTesterName(val) {
@@ -1446,14 +1479,57 @@
       }
     }
 
+    function updateTcDom(id, newSt) {
+      const isPass = ['pass', 'passed'].includes(newSt.toLowerCase());
+      const isFail = ['fail', 'failed'].includes(newSt.toLowerCase());
+      const isPending = ['pending', 'blocked'].includes(newSt.toLowerCase());
+
+      // Update checkboxes
+      document.querySelectorAll('input[type="checkbox"][data-id="' + id + '"]').forEach(cb => {
+        cb.checked = isPass;
+      });
+
+      // Update select dropdowns
+      document.querySelectorAll('select[data-id="' + id + '"]').forEach(sel => {
+        sel.value = isPass ? 'Pass' : (isFail ? 'Fail' : (isPending ? 'Pending' : 'Untested'));
+        if (isPass) {
+          sel.style.background = 'var(--green-bg)';
+          sel.style.color = 'var(--green-buy)';
+          sel.style.borderColor = 'var(--green-border)';
+        } else if (isFail) {
+          sel.style.background = 'var(--red-bg)';
+          sel.style.color = 'var(--red-sell)';
+          sel.style.borderColor = 'var(--red-border)';
+        } else if (isPending) {
+          sel.style.background = 'var(--price-ref-bg)';
+          sel.style.color = 'var(--price-ref)';
+          sel.style.borderColor = 'var(--price-ref-border)';
+        } else {
+          sel.style.background = 'var(--bg-card)';
+          sel.style.color = 'var(--text-muted)';
+          sel.style.borderColor = 'var(--border-card)';
+        }
+      });
+
+      // Update Split View list item badge if present
+      const splitItem = document.querySelector('.split-item[data-id="' + id + '"] span:last-child');
+      if (splitItem) {
+        splitItem.style.color = isPass ? 'var(--green-buy)' : 'var(--text-muted)';
+        splitItem.innerText = isPass ? '✅ Pass' : '⚪ Chưa';
+      }
+    }
+
     function setStatus(id, newSt) {
       if (!ekyc_state[id]) ekyc_state[id] = {};
       ekyc_state[id].status = newSt;
+      ekyc_state[id]._localTs = Date.now();
+      ekyc_state[id].updated_at = Date.now();
       const inputTester = document.getElementById('ekyc_tester_name')?.value?.trim();
       if (inputTester) ekyc_state[id].tester = inputTester;
       ekyc_state[id].time = new Date().toLocaleTimeString('vi-VN');
       saveState(id);
       updateMetrics();
+      updateTcDom(id, newSt);
       showToast('Cập nhật ' + id + ' -> ' + newSt, 'info');
     }
 

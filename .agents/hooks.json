@@ -1,0 +1,39 @@
+{
+  "command-guard": {
+    "PreToolUse": [
+      {
+        "matcher": "run_command",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node .agents/hooks/command-guard.js",
+            "timeout": 15
+          }
+        ]
+      }
+    ]
+  },
+  "edit-guard": {
+    "PreToolUse": [
+      {
+        "matcher": "write_to_file|replace_file_content",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node .agents/hooks/edit-guard.js",
+            "timeout": 15
+          }
+        ]
+      }
+    ]
+  },
+  "knowledge-base-reminder": {
+    "Stop": [
+      {
+        "type": "command",
+        "command": "node .agents/hooks/knowledge-base-reminder.js",
+        "timeout": 15
+      }
+    ]
+  }
+}
