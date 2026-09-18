@@ -25,8 +25,8 @@
         </div>
       </div>
             <div class="header-controls">
-        <button class="btn btn-dark" onclick="triggerManualSync ? triggerManualSync() : location.reload()" title="Đồng bộ dữ liệu">
-          🔄 Đồng Bộ Ngay
+        <button class="btn btn-dark" onclick="triggerManualSync ? triggerManualSync(this) : location.reload()" title="Đồng bộ dữ liệu Database Cloudflare KV">
+          🔄 Đồng Bộ DB <span id="ekyc_header_sync_status" style="font-size:11px; color:#10B981; font-weight:600;">(Đang kết nối...)</span>
         </button>
 
         <a href="SBSI_Master_Project_Portal.html#dashboard" class="btn btn-dark" style="text-decoration:none;" title="Về Trang Chủ Master Portal">
@@ -187,9 +187,9 @@
         <!-- TOP SYNC STATUS BAR -->
         <div class="uat-status-bar">
           <div style="display:flex; align-items:center; gap:12px; flex-wrap:wrap;">
-            <span class="status-badge live">
+            <span class="status-badge live" id="ekyc_live_badge">
               <span class="status-pulse"></span>
-              ĐỒNG BỘ TRỰC TIẾP MÁY CHỦ SBSI (REAL-TIME)
+              <span id="ekyc_live_text">🟢 ĐÃ KẾT NỐI DB CLOUDFLARE KV (REAL-TIME)</span>
             </span>
             <span style="font-size:12px; color:var(--border-sub);">|</span>
             <div style="display:flex; align-items:center; gap:8px;">
@@ -199,8 +199,8 @@
           </div>
 
           <div style="display:flex; align-items:center; gap:10px;">
-            <button class="btn btn-dark" onclick="syncPullData()">
-              🔄 Đồng Bộ Ngay
+            <button class="btn btn-dark toolbar-sync-btn" onclick="triggerManualSync(this)">
+              🔄 Đồng Bộ DB
             </button>
             <span id="ekyc_last_sync_time" style="font-size:11.5px; color:var(--text-muted); font-family:'JetBrains Mono', monospace;">Vừa đồng bộ</span>
           </div>
@@ -784,9 +784,79 @@
       }
     }
 
+    const SBSI_API_BASE = 'https://sbsi-uat-api.tungbachntb.workers.dev';
+    let isEkycSyncing = false;
+
+    function toggleTcCheckbox(id, checked) {
+      setStatus(id, checked ? 'Pass' : 'Untested');
+      renderActiveView();
+    }
+
+    async function syncEkycFromServer(manual) {
+      if (isEkycSyncing) return;
+      isEkycSyncing = true;
+      const syncStatusEl = document.getElementById('ekyc_header_sync_status');
+      const liveBadgeText = document.getElementById('ekyc_live_text');
+      const lastSyncEl = document.getElementById('ekyc_last_sync_time');
+      
+      if (syncStatusEl) syncStatusEl.innerText = '(Đang đồng bộ...)';
+      if (liveBadgeText) liveBadgeText.innerText = 'ĐANG ĐỒNG BỘ CLOUDFLARE KV...';
+
+      try {
+        const res = await fetch(SBSI_API_BASE + '/api/state?platform=ekyc&t=' + Date.now());
+        if (res.ok) {
+          const json = await res.json();
+          const remoteState = json.state || json.data || {};
+          let mergedCount = 0;
+          const validIds = new Set(ekyc_dataset.map(x => x.id));
+          
+          for (const id in remoteState) {
+            if (id === 'EKYC_002' || !validIds.has(id)) continue;
+            const rec = remoteState[id];
+            ekyc_state[id] = (typeof rec === 'object' && rec !== null) ? rec : { status: rec };
+            mergedCount++;
+          }
+          
+          const str = JSON.stringify(ekyc_state);
+          localStorage.setItem(ekyc_storageKey, str);
+          localStorage.setItem('sbsi_ekyc_uat_state_v3', str);
+          localStorage.setItem('sbsi_ekyc_uat_state_v2', str);
+          localStorage.setItem('sbsi_ekyc_uat_state', str);
+          localStorage.setItem('SBSI_PO_STATE_EKYC', str);
+          
+          if (typeof updateMetrics === 'function') updateMetrics();
+          if (typeof renderActiveView === 'function') renderActiveView();
+          
+          const nowStr = new Date().toLocaleTimeString('vi-VN');
+          if (lastSyncEl) lastSyncEl.innerText = 'Đồng bộ lúc ' + nowStr;
+          
+          let testedCount = 0;
+          for (const id in ekyc_state) {
+            const st = (ekyc_state[id]?.status || '').toLowerCase();
+            if (['pass', 'passed', 'fail', 'failed', 'pending', 'blocked', 'đạt', 'lỗi'].includes(st)) {
+              testedCount++;
+            }
+          }
+          
+          if (syncStatusEl) syncStatusEl.innerText = '(Đã kết nối (' + testedCount + ' TCs))';
+          if (liveBadgeText) liveBadgeText.innerText = '🟢 ĐÃ KẾT NỐI DB CLOUDFLARE KV (' + testedCount + '/236 TCs ĐÃ TEST)';
+          
+          if (manual && typeof showToast === 'function') {
+            showToast('✅ Đã đồng bộ thành công ' + testedCount + ' kịch bản eKYC từ Database Cloudflare KV!', 'success');
+          }
+        }
+      } catch (err) {
+        console.warn('Lỗi đồng bộ eKYC từ DB:', err);
+        if (syncStatusEl) syncStatusEl.innerText = '(Offline / Local)';
+        if (liveBadgeText) liveBadgeText.innerText = 'CHẾ ĐỘ OFFLINE / LOCAL CACHE';
+        if (manual && typeof showToast === 'function') showToast('⚠️ Không thể kết nối tới DB, đang sử dụng dữ liệu cục bộ.', 'warning');
+      } finally {
+        isEkycSyncing = false;
+      }
+    }
+
     function loadSavedState() {
       try {
-        // Sanitize and purge old legacy keys from storage
         ['sbsi_ekyc_uat_state_v2', 'sbsi_ekyc_uat_state'].forEach(k => {
           try {
             const raw = localStorage.getItem(k);
@@ -801,7 +871,7 @@
           } catch(err) {}
         });
 
-        const saved = localStorage.getItem(ekyc_storageKey) || localStorage.getItem('sbsi_ekyc_uat_state_v2');
+        const saved = localStorage.getItem(ekyc_storageKey) || localStorage.getItem('sbsi_ekyc_uat_state_v3') || localStorage.getItem('sbsi_ekyc_uat_state_v2') || localStorage.getItem('SBSI_PO_STATE_EKYC');
         if (saved) {
           const parsed = JSON.parse(saved);
           const validIds = new Set(ekyc_dataset.map(x => x.id));
@@ -828,14 +898,21 @@
           };
         });
       }
+      
+      // Auto trigger background sync with Cloudflare KV Server DB
+      setTimeout(() => {
+        syncEkycFromServer(false);
+      }, 50);
     }
 
     function saveState(tcId) {
       try {
         const str = JSON.stringify(ekyc_state);
         localStorage.setItem(ekyc_storageKey, str);
+        localStorage.setItem('sbsi_ekyc_uat_state_v3', str);
         localStorage.setItem('sbsi_ekyc_uat_state_v2', str);
         localStorage.setItem('sbsi_ekyc_uat_state', str);
+        localStorage.setItem('SBSI_PO_STATE_EKYC', str);
         
         if (typeof BroadcastChannel !== 'undefined') {
           if (!window._sbsiUatBc) window._sbsiUatBc = new BroadcastChannel('sbsi_uat_sync_channel');
@@ -848,23 +925,50 @@
           });
         }
       } catch(e) {}
+
+      // Push update directly to Cloudflare KV DB
+      try {
+        if (typeof navigator !== 'undefined' && navigator.onLine !== false && typeof fetch !== 'undefined') {
+          const tcData = (tcId && ekyc_state[tcId]) ? (typeof ekyc_state[tcId] === 'object' ? ekyc_state[tcId] : { status: ekyc_state[tcId] }) : null;
+          const payload = {
+            platform: 'ekyc',
+            state: ekyc_state,
+            ...(tcId && tcData ? {
+              id: tcId,
+              status: tcData.status,
+              tester: tcData.tester || 'CuongNT',
+              time: tcData.time || new Date().toLocaleTimeString('vi-VN'),
+              [tcId]: tcData
+            } : {})
+          };
+          fetch(SBSI_API_BASE + '/api/state?platform=ekyc', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(payload)
+          }).then(res => {
+            if (res.ok) {
+              const syncStatusEl = document.getElementById('ekyc_header_sync_status');
+              if (syncStatusEl) syncStatusEl.innerText = '(Đã lưu DB)';
+            }
+          }).catch(e => console.warn('POST ekyc state error:', e));
+        }
+      } catch(e) {}
     }
 
-    function triggerManualSync(btn) {
-      saveState(null);
+    async function triggerManualSync(btn) {
       if (btn) {
         const orig = btn.innerHTML;
         btn.innerHTML = '🔄 Đang đồng bộ...';
         btn.disabled = true;
+        await syncEkycFromServer(true);
+        btn.innerHTML = '✅ Đã kết nối DB';
         setTimeout(() => {
-          btn.innerHTML = '✅ Đã đồng bộ';
-          setTimeout(() => {
-            btn.innerHTML = orig;
-            btn.disabled = false;
-          }, 1200);
-        }, 400);
+          btn.innerHTML = orig;
+          btn.disabled = false;
+        }, 1200);
+      } else {
+        await syncEkycFromServer(true);
       }
-      showToast('⚡ Dữ liệu eKYC (236 TCs) đã được đồng bộ trực tiếp sang Master Portal!');
     }
 
     // Realtime BroadcastChannel sync listener
@@ -1075,7 +1179,9 @@
         let fePoFlag = it.is_fe_po ? '<span style="display:inline-block; font-size:10px; font-weight:800; color:#E11D48; background:rgba(225,29,72,0.1); border:1px solid rgba(225,29,72,0.3); padding:1px 6px; border-radius:4px; margin-bottom:4px;">[FE & PO CẦN NGHIỆM THU]</span> ' : '';
 
         html += '<tr>' +
-          '<td style="text-align:center; vertical-align:middle;"><input type="checkbox"></td>' +
+          '<td style="text-align:center; vertical-align:middle;">' +
+            '<input type="checkbox" ' + (isPass ? 'checked ' : '') + 'data-id="' + escapeHtml(it.id) + '" onchange="toggleTcCheckbox(this.dataset.id, this.checked)">' +
+          '</td>' +
           '<td style="vertical-align:top;">' +
             '<div style="font-weight:800; color:#0284c7; font-family:JetBrains Mono,monospace; font-size:12.5px;">' + escapeHtml(it.stt || it.id) + '</div>' +
             '<div style="display:flex; flex-direction:column; gap:3px; margin-top:3px;">' +
@@ -1457,9 +1563,7 @@
     }
 
     function syncPullData() {
-      const now = new Date().toLocaleTimeString('vi-VN');
-      document.getElementById('ekyc_last_sync_time').innerText = 'Đồng bộ lúc ' + now;
-      showToast('Đã đồng bộ dữ liệu nghiệm thu thành công!', 'success');
+      triggerManualSync(document.querySelector('.toolbar-sync-btn, button[onclick*="syncPullData"]'));
     }
 
     function filterIssues() {

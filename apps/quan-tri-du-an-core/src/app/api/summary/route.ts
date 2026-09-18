@@ -15,7 +15,7 @@ const TOTAL_DATASET: Record<string, number> = {
   web: 271,
   core: 2033,
   tprl: 545,
-  ekyc: 582,
+  ekyc: 236,
   uiux: 36
 };
 
