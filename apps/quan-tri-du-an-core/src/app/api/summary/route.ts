@@ -15,7 +15,8 @@ const TOTAL_DATASET: Record<string, number> = {
   web: 271,
   core: 2033,
   tprl: 545,
-  ekyc: 582
+  ekyc: 582,
+  uiux: 36
 };
 
 export async function OPTIONS() {
@@ -28,7 +29,8 @@ export async function GET() {
     web: {},
     core: {},
     tprl: {},
-    ekyc: {}
+    ekyc: {},
+    uiux: {}
   };
 
   try {
