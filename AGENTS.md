@@ -45,6 +45,7 @@ Sử dụng slash command `/new-app <tên-app>` hoặc kích hoạt skill `new-a
 ## Hệ thống cấu hình Antigravity (`.agents/`)
 
 - `.agents/rules/` — các quy tắc ngắn, luôn áp dụng:
+  - `implementation-plan-required.md`: BẮT BUỘC lập `implementation_plan.md` và chờ phê duyệt trước khi build code.
   - `code-conventions.md`: Quy ước viết code tối giản, ưu tiên pattern sẵn có, verify thực tế.
   - `env-secrets.md`: Bảo mật bí mật, không commit file `.env`, không hardcode credential fallback.
   - `git-workflow.md`: Quy trình branch/worktree cô lập, cấm các lệnh phá hoại (`git reset --hard`, `git clean -fdx`).

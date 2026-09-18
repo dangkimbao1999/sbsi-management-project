@@ -11,3 +11,4 @@ See [AGENTS.md](./AGENTS.md) for full project conventions, stack specifications,
 3. **Environment & Secrets:** Never commit `.env` files, API tokens, or hardcode credential fallbacks. Document required variables in `.env.example`.
 4. **Active Knowledge Base:** After completing any significant task on an app, proactively update `apps/<app>/AGENTS.md` with architectural decisions, constraints, and pending items.
 5. **Quality & Verification:** Keep patches small, follow existing patterns, and verify changes with actual commands (`pnpm build`, `pnpm lint`) before reporting completion.
+6. **Implementation Plan Mandatory:** Every code implementation, feature development, or system refactor must strictly follow an `implementation_plan.md` artifact. Always stop and obtain user approval before modifying code or running modifying commands.
