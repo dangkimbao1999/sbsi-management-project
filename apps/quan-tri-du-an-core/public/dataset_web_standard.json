@@ -581,7 +581,7 @@
   {
     "id": "TC_WEB_UC05_027",
     "stt": "27",
-    "tester": "LongNH",
+    "tester": "BaoDK",
     "module": "Danh mục bảng giá",
     "screen": "UC05: 3.2.2.1 Thêm mới danh mục yêu thích",
     "useCaseId": "UC05",
@@ -595,10 +595,11 @@
     "testData": "TK: 088C024014 | MK: 13579@Ab | PIN/OTP: 135790",
     "errorCode": "ERR-WEB-3.2.2.1-03",
     "smoke": "No",
-    "note": "",
-    "status": "Untested",
-    "defaultStatus": "Untested",
-    "defaultTester": "LongNH"
+    "note": "KHÔNG ĐẠT (FAIL / DEFECT) - Kiểm thử ngày 18/09/2026 trên UAT bằng TK 088C096969: (1) Giới hạn độ dài: ĐẠT, thẻ input có thuộc tính maxlength=25 chặn cứng độ dài chuỗi > 25 ký tự, không gây tràn vỡ giao diện. (2) Ký tự đặc biệt: KHÔNG ĐẠT, hệ thống không chặn các ký tự đặc biệt (@, #, %, &, *, /, !...) mà vẫn cho phép tạo danh mục thành công, không hiển thị thông báo lỗi 'Tên danh mục có chứa ký tự đặc biệt' như kỳ vọng.",
+    "status": "Fail",
+    "defaultStatus": "Fail",
+    "defaultTester": "BaoDK",
+    "updatedAt": "15:15 18/09"
   },
   {
     "id": "TC_WEB_UC06_028",
