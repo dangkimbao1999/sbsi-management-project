@@ -5752,7 +5752,7 @@
       try {
         if (typeof updateTesterProgressMatrix === "function") updateTesterProgressMatrix();
         let grandTotal = 0, grandPass = 0, grandFail = 0, grandPending = 0, grandUntested = 0;
-        ['mobile', 'web', 'uiux'].forEach(p => {
+        ['mobile', 'web', 'uiux', 'ekyc'].forEach(p => {
           const st = getPlatformState(p);
           const total = TOTAL_DATASET[p] || 0;
           let pass = 0, fail = 0, pend = 0;
@@ -6017,7 +6017,8 @@ Bạn có chắc chắn muốn tiếp tục?`)) {
     var TOTAL_DATASET = window.TOTAL_DATASET || {
       mobile: 353,
       web: 456,
-      uiux: 36
+      uiux: 36,
+      ekyc: 236
     };
 
     var PLATFORM_KEYS = window.PLATFORM_KEYS || {
@@ -6570,6 +6571,7 @@ Bạn có chắc chắn muốn tiếp tục?`)) {
         const promises = [
           fetch(SBSI_API_BASE + '/api/state'),
           fetch(SBSI_API_BASE + '/api/state?platform=uiux&t=' + Date.now()),
+          fetch(SBSI_API_BASE + '/api/state?platform=ekyc&t=' + Date.now()),
           fetch(SBSI_API_BASE + '/api/state?key=sbsi_deleted_tcs&t=' + Date.now())
         ];
         if (needPeriodicAudit) {
@@ -6579,8 +6581,9 @@ Bạn có chắc chắn muốn tiếp tục?`)) {
         const results = await Promise.allSettled(promises);
         const stateRes = results[0];
         const uiuxRes = results[1];
-        const deletedRes = results[2];
-        const auditRes = results[3];
+        const ekycRes = results[2];
+        const deletedRes = results[3];
+        const auditRes = results[4];
 
         // Đồng bộ danh sách kịch bản bị xóa từ Server DB
         if (deletedRes && deletedRes.status === 'fulfilled' && deletedRes.value.ok) {
@@ -6637,6 +6640,38 @@ Bạn có chắc chắn muốn tiếp tục?`)) {
             }
           } catch(e) {
             console.warn('Error syncing UIUX state from DB:', e);
+          }
+        }
+
+        // Process dedicated eKYC Onboarding state from Cloudflare KV DB
+        if (ekycRes && ekycRes.status === 'fulfilled' && ekycRes.value.ok) {
+          try {
+            const eData = await ekycRes.value.json();
+            if (eData && eData.success && (eData.state || eData.data)) {
+              const rawEkyc = eData.state || eData.data || {};
+              const remoteEkyc = {};
+              for (const id in rawEkyc) {
+                if (id === 'EKYC_002') continue;
+                remoteEkyc[id] = rawEkyc[id];
+              }
+              const k1 = 'sbsi_ekyc_uat_state';
+              const k2 = 'sbsi_ekyc_uat_state_v2';
+              const k3 = 'sbsi_ekyc_uat_state_v3';
+              const k4 = 'SBSI_PO_STATE_EKYC';
+              const k5 = 'SBSI_EKYC_TEST_STATE_V6_TC_EKYC';
+              const remoteStr = JSON.stringify(remoteEkyc);
+              const localStr = localStorage.getItem(k2) || localStorage.getItem(k1) || '{}';
+              if (localStr !== remoteStr && Object.keys(remoteEkyc).length > 0) {
+                localStorage.setItem(k1, remoteStr);
+                localStorage.setItem(k2, remoteStr);
+                localStorage.setItem(k3, remoteStr);
+                localStorage.setItem(k4, remoteStr);
+                localStorage.setItem(k5, remoteStr);
+                hasNewData = true;
+              }
+            }
+          } catch(e) {
+            console.warn('Error syncing eKYC state from DB:', e);
           }
         }
 
