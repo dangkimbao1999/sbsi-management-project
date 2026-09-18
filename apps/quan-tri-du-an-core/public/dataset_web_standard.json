@@ -503,11 +503,12 @@
     "testData": "TK: 088C024014 | MK: 13579@Ab | PIN/OTP: 135790",
     "errorCode": "N/A – không phát sinh thông báo lỗi",
     "smoke": "No",
-    "note": "",
-    "status": "Fail",
-    "defaultStatus": "Untested",
+    "note": "ĐẠT (PASS) - Kiểm thử ngày 18/09/2026 trên UAT: (1) Nhấp biểu tượng thiết lập giao diện trên thanh công cụ và chuyển đổi giữa Giao diện tối (Dark mode) và Giao diện sáng (Light mode). (2) Bảng giá chuyển đổi mượt mà, bố cục và màu sắc chuẩn, dữ liệu toàn bộ các mã chứng khoán và chỉ số thị trường được bảo toàn 100%, không bị mất hay sai lệch sau khi đổi giao diện.",
+    "status": "Pass",
+    "defaultStatus": "Pass",
     "defaultTester": "LongNH",
-    "actual": "Đã kiểm thử UAT live trên trading-uat.sbsi.vn/priceboard"
+    "actual": "Đạt kỳ vọng - Giao diện chuyển đổi chuẩn, toàn bộ dữ liệu giá realtime được bảo toàn",
+    "updatedAt": "19:10 18/09"
   },
   {
     "id": "TC_WEB_UC05_024",
@@ -801,10 +802,12 @@
     "testData": "TK: 088C024014 | MK: 13579@Ab | PIN/OTP: 135790",
     "errorCode": "N/A – không phát sinh thông báo lỗi",
     "smoke": "No",
-    "note": "",
-    "status": "Untested",
-    "defaultStatus": "Untested",
-    "defaultTester": "LongNH"
+    "note": "ĐẠT (PASS) - Kiểm thử ngày 18/09/2026 trên UAT: (1) Tạo danh mục có từ 2 mã chứng khoán trở lên (FPT, HPG). (2) Thực hiện xóa mã HPG khỏi danh mục qua nút remove-symbol-btn. (3) Hệ thống cập nhật danh mục ngay lập tức, mã FPT còn lại hiển thị đúng, đầy đủ toàn bộ dữ liệu giá realtime, không bị mất hoặc sai lệch sau khi xóa mã khác.",
+    "status": "Pass",
+    "defaultStatus": "Pass",
+    "defaultTester": "LongNH",
+    "actual": "Đạt kỳ vọng - Mã xóa thành công, các mã còn lại bảo toàn nguyên vẹn 100% dữ liệu giá realtime",
+    "updatedAt": "19:10 18/09"
   },
   {
     "id": "TC_WEB_UC08_037",
