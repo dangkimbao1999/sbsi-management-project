@@ -742,7 +742,7 @@
   {
     "id": "TC_WEB_UC07_034",
     "stt": "34",
-    "tester": "LongNH",
+    "tester": "BaoDK",
     "module": "Danh mục bảng giá",
     "screen": "UC07: 3.2.2.3 Xóa mã chứng khoán khỏi danh mục yêu thích",
     "useCaseId": "UC07",
@@ -756,10 +756,11 @@
     "testData": "TK: 088C024014 | MK: 13579@Ab | PIN/OTP: 135790",
     "errorCode": "N/A – không phát sinh thông báo lỗi",
     "smoke": "No",
-    "note": "",
-    "status": "Untested",
-    "defaultStatus": "Untested",
-    "defaultTester": "LongNH"
+    "note": "ĐẠT (PASS) - Kiểm thử ngày 18/09/2026 trên UAT bằng TK 088C096969. Chọn danh mục yêu thích rỗng ('sssss'): Giao diện hiển thị trống hoàn toàn, không có mã nào để hiển thị/xóa, không có icon xóa mã thừa thãi, hệ thống hoạt động ổn định không phát sinh lỗi.",
+    "status": "Pass",
+    "defaultStatus": "Pass",
+    "defaultTester": "BaoDK",
+    "updatedAt": "17:20 18/09"
   },
   {
     "id": "TC_WEB_UC07_035",
@@ -867,10 +868,11 @@
     "testData": "TK: 088C024014 | MK: 13579@Ab | PIN/OTP: 135790",
     "errorCode": "ERR-WEB-3.2.2.4-02",
     "smoke": "No",
-    "note": "",
-    "status": "Untested",
-    "defaultStatus": "Untested",
-    "defaultTester": "LongNH"
+    "note": "ĐẠT (PASS) - Kiểm thử ngày 18/09/2026 trên UAT: (1) Hệ thống validate chặn lưu khi tên danh mục để trống (!name || !name.trim()), không lưu tên rỗng và giữ nguyên tên cũ của danh mục. (2) Hệ thống hiển thị thông báo lỗi qua toast popup: 'Tên danh mục không được để trống' (message key common.watch-list-name-required), đáp ứng đúng tiêu chuẩn an toàn dữ liệu và phản hồi người dùng rõ ràng.",
+    "status": "Pass",
+    "defaultStatus": "Pass",
+    "defaultTester": "LongNH",
+    "updatedAt": "17:25 18/09"
   },
   {
     "id": "TC_WEB_UC08_040",
@@ -889,10 +891,11 @@
     "testData": "TK: 088C024014 | MK: 13579@Ab | PIN/OTP: 135790",
     "errorCode": "N/A – không phát sinh thông báo lỗi",
     "smoke": "No",
-    "note": "",
-    "status": "Untested",
-    "defaultStatus": "Untested",
-    "defaultTester": "LongNH"
+    "note": "ĐẠT (PASS) - Kiểm thử ngày 18/09/2026 trên UAT: (1) Danh mục có sẵn danh sách các mã chứng khoán (FPT, HPG). (2) Thực hiện đổi tên danh mục thành công sang tên mới hợp lệ. (3) Sau khi đổi tên, toàn bộ danh sách mã chứng khoán bên trong danh mục vẫn được bảo toàn nguyên vẹn 100%, bảng giá hiển thị realtime đầy đủ các mã, chỉ có tên danh mục được cập nhật mới.",
+    "status": "Pass",
+    "defaultStatus": "Pass",
+    "defaultTester": "LongNH",
+    "updatedAt": "17:25 18/09"
   },
   {
     "id": "TC_WEB_UC08_041",
