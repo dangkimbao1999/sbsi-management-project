@@ -849,10 +849,12 @@
     "testData": "TK: 088C024014 | MK: 13579@Ab | PIN/OTP: 135790",
     "errorCode": "ERR-WEB-3.2.2.4-01",
     "smoke": "No",
-    "note": "",
-    "status": "Untested",
-    "defaultStatus": "Untested",
-    "defaultTester": "LongNH"
+    "note": "LỖI (FAIL) - Kiểm thử ngày 18/09/2026 trên UAT: (1) Tạo 2 danh mục 'DANH MUC A' và 'DANH MUC B'. (2) Chọn Sửa tại danh mục B và đổi tên thành 'DANH MUC A'. (3) Hệ thống không kiểm tra trùng lặp, không hiển thị thông báo lỗi 'Tên danh mục đã tồn tại' mà vẫn lưu thành công và báo 'Đã cập nhật danh sách ưa thích'. Phát sinh 2 danh mục trùng tên vi phạm ràng buộc unique.",
+    "status": "Fail",
+    "defaultStatus": "Fail",
+    "defaultTester": "LongNH",
+    "actual": "LỖI (FAIL) - Kiểm thử ngày 18/09/2026 trên UAT: Hệ thống KHÔNG kiểm tra trùng lặp tên khi đổi tên danh mục. Khi đổi tên 'DANH MUC B' thành 'DANH MUC A' (đã tồn tại), hệ thống không chặn và không báo lỗi 'Tên danh mục đã tồn tại' mà báo thành công 'Đã cập nhật danh sách ưa thích', dẫn đến 2 danh mục trùng tên trong danh sách.",
+    "updatedAt": "19:30 18/09"
   },
   {
     "id": "TC_WEB_UC08_039",
