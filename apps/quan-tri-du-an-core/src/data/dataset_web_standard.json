@@ -4313,28 +4313,6 @@
     "defaultTester": "AnhLL"
   },
   {
-    "id": "TC_WEB_UC47_196",
-    "stt": "196",
-    "tester": "AnhLL",
-    "module": "Giao dịch Tiền & UTTB",
-    "screen": "UC47: 3.6.3.1 Chuyển tiền nội bộ",
-    "useCaseId": "UC47",
-    "useCaseName": "3.6.3.1 Chuyển tiền nội bộ",
-    "name": "Chuyển tiền nội bộ cho Môi giới - MG tự nhập/tìm tài khoản bằng Ctrl+B",
-    "desc": "Tiền điều kiện: Đăng nhập tài khoản 088C031525. Đã kích hoạt Smart OTP, có tài khoản ngân hàng thụ hưởng. | Dữ liệu test: TK: 088C031525 | MK: 13579@Ab | PIN/OTP: 135790 | Số tiền: 1.000.000 VNĐ | NH thụ hưởng: MSB/VCB | Loại kiểm thử: Functional | Độ ưu tiên: P1 - Blocker",
-    "steps": "Bước 1: Đăng nhập tài khoản Môi giới. Vào Menu > Giao dịch tiền > Chuyển tiền nội bộ.\nBước 2: Nhập trực tiếp số tài khoản KH hoặc dùng Ctrl+B để tìm và chọn tài khoản.\nBước 3: Sau khi nhập tài khoản, chọn tiểu khoản chuyển/nhận hiển thị sẵn.\nBước 4: Nhập Số tiền hợp lệ và Nội dung, xác nhận với SMS-OTP (phương thức xác thực của MG).",
-    "expected": "1. Chuyển tiền nội bộ thành công cho đúng khách hàng đã chọn, đúng số tiền.",
-    "priority": "P1 - Blocker",
-    "testType": "Functional",
-    "testData": "TK: 088C031525 | MK: 13579@Ab | PIN/OTP: 135790 | Số tiền: 1.000.000 VNĐ | NH thụ hưởng: MSB/VCB",
-    "errorCode": "N/A – không phát sinh thông báo lỗi",
-    "smoke": "No",
-    "note": "",
-    "status": "Untested",
-    "defaultStatus": "Untested",
-    "defaultTester": "AnhLL"
-  },
-  {
     "id": "TC_WEB_UC47_197",
     "stt": "197",
     "tester": "AnhLL",
