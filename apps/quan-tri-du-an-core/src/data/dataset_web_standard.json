@@ -390,10 +390,11 @@
     "testData": "TK: 088C096969 | MK: 13579@Ab | PIN/OTP: 135790",
     "errorCode": "N/A – không phát sinh thông báo lỗi",
     "smoke": "No",
-    "note": "",
-    "status": "Untested",
-    "defaultStatus": "Untested",
-    "defaultTester": "BaoDK"
+    "note": "ĐẠT (PASS) - Đã kiểm thử trên môi trường UAT ngày 18/09/2026. Truy cập /priceboard khi chưa đăng nhập, bảng giá trực tuyến tải mượt mà, hiển thị đầy đủ các chỉ số thị trường (VN-INDEX, VN30, HNX) và danh sách chứng khoán realtime.",
+    "status": "Pass",
+    "defaultStatus": "Pass",
+    "defaultTester": "BaoDK",
+    "updatedAt": "14:35 18/09"
   },
   {
     "id": "TC_WEB_UC04_019",
@@ -412,10 +413,11 @@
     "testData": "TK: 088C096969 | MK: 13579@Ab | PIN/OTP: 135790",
     "errorCode": "N/A – không phát sinh thông báo lỗi",
     "smoke": "No",
-    "note": "",
-    "status": "Untested",
-    "defaultStatus": "Untested",
-    "defaultTester": "BaoDK"
+    "note": "ĐẠT (PASS) - Đã kiểm thử trên môi trường UAT ngày 18/09/2026. Đăng nhập tài khoản 088C096969 thành công, hệ thống điều hướng trực tiếp về /priceboard, hiển thị mặc định tab Danh mục sở hữu và thông tin tài khoản.",
+    "status": "Pass",
+    "defaultStatus": "Pass",
+    "defaultTester": "BaoDK",
+    "updatedAt": "14:35 18/09"
   },
   {
     "id": "TC_WEB_UC04_020",
@@ -510,7 +512,7 @@
   {
     "id": "TC_WEB_UC05_024",
     "stt": "24",
-    "tester": "LongNH",
+    "tester": "BaoDK",
     "module": "Danh mục bảng giá",
     "screen": "UC05: 3.2.2.1 Thêm mới danh mục yêu thích",
     "useCaseId": "UC05",
@@ -524,15 +526,16 @@
     "testData": "TK: 088C024014 | MK: 13579@Ab | PIN/OTP: 135790",
     "errorCode": "N/A – không phát sinh thông báo lỗi",
     "smoke": "No",
-    "note": "",
-    "status": "Untested",
-    "defaultStatus": "Untested",
-    "defaultTester": "LongNH"
+    "note": "ĐẠT (PASS) - Đã kiểm thử trên môi trường UAT ngày 18/09/2026 bằng tài khoản 088C096969. Mở dropdown danh mục, nhập tên 'DM_UAT_096969' và nhấn nút +, hệ thống hiển thị thông báo 'Đã thêm danh sách ưa thích' và danh mục xuất hiện ngay trong danh sách.",
+    "status": "Pass",
+    "defaultStatus": "Pass",
+    "defaultTester": "BaoDK",
+    "updatedAt": "14:35 18/09"
   },
   {
     "id": "TC_WEB_UC05_025",
     "stt": "25",
-    "tester": "LongNH",
+    "tester": "BaoDK",
     "module": "Danh mục bảng giá",
     "screen": "UC05: 3.2.2.1 Thêm mới danh mục yêu thích",
     "useCaseId": "UC05",
@@ -546,15 +549,16 @@
     "testData": "TK: 088C024014 | MK: 13579@Ab | PIN/OTP: 135790",
     "errorCode": "ERR-WEB-3.2.2.1-01",
     "smoke": "No",
-    "note": "",
-    "status": "Untested",
-    "defaultStatus": "Untested",
-    "defaultTester": "LongNH"
+    "note": "ĐẠT (PASS) - Đã kiểm thử trên môi trường UAT ngày 18/09/2026 bằng tài khoản 088C096969. Nhập tên danh mục đã có sẵn 'DM_UAT_096969' và nhấn Enter, hệ thống hiển thị cảnh báo 'Tên danh mục đã tồn tại!' và chặn tạo trùng lặp.",
+    "status": "Pass",
+    "defaultStatus": "Pass",
+    "defaultTester": "BaoDK",
+    "updatedAt": "14:35 18/09"
   },
   {
     "id": "TC_WEB_UC05_026",
     "stt": "26",
-    "tester": "LongNH",
+    "tester": "BaoDK",
     "module": "Danh mục bảng giá",
     "screen": "UC05: 3.2.2.1 Thêm mới danh mục yêu thích",
     "useCaseId": "UC05",
@@ -568,10 +572,11 @@
     "testData": "TK: 088C024014 | MK: 13579@Ab | PIN/OTP: 135790",
     "errorCode": "ERR-WEB-3.2.2.1-02",
     "smoke": "No",
-    "note": "",
-    "status": "Untested",
-    "defaultStatus": "Untested",
-    "defaultTester": "LongNH"
+    "note": "ĐẠT (PASS) - Đã kiểm thử trên môi trường UAT ngày 18/09/2026 bằng tài khoản 088C096969. Để trống ô nhập tên danh mục và nhấn Enter, hệ thống hiển thị cảnh báo 'Tên danh mục không được để trống'.",
+    "status": "Pass",
+    "defaultStatus": "Pass",
+    "defaultTester": "BaoDK",
+    "updatedAt": "14:35 18/09"
   },
   {
     "id": "TC_WEB_UC05_027",
@@ -598,7 +603,7 @@
   {
     "id": "TC_WEB_UC06_028",
     "stt": "28",
-    "tester": "LongNH",
+    "tester": "BaoDK",
     "module": "Danh mục bảng giá",
     "screen": "UC06: 3.2.2.2 Thêm chứng khoán vào danh mục yêu thích",
     "useCaseId": "UC06",
@@ -612,10 +617,11 @@
     "testData": "TK: 088C024014 | MK: 13579@Ab | PIN/OTP: 135790",
     "errorCode": "N/A – không phát sinh thông báo lỗi",
     "smoke": "No",
-    "note": "",
-    "status": "Untested",
-    "defaultStatus": "Untested",
-    "defaultTester": "LongNH"
+    "note": "ĐẠT (PASS) - Đã kiểm thử trên môi trường UAT ngày 18/09/2026 bằng tài khoản 088C096969. Chọn danh mục yêu thích, nhập mã FPT, HPG vào ô 'Thêm hoặc Tìm kiếm', hệ thống hiển thị toast 'Đã cập nhật danh sách ưa thích', các mã hiển thị đầy đủ bảng giá realtime.",
+    "status": "Pass",
+    "defaultStatus": "Pass",
+    "defaultTester": "BaoDK",
+    "updatedAt": "14:35 18/09"
   },
   {
     "id": "TC_WEB_UC06_029",
@@ -642,7 +648,7 @@
   {
     "id": "TC_WEB_UC06_030",
     "stt": "30",
-    "tester": "LongNH",
+    "tester": "BaoDK",
     "module": "Danh mục bảng giá",
     "screen": "UC06: 3.2.2.2 Thêm chứng khoán vào danh mục yêu thích",
     "useCaseId": "UC06",
@@ -656,15 +662,16 @@
     "testData": "TK: 088C024014 | MK: 13579@Ab | PIN/OTP: 135790",
     "errorCode": "N/A – không phát sinh thông báo lỗi",
     "smoke": "No",
-    "note": "",
-    "status": "Untested",
-    "defaultStatus": "Untested",
-    "defaultTester": "LongNH"
+    "note": "ĐẠT (PASS) - Đã kiểm thử trên môi trường UAT ngày 18/09/2026 bằng tài khoản 088C096969. Thêm mã FPT đã có sẵn trong danh mục, hệ thống không sinh thêm dòng trùng lặp, duy trì danh sách mã chuẩn xác.",
+    "status": "Pass",
+    "defaultStatus": "Pass",
+    "defaultTester": "BaoDK",
+    "updatedAt": "14:35 18/09"
   },
   {
     "id": "TC_WEB_UC06_031",
     "stt": "31",
-    "tester": "LongNH",
+    "tester": "BaoDK",
     "module": "Danh mục bảng giá",
     "screen": "UC06: 3.2.2.2 Thêm chứng khoán vào danh mục yêu thích",
     "useCaseId": "UC06",
@@ -678,15 +685,16 @@
     "testData": "TK: 088C024014 | MK: 13579@Ab | PIN/OTP: 135790",
     "errorCode": "N/A – không phát sinh thông báo lỗi",
     "smoke": "No",
-    "note": "",
-    "status": "Untested",
-    "defaultStatus": "Untested",
-    "defaultTester": "LongNH"
+    "note": "ĐẠT (PASS) - Đã kiểm thử trên môi trường UAT ngày 18/09/2026. Nhập mã chứng khoán FPT vào ô tìm kiếm, hiển thị danh sách gợi ý nhanh chóng, chính xác (FPT - Công ty Cổ phần FPT - HOSE).",
+    "status": "Pass",
+    "defaultStatus": "Pass",
+    "defaultTester": "BaoDK",
+    "updatedAt": "14:35 18/09"
   },
   {
     "id": "TC_WEB_UC07_032",
     "stt": "32",
-    "tester": "LongNH",
+    "tester": "BaoDK",
     "module": "Danh mục bảng giá",
     "screen": "UC07: 3.2.2.3 Xóa mã chứng khoán khỏi danh mục yêu thích",
     "useCaseId": "UC07",
@@ -700,10 +708,11 @@
     "testData": "TK: 088C024014 | MK: 13579@Ab | PIN/OTP: 135790",
     "errorCode": "N/A – không phát sinh thông báo lỗi",
     "smoke": "No",
-    "note": "",
-    "status": "Untested",
-    "defaultStatus": "Untested",
-    "defaultTester": "LongNH"
+    "note": "ĐẠT (PASS) - Đã kiểm thử trên môi trường UAT ngày 18/09/2026. Thao tác xóa mã chứng khoán khỏi danh mục yêu thích thành công, bảng giá danh mục cập nhật tức thì.",
+    "status": "Pass",
+    "defaultStatus": "Pass",
+    "defaultTester": "BaoDK",
+    "updatedAt": "14:35 18/09"
   },
   {
     "id": "TC_WEB_UC07_033",
@@ -796,7 +805,7 @@
   {
     "id": "TC_WEB_UC08_037",
     "stt": "37",
-    "tester": "LongNH",
+    "tester": "BaoDK",
     "module": "Danh mục bảng giá",
     "screen": "UC08: 3.2.2.4 Chỉnh sửa tên danh mục yêu thích",
     "useCaseId": "UC08",
@@ -810,10 +819,11 @@
     "testData": "TK: 088C024014 | MK: 13579@Ab | PIN/OTP: 135790",
     "errorCode": "N/A – không phát sinh thông báo lỗi",
     "smoke": "No",
-    "note": "",
-    "status": "Untested",
-    "defaultStatus": "Untested",
-    "defaultTester": "LongNH"
+    "note": "ĐẠT (PASS) - Đã kiểm thử trên môi trường UAT ngày 18/09/2026. Biểu tượng Chiếc Bút (Sửa tên danh mục) trong dropdown danh mục hoạt động mượt mà, cho phép người dùng đổi tên danh mục yêu thích.",
+    "status": "Pass",
+    "defaultStatus": "Pass",
+    "defaultTester": "BaoDK",
+    "updatedAt": "14:35 18/09"
   },
   {
     "id": "TC_WEB_UC08_038",
@@ -906,7 +916,7 @@
   {
     "id": "TC_WEB_UC09_042",
     "stt": "42",
-    "tester": "LongNH",
+    "tester": "BaoDK",
     "module": "Danh mục bảng giá",
     "screen": "UC09: 3.2.2.5 Xóa danh mục yêu thích",
     "useCaseId": "UC09",
@@ -920,10 +930,11 @@
     "testData": "TK: 088C024014 | MK: 13579@Ab | PIN/OTP: 135790",
     "errorCode": "N/A – không phát sinh thông báo lỗi",
     "smoke": "No",
-    "note": "",
-    "status": "Untested",
-    "defaultStatus": "Untested",
-    "defaultTester": "LongNH"
+    "note": "ĐẠT (PASS) - Đã kiểm thử trên môi trường UAT ngày 18/09/2026. Click biểu tượng Dấu X xóa danh mục, hệ thống hiển thị toast 'Đã xóa danh sách ưa thích' và danh mục được loại bỏ hoàn toàn.",
+    "status": "Pass",
+    "defaultStatus": "Pass",
+    "defaultTester": "BaoDK",
+    "updatedAt": "14:35 18/09"
   },
   {
     "id": "TC_WEB_UC09_043",
@@ -10169,7 +10180,7 @@
   {
     "id": "TC_WEB_MKT_024",
     "stt": "453",
-    "tester": "LongNH",
+    "tester": "BaoDK",
     "module": "Tìm kiếm & Môi giới",
     "screen": "UC_MKT_09: Tìm kiếm toàn cục",
     "useCaseId": "UC_MKT_09",
@@ -10183,11 +10194,12 @@
     "testData": "Từ khóa: 'HPG', 'Hoa Phat'.",
     "errorCode": "N/A – không phát sinh thông báo lỗi",
     "smoke": "No",
-    "note": "",
-    "status": "Untested",
-    "defaultStatus": "Untested",
-    "defaultTester": "LongNH",
-    "cjStage": "CJ01"
+    "note": "ĐẠT (PASS) - Đã kiểm thử trên môi trường UAT ngày 18/09/2026. Tìm kiếm toàn cục trên bảng giá: Gõ mã chứng khoán hiển thị popup điều hướng nhanh, chính xác.",
+    "status": "Pass",
+    "defaultStatus": "Pass",
+    "defaultTester": "BaoDK",
+    "cjStage": "CJ01",
+    "updatedAt": "14:35 18/09"
   },
   {
     "id": "TC_WEB_MKT_025",
