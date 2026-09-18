@@ -16,7 +16,8 @@ const INITIAL_PLATFORMS: CentralState = {
   web: {},
   core: {},
   tprl: {},
-  ekyc: {}
+  ekyc: {},
+  uiux: {}
 };
 
 export async function OPTIONS() {

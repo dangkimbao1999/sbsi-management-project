@@ -2729,8 +2729,8 @@
               <td style="vertical-align:top; padding:12px 10px; font-size:12px; color:var(--text-secondary);">Samsung S24, Xiaomi 14, Oppo Reno, Pixel 8</td>
               <td style="text-align:right; font-weight:800; font-family:'JetBrains Mono',monospace; vertical-align:top; padding:12px 10px; color:#0284c7;">12 TCs</td>
               <td style="text-align:center; vertical-align:top; padding:12px 10px;">
-                <div style="font-weight:700; color:var(--text-white); font-size:12px;"><span id="dash_prog_pass_vinhtq">0</span> / 12 Pass</div>
-                <div style="font-size:10.5px; color:var(--text-muted); margin-top:2px;">(Tỷ lệ: <span id="dash_prog_pct_vinhtq" style="font-weight:700; color:var(--price-ref);">0.0%</span>)</div>
+                <div style="font-weight:700; color:var(--text-white); font-size:12px;"><span id="dash_prog_pass_vinhtq">11</span> / 12 Pass</div>
+                <div style="font-size:10.5px; color:var(--text-muted); margin-top:2px;">(Tỷ lệ: <span id="dash_prog_pct_vinhtq" style="font-weight:700; color:#10B981;">91.7%</span>)</div>
               </td>
             </tr>
             <tr style="border-bottom:1px solid var(--border-card); background:rgba(16,185,129,0.03);">
@@ -2748,8 +2748,8 @@
               <td style="vertical-align:top; padding:12px 10px; font-size:12px; color:var(--text-secondary);">iPhone 13, 14, 15, 16 Pro Max, iPhone SE 3</td>
               <td style="text-align:right; font-weight:800; font-family:'JetBrains Mono',monospace; vertical-align:top; padding:12px 10px; color:#10b981;">12 TCs</td>
               <td style="text-align:center; vertical-align:top; padding:12px 10px;">
-                <div style="font-weight:700; color:var(--text-white); font-size:12px;"><span id="dash_prog_pass_huypn">0</span> / 12 Pass</div>
-                <div style="font-size:10.5px; color:var(--text-muted); margin-top:2px;">(Tỷ lệ: <span id="dash_prog_pct_huypn" style="font-weight:700; color:var(--price-ref);">0.0%</span>)</div>
+                <div style="font-weight:700; color:var(--text-white); font-size:12px;"><span id="dash_prog_pass_huypn">9</span> / 12 Pass</div>
+                <div style="font-size:10.5px; color:var(--text-muted); margin-top:2px;">(Tỷ lệ: <span id="dash_prog_pct_huypn" style="font-weight:700; color:#10B981;">75.0%</span>)</div>
               </td>
             </tr>
             <tr style="border-bottom:1px solid var(--border-card); background:rgba(245,158,11,0.03);">
@@ -2767,8 +2767,8 @@
               <td style="vertical-align:top; padding:12px 10px; font-size:12px; color:var(--text-secondary);">W3C WCAG 2.1 AA & Multi-monitor</td>
               <td style="text-align:right; font-weight:800; font-family:'JetBrains Mono',monospace; vertical-align:top; padding:12px 10px; color:#f59e0b;">12 TCs</td>
               <td style="text-align:center; vertical-align:top; padding:12px 10px;">
-                <div style="font-weight:700; color:var(--text-white); font-size:12px;"><span id="dash_prog_pass_quocpb">0</span> / 12 Pass</div>
-                <div style="font-size:10.5px; color:var(--text-muted); margin-top:2px;">(Tỷ lệ: <span id="dash_prog_pct_quocpb" style="font-weight:700; color:var(--price-ref);">0.0%</span>)</div>
+                <div style="font-weight:700; color:var(--text-white); font-size:12px;"><span id="dash_prog_pass_quocpb">7</span> / 12 Pass</div>
+                <div style="font-size:10.5px; color:var(--text-muted); margin-top:2px;">(Tỷ lệ: <span id="dash_prog_pct_quocpb" style="font-weight:700; color:#10B981;">58.3%</span>)</div>
               </td>
             </tr>
           </tbody>
@@ -3781,6 +3781,9 @@
             <button class="btn btn-dark" onclick="openModuleIssues('uiux')" title="Theo dõi Issue phân hệ UI/UX">
               🐞 Issue Giao Diện
             </button>
+            <button class="btn btn-dark" style="border-color:rgba(2,132,199,0.5); color:#38BDF8; display:flex; align-items:center; gap:6px;" onclick="syncUiuxFromServer(true)" title="Đồng bộ lại dữ liệu UI/UX từ Database Cloudflare">
+              🔄 Đồng Bộ DB (<span id="uiux_sync_status" style="font-weight:700;">Đã kết nối</span>)
+            </button>
             <button class="btn btn-orange" style="background:linear-gradient(135deg, #0284C7 0%, #38BDF8 100%); border:none;" onclick="exportPoCsv('uiux')">
               📥 Xuất CSV Giao Diện (36 TCs)
             </button>
@@ -3796,27 +3799,27 @@
           </div>
           <div class="po-burndown-tile" style="background:var(--bg-card-sub); border:1px solid var(--border-card); border-radius:10px; padding:12px 14px;">
             <div class="po-tile-label" style="display:flex; justify-content:space-between; font-size:11px; color:var(--text-muted); font-weight:700;"><span>⚪ CHƯA TEST</span> <span>⏳</span></div>
-            <div class="po-tile-num" id="po_uiux_untested" style="font-size:22px; font-weight:900; color:var(--text-muted); margin:4px 0;">36</div>
+            <div class="po-tile-num" id="po_uiux_untested" style="font-size:22px; font-weight:900; color:var(--text-muted); margin:4px 0;">4</div>
             <div class="po-tile-sub" style="font-size:10.5px; color:var(--text-muted);">Cần thực thi</div>
           </div>
           <div class="po-burndown-tile" style="background:var(--bg-card-sub); border:1px solid var(--border-card); border-radius:10px; padding:12px 14px;">
             <div class="po-tile-label" style="display:flex; justify-content:space-between; font-size:11px; color:var(--text-muted); font-weight:700;"><span>✅ NGHIỆM THU ĐẠT</span> <span>🏆</span></div>
-            <div class="po-tile-num" id="po_uiux_pass" style="font-size:22px; font-weight:900; color:var(--green-buy); margin:4px 0;">0</div>
+            <div class="po-tile-num" id="po_uiux_pass" style="font-size:22px; font-weight:900; color:var(--green-buy); margin:4px 0;">27</div>
             <div class="po-tile-sub" style="font-size:10.5px; color:var(--text-muted);">Đạt tiêu chuẩn UX</div>
           </div>
           <div class="po-burndown-tile" style="background:var(--bg-card-sub); border:1px solid var(--border-card); border-radius:10px; padding:12px 14px;">
             <div class="po-tile-label" style="display:flex; justify-content:space-between; font-size:11px; color:var(--text-muted); font-weight:700;"><span>❌ PHÁT HIỆN LỖI</span> <span>🐛</span></div>
-            <div class="po-tile-num" id="po_uiux_fail" style="font-size:22px; font-weight:900; color:var(--red-sell); margin:4px 0;">0</div>
+            <div class="po-tile-num" id="po_uiux_fail" style="font-size:22px; font-weight:900; color:var(--red-sell); margin:4px 0;">4</div>
             <div class="po-tile-sub" style="font-size:10.5px; color:var(--text-muted);">Cần tinh chỉnh giao diện</div>
           </div>
           <div class="po-burndown-tile" style="background:var(--bg-card-sub); border:1px solid var(--border-card); border-radius:10px; padding:12px 14px;">
             <div class="po-tile-label" style="display:flex; justify-content:space-between; font-size:11px; color:var(--text-muted); font-weight:700;"><span>🚫 CHỜ / BLOCKED</span> <span>🔒</span></div>
-            <div class="po-tile-num" id="po_uiux_pending" style="font-size:22px; font-weight:900; color:var(--price-ref); margin:4px 0;">0</div>
+            <div class="po-tile-num" id="po_uiux_pending" style="font-size:22px; font-weight:900; color:var(--price-ref); margin:4px 0;">1</div>
             <div class="po-tile-sub" style="font-size:10.5px; color:var(--text-muted);">Tạm hoãn</div>
           </div>
           <div class="po-burndown-tile" style="background:var(--bg-card-sub); border:1px solid var(--border-card); border-radius:10px; padding:12px 14px;">
             <div class="po-tile-label" style="display:flex; justify-content:space-between; font-size:11px; color:var(--text-muted); font-weight:700;"><span>TỶ LỆ ĐẠT (PASS RATE)</span> <span>📈</span></div>
-            <div class="po-tile-num" id="po_uiux_pct" style="font-size:22px; font-weight:900; color:#0284C7; margin:4px 0;">0.0%</div>
+            <div class="po-tile-num" id="po_uiux_pct" style="font-size:22px; font-weight:900; color:#0284C7; margin:4px 0;">75.0%</div>
             <div class="po-tile-sub" style="font-size:10.5px; color:var(--text-muted);">Mục tiêu: 100%</div>
           </div>
         </div>
@@ -5423,9 +5426,9 @@
         baodk: { id: 'baodk', name: '↳ Bảo Mật, OTP & Tiện Ích (AF-CF/SMS)', pic: '👤 BaoDK', total: 216, pass: 99, fail: 12, todayPass: 3, todayFail: 0 },
         longnh: { id: 'longnh', name: '↳ Bảng Giá & Dữ Liệu Thị Trường', pic: '👤 LongNH', total: 126, pass: 7, fail: 0, todayPass: 0, todayFail: 0 },
         cuongnt: { id: 'cuongnt', name: '↳ Khởi Tạo, eKYC & Tiện Ích App/Web', pic: '👤 CuongNT', total: 339, pass: 0, fail: 0, todayPass: 0, todayFail: 0, ekycPass: 0, ekycFail: 0 },
-        vinhtq: { id: 'vinhtq', name: '↳ UI/UX Design Test (Android App)', pic: '👤 VinhTQ', total: 12, pass: 0, fail: 0, todayPass: 0, todayFail: 0 },
-        huypn: { id: 'huypn', name: '↳ UI/UX Design Test (iOS App)', pic: '👤 HuyPN', total: 12, pass: 0, fail: 0, todayPass: 0, todayFail: 0 },
-        quocpb: { id: 'quocpb', name: '↳ UI/UX Design Test (WebTrading)', pic: '👤 QuocPB', total: 12, pass: 0, fail: 0, todayPass: 0, todayFail: 0 }
+        vinhtq: { id: 'vinhtq', name: '↳ UI/UX Design Test (Android App)', pic: '👤 VinhTQ', total: 12, pass: 11, fail: 1, todayPass: 11, todayFail: 1 },
+        huypn: { id: 'huypn', name: '↳ UI/UX Design Test (iOS App)', pic: '👤 HuyPN', total: 12, pass: 9, fail: 0, todayPass: 9, todayFail: 0 },
+        quocpb: { id: 'quocpb', name: '↳ UI/UX Design Test (WebTrading)', pic: '👤 QuocPB', total: 12, pass: 7, fail: 3, todayPass: 7, todayFail: 3 }
       };
 
       try {
@@ -5545,9 +5548,9 @@
         baodk: { id: 'baodk', name: '↳ Bảo Mật, OTP & Tiện Ích (AF-CF/SMS)', pic: '👤 BaoDK', total: 216, pass: 99, fail: 12, todayPass: 3, todayFail: 0 },
         longnh: { id: 'longnh', name: '↳ Bảng Giá & Dữ Liệu Thị Trường', pic: '👤 LongNH', total: 126, pass: 7, fail: 0, todayPass: 0, todayFail: 0 },
         cuongnt: { id: 'cuongnt', name: '↳ Khởi Tạo, eKYC & Tiện Ích App/Web', pic: '👤 CuongNT', total: 339, pass: 0, fail: 0, todayPass: 0, todayFail: 0, ekycPass: 0, ekycFail: 0 },
-        vinhtq: { id: 'vinhtq', name: '↳ UI/UX Design Test (Android App)', pic: '👤 VinhTQ', total: 12, pass: 0, fail: 0, todayPass: 0, todayFail: 0 },
-        huypn: { id: 'huypn', name: '↳ UI/UX Design Test (iOS App)', pic: '👤 HuyPN', total: 12, pass: 0, fail: 0, todayPass: 0, todayFail: 0 },
-        quocpb: { id: 'quocpb', name: '↳ UI/UX Design Test (WebTrading)', pic: '👤 QuocPB', total: 12, pass: 0, fail: 0, todayPass: 0, todayFail: 0 }
+        vinhtq: { id: 'vinhtq', name: '↳ UI/UX Design Test (Android App)', pic: '👤 VinhTQ', total: 12, pass: 11, fail: 1, todayPass: 11, todayFail: 1 },
+        huypn: { id: 'huypn', name: '↳ UI/UX Design Test (iOS App)', pic: '👤 HuyPN', total: 12, pass: 9, fail: 0, todayPass: 9, todayFail: 0 },
+        quocpb: { id: 'quocpb', name: '↳ UI/UX Design Test (WebTrading)', pic: '👤 QuocPB', total: 12, pass: 7, fail: 3, todayPass: 7, todayFail: 3 }
       };
 
       try {
@@ -5785,6 +5788,52 @@
       } catch(e) {}
     }
 
+        // Dedicated Realtime Cloud DB Sync for UI/UX Multi-Device Testing Lab
+    async function syncUiuxFromServer(manual) {
+      try {
+        const syncStatusEl = document.getElementById('uiux_sync_status');
+        if (syncStatusEl) syncStatusEl.innerText = 'Đang đồng bộ...';
+
+        const resp = await fetch(SBSI_API_BASE + '/api/state?platform=uiux&t=' + Date.now(), {
+          headers: { 'Accept': 'application/json' }
+        });
+        if (!resp.ok) throw new Error('HTTP ' + resp.status);
+        const data = await resp.json();
+        if (data && data.success && data.state && typeof data.state === 'object') {
+          const remoteUiux = data.state;
+          const k1 = 'sbsi_uiux_uat_state';
+          const k2 = 'sbsi_uiux_uat_state_v2';
+          const k3 = 'SBSI_PO_STATE_UIUX';
+          const remoteStr = JSON.stringify(remoteUiux);
+          localStorage.setItem(k1, remoteStr);
+          localStorage.setItem(k2, remoteStr);
+          localStorage.setItem(k3, remoteStr);
+
+          if (typeof updatePoMetrics === 'function') updatePoMetrics('uiux');
+          if (typeof renderPoModule === 'function') renderPoModule('uiux');
+          if (typeof recalculateMetrics === 'function') recalculateMetrics();
+          if (typeof updateTesterProgressMatrix === 'function') updateTesterProgressMatrix();
+          if (typeof updateProjectStatusReport === 'function') updateProjectStatusReport();
+
+          const count = Object.keys(remoteUiux).length;
+          if (syncStatusEl) syncStatusEl.innerText = 'Đã kết nối (' + count + ' TCs)';
+          if (manual && typeof showToast === 'function') {
+            showToast('✅ Đã đồng bộ thành công ' + count + ' kịch bản UI/UX từ Database!');
+          }
+          return remoteUiux;
+        }
+      } catch(err) {
+        console.warn('syncUiuxFromServer error:', err);
+        const syncStatusEl = document.getElementById('uiux_sync_status');
+        if (syncStatusEl) syncStatusEl.innerText = 'Ngoại tuyến';
+        if (manual && typeof showToast === 'function') {
+          showToast('⚠️ Không thể kết nối DB, hiển thị dữ liệu bộ nhớ cục bộ.');
+        }
+      }
+      return null;
+    }
+    window.syncUiuxFromServer = syncUiuxFromServer;
+
     function switchPortalTab(tabId) {
       if (!tabId) tabId = 'dashboard';
       tabId = String(tabId).toLowerCase().trim();
@@ -5833,12 +5882,16 @@
       if (['margin', 'ci', 're', 'rm', 'uiux', 'mobile', 'web'].includes(tabId)) {
         if (typeof renderPoModule === 'function') renderPoModule(tabId);
         if (typeof updatePoMetrics === 'function') updatePoMetrics(tabId);
+        if (tabId === 'uiux' && typeof syncUiuxFromServer === 'function') {
+          syncUiuxFromServer(false);
+        }
       } else if (tabId === 'issues') {
         if (typeof renderPortalIssues === 'function') renderPortalIssues(); if (typeof syncJiraFssIssues === 'function') syncJiraFssIssues(true);
       } else if (tabId === 'dashboard') {
         if (typeof updateAllDashboardMetrics === 'function') updateAllDashboardMetrics();
       } else if (tabId === 'info') {
         if (typeof updateProjectInfoDynamic === 'function') updateProjectInfoDynamic();
+    if (typeof syncUiuxFromServer === "function") syncUiuxFromServer(false);
       } else if (tabId === 'report') {
         if (typeof initProjectStatusReport === 'function') initProjectStatusReport();
       }
@@ -5916,7 +5969,7 @@
         state[item.id] = { status: 'Pass', tester: item.tester || 'PO', note: 'Batch marked Pass by PO', timestamp: new Date().toISOString() };
       });
 
-      savePoState(modKey, state);
+      savePoState(modKey, state, tcId);
       renderPoModule(modKey);
       updatePoMetrics(modKey);
       if (typeof recalculateMetrics === 'function') recalculateMetrics();
@@ -5982,24 +6035,21 @@ Bạn có chắc chắn muốn tiếp tục?`)) {
       uiux: ['SBSI_PO_STATE_UIUX', 'sbsi_uiux_uat_state_v2', 'sbsi_uiux_uat_state']
     };
 
-    // Helper: Safely retrieves and synchronizes state across both _v2 and non-_v2 keys
+    // Helper: Safely retrieves and synchronizes state across all configured keys
     function getPlatformState(p) {
       const keys = PLATFORM_KEYS[p] || ['sbsi_' + p + '_uat_state_v2', 'sbsi_' + p + '_uat_state'];
-      const primaryKey = keys[0];
-      const fallbackKey = keys[1];
-      
-      let statePrimary = {};
-      let stateFallback = {};
-      try {
-        const r1 = localStorage.getItem(primaryKey);
-        if (r1) statePrimary = JSON.parse(r1);
-      } catch(e) {}
-      try {
-        const r2 = localStorage.getItem(fallbackKey);
-        if (r2) stateFallback = JSON.parse(r2);
-      } catch(e) {}
-
-      const merged = { ...stateFallback, ...statePrimary };
+      let merged = {};
+      keys.forEach(k => {
+        try {
+          const val = localStorage.getItem(k);
+          if (val) {
+            const parsed = JSON.parse(val);
+            if (parsed && typeof parsed === 'object') {
+              merged = { ...merged, ...parsed };
+            }
+          }
+        } catch(e) {}
+      });
       if (p === 'ekyc') {
         for (const k in merged) {
           if (!k.startsWith('TC_EKYC_')) delete merged[k];
@@ -6519,6 +6569,7 @@ Bạn có chắc chắn muốn tiếp tục?`)) {
 
         const promises = [
           fetch(SBSI_API_BASE + '/api/state'),
+          fetch(SBSI_API_BASE + '/api/state?platform=uiux&t=' + Date.now()),
           fetch(SBSI_API_BASE + '/api/state?key=sbsi_deleted_tcs&t=' + Date.now())
         ];
         if (needPeriodicAudit) {
@@ -6527,8 +6578,9 @@ Bạn có chắc chắn muốn tiếp tục?`)) {
 
         const results = await Promise.allSettled(promises);
         const stateRes = results[0];
-        const deletedRes = results[1];
-        const auditRes = results[2];
+        const uiuxRes = results[1];
+        const deletedRes = results[2];
+        const auditRes = results[3];
 
         // Đồng bộ danh sách kịch bản bị xóa từ Server DB
         if (deletedRes && deletedRes.status === 'fulfilled' && deletedRes.value.ok) {
@@ -6561,10 +6613,36 @@ Bạn có chắc chắn muốn tiếp tục?`)) {
           } catch(e) {}
         }
 
+        let hasNewData = false;
+
+        // Process dedicated UI/UX state from Cloudflare KV DB
+        if (uiuxRes && uiuxRes.status === 'fulfilled' && uiuxRes.value.ok) {
+          try {
+            const uData = await uiuxRes.value.json();
+            if (uData && uData.success && uData.state) {
+              const remoteUiux = (uData.state && typeof uData.state === 'object') ? uData.state : {};
+              const k1 = 'sbsi_uiux_uat_state';
+              const k2 = 'sbsi_uiux_uat_state_v2';
+              const k3 = 'SBSI_PO_STATE_UIUX';
+              const localStr = localStorage.getItem(k2) || localStorage.getItem(k1) || localStorage.getItem(k3) || '{}';
+              const remoteStr = JSON.stringify(remoteUiux);
+              if (localStr !== remoteStr && Object.keys(remoteUiux).length > 0) {
+                localStorage.setItem(k1, remoteStr);
+                localStorage.setItem(k2, remoteStr);
+                localStorage.setItem(k3, remoteStr);
+                hasNewData = true;
+                const syncStatusEl = document.getElementById('uiux_sync_status');
+                if (syncStatusEl) syncStatusEl.innerText = 'Đã kết nối (' + Object.keys(remoteUiux).length + ' TCs)';
+              }
+            }
+          } catch(e) {
+            console.warn('Error syncing UIUX state from DB:', e);
+          }
+        }
+
         if (stateRes && stateRes.status === 'fulfilled' && stateRes.value.ok) {
           const data = await stateRes.value.json();
           if (data && data.success && data.state) {
-            let hasNewData = false;
             for (const p in data.state) {
               const remotePState = data.state[p] || {};
               const k1 = 'sbsi_' + p + '_uat_state';
@@ -6574,6 +6652,7 @@ Bạn có chắc chắn muốn tiếp tục?`)) {
               if (localStr !== remoteStr) {
                 localStorage.setItem(k1, remoteStr);
                 localStorage.setItem(k2, remoteStr);
+                if (p === 'uiux') localStorage.setItem('SBSI_PO_STATE_UIUX', remoteStr);
                 hasNewData = true;
               }
             }
@@ -7544,6 +7623,7 @@ Bạn có chắc chắn muốn tiếp tục?`)) {
 
     function initPortalCore() {
       updateProjectInfoDynamic();
+    if (typeof syncUiuxFromServer === "function") syncUiuxFromServer(false);
       initProjectStatusReport();
       initPortalTheme();
       setupShareUrl();
@@ -7662,8 +7742,18 @@ Bạn có chắc chắn muốn tiếp tục?`)) {
           const fb = localStorage.getItem('sbsi_web_uat_state_v2');
           if (fb) return JSON.parse(fb);
         }
-        const saved = localStorage.getItem('sbsi_' + modKey + '_uat_state_v2') || localStorage.getItem('sbsi_' + modKey + '_uat_state') || localStorage.getItem('SBSI_PO_STATE_' + modKey.toUpperCase());
-        if (saved) return JSON.parse(saved);
+        const pKeys = PLATFORM_KEYS[modKey] || ['sbsi_' + modKey + '_uat_state_v2', 'sbsi_' + modKey + '_uat_state', 'SBSI_PO_STATE_' + modKey.toUpperCase()];
+        let mergedState = {};
+        pKeys.forEach(k => {
+          try {
+            const v = localStorage.getItem(k);
+            if (v) {
+              const p = JSON.parse(v);
+              if (p && typeof p === 'object') mergedState = { ...mergedState, ...p };
+            }
+          } catch(e) {}
+        });
+        if (Object.keys(mergedState).length > 0) return mergedState;
       } catch(e) {}
       return {};
     }
@@ -7673,6 +7763,13 @@ Bạn có chắc chắn muốn tiếp tục?`)) {
       keys.forEach(k => {
         try { localStorage.setItem(k, JSON.stringify(state)); } catch(e) {}
       });
+      if (modKey === 'uiux') {
+        try {
+          localStorage.setItem('sbsi_uiux_uat_state_v2', JSON.stringify(state));
+          localStorage.setItem('sbsi_uiux_uat_state', JSON.stringify(state));
+          localStorage.setItem('SBSI_PO_STATE_UIUX', JSON.stringify(state));
+        } catch(e) {}
+      }
       updatePoMetrics(modKey);
       if (typeof recalculateMetrics === 'function') recalculateMetrics();
       if (typeof updateProjectStatusReport === 'function') updateProjectStatusReport();
@@ -7687,19 +7784,25 @@ Bạn có chắc chắn muốn tiếp tục?`)) {
       // Push state to Cloudflare KV Database
       try {
         if (typeof navigator !== 'undefined' && navigator.onLine !== false && typeof fetch !== 'undefined') {
-          const payload = tcId && state[tcId] ? {
-            id: tcId,
-            status: typeof state[tcId] === 'object' ? state[tcId].status : state[tcId],
-            tester: typeof state[tcId] === 'object' ? state[tcId].tester : 'User',
-            time: typeof state[tcId] === 'object' ? state[tcId].time : new Date().toLocaleTimeString('vi-VN')
-          } : {
+          const tcData = (tcId && state[tcId]) ? (typeof state[tcId] === 'object' ? state[tcId] : { status: state[tcId] }) : null;
+          const payload = {
             platform: modKey,
-            state: state
+            state: state,
+            ...(tcId && tcData ? {
+              id: tcId,
+              status: tcData.status,
+              tester: tcData.tester || 'User',
+              time: tcData.time || new Date().toLocaleTimeString('vi-VN'),
+              [tcId]: tcData
+            } : {})
           };
           fetch(SBSI_API_BASE + '/api/state?platform=' + encodeURIComponent(modKey), {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(payload)
+          }).then(() => {
+            const syncStatusEl = document.getElementById(modKey + '_sync_status');
+            if (syncStatusEl) syncStatusEl.innerText = 'Đã lưu DB';
           }).catch(err => console.warn('Cloud sync push error for ' + modKey, err));
         }
       } catch(e) {}
@@ -8179,7 +8282,7 @@ Bạn có chắc chắn muốn tiếp tục?`)) {
         tester: assignedTester,
         time: timeStr
       };
-      savePoState(modKey, state);
+      savePoState(modKey, state, tcId);
       renderPoModule(modKey);
       if (typeof updateTesterProgressMatrix === 'function') updateTesterProgressMatrix();
       if (typeof recalculateMetrics === 'function') recalculateMetrics();
