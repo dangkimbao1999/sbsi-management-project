@@ -627,7 +627,7 @@
   {
     "id": "TC_WEB_UC06_029",
     "stt": "29",
-    "tester": "LongNH",
+    "tester": "BaoDK",
     "module": "Danh mục bảng giá",
     "screen": "UC06: 3.2.2.2 Thêm chứng khoán vào danh mục yêu thích",
     "useCaseId": "UC06",
@@ -641,10 +641,11 @@
     "testData": "TK: 088C024014 | MK: 13579@Ab | PIN/OTP: 135790",
     "errorCode": "N/A – không phát sinh thông báo lỗi",
     "smoke": "No",
-    "note": "",
-    "status": "Untested",
-    "defaultStatus": "Untested",
-    "defaultTester": "LongNH"
+    "note": "ĐẠT (PASS) - Kiểm thử ngày 18/09/2026 trên UAT bằng TK 088C096969. Chọn danh mục yêu thích, nhập mã không tồn tại 'XXXX1' vào ô tìm kiếm: Hệ thống không hiển thị gợi ý mã CK nào, nhấn Enter hệ thống chặn và không cho thêm mã không hợp lệ vào danh mục bảng giá.",
+    "status": "Pass",
+    "defaultStatus": "Pass",
+    "defaultTester": "BaoDK",
+    "updatedAt": "16:35 18/09"
   },
   {
     "id": "TC_WEB_UC06_030",
