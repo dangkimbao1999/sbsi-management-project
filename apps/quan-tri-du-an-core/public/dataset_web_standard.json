@@ -719,7 +719,7 @@
   {
     "id": "TC_WEB_UC07_033",
     "stt": "33",
-    "tester": "LongNH",
+    "tester": "BaoDK",
     "module": "Danh mục bảng giá",
     "screen": "UC07: 3.2.2.3 Xóa mã chứng khoán khỏi danh mục yêu thích",
     "useCaseId": "UC07",
@@ -733,10 +733,11 @@
     "testData": "TK: 088C024014 | MK: 13579@Ab | PIN/OTP: 135790",
     "errorCode": "N/A – không phát sinh thông báo lỗi",
     "smoke": "No",
-    "note": "",
-    "status": "Untested",
-    "defaultStatus": "Untested",
-    "defaultTester": "LongNH"
+    "note": "ĐẠT (PASS) - Kiểm thử ngày 18/09/2026 trên UAT bằng TK 088C096969. Chọn danh mục yêu thích chỉ có duy nhất 1 mã SSI, click nút xóa (remove-symbol-btn) trên dòng mã CK: Mã SSI được xóa thành công, bảng giá danh mục trở về trạng thái rỗng, danh mục 'sssss' vẫn tồn tại nguyên vẹn trong danh sách dropdown.",
+    "status": "Pass",
+    "defaultStatus": "Pass",
+    "defaultTester": "BaoDK",
+    "updatedAt": "17:05 18/09"
   },
   {
     "id": "TC_WEB_UC07_034",
