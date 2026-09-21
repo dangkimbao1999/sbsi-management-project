@@ -46,3 +46,7 @@ This app is a fork of a previous standalone repo (`quan-tri-du-an-core`): a set 
 ## Security notes specific to this repo
 
 The original repo had a hardcoded Jira Basic Auth password committed to git history (now rotated to env-var-only: `JIRA_USER`/`JIRA_PASS`, no fallback, in both the `jira-sync` route and `sync_jira_fss.py`). If you ever see a hardcoded credential fallback reappear in either of those files, that's a regression — remove it.
+
+## Nghiệp vụ & Dataset UAT Web Trading
+- **YC_289 (Jira SBSI-114 / Sửa thông báo lỗi màn Đặt lệnh)**: Bộ kịch bản gồm STT 375 - 380 cùng kịch bản đa ngôn ngữ tiếng Anh `TC_WEB_[BỔ SUNG] YC_380_EN` (STT 380b, hiển thị *"The price is out of range"*) đã hoàn tất nghiệm thu `Pass` với tester phụ trách `NgaMTQ`, được duy trì đồng bộ trên cả dataset mã nguồn và Cloudflare KV (`sbsi_web_uat_state_v2`).
+

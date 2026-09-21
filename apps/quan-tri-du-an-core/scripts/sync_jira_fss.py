@@ -153,11 +153,11 @@ def sync_jira():
 
     folders = [
         root_dir,
-        os.path.join(root_dir, "CLOUDFLARE_PAGES_DEPLOY"),
-        os.path.join(root_dir, "miso"),
-        os.path.join(root_dir, "quan-tri-du-an-core"),
-        os.path.join(root_dir, "sbsi-management-project-main", "sbsi-management-project-main", "apps", "quan-tri-du-an-core", "public"),
-        os.path.join(root_dir, "sbsi-management-project-main", "sbsi-management-project-main", "apps", "quan-tri-du-an-core", "src", "data")
+        os.path.join(root_dir, "11_Deploy_Web", "CLOUDFLARE_PAGES_DEPLOY"),
+        os.path.join(root_dir, "07_Maris_Product", "miso"),
+        os.path.join(root_dir, "08_SBSI_Project_Mgmt", "quan-tri-du-an-core"),
+        os.path.join(root_dir, "08_SBSI_Project_Mgmt", "sbsi-management-project-main", "sbsi-management-project-main", "apps", "quan-tri-du-an-core", "public"),
+        os.path.join(root_dir, "08_SBSI_Project_Mgmt", "sbsi-management-project-main", "sbsi-management-project-main", "apps", "quan-tri-du-an-core", "src", "data")
     ]
 
     js_content = 'window.__SBSI_JIRA_DATA__ = ' + json.dumps(payload, ensure_ascii=False, indent=2) + ';\n'
@@ -200,13 +200,15 @@ def sync_jira():
             content = sf.read()
         with open(os.path.join(root_dir, "sync_jira_fss.py"), 'w', encoding='utf-8') as df:
             df.write(content)
-        with open(os.path.join(root_dir, "CLOUDFLARE_PAGES_DEPLOY", "sync_jira_fss.py"), 'w', encoding='utf-8') as df:
+        with open(os.path.join(root_dir, "11_Deploy_Web", "CLOUDFLARE_PAGES_DEPLOY", "sync_jira_fss.py"), 'w', encoding='utf-8') as df:
             df.write(content)
-        with open(os.path.join(root_dir, "miso", "sync_jira_fss.py"), 'w', encoding='utf-8') as df:
+        with open(os.path.join(root_dir, "07_Maris_Product", "miso", "sync_jira_fss.py"), 'w', encoding='utf-8') as df:
             df.write(content)
-        with open(os.path.join(root_dir, "quan-tri-du-an-core", "sync_jira_fss.py"), 'w', encoding='utf-8') as df:
+        with open(os.path.join(root_dir, "08_SBSI_Project_Mgmt", "quan-tri-du-an-core", "sync_jira_fss.py"), 'w', encoding='utf-8') as df:
             df.write(content)
-        with open(os.path.join(root_dir, "sbsi-management-project-main", "sbsi-management-project-main", "apps", "quan-tri-du-an-core", "scripts", "sync_jira_fss.py"), 'w', encoding='utf-8') as df:
+        with open(os.path.join(root_dir, "08_SBSI_Project_Mgmt", "sync_jira_fss.py"), 'w', encoding='utf-8') as df:
+            df.write(content)
+        with open(os.path.join(root_dir, "08_SBSI_Project_Mgmt", "sbsi-management-project-main", "sbsi-management-project-main", "apps", "quan-tri-du-an-core", "scripts", "sync_jira_fss.py"), 'w', encoding='utf-8') as df:
             df.write(content)
         print("Đã cập nhật file script sync_jira_fss.py tại các thư mục dự án.")
     except Exception as e:
