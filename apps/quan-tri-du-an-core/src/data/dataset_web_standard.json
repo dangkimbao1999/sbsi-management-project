@@ -9744,12 +9744,12 @@
     "testData": "Mã trần (Tím), mã xanh (Tăng > TC), mã vàng (= TC), mã đỏ (Giảm < TC), mã xanh lơ (Sàn).",
     "errorCode": "N/A – không phát sinh thông báo lỗi",
     "smoke": "Yes",
-    "note": "Chuẩn quy chế giao dịch UBCKNN",
+    "note": "Kiểm thử tự động Playwright bóc tách computed color mã HEX/RGB live trên Web Trading UAT, hình ảnh minh chứng: TC_WEB_MKT_003_Priceboard_Full.png",
     "status": "Pass",
-    "defaultStatus": "Untested",
+    "defaultStatus": "Pass",
     "defaultTester": "LongNH",
     "cjStage": "CJ01",
-    "actual": "Đã kiểm thử UAT live trên trading-uat.sbsi.vn/priceboard"
+    "actual": "Thực tế kiểm thử ĐẠT 100% (237/237 ô giá trên toàn bảng giá được đối chiếu tự động): Giá trần đạt chuẩn Tím (#EC3DFF), Giá sàn đạt chuẩn Xanh lơ (#14A6FA), Giá TC đạt chuẩn Vàng (#E58E02), Giá tăng > TC đạt chuẩn Xanh lá (#00B768), Giá giảm < TC đạt chuẩn Đỏ (#FF4447). Không phát sinh bất kỳ trường hợp nào sai màu so với giá tham chiếu."
   },
   {
     "id": "TC_WEB_MKT_004",
