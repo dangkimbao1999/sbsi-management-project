@@ -9862,11 +9862,12 @@
     "testData": "Các cột: NN Mua, NN Bán, NN Room, Giá Cao/Thấp/TB.",
     "errorCode": "N/A – không phát sinh thông báo lỗi",
     "smoke": "No",
-    "note": "",
-    "status": "Untested",
-    "defaultStatus": "Untested",
+    "note": "LỖI THIẾU TÍNH NĂNG (Feature Not Implemented): Thiếu nút và popup Column Chooser để tùy chỉnh ẩn/hiện cột bảng giá và lưu vào localStorage.",
+    "status": "Fail",
+    "defaultStatus": "Fail",
     "defaultTester": "LongNH",
-    "cjStage": "CJ01"
+    "cjStage": "CJ01",
+    "actual": "Thực tế kiểm thử: KHÔNG ĐẠT. Trên thanh công cụ Bảng giá trực tuyến UAT hoàn toàn không có biểu tượng Bánh răng (⚙️) hoặc nút Column Chooser để mở modal/popup tùy chọn ẩn/hiện cột (như 'NN Room', 'Giá TB'). Cấu hình AG-Grid trong mã nguồn PriceBoard-YvGJ0yE0.js sử dụng bộ cột cố định và chặn menu cột (suppressContextMenu, suppressMenuHide). Người dùng không thể tùy chỉnh ẩn/hiện cột."
   },
   {
     "id": "TC_WEB_MKT_009",
@@ -9885,11 +9886,12 @@
     "testData": "Sắp xếp tăng dần / giảm dần.",
     "errorCode": "N/A – không phát sinh thông báo lỗi",
     "smoke": "No",
-    "note": "",
-    "status": "Untested",
-    "defaultStatus": "Untested",
+    "note": "Kiểm thử tự động Playwright live trên Web Trading UAT, hình ảnh minh chứng: TC_WEB_MKT_009_Step1_Sort_Percent_Desc.png, TC_WEB_MKT_009_Step2_Sort_Percent_Asc.png, TC_WEB_MKT_009_Step3b_Sort_TotalVol_Desc.png",
+    "status": "Pass",
+    "defaultStatus": "Pass",
     "defaultTester": "LongNH",
-    "cjStage": "CJ01"
+    "cjStage": "CJ01",
+    "actual": "Thực tế kiểm thử ĐẠT 100%: Nhấp tiêu đề cột '%' lần 1 sắp xếp tăng dần (↑, SSB -6.85% lên đầu); nhấp lần 2 sắp xếp giảm dần (↓, VJC Trần, BSR +4.47%, VPB +3.64% lên đầu). Nhấp cột 'Tổng KL' sắp xếp chính xác theo thanh khoản (↓, SHB 47.347K CP, SSI 33.510K CP lên đầu). Icon mũi tên điều hướng hiển thị đúng chiều tăng/giảm."
   },
   {
     "id": "TC_WEB_MKT_010",
