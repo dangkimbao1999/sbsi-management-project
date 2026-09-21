@@ -1,6 +1,6 @@
 {
-  "syncedAt": "2026-09-21 15:53:20",
-  "total": 233,
+  "syncedAt": "2026-09-21 23:10:15",
+  "total": 240,
   "allowedUsers": [
     "anhll.sbsi",
     "anntt.sbsi",
@@ -30,14 +30,154 @@
   ],
   "issues": [
     {
-      "id": "SBSIEXT-240",
+      "id": "SBSIEXT-247",
+      "platform": "web",
+      "title": "[Web Trading][Bảng giá] Biểu đồ HNX-INDEX bị lỗi render khối chữ nhật xám đặc che khuất đồ thị ở đầu phiên Khớp lệnh liên tục",
+      "type": "External Bug",
+      "priority": "High",
+      "status": "Open",
+      "assignee": "Mai Cao Thi(KT-CK-HN)",
+      "assigneeUser": "mai.cao",
+      "reporter": "Bách Nguyen Tung(SBSI)",
+      "reporterUser": "bachnt.sbsi",
+      "reporterNick": "BachNT",
+      "ba": "",
+      "desc": "Kính gửi chị Mai Cao và đội ngũ FSS,\n\nPhía SBSI kiểm thử nghiệm thu tính năng Bảng giá Web Trading trên môi trường UAT (https://trading-uat.sbsi.vn/priceboard) và phát hiện lỗi giao diện hiển thị biểu đồ mini Index của sàn HNX vào thời điểm đầu phiên sáng:\n\n1. THÔNG TIN CHUNG:\n- Môi trường: Web Trading UAT (https://trading-uat.sbsi.vn/priceboard)\n- Phân hệ: Bảng giá / Biểu đồ mini chỉ số thị trường (Mini Chart Index)\n- Thời điểm phát sinh lỗi: Đầu phiên sáng từ 09:00:00 (Thời điểm sàn HNX bắt đầu phiên Khớp lệnh liên tục, ghi nhận lúc 09:00:47).\n\n2. MÔ TẢ LỖI (DEFECT DESCRIPTION):\n- Tại thời điểm 09:00:47, trên biểu đồ mini HNX-INDEX xuất hiện một khối hộp chữ nhật đặc màu xám đục to bất thường kéo dài từ đỉnh điểm số xuống đáy đồ thị.\n- Khối chữ nhật xám này che khuất toàn bộ không gian vùng đầu phiên, đè lên và che mất đường tham chiếu màu vàng (Reference line).\n- Trong khi đó, hai biểu đồ bên cạnh là VN-INDEX và VN30 (sàn HOSE - đang trong phiên ATO) chỉ hiển thị 1 điểm chấm tròn màu xanh (Dot) đại diện giá mở cửa dự kiến rất rõ ràng và chuẩn xác.\n\n3. NGUYÊN NHÂN DỰ ĐOÁN (ROOT CAUSE ANALYSIS):\n- Sàn HNX không có phiên ATO mà vào thẳng Khớp lệnh liên tục từ 09:00:00, tại 09:00:47 đã có khớp lệnh thật (612,257 CP - 3.5 Tỷ VND).\n- Thư viện vẽ biểu đồ có thể đang bị lỗi scale trục Y của Cột khối lượng (Volume bar) đầu tiên (bị scale 100% max-height hoặc gán nhầm sang trục Y của Điểm số), HOẶC bị lỗi tính toán tọa độ SVG Area Fill (đổ bóng dưới đường giá khi chỉ mới có 1-2 data points đầu ngày khiến path d=\"... Z\" bị nối thành khối đặc).\n\n4. CÁC BƯỚC TÁI HIỆN (STEPS TO REPRODUCE):\n- Bước 1: Đăng nhập Web Trading UAT tại https://trading-uat.sbsi.vn/priceboard vào đầu phiên sáng (09:00:00 - 09:05:00).\n- Bước 2: Quan sát khu vực Biểu đồ chỉ số (Index Mini Charts) ở đầu trang (VNINDEX, VN30, HNXINDEX).\n- Bước 3: Quan sát biểu đồ HNX-INDEX ngay khi sàn HNX phát sinh lệnh khớp đầu tiên.\n\n5. KẾT QUẢ THỰC TẾ (ACTUAL RESULT):\n- Biểu đồ HNX-INDEX bị che bởi một khối hình chữ nhật màu xám đặc to chiếm trọn chiều cao, che lấp đường tham chiếu vàng.\n\n6. KẾT QUẢ KỲ VỌNG (EXPECTED RESULT):\n- Biểu đồ HNX-INDEX hiển thị đường line mượt mà thể hiện biến động điểm số thời gian thực.\n- Nếu có hiển thị cột Volume, cột Volume chỉ được chiếm tối đa 20-25% chiều cao ở đáy biểu đồ, có trục tỷ lệ riêng biệt và không che khuất đường chỉ số/đường tham chiếu.\n\n7. BẰNG CHỨNG ĐÍNH KÈM:\n- Ảnh chụp màn hình UAT thực tế lúc 09:00:47 (đính kèm trong issue).\n",
+      "relatedTc": "",
+      "jiraUrl": "https://projects.fss.com.vn/browse/SBSIEXT-247",
+      "createdAt": "2026-09-21 23:09",
+      "updatedAt": "2026-09-21 23:09",
+      "source": "JIRA_FSS"
+    },
+    {
+      "id": "SBSIEXT-246",
       "platform": "mobile",
-      "title": "[Mobile App][Bảng giá] Cột Mã CK bị cắt cụt/ẩn phần đuôi ký tự đối với Chứng quyền (CW), ETF và Trái phiếu",
+      "title": "[Web & Mobile][Priceboard] Bất nhất danh mục bộ chỉ số giữa Web và App; các chỉ số ngành trên Web bị trắng trang không có dữ liệu",
+      "type": "External Bug",
+      "priority": "High",
+      "status": "Open",
+      "assignee": "Mai Cao Thi(KT-CK-HN)",
+      "assigneeUser": "mai.cao",
+      "reporter": "Bách Nguyen Tung(SBSI)",
+      "reporterUser": "bachnt.sbsi",
+      "reporterNick": "BachNT",
+      "ba": "",
+      "desc": "Kính gửi chị Mai Cao và đội ngũ FSS,\n\nPhía SBSI kiểm thử nghiệm thu tính năng Bảng giá trên môi trường UAT và phát hiện sự bất nhất nghiêm trọng về cấu trúc danh mục và dữ liệu chỉ số thị trường giữa 2 kênh Web Trading và Mobile App:\n\n1. Vấn đề trên kênh Web Trading (https://trading-uat.sbsi.vn/priceboard):\n- Menu bộ lọc Chỉ số đang hiển thị 12 chỉ số (gồm 6 chỉ số quy mô và 6 chỉ số ngành: VNREAL, VNIND, VNIT, VNUTI, VNCONS, VNENE).\n- Khi chọn bất kỳ chỉ số ngành nào (ví dụ VNREAL - Bất động sản), bảng giá hoàn toàn trống trơn (0 mã cổ phiếu), hiển thị màn hình đen, không có dữ liệu khớp lệnh và cũng không có thông báo Empty State.\n- Web đang thiếu hoàn toàn các chỉ số quan trọng mà trên App đã có: HNXMSCap, HNXFin, HNXMan, VNSI, VNX50, VNFINLEAD, VNFINSELECT.\n\n2. Vấn đề trên kênh Mobile App (SBSI Trading):\n- Menu \"Chỉ số\" hiển thị 18 chỉ số thị trường (có đủ chỉ số sàn HNX và chỉ số đầu tư).\n- Mobile không đưa các chỉ số ngành (VNREAL, VNIND...) vào menu này mà tách riêng thành tab \"CP ngành\" ở thanh công cụ ngoài.\n\n* Tác động: Gây đứt gãy trải nghiệm khi khách hàng chuyển đổi giữa Web và App. Màn hình đen trơn không dữ liệu trên Web khiến khách hàng đánh giá hệ thống hoạt động không ổn định hoặc bị treo máy.\n\n--- MA TRẬN BẤT NHẤT HIỆN TẠI (AS-IS) ---\n* Tổng số chỉ số trong Menu: Web có 12 chỉ số | App có 18 chỉ số -> Lệch số lượng\n* Chỉ số sàn HNX (HNXMSCap, HNXFin, HNXMan): Web không có | App có đầy đủ -> Web bị thiếu\n* Chỉ số chuyên biệt (VNSI, VNX50, VNFINLEAD, VNFINSELECT): Web không có | App có đầy đủ -> Web bị thiếu\n* Chỉ số ngành HOSE (VNREAL, VNIND, VNIT, VNUTI, VNCONS, VNENE): Web có nhưng trống trơn 0 mã | App không nằm trong menu Chỉ số -> Lỗi dữ liệu Web\n* Menu Cổ phiếu Ngành kinh tế: Web nằm lẫn trong Dropdown Chỉ số | App tách thành Tab riêng \"CP ngành\" -> Lệch luồng UX\n\n--- CÁC BƯỚC TÁI HIỆN (STEPS TO REPRODUCE) ---\n1. Kiểm tra trên Web:\n- Truy cập https://trading-uat.sbsi.vn/priceboard.\n- Bấm vào menu chọn Chỉ số (cạnh tab HOSE).\n- Chọn VNREAL (hoặc VNIND, VNIT, VNUTI, VNCONS, VNENE).\n- Kết quả thực tế: Màn hình bảng giá đen ngòm, không tải lên bất kỳ mã nào, không có thông báo.\n\n2. Kiểm tra trên Mobile:\n- Mở ứng dụng SBSI Mobile -> Chọn Bảng giá -> Bấm mở menu Chỉ số.\n- Kết quả thực tế: Danh mục hiển thị 18 chỉ số, khác biệt hoàn toàn với Web.\n\n--- YÊU CẦU XỬ LÝ & TIÊU CHÍ NGHIỆM THU (ACCEPTANCE CRITERIA) ---\n1. Đồng bộ chuẩn hóa Danh mục Chỉ số (Index Taxonomy):\n- FSS thống nhất và chuẩn hóa danh mục bộ chỉ số dùng chung cho cả Web và Mobile. Danh sách chỉ số hiển thị trên Web và App phải tương đồng về số lượng, tên gọi và thứ tự phân loại.\n- Bổ sung các chỉ số sàn HNX (HNXMSCap, HNXFin, HNXMan) và chỉ số đầu tư (VNX50, VNSI, VNFINLEAD, VNFINSELECT) lên Web để đồng nhất với Mobile.\n\n2. Thống nhất phương án hiển thị Cổ phiếu Ngành:\n- Thống nhất đưa việc tra cứu Cổ phiếu theo Ngành về tab \"Ngành / CP ngành\" riêng biệt như luồng hiện tại trên Mobile (đang hoạt động tốt với đầy đủ dữ liệu theo nhóm ngành kinh tế: Bất động sản, Ngân hàng, Thép, Bán lẻ...). Không để lẫn lộn các rổ ngành không có mã vào menu chỉ số thị trường.\n\n3. Cam kết dữ liệu sẵn sàng (Data Readiness):\n- Tất cả các rổ chỉ số xuất hiện trên giao diện bắt buộc phải có đầy đủ dữ liệu mã thành phần, giá và bước giá realtime khi người dùng click chọn. Không chấp nhận tình trạng rổ chỉ số trả về 0 dòng.\n\n4. Bổ sung UI Trạng thái Rỗng (Empty State):\n- Phía Web Trading cần bổ sung ngay component Empty State: Trong trường hợp một rổ danh mục chưa có dữ liệu, phải hiển thị icon kèm thông báo rõ ràng: \"Danh mục đang được cập nhật, vui lòng quay lại sau\", tuyệt đối không để màn hình đen trơn.",
+      "relatedTc": "",
+      "jiraUrl": "https://projects.fss.com.vn/browse/SBSIEXT-246",
+      "createdAt": "2026-09-21 22:59",
+      "updatedAt": "2026-09-21 22:59",
+      "source": "JIRA_FSS"
+    },
+    {
+      "id": "SBSIEXT-245",
+      "platform": "ekyc",
+      "title": "[Onboarding][BO] [MH VCF0504] Sửa lại rule hiển thị bản ghi đã thực hiện giao dịchDuyệt/Xóa",
+      "type": "Requirement",
+      "priority": "High",
+      "status": "Open",
+      "assignee": "Mai Cao Thi(KT-CK-HN)",
+      "assigneeUser": "mai.cao",
+      "reporter": "An Nguyen Thi Thanh(SBSI)",
+      "reporterUser": "anntt.sbsi",
+      "reporterNick": "AnNTT",
+      "ba": "",
+      "desc": "*Mô tả:* \r\n\r\n*Trong tài liệu yêu cầu đã thống nhất với FSS:*\r\n\r\n- Đối với giao dịch Xóa, xử lý như sau:\r\n * Không sinh tài khoản KH\r\n * Cập nhật trạng thái của yêu cầu thành Từ chối\r\n * Gửi email thông báo tới KH\r\n\r\n- Đối với giao dịch Duyệt, xử lý như sau:\r\n * Mở tài khoản cho KH thành công, trạng thái tài khoản là Hoạt động\r\n * Cập nhật trạng thái của yêu cầu thành Duyệt\r\n\r\n*Bản FSS bàn giao đang xử lý:* \r\n * Chỉ hiển thị đúng 1 dòng (yêu cầu chưa xử lý) với cột \"Trạng thái\" = \"Chờ duyệt\"\r\n * Yêu cầu đã Thực hiện duyệt và đã Xóa (từ chối) KHÔNG hiển thị dòng nào\r\n\r\n=> Nghiệp vụ sẽ không theo dõi/quản lý được thông tin giao dịch rơi vào case \r\n\r\nChờ duyệt để hướng dẫn KH\r\n\r\n*Yêu cầu:* \r\n\r\nKhi duyệt/xóa giao dịch ở màn hình này, bản ghi vẫn hiển thị nhưng ở trạng thái Duyệt/Từ chối ",
+      "relatedTc": "",
+      "jiraUrl": "https://projects.fss.com.vn/browse/SBSIEXT-245",
+      "createdAt": "2026-09-21 17:56",
+      "updatedAt": "2026-09-21 17:56",
+      "source": "JIRA_FSS"
+    },
+    {
+      "id": "SBSIEXT-244",
+      "platform": "ekyc",
+      "title": "[Onboarding][BO] [Màn hình CF0504] Bổ sung cột Diễn giải ",
+      "type": "Requirement",
+      "priority": "High",
+      "status": "Open",
+      "assignee": "Mai Cao Thi(KT-CK-HN)",
+      "assigneeUser": "mai.cao",
+      "reporter": "An Nguyen Thi Thanh(SBSI)",
+      "reporterUser": "anntt.sbsi",
+      "reporterNick": "AnNTT",
+      "ba": "",
+      "desc": "{*}Yêu cầu{*}: Bổ sung cột Diễn giải vào màn hình VCF0504 - Danh sách Kh mở eKYC cần phê duyệt\r\n * Bản ghi ở trạng thái Chờ duyệt: Trường Diễn giải không có thông tin\r\n * Bản ghi ở trạng thái Duyệt/Xóa: Trường Diễn giải lấy theo nội dung đã nhập ở màn hình Thông tin trên giao dịch Duyệt/Xóa",
+      "relatedTc": "",
+      "jiraUrl": "https://projects.fss.com.vn/browse/SBSIEXT-244",
+      "createdAt": "2026-09-21 17:38",
+      "updatedAt": "2026-09-21 17:38",
+      "source": "JIRA_FSS"
+    },
+    {
+      "id": "SBSIEXT-243",
+      "platform": "ekyc",
+      "title": "[Onboarding][BO] Sửa rule tham số EKYC_AUTOREMISERID",
+      "type": "Requirement",
+      "priority": "High",
+      "status": "Open",
+      "assignee": "Mai Cao Thi(KT-CK-HN)",
+      "assigneeUser": "mai.cao",
+      "reporter": "An Nguyen Thi Thanh(SBSI)",
+      "reporterUser": "anntt.sbsi",
+      "reporterNick": "AnNTT",
+      "ba": "",
+      "desc": "*Mô tả:*\r\n\r\n- Do yêu cầu sinh CTV id dựa vào số tài khoản lưu ký của CTV (danh sách Gap) => Muốn tạo CTV id thì bắt buộc phải mở tk chứng khoán (Có thông tin ở bảng CFmast)\r\n\r\n- Yêu cầu đối với mở tk ekyc không nhập mã CTV là hệ thống sẽ mặc định gán CTV ID của DVKH\r\n\r\n=> Issue phát sinh đối với KH mở tk ekyc không nhập mã CTV là phải mở tk chứng khoán của 1 người nào đó để tạo mã CTV cho DVKH để gán vào KH không có môi giới => không khả thi\r\n\r\n \r\n\r\n*Mong muốn:*\r\n * Ở phase 2 sẽ tạo 1 tham số riêng cho mã môi giới của DVKH\r\n * Phương án trước mắt ở phase 1 sẽ là gán giá trị CTV id = null cho KH không nhập mã giới thiệu\r\n\r\n*Yêu cầu:* \r\n\r\nDo tham số EKYC_AUTOREMISERID để gán mã CTV mặc định cho KH mở tk ekyc đang bắt buộc nhập => Đề nghị FSS sửa tính năng như sau:\r\n * Tạo droplist ở trường *Giá trị tham số* với 2 option là Nhập mã CTV và Null\r\n * Nếu user chọn Nhập mã CTV => giữ nguyên rule hiện tại\r\n * Nếu user chọn Null => gán giá trị Null vào trường CTV id ở thông tin KH, tên môi giới = DVKH\r\n\r\n!image-2026-09-21-17-04-15-672.png!",
+      "relatedTc": "",
+      "jiraUrl": "https://projects.fss.com.vn/browse/SBSIEXT-243",
+      "createdAt": "2026-09-21 17:08",
+      "updatedAt": "2026-09-21 17:08",
+      "source": "JIRA_FSS"
+    },
+    {
+      "id": "SBSIEXT-242",
+      "platform": "general",
+      "title": "Format trường số tiển chi hộ từng lần trên màn hình 031003",
+      "type": "Requirement",
+      "priority": "Medium",
+      "status": "Reviewed",
+      "assignee": "Thao Tran Thi Phuong(LTV-CK-HN)",
+      "assigneeUser": "thao.tranphuong",
+      "reporter": "Phuong Nguyen Ngoc",
+      "reporterUser": "phuong.nguyenngoc",
+      "reporterNick": "PhuongNN",
+      "ba": "",
+      "desc": "Hiện chưa format kiểu số trường: \r\n\r\nHM chi hộ từng lần\r\n\r\nHM chi hộ ngày \r\n\r\nYêu cầu format đúng kiểu số",
+      "relatedTc": "",
+      "jiraUrl": "https://projects.fss.com.vn/browse/SBSIEXT-242",
+      "createdAt": "2026-09-21 16:30",
+      "updatedAt": "2026-09-21 18:30",
+      "source": "JIRA_FSS"
+    },
+    {
+      "id": "SBSIEXT-241",
+      "platform": "general",
+      "title": "ONB_Bước 1/7: Lỗi hiển thị thiết bị khác khi nhập SDT B sau khi nhấn nut Back",
       "type": "External Bug",
       "priority": "Medium",
       "status": "Open",
       "assignee": "Mai Cao Thi(KT-CK-HN)",
       "assigneeUser": "mai.cao",
+      "reporter": "Trinh Nguyen Thi(SBSI)",
+      "reporterUser": "trinhnt.sbsi",
+      "reporterNick": "TrinhNT",
+      "ba": "",
+      "desc": "# Trên thiết bị 1: Tại màn hình nhập SDT A + mã capcha -> Nhập OTP sai 5 lần\r\n # Màn hình hiển thị message: Quý khách đã nhập sai... Vui lòng thử lại sau 15p\r\n # Trên thiết bị 2: Thực hiện Nhập lại sdt A + capcha -> Hiển thị đúng time countdown như ở thiết bị 1\r\n # Trên thiết bị 2: Nhấn nút Back -> Thực hiện nhập sdt B + capcha -> Tiếp tục\r\n # Kiểm tra màn hình hiển thị\r\n\r\nKQTT: Lỗi hiển thị time countdown của sdt A\r\n\r\nKQMM: Cần hiển thị đúng theo số lần nhập OTP và time hạn sử dụng OTP của sdt B\r\n\r\n{color:#FF0000}*Lưu ý: Case này trên cùng 1 thiết bị khi Back vào nhập sdt khác cũng đang bị lỗi như case mô tả trên*{color}\r\n\r\n ",
+      "relatedTc": "",
+      "jiraUrl": "https://projects.fss.com.vn/browse/SBSIEXT-241",
+      "createdAt": "2026-09-21 16:07",
+      "updatedAt": "2026-09-21 17:37",
+      "source": "JIRA_FSS"
+    },
+    {
+      "id": "SBSIEXT-240",
+      "platform": "mobile",
+      "title": "[Mobile App][Bảng giá] Cột Mã CK bị cắt cụt/ẩn phần đuôi ký tự đối với Chứng quyền (CW), ETF và Trái phiếu",
+      "type": "External Bug",
+      "priority": "Medium",
+      "status": "Reviewed Code",
+      "assignee": "Nguyen Duc Minh(LTV-CK-HN)",
+      "assigneeUser": "minh.nguyenduc",
       "reporter": "Bách Nguyen Tung(SBSI)",
       "reporterUser": "bachnt.sbsi",
       "reporterNick": "BachNT",
@@ -46,18 +186,18 @@
       "relatedTc": "",
       "jiraUrl": "https://projects.fss.com.vn/browse/SBSIEXT-240",
       "createdAt": "2026-09-21 15:52",
-      "updatedAt": "2026-09-21 15:53",
+      "updatedAt": "2026-09-21 18:31",
       "source": "JIRA_FSS"
     },
     {
       "id": "SBSIEXT-239",
       "platform": "ekyc",
       "title": "[Onboarding][BO][111001][Tab thông tin mở rộng] Trường Chức vụ khác vẫn cho nhập khi Chức vụ # khác",
-      "type": "External Bug",
+      "type": "Requirement",
       "priority": "Medium",
-      "status": "Open",
-      "assignee": "Mai Cao Thi(KT-CK-HN)",
-      "assigneeUser": "mai.cao",
+      "status": "Reviewed",
+      "assignee": "Thao Tran Thi Phuong(LTV-CK-HN)",
+      "assigneeUser": "thao.tranphuong",
       "reporter": "An Nguyen Thi Thanh(SBSI)",
       "reporterUser": "anntt.sbsi",
       "reporterNick": "AnNTT",
@@ -66,7 +206,7 @@
       "relatedTc": "",
       "jiraUrl": "https://projects.fss.com.vn/browse/SBSIEXT-239",
       "createdAt": "2026-09-21 15:47",
-      "updatedAt": "2026-09-21 15:47",
+      "updatedAt": "2026-09-21 16:13",
       "source": "JIRA_FSS"
     },
     {
@@ -126,7 +266,7 @@
       "relatedTc": "",
       "jiraUrl": "https://projects.fss.com.vn/browse/SBSIEXT-236",
       "createdAt": "2026-09-21 14:51",
-      "updatedAt": "2026-09-21 14:57",
+      "updatedAt": "2026-09-21 16:07",
       "source": "JIRA_FSS"
     },
     {
@@ -226,7 +366,7 @@
       "relatedTc": "",
       "jiraUrl": "https://projects.fss.com.vn/browse/SBSIEXT-231",
       "createdAt": "2026-09-21 14:30",
-      "updatedAt": "2026-09-21 14:38",
+      "updatedAt": "2026-09-21 18:14",
       "source": "JIRA_FSS"
     },
     {
@@ -375,7 +515,7 @@
       "title": "[Onboarding] Lỗi text thông báo số tài khoản ngân hàng",
       "type": "External Bug",
       "priority": "Medium",
-      "status": "Open",
+      "status": "Won't fix",
       "assignee": "Chưa gán",
       "assigneeUser": "",
       "reporter": "Cuong Nguyen Tien(SBSI)",
@@ -386,14 +526,14 @@
       "relatedTc": "",
       "jiraUrl": "https://projects.fss.com.vn/browse/SBSIEXT-223",
       "createdAt": "2026-09-21 10:51",
-      "updatedAt": "2026-09-21 10:54",
+      "updatedAt": "2026-09-21 18:45",
       "source": "JIRA_FSS"
     },
     {
       "id": "SBSIEXT-222",
       "platform": "ekyc",
       "title": "[Onboarding] Tài khoản ngân hàng",
-      "type": "Vấn đề phát sinh",
+      "type": "Requirement",
       "priority": "Medium",
       "status": "Open",
       "assignee": "Chưa gán",
@@ -406,7 +546,7 @@
       "relatedTc": "",
       "jiraUrl": "https://projects.fss.com.vn/browse/SBSIEXT-222",
       "createdAt": "2026-09-21 10:43",
-      "updatedAt": "2026-09-21 10:45",
+      "updatedAt": "2026-09-21 18:06",
       "source": "JIRA_FSS"
     },
     {
@@ -435,7 +575,7 @@
       "title": "[SMS] Khách hàng không nhận được SMS chúc mừng sinh nhật mã 0340.",
       "type": "External Bug",
       "priority": "Medium",
-      "status": "Open",
+      "status": "Won't fix",
       "assignee": "Mai Cao Thi(KT-CK-HN)",
       "assigneeUser": "mai.cao",
       "reporter": "Huong Luong Thi(SBSI)",
@@ -446,7 +586,7 @@
       "relatedTc": "",
       "jiraUrl": "https://projects.fss.com.vn/browse/SBSIEXT-220",
       "createdAt": "2026-09-21 10:27",
-      "updatedAt": "2026-09-21 13:59",
+      "updatedAt": "2026-09-21 17:38",
       "source": "JIRA_FSS"
     },
     {
@@ -472,12 +612,12 @@
     {
       "id": "SBSIEXT-218",
       "platform": "web",
-      "title": "[Web Trading] Bug UI + Sai logic sort kết quả tìm kiếm gần đây",
-      "type": "External Bug",
+      "title": "[Web Trading] Chỉnh sửa logic sort kết quả tìm kiếm gần đây",
+      "type": "Requirement",
       "priority": "Medium",
-      "status": "Open",
-      "assignee": "Trang Nguyen Thi Quynh(KT-CK-HN)",
-      "assigneeUser": "trang.nguyenthiquynh",
+      "status": "Reviewed",
+      "assignee": "Vo Pham Tien(LTV-CK-HN)",
+      "assigneeUser": "vo.pham",
       "reporter": "Long Nguyen Hai(SBSI)",
       "reporterUser": "longnh.sbsi",
       "reporterNick": "LongNH",
@@ -486,7 +626,7 @@
       "relatedTc": "",
       "jiraUrl": "https://projects.fss.com.vn/browse/SBSIEXT-218",
       "createdAt": "2026-09-21 09:34",
-      "updatedAt": "2026-09-21 09:34",
+      "updatedAt": "2026-09-21 18:24",
       "source": "JIRA_FSS"
     },
     {
@@ -535,7 +675,7 @@
       "title": "[Web Trading][Bảng giá] Cho phép đổi tên danh mục yêu thích trùng với danh mục đã có sẵn",
       "type": "Requirement",
       "priority": "High",
-      "status": "Open",
+      "status": "Suspended",
       "assignee": "Mai Cao Thi(KT-CK-HN)",
       "assigneeUser": "mai.cao",
       "reporter": "Bách Nguyen Tung(SBSI)",
@@ -546,7 +686,7 @@
       "relatedTc": "TC_WEB_UC08_038",
       "jiraUrl": "https://projects.fss.com.vn/browse/SBSIEXT-215",
       "createdAt": "2026-09-18 19:38",
-      "updatedAt": "2026-09-19 16:48",
+      "updatedAt": "2026-09-21 18:27",
       "source": "JIRA_FSS"
     },
     {
@@ -606,7 +746,7 @@
       "relatedTc": "",
       "jiraUrl": "https://projects.fss.com.vn/browse/SBSIEXT-212",
       "createdAt": "2026-09-18 18:38",
-      "updatedAt": "2026-09-21 13:14",
+      "updatedAt": "2026-09-21 18:32",
       "source": "JIRA_FSS"
     },
     {
@@ -626,7 +766,7 @@
       "relatedTc": "",
       "jiraUrl": "https://projects.fss.com.vn/browse/SBSIEXT-211",
       "createdAt": "2026-09-18 18:23",
-      "updatedAt": "2026-09-18 18:26",
+      "updatedAt": "2026-09-21 18:05",
       "source": "JIRA_FSS"
     },
     {
@@ -755,7 +895,7 @@
       "title": "[UI/UX] Tại màn Quên mật khẩu",
       "type": "External Bug",
       "priority": "Medium",
-      "status": "Reviewed",
+      "status": "Reviewed Code",
       "assignee": "Nguyen Duc Minh(LTV-CK-HN)",
       "assigneeUser": "minh.nguyenduc",
       "reporter": "Vinh Tran Quang(SBSI)",
@@ -766,7 +906,7 @@
       "relatedTc": "",
       "jiraUrl": "https://projects.fss.com.vn/browse/SBSIEXT-204",
       "createdAt": "2026-09-18 15:24",
-      "updatedAt": "2026-09-21 15:44",
+      "updatedAt": "2026-09-21 18:32",
       "source": "JIRA_FSS"
     },
     {
@@ -895,7 +1035,7 @@
       "title": "[Noti] Chuyển ngôn ngữ sang tiếng Anh nhưng phần Chi tiết giao dịch vẫn hiển thị tiếng Việt.",
       "type": "External Bug",
       "priority": "Medium",
-      "status": "Reviewed Code",
+      "status": "Delivered",
       "assignee": "Hao Ha Thi(LTV-CK-HN)",
       "assigneeUser": "hao.ha",
       "reporter": "Huong Luong Thi(SBSI)",
@@ -906,7 +1046,7 @@
       "relatedTc": "",
       "jiraUrl": "https://projects.fss.com.vn/browse/SBSIEXT-197",
       "createdAt": "2026-09-18 14:24",
-      "updatedAt": "2026-09-21 09:30",
+      "updatedAt": "2026-09-21 17:01",
       "source": "JIRA_FSS"
     },
     {
@@ -1186,7 +1326,7 @@
       "relatedTc": "",
       "jiraUrl": "https://projects.fss.com.vn/browse/SBSIEXT-183",
       "createdAt": "2026-09-18 10:53",
-      "updatedAt": "2026-09-18 17:19",
+      "updatedAt": "2026-09-21 18:46",
       "source": "JIRA_FSS"
     },
     {
@@ -1355,7 +1495,7 @@
       "title": "[Web Trading][Chi tiết lệnh] Lỗi nháy giá trong chi tiết lệnh",
       "type": "External Bug",
       "priority": "Medium",
-      "status": "Open",
+      "status": "Suspended",
       "assignee": "Trang Nguyen Thi Quynh(KT-CK-HN)",
       "assigneeUser": "trang.nguyenthiquynh",
       "reporter": "Bách Nguyen Tung(SBSI)",
@@ -1366,7 +1506,7 @@
       "relatedTc": "",
       "jiraUrl": "https://projects.fss.com.vn/browse/SBSIEXT-174",
       "createdAt": "2026-09-17 19:15",
-      "updatedAt": "2026-09-18 13:16",
+      "updatedAt": "2026-09-21 18:41",
       "source": "JIRA_FSS"
     },
     {
@@ -1475,7 +1615,7 @@
       "title": "Mở tab Tra cứu danh mục Margin",
       "type": "Requirement",
       "priority": "Medium",
-      "status": "Reviewed",
+      "status": "Reviewed Code",
       "assignee": "Hanh Le Hong(LTV-CK-HN)",
       "assigneeUser": "hanh.le",
       "reporter": "Bao Dang Kim(SBSI)",
@@ -1486,7 +1626,7 @@
       "relatedTc": "",
       "jiraUrl": "https://projects.fss.com.vn/browse/SBSIEXT-168",
       "createdAt": "2026-09-17 15:06",
-      "updatedAt": "2026-09-19 16:47",
+      "updatedAt": "2026-09-21 18:32",
       "source": "JIRA_FSS"
     },
     {
@@ -1515,9 +1655,9 @@
       "title": "Sai diễn giải chi hộ khi thực hiện chuyển tiền nội bộ đến tiểu khoản TPRL và ngược lại",
       "type": "Requirement",
       "priority": "Medium",
-      "status": "Open",
-      "assignee": "Trang Nguyen Thi Quynh(KT-CK-HN)",
-      "assigneeUser": "trang.nguyenthiquynh",
+      "status": "Reviewed",
+      "assignee": "Thao Tran Thi Phuong(LTV-CK-HN)",
+      "assigneeUser": "thao.tranphuong",
       "reporter": "Tuan Nguyen Anh(SBSI)",
       "reporterUser": "tuanna.sbsi",
       "reporterNick": "TuanNA",
@@ -1526,7 +1666,7 @@
       "relatedTc": "",
       "jiraUrl": "https://projects.fss.com.vn/browse/SBSIEXT-166",
       "createdAt": "2026-09-17 14:21",
-      "updatedAt": "2026-09-19 16:54",
+      "updatedAt": "2026-09-21 16:06",
       "source": "JIRA_FSS"
     },
     {
@@ -1555,9 +1695,9 @@
       "title": "[Mobile app] Quên mật khẩu - chưa có restrict số lần nhập OTP và lấy SMS-OTP ",
       "type": "Requirement",
       "priority": "Medium",
-      "status": "Open",
-      "assignee": "Trang Nguyen Thi Quynh(KT-CK-HN)",
-      "assigneeUser": "trang.nguyenthiquynh",
+      "status": "Reviewed Code",
+      "assignee": "Nguyen Duc Minh(LTV-CK-HN)",
+      "assigneeUser": "minh.nguyenduc",
       "reporter": "Bao Dang Kim(SBSI)",
       "reporterUser": "baodk.sbsi",
       "reporterNick": "BaoDK",
@@ -1566,7 +1706,7 @@
       "relatedTc": "",
       "jiraUrl": "https://projects.fss.com.vn/browse/SBSIEXT-164",
       "createdAt": "2026-09-17 14:07",
-      "updatedAt": "2026-09-21 15:48",
+      "updatedAt": "2026-09-21 16:56",
       "source": "JIRA_FSS"
     },
     {
@@ -1875,7 +2015,7 @@
       "title": "Chuyển tiền ra ngoài: Lỗi Thêm ngân hàng",
       "type": "External Bug",
       "priority": "Medium",
-      "status": "Reviewed Code",
+      "status": "Tested",
       "assignee": "Nguyen Duc Minh(LTV-CK-HN)",
       "assigneeUser": "minh.nguyenduc",
       "reporter": "Trinh Nguyen Thi(SBSI)",
@@ -1886,7 +2026,7 @@
       "relatedTc": "",
       "jiraUrl": "https://projects.fss.com.vn/browse/SBSIEXT-146",
       "createdAt": "2026-09-16 16:10",
-      "updatedAt": "2026-09-18 18:23",
+      "updatedAt": "2026-09-21 16:22",
       "source": "JIRA_FSS"
     },
     {
@@ -1935,7 +2075,7 @@
       "title": "[Webtrading] Notification đang không có hiện indicator báo có thông tin mới",
       "type": "External Bug",
       "priority": "Medium",
-      "status": "Fixed",
+      "status": "Reviewed Code",
       "assignee": "Hanh Le Hong(LTV-CK-HN)",
       "assigneeUser": "hanh.le",
       "reporter": "Bao Dang Kim(SBSI)",
@@ -1946,7 +2086,7 @@
       "relatedTc": "",
       "jiraUrl": "https://projects.fss.com.vn/browse/SBSIEXT-143",
       "createdAt": "2026-09-16 15:11",
-      "updatedAt": "2026-09-18 16:33",
+      "updatedAt": "2026-09-21 18:31",
       "source": "JIRA_FSS"
     },
     {
@@ -1986,7 +2126,7 @@
       "relatedTc": "",
       "jiraUrl": "https://projects.fss.com.vn/browse/SBSIEXT-141",
       "createdAt": "2026-09-16 14:25",
-      "updatedAt": "2026-09-16 14:25",
+      "updatedAt": "2026-09-21 18:08",
       "source": "JIRA_FSS"
     },
     {
@@ -2235,9 +2375,9 @@
       "title": "[UI/UX] [ONBOARDING] Bước 3: Thông tin cá nhân",
       "type": "Vấn đề phát sinh",
       "priority": "High",
-      "status": "Open",
-      "assignee": "Trang Nguyen Thi Quynh(KT-CK-HN)",
-      "assigneeUser": "trang.nguyenthiquynh",
+      "status": "In-progress",
+      "assignee": "Nguyen Duc Minh(LTV-CK-HN)",
+      "assigneeUser": "minh.nguyenduc",
       "reporter": "Huy Pham Ngoc(SBSI)",
       "reporterUser": "huypn.sbsi",
       "reporterNick": "HuyPN",
@@ -2246,7 +2386,7 @@
       "relatedTc": "",
       "jiraUrl": "https://projects.fss.com.vn/browse/SBSIEXT-128",
       "createdAt": "2026-09-16 11:07",
-      "updatedAt": "2026-09-16 11:09",
+      "updatedAt": "2026-09-21 17:09",
       "source": "JIRA_FSS"
     },
     {
@@ -2295,7 +2435,7 @@
       "title": "UIUX (Đăng nhập) chưa có tài khoản",
       "type": "External Bug",
       "priority": "Medium",
-      "status": "Open",
+      "status": "Suspended",
       "assignee": "Trang Nguyen Thi Quynh(KT-CK-HN)",
       "assigneeUser": "trang.nguyenthiquynh",
       "reporter": "Quoc Pham Bao(SBSI)",
@@ -2306,7 +2446,7 @@
       "relatedTc": "",
       "jiraUrl": "https://projects.fss.com.vn/browse/SBSIEXT-125",
       "createdAt": "2026-09-16 10:27",
-      "updatedAt": "2026-09-18 13:16",
+      "updatedAt": "2026-09-21 15:55",
       "source": "JIRA_FSS"
     },
     {
@@ -2416,17 +2556,17 @@
       "type": "Requirement",
       "priority": "Medium",
       "status": "Open",
-      "assignee": "Trang Nguyen Thi Quynh(KT-CK-HN)",
-      "assigneeUser": "trang.nguyenthiquynh",
+      "assignee": "Mai Cao Thi(KT-CK-HN)",
+      "assigneeUser": "mai.cao",
       "reporter": "Anh Le Lan(SBSI)",
       "reporterUser": "anhll.sbsi",
       "reporterNick": "AnhLL",
       "ba": "",
-      "desc": "* Giao diện chuyển tiền ra ngoài đang hiển thị số tiền chuyển tối thiểu 0 VNĐ !image-2026-09-15-17-22-04-890.png!\r\n * Tuy nhiên chuyển > 0 VNĐ và < 10,000 VNĐ thì lại k0 được",
+      "desc": "* Giao diện chuyển tiền ra ngoài đang hiển thị số tiền chuyển tối thiểu 0 VNĐ  !image-2026-09-15-17-22-04-890.png!\r\n * Tuy nhiên chuyển > 0 VNĐ và < 10,000 VNĐ thì lại k0 được\r\n\r\nRule check hiện tại check lần lượt các tầng: tham số MINWITHDRAWAMT --> Khai báo ngân hàng chi hộ 031003 --> Loại hình tiểu khoản 032001",
       "relatedTc": "",
       "jiraUrl": "https://projects.fss.com.vn/browse/SBSIEXT-114",
       "createdAt": "2026-09-15 17:23",
-      "updatedAt": "2026-09-18 13:16",
+      "updatedAt": "2026-09-21 16:49",
       "source": "JIRA_FSS"
     },
     {
@@ -2516,8 +2656,8 @@
       "type": "Vấn đề phát sinh",
       "priority": "Medium",
       "status": "Open",
-      "assignee": "Trang Nguyen Thi Quynh(KT-CK-HN)",
-      "assigneeUser": "trang.nguyenthiquynh",
+      "assignee": "Mai Cao Thi(KT-CK-HN)",
+      "assigneeUser": "mai.cao",
       "reporter": "Huy Pham Ngoc(SBSI)",
       "reporterUser": "huypn.sbsi",
       "reporterNick": "HuyPN",
@@ -2526,7 +2666,7 @@
       "relatedTc": "",
       "jiraUrl": "https://projects.fss.com.vn/browse/SBSIEXT-109",
       "createdAt": "2026-09-15 16:46",
-      "updatedAt": "2026-09-15 18:07",
+      "updatedAt": "2026-09-21 16:08",
       "source": "JIRA_FSS"
     },
     {
@@ -2595,7 +2735,7 @@
       "title": "ONB_Bước 1/7: Lỗi hiển thị thời gian hiệu lực OTP gửi về SMS và APP",
       "type": "External Bug",
       "priority": "Medium",
-      "status": "Fixed",
+      "status": "Reviewed Code",
       "assignee": "Cong Tran Thanh2(LTV-CK-HN)",
       "assigneeUser": "cong.tran2",
       "reporter": "Trinh Nguyen Thi(SBSI)",
@@ -2606,7 +2746,7 @@
       "relatedTc": "",
       "jiraUrl": "https://projects.fss.com.vn/browse/SBSIEXT-105",
       "createdAt": "2026-09-15 16:11",
-      "updatedAt": "2026-09-21 08:57",
+      "updatedAt": "2026-09-21 18:33",
       "source": "JIRA_FSS"
     },
     {
@@ -2895,7 +3035,7 @@
       "title": "UIUX (Chi tiết mã) thông kê_lịch sử giá",
       "type": "Requirement",
       "priority": "Medium",
-      "status": "Fixed",
+      "status": "Reviewed Code",
       "assignee": "Hanh Le Hong(LTV-CK-HN)",
       "assigneeUser": "hanh.le",
       "reporter": "Quoc Pham Bao(SBSI)",
@@ -2906,7 +3046,7 @@
       "relatedTc": "",
       "jiraUrl": "https://projects.fss.com.vn/browse/SBSIEXT-90",
       "createdAt": "2026-09-15 13:34",
-      "updatedAt": "2026-09-21 15:27",
+      "updatedAt": "2026-09-21 18:29",
       "source": "JIRA_FSS"
     },
     {
@@ -2922,11 +3062,11 @@
       "reporterUser": "quocpb.sbsi",
       "reporterNick": "QuocPB",
       "ba": "",
-      "desc": "1: check lại rule *\r\n2: Màu text sai \r\n3: icon phóng to thu nhỏ sai màu \r\n4:Tiêu đề ở tab cho nhỏ font size (14H)\r\n5: Cung cầu thử thông tin giá và tăng giảm\r\n\r\n!image-2026-09-15-13-28-02-885.png!",
+      "desc": "1: check lại rule *\r\n2: Màu text sai \r\n3: icon phóng to thu nhỏ sai màu \r\n4:Tiêu đề ở tab cho nhỏ font size (14H)\r\n5: Cung cầu thừa thông tin giá và tăng giảm\r\n\r\n!image-2026-09-15-13-28-02-885.png!",
       "relatedTc": "",
       "jiraUrl": "https://projects.fss.com.vn/browse/SBSIEXT-89",
       "createdAt": "2026-09-15 13:30",
-      "updatedAt": "2026-09-21 15:08",
+      "updatedAt": "2026-09-21 18:40",
       "source": "JIRA_FSS"
     },
     {
@@ -2935,7 +3075,7 @@
       "title": "UIUX (Bảng giá) tài sản trong đặt lệnh nhanh",
       "type": "Requirement",
       "priority": "Medium",
-      "status": "Fixed",
+      "status": "Reviewed Code",
       "assignee": "Vo Pham Tien(LTV-CK-HN)",
       "assigneeUser": "vo.pham",
       "reporter": "Quoc Pham Bao(SBSI)",
@@ -2946,7 +3086,7 @@
       "relatedTc": "",
       "jiraUrl": "https://projects.fss.com.vn/browse/SBSIEXT-88",
       "createdAt": "2026-09-15 13:21",
-      "updatedAt": "2026-09-21 10:03",
+      "updatedAt": "2026-09-21 18:28",
       "source": "JIRA_FSS"
     },
     {
@@ -2975,9 +3115,9 @@
       "title": "Lỗi hiển thị Dư mua / Dư bán",
       "type": "External Bug",
       "priority": "Medium",
-      "status": "Open",
-      "assignee": "Trang Nguyen Thi Quynh(KT-CK-HN)",
-      "assigneeUser": "trang.nguyenthiquynh",
+      "status": "Suspended",
+      "assignee": "Mai Cao Thi(KT-CK-HN)",
+      "assigneeUser": "mai.cao",
       "reporter": "Bách Nguyen Tung(SBSI)",
       "reporterUser": "bachnt.sbsi",
       "reporterNick": "BachNT",
@@ -2986,7 +3126,7 @@
       "relatedTc": "",
       "jiraUrl": "https://projects.fss.com.vn/browse/SBSIEXT-86",
       "createdAt": "2026-09-15 11:22",
-      "updatedAt": "2026-09-19 17:09",
+      "updatedAt": "2026-09-21 16:30",
       "source": "JIRA_FSS"
     },
     {
@@ -3035,9 +3175,9 @@
       "title": "UIUX (Bảng giá) Chọn bảng giá",
       "type": "External Bug",
       "priority": "Medium",
-      "status": "Open",
-      "assignee": "Mai Cao Thi(KT-CK-HN)",
-      "assigneeUser": "mai.cao",
+      "status": "Reviewed",
+      "assignee": "Vo Pham Tien(LTV-CK-HN)",
+      "assigneeUser": "vo.pham",
       "reporter": "Quoc Pham Bao(SBSI)",
       "reporterUser": "quocpb.sbsi",
       "reporterNick": "QuocPB",
@@ -3046,7 +3186,7 @@
       "relatedTc": "",
       "jiraUrl": "https://projects.fss.com.vn/browse/SBSIEXT-83",
       "createdAt": "2026-09-15 11:04",
-      "updatedAt": "2026-09-18 13:11",
+      "updatedAt": "2026-09-21 18:39",
       "source": "JIRA_FSS"
     },
     {
@@ -3055,9 +3195,9 @@
       "title": "UIUX (Bảng giá) ô tìm kiếm",
       "type": "External Bug",
       "priority": "Medium",
-      "status": "Open",
-      "assignee": "Mai Cao Thi(KT-CK-HN)",
-      "assigneeUser": "mai.cao",
+      "status": "Reviewed",
+      "assignee": "Vo Pham Tien(LTV-CK-HN)",
+      "assigneeUser": "vo.pham",
       "reporter": "Quoc Pham Bao(SBSI)",
       "reporterUser": "quocpb.sbsi",
       "reporterNick": "QuocPB",
@@ -3066,7 +3206,7 @@
       "relatedTc": "",
       "jiraUrl": "https://projects.fss.com.vn/browse/SBSIEXT-82",
       "createdAt": "2026-09-15 11:00",
-      "updatedAt": "2026-09-18 13:11",
+      "updatedAt": "2026-09-21 18:38",
       "source": "JIRA_FSS"
     },
     {
@@ -3146,7 +3286,7 @@
       "relatedTc": "",
       "jiraUrl": "https://projects.fss.com.vn/browse/SBSIEXT-78",
       "createdAt": "2026-09-15 10:29",
-      "updatedAt": "2026-09-18 11:07",
+      "updatedAt": "2026-09-21 16:34",
       "source": "JIRA_FSS"
     },
     {
@@ -3233,9 +3373,9 @@
       "id": "SBSIEXT-73",
       "platform": "ekyc",
       "title": "[Onboarding] Lỗi nhập sđt",
-      "type": "Internal Bug",
+      "type": "External Bug",
       "priority": "Medium",
-      "status": "Open",
+      "status": "Reviewed",
       "assignee": "Nguyen Duc Minh(LTV-CK-HN)",
       "assigneeUser": "minh.nguyenduc",
       "reporter": "Cuong Nguyen Tien(SBSI)",
@@ -3246,7 +3386,7 @@
       "relatedTc": "",
       "jiraUrl": "https://projects.fss.com.vn/browse/SBSIEXT-73",
       "createdAt": "2026-09-15 09:23",
-      "updatedAt": "2026-09-18 10:53",
+      "updatedAt": "2026-09-21 18:05",
       "source": "JIRA_FSS"
     },
     {
@@ -3435,7 +3575,7 @@
       "title": "[Web] [UI/UX] [Header] Thông báo",
       "type": "External Bug",
       "priority": "Medium",
-      "status": "Fixed",
+      "status": "Reviewed Code",
       "assignee": "Hanh Le Hong(LTV-CK-HN)",
       "assigneeUser": "hanh.le",
       "reporter": "Quoc Pham Bao(SBSI)",
@@ -3446,7 +3586,7 @@
       "relatedTc": "",
       "jiraUrl": "https://projects.fss.com.vn/browse/SBSIEXT-63",
       "createdAt": "2026-09-14 16:18",
-      "updatedAt": "2026-09-21 10:22",
+      "updatedAt": "2026-09-21 18:30",
       "source": "JIRA_FSS"
     },
     {
@@ -3475,7 +3615,7 @@
       "title": "[Web] [UI/UX] [Hệ thống] Icon Favicon web",
       "type": "Requirement",
       "priority": "Medium",
-      "status": "Reviewed",
+      "status": "Reviewed Code",
       "assignee": "Vo Pham Tien(LTV-CK-HN)",
       "assigneeUser": "vo.pham",
       "reporter": "Quoc Pham Bao(SBSI)",
@@ -3486,7 +3626,7 @@
       "relatedTc": "",
       "jiraUrl": "https://projects.fss.com.vn/browse/SBSIEXT-61",
       "createdAt": "2026-09-14 16:08",
-      "updatedAt": "2026-09-18 13:16",
+      "updatedAt": "2026-09-21 18:27",
       "source": "JIRA_FSS"
     },
     {
@@ -3595,7 +3735,7 @@
       "title": "UIUX (Bảng giá) VN index Sai UI",
       "type": "External Bug",
       "priority": "Medium",
-      "status": "Reviewed",
+      "status": "Reviewed Code",
       "assignee": "Vo Pham Tien(LTV-CK-HN)",
       "assigneeUser": "vo.pham",
       "reporter": "Quoc Pham Bao(SBSI)",
@@ -3606,7 +3746,7 @@
       "relatedTc": "",
       "jiraUrl": "https://projects.fss.com.vn/browse/SBSIEXT-55",
       "createdAt": "2026-09-14 15:44",
-      "updatedAt": "2026-09-18 13:16",
+      "updatedAt": "2026-09-21 18:27",
       "source": "JIRA_FSS"
     },
     {
@@ -3716,8 +3856,8 @@
       "type": "External Bug",
       "priority": "Medium",
       "status": "Reviewed",
-      "assignee": "Mai Cao Thi(KT-CK-HN)",
-      "assigneeUser": "mai.cao",
+      "assignee": "Thao Tran Thi Phuong(LTV-CK-HN)",
+      "assigneeUser": "thao.tranphuong",
       "reporter": "Tra Chu Thi Thu(SBSI)",
       "reporterUser": "tractt.sbsi",
       "reporterNick": "TraCTT",
@@ -3726,7 +3866,7 @@
       "relatedTc": "",
       "jiraUrl": "https://projects.fss.com.vn/browse/SBSIEXT-49",
       "createdAt": "2026-09-14 15:13",
-      "updatedAt": "2026-09-18 11:09",
+      "updatedAt": "2026-09-21 18:33",
       "source": "JIRA_FSS"
     },
     {
@@ -3975,7 +4115,7 @@
       "title": "[Web] [UI/UX] [Header] Icon sai định dạng ",
       "type": "External Bug",
       "priority": "Medium",
-      "status": "Reviewed Code",
+      "status": "Delivered",
       "assignee": "Vo Pham Tien(LTV-CK-HN)",
       "assigneeUser": "vo.pham",
       "reporter": "Quoc Pham Bao(SBSI)",
@@ -3986,7 +4126,7 @@
       "relatedTc": "",
       "jiraUrl": "https://projects.fss.com.vn/browse/SBSIEXT-36",
       "createdAt": "2026-09-14 13:47",
-      "updatedAt": "2026-09-18 13:16",
+      "updatedAt": "2026-09-21 17:01",
       "source": "JIRA_FSS"
     },
     {
@@ -4035,7 +4175,7 @@
       "title": "Đặt lệnh báo lỗi bị lỗi font",
       "type": "External Bug",
       "priority": "Medium",
-      "status": "Fixed",
+      "status": "Reviewed Code",
       "assignee": "Hanh Le Hong(LTV-CK-HN)",
       "assigneeUser": "hanh.le",
       "reporter": "Thao Nguyen Phuong(SBSI)",
@@ -4046,7 +4186,7 @@
       "relatedTc": "",
       "jiraUrl": "https://projects.fss.com.vn/browse/SBSIEXT-33",
       "createdAt": "2026-09-14 13:12",
-      "updatedAt": "2026-09-18 13:16",
+      "updatedAt": "2026-09-21 18:29",
       "source": "JIRA_FSS"
     },
     {
@@ -4055,7 +4195,7 @@
       "title": "Tạo, Cập nhật tài khoản VIA",
       "type": "External Bug",
       "priority": "Medium",
-      "status": "Reopened",
+      "status": "Fixed",
       "assignee": "Trung Tran Manh(LTV-CK-HN)",
       "assigneeUser": "trung.tranmanh",
       "reporter": "Tuan Nguyen Anh(SBSI)",
@@ -4066,7 +4206,7 @@
       "relatedTc": "",
       "jiraUrl": "https://projects.fss.com.vn/browse/SBSIEXT-32",
       "createdAt": "2026-09-14 13:09",
-      "updatedAt": "2026-09-21 14:07",
+      "updatedAt": "2026-09-21 16:38",
       "source": "JIRA_FSS"
     },
     {
@@ -4095,7 +4235,7 @@
       "title": "UIUX (Scroll)",
       "type": "External Bug",
       "priority": "Medium",
-      "status": "Fixed",
+      "status": "Reviewed Code",
       "assignee": "Vo Pham Tien(LTV-CK-HN)",
       "assigneeUser": "vo.pham",
       "reporter": "Quoc Pham Bao(SBSI)",
@@ -4106,7 +4246,7 @@
       "relatedTc": "",
       "jiraUrl": "https://projects.fss.com.vn/browse/SBSIEXT-30",
       "createdAt": "2026-09-14 11:26",
-      "updatedAt": "2026-09-18 23:21",
+      "updatedAt": "2026-09-21 18:28",
       "source": "JIRA_FSS"
     },
     {
@@ -4135,7 +4275,7 @@
       "title": "[UI/UX] Validation của btn \"Chấp nhận\" tại mh 112703, xử lý chưa chính xác",
       "type": "External Bug",
       "priority": "Low",
-      "status": "Reviewed Code",
+      "status": "Tested",
       "assignee": "Trung Tran Manh(LTV-CK-HN)",
       "assigneeUser": "trung.tranmanh",
       "reporter": "Hung Bui Quang(SBSI)",
@@ -4146,7 +4286,7 @@
       "relatedTc": "",
       "jiraUrl": "https://projects.fss.com.vn/browse/SBSIEXT-28",
       "createdAt": "2026-09-14 11:21",
-      "updatedAt": "2026-09-18 15:41",
+      "updatedAt": "2026-09-21 16:57",
       "source": "JIRA_FSS"
     },
     {
@@ -4295,7 +4435,7 @@
       "title": "[Danh mục tài sản] Lỗi điều hướng ",
       "type": "External Bug",
       "priority": "Medium",
-      "status": "Fixed",
+      "status": "Reviewed Code",
       "assignee": "Vo Pham Tien(LTV-CK-HN)",
       "assigneeUser": "vo.pham",
       "reporter": "Bách Nguyen Tung(SBSI)",
@@ -4306,7 +4446,7 @@
       "relatedTc": "TC_WEB_AST_001",
       "jiraUrl": "https://projects.fss.com.vn/browse/SBSIEXT-20",
       "createdAt": "2026-09-11 16:32",
-      "updatedAt": "2026-09-21 12:58",
+      "updatedAt": "2026-09-21 18:27",
       "source": "JIRA_FSS"
     },
     {
@@ -4426,7 +4566,7 @@
       "relatedTc": "TC_WEB_UC65_272",
       "jiraUrl": "https://projects.fss.com.vn/browse/SBSIEXT-14",
       "createdAt": "2026-09-11 11:08",
-      "updatedAt": "2026-09-18 13:16",
+      "updatedAt": "2026-09-21 16:18",
       "source": "JIRA_FSS"
     },
     {
@@ -4446,7 +4586,7 @@
       "relatedTc": "",
       "jiraUrl": "https://projects.fss.com.vn/browse/SBSIEXT-13",
       "createdAt": "2026-09-11 10:22",
-      "updatedAt": "2026-09-21 14:31",
+      "updatedAt": "2026-09-21 17:35",
       "source": "JIRA_FSS"
     },
     {
@@ -4616,8 +4756,8 @@
       "type": "Requirement",
       "priority": "Medium",
       "status": "Open",
-      "assignee": "Chưa gán",
-      "assigneeUser": "",
+      "assignee": "Phuong Nguyen Ngoc",
+      "assigneeUser": "phuong.nguyenngoc",
       "reporter": "Thao Nguyen Phuong(SBSI)",
       "reporterUser": "thaonp1.sbsi",
       "reporterNick": "ThaoNP",
@@ -4626,7 +4766,7 @@
       "relatedTc": "",
       "jiraUrl": "https://projects.fss.com.vn/browse/SBSIEXT-4",
       "createdAt": "2026-09-10 15:08",
-      "updatedAt": "2026-09-18 13:19",
+      "updatedAt": "2026-09-21 16:15",
       "source": "JIRA_FSS"
     },
     {
