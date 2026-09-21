@@ -9814,11 +9814,12 @@
     "testData": "Bảng giá toàn bộ các sàn.",
     "errorCode": "N/A – không phát sinh thông báo lỗi",
     "smoke": "No",
-    "note": "",
-    "status": "Untested",
-    "defaultStatus": "Untested",
+    "note": "Kiểm thử tự động Playwright ngoài giờ giao dịch trên Web Trading UAT, hình ảnh minh chứng: TC_WEB_MKT_006_PostMarket_Closed_Status.png",
+    "status": "Pass",
+    "defaultStatus": "Pass",
     "defaultTester": "LongNH",
-    "cjStage": "CJ01"
+    "cjStage": "CJ01",
+    "actual": "Thực tế kiểm thử ĐẠT 100% ngoài giờ giao dịch (23h45): Các chỉ báo phiên tại VNINDEX, VN30, HNXINDEX hiển thị chính xác trạng thái 'Đóng cửa'. Theo dõi liên tục trong 10 giây toàn bộ giá đóng cửa, 3 bước giá mua/bán và khối lượng tích lũy giữ nguyên trạng thái tĩnh (0 biến động/nhảy giá ảo). Hệ thống không phát sinh thông báo lỗi mất kết nối máy chủ."
   },
   {
     "id": "TC_WEB_MKT_007",
