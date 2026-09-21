@@ -780,10 +780,11 @@
     "testData": "TK: 088C024014 | MK: 13579@Ab | PIN/OTP: 135790",
     "errorCode": "N/A – không phát sinh thông báo lỗi",
     "smoke": "No",
-    "note": "",
-    "status": "Untested",
-    "defaultStatus": "Untested",
-    "defaultTester": "LongNH"
+    "note": "Kiểm thử tự động Playwright live trên Web Trading UAT, hình ảnh minh chứng: TC_WEB_UC07_035_Step2_DM_A_FPT_Deleted.png, TC_WEB_UC07_035_Step3_DM_B_FPT_Still_Present.png",
+    "status": "Pass",
+    "defaultStatus": "Pass",
+    "defaultTester": "LongNH",
+    "actual": "Thực tế kiểm thử ĐẠT 100%: FPT bị xóa thành công khỏi DM_TEST_A (còn 0 mã), chuyển sang DM_TEST_B mã FPT vẫn còn nguyên vẹn với đầy đủ dữ liệu giá và khối lượng."
   },
   {
     "id": "TC_WEB_UC07_036",
@@ -966,10 +967,11 @@
     "testData": "TK: 088C024014 | MK: 13579@Ab | PIN/OTP: 135790",
     "errorCode": "N/A – không phát sinh thông báo lỗi",
     "smoke": "No",
-    "note": "",
-    "status": "Untested",
-    "defaultStatus": "Untested",
-    "defaultTester": "LongNH"
+    "note": "LỖI UX CRITICAL: Thiếu Modal/Popup xác nhận xóa danh mục yêu thích (Missing Confirmation Dialog). Minh chứng hình ảnh: after_click_delete_watchlist.png",
+    "status": "Fail",
+    "defaultStatus": "Fail",
+    "defaultTester": "LongNH",
+    "actual": "Thực tế kiểm thử trên Web Trading UAT: Khi bấm biểu tượng ✕ xóa danh mục, hệ thống gọi API xóa ngay lập tức (1-tap delete) mà KHÔNG hiển thị bất kỳ popup/modal xác nhận nào. Người dùng không thể chọn 'Hủy'/'Không', tiềm ẩn rủi ro xóa mất vĩnh viễn danh mục khi click nhầm."
   },
   {
     "id": "TC_WEB_UC09_044",
