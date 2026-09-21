@@ -8377,8 +8377,8 @@
     "errorCode": "ERR-WEB-BS289-01",
     "smoke": "No",
     "note": "Test case bổ sung",
-    "status": "Untested",
-    "defaultStatus": "Untested",
+    "status": "Pass",
+    "defaultStatus": "Pass",
     "defaultTester": "NgaMTQ"
   },
   {
@@ -8399,8 +8399,8 @@
     "errorCode": "ERR-WEB-BS289-02",
     "smoke": "No",
     "note": "Test case bổ sung",
-    "status": "Untested",
-    "defaultStatus": "Untested",
+    "status": "Pass",
+    "defaultStatus": "Pass",
     "defaultTester": "NgaMTQ"
   },
   {
@@ -8421,8 +8421,8 @@
     "errorCode": "ERR-WEB-BS289-03",
     "smoke": "No",
     "note": "Test case bổ sung",
-    "status": "Untested",
-    "defaultStatus": "Untested",
+    "status": "Pass",
+    "defaultStatus": "Pass",
     "defaultTester": "NgaMTQ"
   },
   {
@@ -8443,8 +8443,8 @@
     "errorCode": "ERR-WEB-BS289-04",
     "smoke": "No",
     "note": "Test case bổ sung",
-    "status": "Untested",
-    "defaultStatus": "Untested",
+    "status": "Pass",
+    "defaultStatus": "Pass",
     "defaultTester": "NgaMTQ"
   },
   {
@@ -8465,8 +8465,8 @@
     "errorCode": "ERR-WEB-BS289-05",
     "smoke": "No",
     "note": "Test case bổ sung",
-    "status": "Untested",
-    "defaultStatus": "Untested",
+    "status": "Pass",
+    "defaultStatus": "Pass",
     "defaultTester": "NgaMTQ"
   },
   {
@@ -8487,8 +8487,30 @@
     "errorCode": "ERR-WEB-BS289-06",
     "smoke": "No",
     "note": "Test case bổ sung",
-    "status": "Untested",
-    "defaultStatus": "Untested",
+    "status": "Pass",
+    "defaultStatus": "Pass",
+    "defaultTester": "NgaMTQ"
+  },
+  {
+    "id": "TC_WEB_[BỔ SUNG] YC_380_EN",
+    "stt": "380b",
+    "tester": "NgaMTQ",
+    "module": "Giao dịch Lệnh",
+    "screen": "[BỔ SUNG] YC: 289_Web_Sửa thông báo lỗi màn Đặt lệnh (mục 2.17)",
+    "useCaseId": "[BỔ SUNG] YC",
+    "useCaseName": "289_Web_Sửa thông báo lỗi màn Đặt lệnh (mục 2.17)",
+    "name": "Kiểm tra đa ngôn ngữ tiếng Anh - Đặt lệnh với giá ngoài biên độ",
+    "desc": "Tiền điều kiện: Môi trường UAT sẵn sàng. Đã chuyển đổi giao diện sang Tiếng Anh. | Dữ liệu test: Mã CK bất kỳ (VD: SSI, trần 40.0, sàn 35.0) | Giá: ngoài biên độ | Loại kiểm thử: Functional | Độ ưu tiên: P2 - High",
+    "steps": "Bước 1: Chuyển đổi ngôn ngữ sang Tiếng Anh.\nBước 2: Vào màn hình Đặt lệnh hoặc Đặt lệnh nhanh, nhập mã CK.\nBước 3: Nhập giá ngoài biên độ trần/sàn (VD: lớn hơn trần hoặc nhỏ hơn sàn).\nBước 4: Nhấn button Mua/Bán hoặc tab qua trường khác.",
+    "expected": "1. Hệ thống hiển thị thông báo lỗi/validate tiếng Anh tương ứng: \"The price is out of range\".\n2. Không hiển thị tiếng Việt hoặc lỗi ngôn ngữ.",
+    "priority": "P2 - High",
+    "testType": "Functional",
+    "testData": "TK: 088C000922 | MK: 13579@Ab | PIN/OTP: 135790 | Mã: SSI | Giá: Ngoài biên độ",
+    "errorCode": "ERR-WEB-BS289-07",
+    "smoke": "No",
+    "note": "Test case bổ sung (Case 35 - Jira SBSI-114)",
+    "status": "Pass",
+    "defaultStatus": "Pass",
     "defaultTester": "NgaMTQ"
   },
   {
