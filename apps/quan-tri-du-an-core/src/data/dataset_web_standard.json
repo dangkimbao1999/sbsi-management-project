@@ -10780,7 +10780,7 @@
     "smoke": "No",
     "note": "Đã kiểm thử thực tế trên Web UAT ngày 21/09/2026: HTTP 200 OK, trả về transactionId: 0001032944:CASHTRANS:1789979002993:9SND.",
     "status": "Pass",
-    "defaultStatus": "Untested",
+    "defaultStatus": "Pass",
     "defaultTester": "BachNT",
     "updatedAt": "16:20 21/09"
   },
@@ -10803,7 +10803,7 @@
     "smoke": "No",
     "note": "Đã kiểm thử thực tế trên Web UAT: HTTP 200 OK, transactionId: 0001032944:CASHTRANS:1789979003093:2UW6.",
     "status": "Pass",
-    "defaultStatus": "Untested",
+    "defaultStatus": "Pass",
     "defaultTester": "BachNT",
     "updatedAt": "16:20 21/09"
   },
@@ -10826,7 +10826,7 @@
     "smoke": "No",
     "note": "Đã kiểm thử thực tế trên Web UAT: HTTP 200 OK.",
     "status": "Pass",
-    "defaultStatus": "Untested",
+    "defaultStatus": "Pass",
     "defaultTester": "BachNT",
     "updatedAt": "16:20 21/09"
   },
@@ -10849,7 +10849,7 @@
     "smoke": "No",
     "note": "Đã kiểm thử thực tế trên Web UAT: HTTP 200 OK.",
     "status": "Pass",
-    "defaultStatus": "Untested",
+    "defaultStatus": "Pass",
     "defaultTester": "BachNT",
     "updatedAt": "16:20 21/09"
   },
@@ -10872,7 +10872,7 @@
     "smoke": "Yes",
     "note": "Đã kiểm thử trên Web UAT: Popup hiển thị chuẩn xác, đầy đủ các trường Ngân hàng, Số TK, Tên thụ hưởng.",
     "status": "Pass",
-    "defaultStatus": "Untested",
+    "defaultStatus": "Pass",
     "defaultTester": "BachNT",
     "updatedAt": "16:20 21/09"
   },
@@ -10895,7 +10895,7 @@
     "smoke": "No",
     "note": "Đã đối soát logic isDisableBtnAdd() trong client bundle và tham số sysVar BASE_MARGIN_MAXCFOTHERACC.",
     "status": "Pass",
-    "defaultStatus": "Untested",
+    "defaultStatus": "Pass",
     "defaultTester": "BachNT",
     "updatedAt": "16:20 21/09"
   },
@@ -10918,7 +10918,7 @@
     "smoke": "No",
     "note": "Đã kiểm thử thực tế trên Web UAT: Mở popup thành công.",
     "status": "Pass",
-    "defaultStatus": "Untested",
+    "defaultStatus": "Pass",
     "defaultTester": "BachNT",
     "updatedAt": "16:20 21/09"
   },
@@ -10941,7 +10941,7 @@
     "smoke": "No",
     "note": "Đã xác thực luồng fetchBeneficiaryName() và API /inq/getbenname?bankCode={bin}&bankAccount={acc}.",
     "status": "Pass",
-    "defaultStatus": "Untested",
+    "defaultStatus": "Pass",
     "defaultTester": "BachNT",
     "updatedAt": "16:20 21/09"
   },
@@ -10964,7 +10964,7 @@
     "smoke": "No",
     "note": "Đã kiểm thử thực tế trên Web UAT: Giao diện chặn submit và hiện toast cảnh báo.",
     "status": "Pass",
-    "defaultStatus": "Untested",
+    "defaultStatus": "Pass",
     "defaultTester": "BachNT",
     "updatedAt": "16:20 21/09"
   },
@@ -10987,7 +10987,7 @@
     "smoke": "No",
     "note": "Đã kiểm thử thực tế trên Web UAT: Backend trả về đúng ec: -670108, em: \"Tên người thụ hưởng không trùng khớp\".",
     "status": "Pass",
-    "defaultStatus": "Untested",
+    "defaultStatus": "Pass",
     "defaultTester": "BachNT",
     "updatedAt": "16:20 21/09"
   },
@@ -11010,7 +11010,7 @@
     "smoke": "No",
     "note": "Đã kiểm thử thực tế trên Web UAT: Callback loadBankRegistered() nạp lại dữ liệu thành công.",
     "status": "Pass",
-    "defaultStatus": "Untested",
+    "defaultStatus": "Pass",
     "defaultTester": "BachNT",
     "updatedAt": "16:20 21/09"
   },
@@ -11033,7 +11033,7 @@
     "smoke": "No",
     "note": "Đã kiểm thử thực tế trên Web UAT: Backend trả về đúng ec: -100147, em: \"Tài khoản ngân hàng bị trùng!\".",
     "status": "Pass",
-    "defaultStatus": "Untested",
+    "defaultStatus": "Pass",
     "defaultTester": "BachNT",
     "updatedAt": "16:20 21/09"
   }
