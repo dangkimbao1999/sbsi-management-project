@@ -596,7 +596,7 @@
   {
     "id": "TC_APP_UC06_028",
     "stt": "28",
-    "tester": "BachNT",
+    "tester": "LongNH",
     "module": "Bảng giá & Thị trường",
     "screen": "UC06: 2.2.1 Thị trường - Tab Tổng quan",
     "useCaseId": "UC06",
@@ -610,8 +610,8 @@
     "testData": "TK: 088C030413 | MK: 13579@Ab | PIN/OTP: 135790",
     "errorCode": "N/A – không phát sinh thông báo lỗi",
     "smoke": "No",
-    "note": "",
-    "status": "Untested",
+    "note": "Hiển thị đúng tổng NAV và popup chi tiết từng tiểu khoản (01, 06); chạm tiểu khoản 01 chuyển đúng sang màn hình Tài sản",
+    "status": "Pass",
     "defaultStatus": "Untested",
     "defaultTester": "BachNT"
   },
@@ -632,8 +632,8 @@
     "testData": "TK: 088C024014 | MK: 13579@Ab | PIN/OTP: 135790",
     "errorCode": "N/A – không phát sinh thông báo lỗi",
     "smoke": "No",
-    "note": "",
-    "status": "Untested",
+    "note": "Khu vực Truy cập nhanh chỉ có 3 tính năng (Chuyển tiền, SmartOTP, Cập nhật CCCD), thiếu Danh mục, Xác nhận lệnh Online theo đặc tả",
+    "status": "Fail",
     "defaultStatus": "Untested",
     "defaultTester": "LongNH"
   },
@@ -654,8 +654,8 @@
     "testData": "TK: 088C024014 | MK: 13579@Ab | PIN/OTP: 135790",
     "errorCode": "N/A – không phát sinh thông báo lỗi",
     "smoke": "No",
-    "note": "",
-    "status": "Untested",
+    "note": "Chưa có icon Tùy chỉnh để khách hàng chọn/bỏ chọn các chức năng truy cập nhanh",
+    "status": "Fail",
     "defaultStatus": "Untested",
     "defaultTester": "LongNH"
   },
