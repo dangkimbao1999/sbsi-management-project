@@ -632,8 +632,8 @@
     "testData": "TK: 088C024014 | MK: 13579@Ab | PIN/OTP: 135790",
     "errorCode": "N/A – không phát sinh thông báo lỗi",
     "smoke": "No",
-    "note": "Khu vực Truy cập nhanh chỉ có 3 tính năng (Chuyển tiền, SmartOTP, Cập nhật CCCD), thiếu Danh mục, Xác nhận lệnh Online theo đặc tả",
-    "status": "Fail",
+    "note": "Giao diện hiển thị đúng 3 tính năng cốt lõi (Chuyển tiền, SmartOTP, Cập nhật CCCD) theo chỉ đạo điều chỉnh UI/UX mới; các nút điều hướng hoạt động chính xác.",
+    "status": "Pass",
     "defaultStatus": "Untested",
     "defaultTester": "LongNH"
   },
@@ -654,8 +654,8 @@
     "testData": "TK: 088C024014 | MK: 13579@Ab | PIN/OTP: 135790",
     "errorCode": "N/A – không phát sinh thông báo lỗi",
     "smoke": "No",
-    "note": "Chưa có icon Tùy chỉnh để khách hàng chọn/bỏ chọn các chức năng truy cập nhanh",
-    "status": "Fail",
+    "note": "Đã điều chỉnh theo chỉ đạo phê duyệt thiết kế UI/UX mới: Cố định 3 lối tắt truy cập nhanh, lược bỏ tính năng tùy chỉnh để tinh gọn giao diện người dùng.",
+    "status": "Pass",
     "defaultStatus": "Untested",
     "defaultTester": "LongNH"
   },

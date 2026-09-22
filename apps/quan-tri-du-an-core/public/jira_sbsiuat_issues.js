@@ -1,6 +1,6 @@
 window.__SBSI_JIRA_DATA__ = {
-  "syncedAt": "2026-09-21 23:10:15",
-  "total": 240,
+  "syncedAt": "2026-09-22 08:34:51",
+  "total": 241,
   "allowedUsers": [
     "anhll.sbsi",
     "anntt.sbsi",
@@ -29,6 +29,26 @@ window.__SBSI_JIRA_DATA__ = {
     "vinhtq.sbsi"
   ],
   "issues": [
+    {
+      "id": "SBSIEXT-248",
+      "platform": "general",
+      "title": "Mail kết quả khớp lệnh gửi 2 lần",
+      "type": "External Bug",
+      "priority": "Medium",
+      "status": "Open",
+      "assignee": "Huong Nguyen Doan Lan(KT-CK-HN)",
+      "assigneeUser": "huong.nguyen",
+      "reporter": "Thao Nguyen Phuong(SBSI)",
+      "reporterUser": "thaonp1.sbsi",
+      "reporterNick": "ThaoNP",
+      "ba": "",
+      "desc": "088C000987, ngày 21/09/2026",
+      "relatedTc": "",
+      "jiraUrl": "https://projects.fss.com.vn/browse/SBSIEXT-248",
+      "createdAt": "2026-09-22 08:25",
+      "updatedAt": "2026-09-22 08:25",
+      "source": "JIRA_FSS"
+    },
     {
       "id": "SBSIEXT-247",
       "platform": "web",
@@ -252,7 +272,7 @@ window.__SBSI_JIRA_DATA__ = {
     {
       "id": "SBSIEXT-236",
       "platform": "general",
-      "title": "ONB_Bước 1/7: Lỗi không hiển thị số lần còn lại nhập OTP sau khi thực hiện nhập SDT đã thao tác vào Thiết bị test thứ 2",
+      "title": "ONB_Bước 1/7: Lỗi hiển thị khi nhập SDT khác trên cùng 1 thiết bị sau khi nhấn nut Back",
       "type": "External Bug",
       "priority": "Medium",
       "status": "Open",
@@ -262,17 +282,17 @@ window.__SBSI_JIRA_DATA__ = {
       "reporterUser": "trinhnt.sbsi",
       "reporterNick": "TrinhNT",
       "ba": "",
-      "desc": "# Trên thiết bị 1: Tại màn hình nhập OTP sai 1 lần\r\n # Màn hình hiển thị message: Mã OTP chưa chính xác. Vui lòng thử lại (còn 4 lần)\r\n # Trên thiết bị 2: Thực hiện Nhập lại sdt + capcha -> nhấn Tiếp tục\r\n # Kiểm tra màn hình hiển thị\r\n\r\nKQTT: Lỗi không hiển thị số lần còn lại nhập OTP ở thiết bị 2 sau khi nhập cùng với Sđt đã thao tác ở thiết bị 1\r\n\r\nKQMM: Cần hiển thị số lần còn lại nhập OTP sau khi đã thao tác xong B3 chứ không phải thao tác nhập mới hiển thị số lần nhập OTP còn lại\r\n\r\n[^1789976965471_638376532291700399_8960082758357430572 (1).mp4]\r\n\r\n ",
+      "desc": "# Tại màn hình nhập SDT A + mã capcha -> Nhập OTP sai 5 lần\r\n # Màn hình hiển thị message: Quý khách đã nhập sai... Vui lòng thử lại sau 15p\r\n # Nhấn nút Back -> Thực hiện nhập sdt B + capcha -> Tiếp tục\r\n # Kiểm tra màn hình hiển thị\r\n\r\nKQTT: Lỗi hiển thị time countdown của sdt A\r\n\r\nKQMM: Cần hiển thị đúng theo số lần nhập OTP và time hạn sử dụng OTP của sdt B\r\n\r\n \r\n\r\n ",
       "relatedTc": "",
       "jiraUrl": "https://projects.fss.com.vn/browse/SBSIEXT-236",
       "createdAt": "2026-09-21 14:51",
-      "updatedAt": "2026-09-21 16:07",
+      "updatedAt": "2026-09-22 08:28",
       "source": "JIRA_FSS"
     },
     {
       "id": "SBSIEXT-235",
-      "platform": "mobile",
-      "title": "ONB_Bước 1/7: Lỗi không hiển thị số lần còn lại nhập OTP sau khi nhập sai và thực hiện Out App",
+      "platform": "general",
+      "title": "ONB_Bước 1/7: Hiển thị message khi nhập mã OTP hết hiệu lực chưa tường minh",
       "type": "External Bug",
       "priority": "Medium",
       "status": "Open",
@@ -282,11 +302,11 @@ window.__SBSI_JIRA_DATA__ = {
       "reporterUser": "trinhnt.sbsi",
       "reporterNick": "TrinhNT",
       "ba": "",
-      "desc": "# Tại màn hình nhập OTP sai 1 lần\r\n # Màn hình hiển thị message: Mã OTP chưa chính xác. Vui lòng thử lại (còn 4 lần)\r\n # Thực hiện Out App -> Nhập lại sdt + capcha -> nhấn Tiếp tục\r\n # Kiểm tra màn hình hiển thị\r\n\r\nKQTT: Lỗi không hiển thị số lần còn lại nhập OTP sau khi nhập sai và thực hiện Out App\r\n\r\nKQMM: Cần hiển thị số lần còn lại nhập OTP sau khi đã thao tác xong B3 chứ không phải thao tác nhập mới hiển thị số lần nhập OTP còn lại\r\n\r\n[^1789976616975_638376532291700399_8960082758357430572.mp4]\r\n\r\n ",
+      "desc": "# Tại màn hình nhập OTP time countdown còn 5s\r\n # Kiểm tra màn hình hiển thị\r\n\r\nKQTT: Hiển thị message: Mã OTP chưa chính xác. Vui lòng thử lại (số...)\r\n\r\nKQMM: Hiển thị message khi nhập mã OTP hết hiệu lực: Mã OTP hết hiệu lực \r\n\r\n \r\n\r\n ",
       "relatedTc": "",
       "jiraUrl": "https://projects.fss.com.vn/browse/SBSIEXT-235",
       "createdAt": "2026-09-21 14:44",
-      "updatedAt": "2026-09-21 14:51",
+      "updatedAt": "2026-09-22 08:31",
       "source": "JIRA_FSS"
     },
     {
@@ -562,11 +582,11 @@ window.__SBSI_JIRA_DATA__ = {
       "reporterUser": "anntt.sbsi",
       "reporterNick": "AnNTT",
       "ba": "",
-      "desc": "# *Mô tả*\r\n\r\nRule validate hiện tại của core: hệ thống check nếu tài khoản đã có tiểu khoản mg => disable button Đăng ký ở trường Mở tiểu khoản margin \r\n\r\n!image-2026-09-21-10-24-27-763.png!\r\n\r\n*2. Mong muốn*\r\n * Check theo trạng thái \"đăng ký\" của toàn bộ loại hình aftype được gắn vào cftype của tài khoản, nếu còn aftype ở trạng thái chưa đăng ký => enable button Đăng ký\r\n * Aftype loại hình Margin => validate cho trường Mở tiểu khoản margin; Aftype loại hình Normal => validate cho trường Mở tiểu khoản normal (phát triển sau)\r\n * Khi user nhấn button Đăng ký, hệ thống show danh sách sản phẩm tương ứng với các LH aftype đang được gán cho TK có trạng thái Chưa đăng ký\r\n * User chọn sản phẩm nào thì hiển thị hợp đồng tương ứng với sản phẩm đó để ký econtract và sinh tiểu khoản mg tương ứng\r\n\r\n ",
+      "desc": "# *Mô tả*\r\n\r\nRule validate hiện tại của core: hệ thống check nếu tài khoản đã có tiểu khoản mg => disable button Đăng ký ở trường Mở tiểu khoản margin \r\n\r\n!image-2026-09-21-10-24-27-763.png!\r\n\r\n*2. Mong muốn*\r\n * Check theo trạng thái \"đăng ký\" của toàn bộ loại hình aftype được gắn vào cftype của tài khoản, nếu còn aftype ở trạng thái chưa đăng ký => enable button Đăng ký\r\n * Aftype loại hình Margin => validate cho trường Mở tiểu khoản margin; Aftype loại hình Normal => validate cho trường Mở tiểu khoản normal (phát triển sau)\r\n * Khi user nhấn button Đăng ký, hệ thống show danh sách sản phẩm tương ứng với các LH aftype đang được gán cho TK có trạng thái Chưa đăng ký\r\n * User chọn sản phẩm nào thì hiển thị hợp đồng tương ứng với sản phẩm đó để ký econtract và sinh tiểu khoản mg tương ứng\r\n * Duyệt sinh tiểu khoản tự động (Điều kiện duyệt: ký thành công Econtract)\r\n\r\n ",
       "relatedTc": "",
       "jiraUrl": "https://projects.fss.com.vn/browse/SBSIEXT-221",
       "createdAt": "2026-09-21 10:38",
-      "updatedAt": "2026-09-21 10:38",
+      "updatedAt": "2026-09-22 08:17",
       "source": "JIRA_FSS"
     },
     {
@@ -1126,7 +1146,7 @@ window.__SBSI_JIRA_DATA__ = {
       "relatedTc": "",
       "jiraUrl": "https://projects.fss.com.vn/browse/SBSIEXT-193",
       "createdAt": "2026-09-18 13:38",
-      "updatedAt": "2026-09-19 16:04",
+      "updatedAt": "2026-09-22 08:14",
       "source": "JIRA_FSS"
     },
     {
@@ -3355,7 +3375,7 @@ window.__SBSI_JIRA_DATA__ = {
       "title": "[Web] [UI/UX] [Đăng nhập] sửa UI Đã có tài khoản đăng nhập",
       "type": "Requirement",
       "priority": "Medium",
-      "status": "Reviewed Code",
+      "status": "Tested",
       "assignee": "Vo Pham Tien(LTV-CK-HN)",
       "assigneeUser": "vo.pham",
       "reporter": "Quoc Pham Bao(SBSI)",
@@ -3366,7 +3386,7 @@ window.__SBSI_JIRA_DATA__ = {
       "relatedTc": "",
       "jiraUrl": "https://projects.fss.com.vn/browse/SBSIEXT-74",
       "createdAt": "2026-09-15 09:39",
-      "updatedAt": "2026-09-18 13:16",
+      "updatedAt": "2026-09-22 08:32",
       "source": "JIRA_FSS"
     },
     {
