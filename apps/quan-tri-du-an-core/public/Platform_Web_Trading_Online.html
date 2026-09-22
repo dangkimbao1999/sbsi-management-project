@@ -3381,9 +3381,7 @@
     }
 
     function mobile_deleteTc(tcId) {
-      if (!confirm('Bạn có chắc chắn muốn xóa kịch bản kiểm thử ' + tcId + ' này không?
-
-Thao tác này sẽ đồng bộ lên Server và xóa vĩnh viễn trên toàn hệ thống.')) return;
+      if (!confirm('Bạn có chắc chắn muốn xóa kịch bản kiểm thử ' + tcId + ' này không?\n\nThao tác này sẽ đồng bộ lên Server và xóa vĩnh viễn trên toàn hệ thống.')) return;
       
       const idx = mobile_dataset.findIndex(tc => tc.id === tcId);
       if (idx !== -1) {
