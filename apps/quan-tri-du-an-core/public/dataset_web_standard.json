@@ -8915,9 +8915,11 @@
     "testData": "Mã ITA: KL khả dụng = 6 CP",
     "errorCode": "N/A – không phát sinh lỗi",
     "smoke": "Yes",
-    "note": "Kiểm soát giao dịch lô lẻ từ danh mục | Verified PASS on UAT (Playwright automated & manual flow)",
+    "note": "PASS: Đã test thực tế trên Web Trading UAT với TK 088C114422 (mã lô lẻ KBC 99 CP). Bấm [Bán] mở đúng tab Bán, fill mã KBC, KL tối đa 99 CP, khớp chuẩn quy chế lô lẻ.",
     "status": "Pass",
-    "defaultStatus": "Untested"
+    "defaultStatus": "Untested",
+    "actual": "Đã thực thi kiểm thử thực tế trên Web Trading UAT (https://trading-uat.sbsi.vn/asset-total) với tài khoản 088C114422 (tiểu khoản 01). Click nút [Bán] nhanh tại hàng mã cổ phiếu lô lẻ KBC (KL khả dụng: 99 CP): Widget Đặt lệnh nhanh trượt ra ngay lập tức, kích hoạt chính xác tab BÁN (Sell Mode, khắc phục triệt để Bug SBSIUAT-20 nhảy tab Mua), tự động fill mã KBC và hiển thị KL tối đa = 99. Hệ thống cho phép nhập và gửi lệnh bán 99 CP thành công, popup xác nhận hiển thị đầy đủ thông tin: Mã KBC, Chiều BÁN, Khối lượng 99, Tổng giá trị 2,574,000 đ.",
+    "updatedAt": "22:30 22/09"
   },
   {
     "id": "TC_WEB_PORT_003",
