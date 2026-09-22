@@ -10054,12 +10054,13 @@
     "testData": "Khối lượng từ 1 đến 99 cổ phiếu.",
     "errorCode": "N/A – không phát sinh thông báo lỗi",
     "smoke": "No",
-    "note": "",
+    "note": "Nghiệm thu UAT đạt 100% tiêu chuẩn. Evidence: evidence_TC_WEB_MKT_016_odd_lot.png",
     "status": "Pass",
     "defaultStatus": "Untested",
     "defaultTester": "LongNH",
     "cjStage": "CJ01",
-    "actual": "Đã kiểm thử UAT live trên trading-uat.sbsi.vn/priceboard"
+    "actual": "Đã kiểm thử live trên Web UAT MARIS (TK 088C115858). 1. Bảng giá Lô lẻ phân tách chế độ xem riêng biệt (truy cập dropdown sàn HOSE/HNX/UPCOM -> Lô lẻ). 2. Bước giá và các cột chuẩn xác, khối lượng chào mua/bán hiển thị chính xác từng đơn vị lẻ (1 - 99 CP: AAA KL 1, 50, 38; AAM KL 50, 12, 60; ACG KL 99, 1; ACL KL 98, 5...); footer chú thích rõ 'Giá x 1,000 VNĐ. Khối lượng x 1CP'. Kết quả ĐẠT 100%.",
+    "updatedAt": "22:30 22/09"
   },
   {
     "id": "TC_WEB_MKT_017",
