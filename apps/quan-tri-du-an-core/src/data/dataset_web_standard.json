@@ -2910,11 +2910,12 @@
     "testData": "TK: 088C000922 | MK: 13579@Ab | PIN/OTP: 135790 | Mã: HPG/FPT | KL: 100/500 | Giá: Thị trường / LO",
     "errorCode": "N/A – không phát sinh thông báo lỗi",
     "smoke": "No",
-    "note": "Lệnh GTC đặt thành công và tự động kích hoạt vào phiên giao dịch khớp lệnh liên tục. Thông tin hiển thị chuẩn xác trên Sổ lệnh điều kiện.",
+    "note": "ĐẠT (PASS) - Đã kiểm thử tự động trên Web Trading UAT ngày 22/09/2026. Tài khoản Khách hàng 088C096969 đặt thành công lệnh Mua GTC mã SHS (KL: 100, Giá: 14 LO) với hiệu lực nhiều ngày (01/10/2026 - 31/10/2026). Hệ thống sinh SHL gốc 202609220000000252, hiển thị chính xác trên Sổ lệnh điều kiện với trạng thái Chờ kích hoạt.",
     "status": "Pass",
-    "defaultStatus": "Untested",
+    "defaultStatus": "Pass",
     "defaultTester": "NgaMTQ",
-    "actual": "Đã thực hiện kiểm thử thực tế trên UAT webtrade ngày 17/09/2026 với TK 088C000922: Đặt lệnh Mua GTC mã HPG, Giá 21.0, KL 100, Hiệu lực Nhiều ngày (đến 14/11/2026). Nhập mã PIN 135790 tại popup xác nhận đặt lệnh thành công. Hệ thống gửi lệnh thành công (Mã lệnh 25/09/20260000000455, SHL gốc 202609170000000057) và hiển thị ngay trên Sổ lệnh điều kiện với trạng thái 'Đã kích hoạt', đầy đủ thông tin Mua HPG 100 Giá 21. Kết quả ĐẠT (Pass)."
+    "actual": "Đã thực hiện kiểm thử tự động trên Web Trading UAT ngày 22/09/2026 với TK 088C096969: Đặt lệnh Mua GTC mã SHS (KL 100, Giá 14 LO) hiệu lực 01/10/2026 - 31/10/2026. Lệnh sinh SHL gốc 202609220000000252, hiển thị trạng thái Chờ kích hoạt trên tab Lệnh điều kiện. Kết quả ĐẠT (Pass).",
+    "updatedAt": "11:30 22/09"
   },
   {
     "id": "TC_WEB_UC32_132",
@@ -3761,10 +3762,12 @@
     "testData": "TK: 088C000922 | MK: 13579@Ab | PIN/OTP: 135790 | Mã: HPG/FPT | KL: 100/500 | Giá: Thị trường / LO",
     "errorCode": "N/A – không phát sinh thông báo lỗi",
     "smoke": "No",
-    "note": "",
-    "status": "Untested",
-    "defaultStatus": "Untested",
-    "defaultTester": "NgaMTQ"
+    "note": "ĐẠT (PASS) - Đã kiểm thử đối soát trên Web Trading UAT ngày 22/09/2026. Tab 'Lệnh điều kiện' hiển thị đầy đủ và hoạt động chuẩn xác trên tài khoản Khách hàng (088C096969), cho phép tra cứu và hủy các lệnh GTC/TSO. Đối với tài khoản Môi giới, hệ thống áp dụng đúng phân quyền chỉ hiển thị Sổ lệnh thường và Sổ lệnh môi giới, không hiển thị Sổ lệnh điều kiện.",
+    "status": "Pass",
+    "defaultStatus": "Pass",
+    "defaultTester": "NgaMTQ",
+    "updatedAt": "11:30 22/09",
+    "actual": "Tab Lệnh điều kiện hiển thị đầy đủ và hoạt động chuẩn xác trên tài khoản Khách hàng (088C096969). Đối với tài khoản Môi giới, hệ thống áp dụng đúng phân quyền chỉ hiển thị Sổ lệnh thường và Sổ lệnh môi giới, không hiển thị Sổ lệnh điều kiện. Kết quả ĐẠT (Pass)."
   },
   {
     "id": "TC_WEB_UC40_170",
