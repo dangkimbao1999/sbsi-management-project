@@ -775,7 +775,7 @@
         <p>Cuộc họp làm việc kỹ thuật giữa SBSI (Product/QA) và FSS (Phát triển & BA) nhằm tháo gỡ các điểm nghẽn kịch bản, chốt deadline xử lý bug và giải quyết dứt điểm các issue bị gắn trạng thái "Won't fix".</p>
       </div>
       <div class="meeting-meta-chips">
-        <div class="meta-chip">📅 Thời điểm: <strong>22/09/2026 08:40</strong></div>
+        <div class="meta-chip">📅 Thời điểm: <strong>22/09/2026 08:46</strong></div>
         <div class="meta-chip">👤 Tester phụ trách: <strong>CuongNT / LongNH / AnNTT</strong></div>
         <div class="meta-chip">🏢 Đối tác: <strong>FSS (Mai Cao, Hao Ha Thi, Nguyen Duc Minh)</strong></div>
         <div class="meta-chip">📱 Nền tảng: <strong>Mobile App (iOS/Android) • Web Trade • Core FLEX BO</strong></div>
@@ -1010,6 +1010,231 @@
           <div>Hành động: <strong>FSS bàn giao bản vá App mới nhất để Tester CuongNT kiểm thử lại</strong></div>
           <button class="btn btn-secondary" onclick="switchTab('tab_tcs'); filterByStatus('Fail');" style="padding: 4px 10px; font-size: 11px;">Xem 6 kịch bản Fail ↗</button>
         </div>
+      </div>
+
+      <!-- ================================================================= -->
+      <!-- PO ACTION CHECKLIST & DECISION MATRIX -->
+      <!-- ================================================================= -->
+      <div style="margin-top: 32px; margin-bottom: 20px;">
+        <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; margin-bottom: 16px;">
+          <div>
+            <h3 style="font-size: 18px; font-weight: 800; color: var(--primary); display: flex; align-items: center; gap: 8px;">
+              <span>📌 BẢNG ĐIỀU HÀNH & CHECKLIST DÀNH CHO PRODUCT OWNER (PO CONFIRM & COMMENT)</span>
+            </h3>
+            <p style="font-size: 13px; color: var(--text-muted);">
+              Trích xuất trực tiếp từ Dashboard Jira FSS (selectPageId=15258) và lịch sử trao đổi mới nhất (22/09/2026) — 19 issue trọng điểm cần PO can thiệp
+            </p>
+          </div>
+          <span class="badge badge-open" style="font-size: 12px; padding: 6px 12px;">19 Issue Cần Quyết Định</span>
+        </div>
+
+        <!-- Group 1: Won't fix issues -->
+        <div class="hotspot-card critical" style="margin-bottom: 20px;">
+          <div class="hotspot-header">
+            <div class="hotspot-title">
+              <span class="badge badge-fail">NHÓM 1</span>
+              <span>Các Issue FSS Gắn "Won't Fix" Cần PO Thẩm Định (Bác Bỏ / Reopen Hoặc Xác Nhận Đóng)</span>
+            </div>
+            <span class="badge badge-wontfix">7 Issues Won't Fix</span>
+          </div>
+          <div class="hotspot-body" style="overflow-x: auto;">
+            <table class="data-table" style="margin-top: 8px; font-size: 12px;">
+              <thead>
+                <tr>
+                  <th style="width: 110px;">Mã Issue</th>
+                  <th>Tiêu Đề & Vấn Đề</th>
+                  <th style="width: 140px;">FSS Phụ Trách</th>
+                  <th>Lý Do FSS Đóng Won't Fix</th>
+                  <th>Hành Động & Quyết Định Cần PO Chốt</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><a href="https://projects.fss.com.vn/browse/SBSIEXT-108" target="_blank" class="mono" style="font-weight:700; color:var(--fail);">SBSIEXT-108 ↗</a></td>
+                  <td><strong>[Onboarding] Lỗi không qua được bước 1 khi nhập sai mã NGT</strong></td>
+                  <td>TrangNTQ / Mai Cao</td>
+                  <td>FSS (Mai Cao): <em>"Không nhập thì cho đi tiếp, đã nhập thì phải đúng thông tin CTV"</em> -> Đóng Won't fix.</td>
+                  <td><strong style="color:var(--fail);">CỰC KỲ QUAN TRỌNG:</strong> CuongNT phản biện: Rule SBSI quy định nhập sai mã NGT vẫn cho qua và gán về DVKH. <strong>PO cần chốt:</strong> Yêu cầu FSS BÁC BỎ Won't fix và Reopen để sửa.</td>
+                </tr>
+                <tr>
+                  <td><a href="https://projects.fss.com.vn/browse/SBSIEXT-180" target="_blank" class="mono" style="font-weight:700; color:var(--fail);">SBSIEXT-180 ↗</a></td>
+                  <td><strong>Search sai tên Bank làm mất textbox STK thụ hưởng</strong></td>
+                  <td>Mai Cao Thi</td>
+                  <td>FSS (Mai Cao): <em>"Trùng iss SBSIEXT-117"</em>.</td>
+                  <td>PO/Tester kiểm tra bản build mới xem SBSIEXT-117 (Delivered) đã hết lỗi mất textbox chưa. Nếu chưa hết thì <strong>Reopen</strong>.</td>
+                </tr>
+                <tr>
+                  <td><a href="https://projects.fss.com.vn/browse/SBSIEXT-195" target="_blank" class="mono" style="font-weight:700; color:var(--fail);">SBSIEXT-195 ↗</a></td>
+                  <td><strong>[UI/UX] Bottom sheet tại màn chọn ngân hàng thụ hưởng bị che</strong></td>
+                  <td>TrangNTQ / Mai Cao</td>
+                  <td>FSS: <em>"Trùng iss SBSIEXT-117"</em>.</td>
+                  <td>Kiểm tra trên thiết bị thật xem bàn phím có còn che khuất Bottom sheet không trước khi chấp nhận đóng issue.</td>
+                </tr>
+                <tr>
+                  <td><a href="https://projects.fss.com.vn/browse/SBSIEXT-129" target="_blank" class="mono" style="font-weight:700; color:var(--fail);">SBSIEXT-129 ↗</a></td>
+                  <td><strong>[UI/UX] Nhập ô search làm biến mất Bottom sheet</strong></td>
+                  <td>TrangNTQ / Mai Cao</td>
+                  <td>FSS: <em>"Trùng iss SBSIEXT-117"</em>.</td>
+                  <td>Xác nhận format tên ngân hàng chuẩn và thứ tự sort A-Z đã đạt chuẩn UI/UX chưa.</td>
+                </tr>
+                <tr>
+                  <td><a href="https://projects.fss.com.vn/browse/SBSIEXT-176" target="_blank" class="mono" style="font-weight:700; color:var(--fail);">SBSIEXT-176 ↗</a></td>
+                  <td><strong>[BO] Sửa thông tin KH báo lỗi trống Loại hình KH</strong></td>
+                  <td>Mai Cao Thi</td>
+                  <td>FSS: Do data test khai báo nhầm loại hình eKYC 002 (Tổ chức) thay vì Cá nhân.</td>
+                  <td>PO/BA kiểm tra tham số `cftype` trên UAT. Nếu do data test thì chấp nhận đóng; nếu do bug hệ thống thì Reopen.</td>
+                </tr>
+                <tr>
+                  <td><a href="https://projects.fss.com.vn/browse/SBSIEXT-223" target="_blank" class="mono" style="font-weight:700; color:var(--fail);">SBSIEXT-223 ↗</a></td>
+                  <td><strong>Lỗi text thông báo số tài khoản ngân hàng</strong></td>
+                  <td>Mai Cao Thi</td>
+                  <td>FSS (21/09): <em>"Trùng iss SBSIEXT-183"</em>.</td>
+                  <td>Đồng ý gộp vào SBSIEXT-183 (đang Open) nhưng yêu cầu FSS cam kết deadline xử lý.</td>
+                </tr>
+                <tr>
+                  <td><a href="https://projects.fss.com.vn/browse/SBSIEXT-192" target="_blank" class="mono" style="font-weight:700; color:var(--fail);">SBSIEXT-192 ↗</a></td>
+                  <td><strong>Không autofill NGT mở tk là NGT cấp trên CTV</strong></td>
+                  <td>HungBQ</td>
+                  <td>FSS: Do khai báo loại hình CTV phải có vai trò Quản lý tài khoản.</td>
+                  <td>PO xác nhận business rule phân cấp cộng tác viên theo giải trình của FSS.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Group 2: Suspended / Questioning from FSS -->
+        <div class="hotspot-card warning" style="margin-bottom: 20px;">
+          <div class="hotspot-header">
+            <div class="hotspot-title">
+              <span class="badge badge-prio-high">NHÓM 2</span>
+              <span>Các Issue Đang Tạm Dừng (Suspended) / FSS Đang Hỏi Ý Kiến Chờ PO Chốt Phương Án</span>
+            </div>
+            <span class="badge badge-open">4 Issues Chờ Chốt</span>
+          </div>
+          <div class="hotspot-body" style="overflow-x: auto;">
+            <table class="data-table" style="margin-top: 8px; font-size: 12px;">
+              <thead>
+                <tr>
+                  <th style="width: 110px;">Mã Issue</th>
+                  <th>Tiêu Đề</th>
+                  <th style="width: 140px;">FSS Hỏi / Giải Trình</th>
+                  <th>Nội Dung Cụ Thể Cần PO Confirm & Phản Hồi Cho FSS</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><a href="https://projects.fss.com.vn/browse/SBSIEXT-211" target="_blank" class="mono" style="font-weight:700; color:var(--primary);">SBSIEXT-211 ↗</a><br><a href="https://projects.fss.com.vn/browse/SBSIEXT-148" target="_blank" class="mono" style="font-weight:700; color:var(--primary);">SBSIEXT-148 ↗</a></td>
+                  <td><strong>Lỗi không refresh Captcha Bước 1 & Đề xuất bỏ/đổi Captcha</strong></td>
+                  <td>FSS (Mai Cao comment 21/09): <em>"Chờ xem có chốt làm captcha V3 không, nếu làm thì sẽ không cần sửa iss này"</em>.</td>
+                  <td><strong style="color:var(--primary);">CẦN PO CHỐT GẤP TRONG HỌP:</strong> Xác nhận phương án triển khai <strong>reCAPTCHA v3</strong> (tàng hình). Nếu làm v3 ở Phase 1 thì bỏ qua bug 211; nếu dời v3 sang Phase 2 thì bắt buộc FSS phải sửa bug 211 trên Captcha hiện tại.</td>
+                </tr>
+                <tr>
+                  <td><a href="https://projects.fss.com.vn/browse/SBSIEXT-187" target="_blank" class="mono" style="font-weight:700; color:var(--primary);">SBSIEXT-187 ↗</a></td>
+                  <td><strong>Thống nhất hiển thị tên Ngân hàng theo chuẩn doanh nghiệp</strong></td>
+                  <td>FSS: Cơ chế lấy từ MH 020994: `shortname - bankname`. Đang để <em>Suspended</em>.</td>
+                  <td>PO phản hồi: Thống nhất chấp nhận hiển thị theo cấu hình `shortname - bankname` tại MH 020994 (SBSI tự chuẩn hóa data), hay bắt buộc Dev phải sửa riêng trên Mobile App?</td>
+                </tr>
+                <tr>
+                  <td><a href="https://projects.fss.com.vn/browse/SBSIEXT-231" target="_blank" class="mono" style="font-weight:700; color:var(--primary);">SBSIEXT-231 ↗</a></td>
+                  <td><strong>Lỗi hiển thị countdown khóa OTP bắt đầu từ 15:08</strong></td>
+                  <td>FSS: Server tính giờ kết thúc khóa theo giờ server, thiết bị KH lệch giờ nên hiện 15:08.</td>
+                  <td>PO xác nhận: Chấp nhận cơ chế tính đếm ngược theo giờ thiết bị (chấp nhận dung sai do đồng hồ người dùng) hay yêu cầu FSS đồng bộ thời gian từ server về app?</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Group 3: Requirements & Business Rules -->
+        <div class="hotspot-card info" style="margin-bottom: 20px;">
+          <div class="hotspot-header">
+            <div class="hotspot-title">
+              <span class="badge badge-reviewed">NHÓM 3</span>
+              <span>Các Yêu Cầu Nghiệp Vụ Mới (Requirement) Cần PO Chốt Đặc Tả & Thúc Đẩy Tiến Độ</span>
+            </div>
+            <span class="badge badge-open">8 Requirements</span>
+          </div>
+          <div class="hotspot-body" style="overflow-x: auto;">
+            <table class="data-table" style="margin-top: 8px; font-size: 12px;">
+              <thead>
+                <tr>
+                  <th style="width: 110px;">Mã Issue</th>
+                  <th>Tiêu Đề</th>
+                  <th style="width: 140px;">Người Tạo / Assignee</th>
+                  <th>Nội Dung Yêu Cầu Nghiệp Vụ Cần PO Chốt</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><a href="https://projects.fss.com.vn/browse/SBSIEXT-198" target="_blank" class="mono" style="font-weight:700; color:var(--fail);">SBSIEXT-198 ↗</a></td>
+                  <td><strong>Chọn số tài khoản chỉ được đến lần thứ 9 (P1 Blocker)</strong></td>
+                  <td>AnNTT / Mai Cao Thi</td>
+                  <td>PO chốt: Có quy định giới hạn số lần chọn STK không? Nếu có (VD: 10 lần), UI phải hiển thị bộ đếm số lượt còn lại rõ ràng cho KH và cho phép quay lại chọn số ngẫu nhiên thay vì chặn đứng giao diện.</td>
+                </tr>
+                <tr>
+                  <td><a href="https://projects.fss.com.vn/browse/SBSIEXT-193" target="_blank" class="mono" style="font-weight:700; color:var(--primary);">SBSIEXT-193 ↗</a></td>
+                  <td><strong>Sửa lại error message tại màn chọn số tài khoản</strong></td>
+                  <td>AnNTT / Mai Cao Thi</td>
+                  <td>AnNTT comment (22/09 08:14): <em>"Đúng rồi em, đây là rule phòng PTSP đặt ra, chị đã confirm với họ rồi..."</em>. PO duyệt bộ message chuẩn cho các case: số đã giữ chỗ, số không hợp lệ.</td>
+                </tr>
+                <tr>
+                  <td><a href="https://projects.fss.com.vn/browse/SBSIEXT-243" target="_blank" class="mono" style="font-weight:700; color:var(--primary);">SBSIEXT-243 ↗</a></td>
+                  <td><strong>[BO] Sửa rule tham số EKYC_AUTOREMISERID (Mới 21/09)</strong></td>
+                  <td>AnNTT / Mai Cao Thi</td>
+                  <td>Thống nhất phương án gán broker mặc định: Phase 1 thêm droplist chọn `Null` để gán CTV id = null, tên môi giới = DVKH. Phase 2 làm tham số riêng.</td>
+                </tr>
+                <tr>
+                  <td><a href="https://projects.fss.com.vn/browse/SBSIEXT-245" target="_blank" class="mono" style="font-weight:700; color:var(--primary);">SBSIEXT-245 ↗</a><br><a href="https://projects.fss.com.vn/browse/SBSIEXT-244" target="_blank" class="mono" style="font-weight:700; color:var(--primary);">SBSIEXT-244 ↗</a></td>
+                  <td><strong>[BO] Giữ hiển thị bản ghi đã Duyệt/Xóa và cột Diễn giải trên VCF0504 (Mới 21/09)</strong></td>
+                  <td>AnNTT / Mai Cao Thi</td>
+                  <td>Giữ lại bản ghi ở trạng thái "Duyệt" / "Từ chối" trên màn hình VCF0504 sau khi xử lý để phục vụ tra cứu và lưu lý do từ chối hồ sơ eKYC.</td>
+                </tr>
+                <tr>
+                  <td><a href="https://projects.fss.com.vn/browse/SBSIEXT-222" target="_blank" class="mono" style="font-weight:700; color:var(--primary);">SBSIEXT-222 ↗</a></td>
+                  <td><strong>Đưa ngân hàng MSB lên đầu danh sách chọn NH thụ hưởng Bước 4</strong></td>
+                  <td>CuongNT / Chưa gán</td>
+                  <td>PO duyệt rule ưu tiên hiển thị ngân hàng đối tác liên kết chính MSB lên vị trí đầu tiên của danh sách ngân hàng.</td>
+                </tr>
+                <tr>
+                  <td><a href="https://projects.fss.com.vn/browse/SBSIEXT-219" target="_blank" class="mono" style="font-weight:700; color:var(--primary);">SBSIEXT-219 ↗</a></td>
+                  <td><strong>Chặn MTK trường hợp KH trùng tên, ngày sinh, số điện thoại</strong></td>
+                  <td>AnNTT / Mai Cao Thi</td>
+                  <td>Chặn ngay từ luồng eKYC trên App khi trùng Họ tên + Ngày sinh + SĐT thay vì để lọt xuống Core mới chặn.</td>
+                </tr>
+                <tr>
+                  <td><a href="https://projects.fss.com.vn/browse/SBSIEXT-182" target="_blank" class="mono" style="font-weight:700; color:var(--primary);">SBSIEXT-182 ↗</a></td>
+                  <td><strong>Xử lý khi API AML screening bị timeout</strong></td>
+                  <td>TuanNA / Hao Ha Thi</td>
+                  <td><strong>Quan trọng về Compliance:</strong> Khi API AML bị timeout, tiếp tục luồng onboarding với trạng thái AML = N để hậu kiểm thay vì chặn khách hàng. PO xác nhận với Pháp chế/Kiểm soát nội bộ.</td>
+                </tr>
+                <tr>
+                  <td><a href="https://projects.fss.com.vn/browse/SBSIEXT-190" target="_blank" class="mono" style="font-weight:700; color:var(--primary);">SBSIEXT-190 ↗</a></td>
+                  <td><strong>Sửa business rule search tên ngân hàng thụ hưởng</strong></td>
+                  <td>AnNTT / Mai Cao Thi</td>
+                  <td>Thống nhất thuật toán tìm kiếm tương đối: cho phép search theo mã NH, tên viết tắt hoặc cụm từ tên đầy đủ tiếng Việt không dấu.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Group 4: OTP Session & Back logic -->
+        <div class="hotspot-card warning" style="margin-bottom: 20px;">
+          <div class="hotspot-header">
+            <div class="hotspot-title">
+              <span class="badge badge-inprogress">NHÓM 4</span>
+              <span>Nhóm Bug Logic Session / Cache OTP Bước 1/7 Cần Thống Nhất Cơ Chế Xử Lý</span>
+            </div>
+            <span class="badge badge-open">Clear Session On Back</span>
+          </div>
+          <div class="hotspot-body">
+            <strong>Mã issues liên quan:</strong> <a href="https://projects.fss.com.vn/browse/SBSIEXT-241" target="_blank" class="mono">SBSIEXT-241</a>, <a href="https://projects.fss.com.vn/browse/SBSIEXT-236" target="_blank" class="mono">SBSIEXT-236</a>, <a href="https://projects.fss.com.vn/browse/SBSIEXT-235" target="_blank" class="mono">SBSIEXT-235</a>, <a href="https://projects.fss.com.vn/browse/SBSIEXT-214" target="_blank" class="mono">SBSIEXT-214</a>.<br>
+            <strong>Triệu chứng:</strong> Khi người dùng nhấn nút <em>Back</em> từ màn nhập OTP quay lại màn hình Bước 1 rồi nhập SĐT khác hoặc trên thiết bị khác, App vẫn lưu cache số lần đếm ngược và số lần thử sai của SĐT cũ áp vào SĐT mới.<br>
+            👉 <strong>PO cần thống nhất với Dev FSS:</strong> Khi nhấn nút Back hoặc thay đổi SĐT tại Bước 1, App phải <strong>clear hoàn toàn state/session OTP</strong> của phiên giao dịch trước đó.
+          </div>
+        </div>
+
       </div>
 
     </div>
