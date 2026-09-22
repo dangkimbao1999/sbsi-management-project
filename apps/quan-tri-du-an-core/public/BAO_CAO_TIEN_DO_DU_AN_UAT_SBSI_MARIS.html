@@ -1,0 +1,777 @@
+<!DOCTYPE html>
+<html lang="vi" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SBSI MARIS — Báo Cáo Tiến Độ Dự Án & Timeline Kiểm Thử UAT</title>
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  
+  <style>
+    :root {
+      --primary: #E45F35;
+      --primary-hover: #D04F26;
+      --primary-light: #FFF4F0;
+      --primary-border: #FCD8CD;
+      --primary-gradient: linear-gradient(135deg, #E45F35 0%, #FF6F43 50%, #EF4029 100%);
+      
+      --secondary: #0F172A;
+      --secondary-light: #1E293B;
+      
+      --bg: #F8FAFC;
+      --card-bg: #FFFFFF;
+      --card-border: #E2E8F0;
+      --text: #0F172A;
+      --text-muted: #64748B;
+      --text-sub: #475569;
+      
+      --badge-bg: #F1F5F9;
+      --table-stripe: #F8FAFC;
+      --table-hover: #F1F5F9;
+      
+      --pass: #10B981;
+      --pass-bg: #ECFDF5;
+      --pass-border: #A7F3D0;
+      
+      --fail: #EF4444;
+      --fail-bg: #FEF2F2;
+      --fail-border: #FECACA;
+      
+      --warning: #F59E0B;
+      --warning-bg: #FFFBEB;
+      --warning-border: #FDE68A;
+      
+      --blue: #0284C7;
+      --blue-bg: #E0F2FE;
+      --purple: #8B5CF6;
+      --purple-bg: #F3E8FF;
+      
+      --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+      --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+      --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+      --radius: 12px;
+      --radius-sm: 8px;
+    }
+    
+    [data-theme="dark"] {
+      --bg: #0B0F19;
+      --card-bg: #111827;
+      --card-border: #1F2937;
+      --text: #F9FAFB;
+      --text-muted: #9CA3AF;
+      --text-sub: #CBD5E1;
+      --badge-bg: #1F2937;
+      --table-stripe: #131D2E;
+      --table-hover: #1E293B;
+      --primary-light: rgba(228, 95, 53, 0.15);
+      --primary-border: rgba(228, 95, 53, 0.3);
+      --pass-bg: rgba(16, 185, 129, 0.15);
+      --pass-border: rgba(16, 185, 129, 0.3);
+      --fail-bg: rgba(239, 68, 68, 0.15);
+      --fail-border: rgba(239, 68, 68, 0.3);
+      --warning-bg: rgba(245, 158, 11, 0.15);
+      --warning-border: rgba(245, 158, 11, 0.3);
+      --blue-bg: rgba(2, 132, 199, 0.15);
+      --purple-bg: rgba(139, 92, 246, 0.15);
+    }
+    
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    
+    body {
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
+      padding-bottom: 80px;
+    }
+    
+    a { color: var(--primary); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    
+    /* Top Navbar */
+    .top-navbar {
+      background: var(--card-bg);
+      border-bottom: 1px solid var(--card-border);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: var(--shadow-sm);
+    }
+    
+    .nav-container {
+      max-width: 1440px;
+      margin: 0 auto;
+      padding: 12px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+    
+    .brand-group { display: flex; align-items: center; gap: 14px; }
+    
+    .brand-logo-badge {
+      background: var(--primary-gradient);
+      color: #fff;
+      font-weight: 900;
+      font-size: 16px;
+      padding: 6px 14px;
+      border-radius: 8px;
+      letter-spacing: 0.5px;
+      box-shadow: 0 4px 10px rgba(228, 95, 53, 0.35);
+    }
+    
+    .brand-title-wrap h1 {
+      font-size: 17px;
+      font-weight: 800;
+      color: var(--text);
+    }
+    
+    .brand-title-wrap p {
+      font-size: 12px;
+      color: var(--text-muted);
+    }
+    
+    .nav-actions { display: flex; align-items: center; gap: 10px; }
+    
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 8px 14px;
+      border-radius: var(--radius-sm);
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+      border: 1px solid transparent;
+      transition: all 0.2s;
+    }
+    
+    .btn-primary { background: var(--primary); color: #fff; }
+    .btn-primary:hover { background: var(--primary-hover); }
+    
+    .btn-secondary {
+      background: var(--card-bg);
+      border-color: var(--card-border);
+      color: var(--text);
+    }
+    .btn-secondary:hover { background: var(--badge-bg); }
+    
+    .btn-theme {
+      background: var(--badge-bg);
+      border: 1px solid var(--card-border);
+      color: var(--text);
+      padding: 8px 12px;
+    }
+    
+    /* Layout */
+    .main-container {
+      max-width: 1440px;
+      margin: 24px auto;
+      padding: 0 24px;
+    }
+    
+    /* Hero Banner */
+    .hero-banner {
+      background: linear-gradient(135deg, rgba(228, 95, 53, 0.1) 0%, rgba(2, 132, 199, 0.1) 100%);
+      border: 1px solid var(--primary-border);
+      border-left: 6px solid var(--primary);
+      border-radius: var(--radius);
+      padding: 22px 26px;
+      margin-bottom: 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+    
+    .hero-banner h2 {
+      font-size: 20px;
+      font-weight: 800;
+      color: var(--primary);
+      margin-bottom: 6px;
+    }
+    
+    .hero-banner p {
+      font-size: 13.5px;
+      color: var(--text-sub);
+      line-height: 1.6;
+      max-width: 960px;
+    }
+    
+    .meta-chip-group { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 12px; }
+    .meta-chip {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      padding: 4px 10px;
+      border-radius: 20px;
+      font-size: 11.5px;
+      font-weight: 600;
+      color: var(--text-sub);
+    }
+    
+    /* KPI Grid */
+    .kpi-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 16px;
+      margin-bottom: 28px;
+    }
+    
+    .kpi-card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: var(--radius);
+      padding: 18px 20px;
+      box-shadow: var(--shadow-sm);
+      position: relative;
+    }
+    
+    .kpi-title { font-size: 12px; font-weight: 700; color: var(--text-muted); text-transform: uppercase; margin-bottom: 8px; }
+    .kpi-main-val { font-size: 32px; font-weight: 900; color: var(--text); line-height: 1; margin-bottom: 6px; }
+    .kpi-sub-text { font-size: 12.5px; color: var(--text-sub); }
+    
+    /* Module Cards Grid */
+    .modules-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
+      gap: 18px;
+      margin-bottom: 28px;
+    }
+    
+    .module-card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: var(--radius);
+      padding: 20px;
+      box-shadow: var(--shadow-sm);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      border-top: 4px solid #CBD5E1;
+    }
+    .module-card.done { border-top-color: var(--pass); }
+    .module-card.warning { border-top-color: var(--warning); }
+    .module-card.inprogress { border-top-color: var(--blue); }
+    
+    .module-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 12px;
+      gap: 10px;
+    }
+    
+    .module-title {
+      font-size: 15px;
+      font-weight: 800;
+      color: var(--text);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    
+    .module-body {
+      font-size: 13px;
+      color: var(--text-sub);
+      line-height: 1.6;
+      margin-bottom: 14px;
+      flex-grow: 1;
+    }
+    
+    .module-footer {
+      border-top: 1px dashed var(--card-border);
+      padding-top: 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 12px;
+      color: var(--text-muted);
+    }
+    
+    /* Badges */
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      padding: 3px 8px;
+      border-radius: 6px;
+      font-size: 11px;
+      font-weight: 700;
+      white-space: nowrap;
+      text-transform: uppercase;
+    }
+    .badge-pass { background: var(--pass-bg); color: #065F46; border: 1px solid var(--pass-border); }
+    .badge-warn { background: var(--warning-bg); color: #92400E; border: 1px solid var(--warning-border); }
+    .badge-blue { background: var(--blue-bg); color: #0369A1; border: 1px solid #BAE6FD; }
+    
+    /* Timeline Table */
+    .section-card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: var(--radius);
+      padding: 22px 24px;
+      margin-bottom: 28px;
+      box-shadow: var(--shadow-sm);
+    }
+    
+    .section-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 16px;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    
+    .section-title {
+      font-size: 17px;
+      font-weight: 800;
+      color: var(--text);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    
+    .table-responsive {
+      overflow-x: auto;
+      border: 1px solid var(--card-border);
+      border-radius: var(--radius-sm);
+    }
+    
+    table.data-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13px;
+      text-align: left;
+    }
+    
+    table.data-table th {
+      background: var(--table-stripe);
+      padding: 12px 14px;
+      font-weight: 700;
+      color: var(--text-sub);
+      border-bottom: 2px solid var(--card-border);
+      white-space: nowrap;
+    }
+    
+    table.data-table td {
+      padding: 12px 14px;
+      border-bottom: 1px solid var(--card-border);
+      vertical-align: top;
+    }
+    
+    table.data-table tbody tr:hover { background: var(--table-hover); }
+    
+    /* Toast Alert */
+    .toast-popup {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      background: var(--secondary);
+      color: #fff;
+      padding: 12px 20px;
+      border-radius: var(--radius-sm);
+      box-shadow: var(--shadow-lg);
+      font-size: 13px;
+      font-weight: 600;
+      display: none;
+      align-items: center;
+      gap: 10px;
+      z-index: 2000;
+    }
+    
+    @media print {
+      .top-navbar, .btn, .nav-actions { display: none !important; }
+      body { background: #fff !important; color: #000 !important; }
+      .section-card, .module-card, .kpi-card { box-shadow: none !important; border: 1px solid #ddd !important; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Navbar -->
+  <header class="top-navbar">
+    <div class="nav-container">
+      <div class="brand-group">
+        <div class="brand-logo-badge">SBSI MARIS</div>
+        <div class="brand-title-wrap">
+          <h1>Báo Cáo Tiến Độ Dự Án & Timeline Kiểm Thử UAT</h1>
+          <p>Tài liệu điều hành quản trị dự án Core FLEX (FSS) & Hệ thống giao dịch SBSI</p>
+        </div>
+      </div>
+      
+      <div class="nav-actions">
+        <button class="btn btn-primary" onclick="copyReportBrief()">
+          📋 Copy Tóm Tắt Báo Cáo
+        </button>
+        <button class="btn btn-secondary" onclick="window.print()">
+          🖨️ Xuất PDF / In
+        </button>
+        <button class="btn btn-theme" onclick="toggleTheme()">
+          <span id="themeIcon">☀️</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Container -->
+  <main class="main-container">
+    
+    <!-- Hero Banner -->
+    <div class="hero-banner">
+      <div>
+        <h2>🎯 Báo Cáo Tiến Độ UAT 6 Phân Hệ Cốt Lõi & Lộ Trình Về Đích</h2>
+        <p>
+          Báo cáo cập nhật hiện trạng kiểm thử toàn diện giữa <strong>SBSI (Product/QA/BA/Vận hành)</strong> và <strong>Đối tác FSS</strong>. 
+          Các luồng giao dịch cốt lõi (Đặt lệnh thường, Lệnh điều kiện, Kích hoạt lệnh, Tiền nội bộ & UTTB, Bảng giá 5 màu full phiên) đã hoàn tất. 
+          Kế hoạch tháo gỡ điểm nghẽn dữ liệu <strong>Ngân hàng & Thực hiện Quyền</strong> trước ngày <strong>28/09/2026</strong>.
+        </p>
+        <div class="meta-chip-group">
+          <span class="meta-chip">📅 Ngày báo cáo: <strong>22/09/2026</strong></span>
+          <span class="meta-chip">👤 Người lập: <strong>Nhóm Product Owner (CuongNT, BachNT) & QA (AnNTT)</strong></span>
+          <span class="meta-chip">🏢 Đối tác phát triển: <strong>FSS (Core FLEX & Frontend)</strong></span>
+          <span class="meta-chip">🚀 Mục tiêu Go-Live: <strong>Tháng 11/2026</strong></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- KPI Grid -->
+    <div class="kpi-grid">
+      <div class="kpi-card">
+        <div class="kpi-title">Phân Hệ Cốt Lõi</div>
+        <div class="kpi-main-val" style="color:var(--primary);">6 / 6</div>
+        <div class="kpi-sub-text">5 phân hệ hoàn tất luồng Happy Path (83.3%)</div>
+      </div>
+
+      <div class="kpi-card">
+        <div class="kpi-title">Luồng Giao Dịch & Bảng Giá</div>
+        <div class="kpi-main-val" style="color:var(--pass);">100%</div>
+        <div class="kpi-sub-text">Lệnh thường, Lệnh ĐK, ATO/ATC, Chu kỳ 5 màu</div>
+      </div>
+
+      <div class="kpi-card">
+        <div class="kpi-title">Điểm Nghẽn Môi Trường Test</div>
+        <div class="kpi-main-val" style="color:var(--fail);">2</div>
+        <div class="kpi-sub-text">Ngân hàng thụ hưởng & Dữ liệu Thực hiện quyền</div>
+      </div>
+
+      <div class="kpi-card">
+        <div class="kpi-title">Mục Tiêu Kết Thúc UAT Round 1</div>
+        <div class="kpi-main-val" style="color:var(--blue);">16/10</div>
+        <div class="kpi-sub-text">Hoàn thành 100% test case UAT Round 1</div>
+      </div>
+    </div>
+
+    <!-- 6 Modules Status Cards -->
+    <div class="section-card">
+      <div class="section-header">
+        <div class="section-title">
+          <span>📦 Hiện Trạng Kiểm Thử 6 Phân Hệ Nghiệp Vụ Trọng Yếu</span>
+        </div>
+      </div>
+
+      <div class="modules-grid">
+        
+        <!-- Module 1 -->
+        <div class="module-card done">
+          <div>
+            <div class="module-head">
+              <div class="module-title">
+                <span>1. Mở Tài Khoản (Onboarding & eKYC)</span>
+              </div>
+              <span class="badge badge-pass">Full Happy Case</span>
+            </div>
+            <div class="module-body">
+              • <strong>Đã hoàn thành:</strong> Đi trọn vẹn luồng Happy Case đăng ký từ Mobile App/Web Trade (SĐT, Captcha, OTP, CCCD gắn chip, quét NFC/Khuôn mặt, mở tài khoản thành công).<br>
+              • <strong>Vấn đề cần xử lý:</strong> Đang chờ FSS bàn giao bản vá cho 6 test case Fail (validate SĐT, SDK NFC, Email, MH Margin) và chốt 5 đề xuất PO (Countdown OTP 15p, quy tắc nút Đăng ký, popup eKYC).
+            </div>
+          </div>
+          <div class="module-footer">
+            <span>Phụ trách: <strong>CuongNT, AnNTT</strong></span>
+            <span>Đối tác: <strong>Mai Cao Thi (FSS)</strong></span>
+          </div>
+        </div>
+
+        <!-- Module 2 -->
+        <div class="module-card done">
+          <div>
+            <div class="module-head">
+              <div class="module-title">
+                <span>2. Luồng Giao Dịch & Đặt Lệnh</span>
+              </div>
+              <span class="badge badge-pass">Full Lệnh Thường & ĐK</span>
+            </div>
+            <div class="module-body">
+              • <strong>Đã hoàn thành:</strong> Test full luồng đặt lệnh thông thường (LO, MP, ATO, ATC trên cả 3 sàn HSX, HNX, UPCOM).<br>
+              • <strong>Lệnh điều kiện nâng cao:</strong> Test trọn vẹn lệnh Stop/Limit, Trailing Stop, TCO (lệnh nhiều ngày), PRO. Cơ chế kích hoạt giá và hệ thống sinh cảnh báo rủi ro (sức mua, tỷ lệ ký quỹ, biên độ trần sàn) hoạt động chuẩn xác.<br>
+              • <strong>Kế hoạch tiếp:</strong> Stress test tải cao phiên ATO/ATC.
+            </div>
+          </div>
+          <div class="module-footer">
+            <span>Phụ trách: <strong>Product & QA Team</strong></span>
+            <span>Trạng thái: <strong>Sẵn sàng UAT chuyên sâu</strong></span>
+          </div>
+        </div>
+
+        <!-- Module 3 -->
+        <div class="module-card warning">
+          <div>
+            <div class="module-head">
+              <div class="module-title">
+                <span>3. Giao Dịch Tiền, UTTB & Ngân Hàng / Quyền</span>
+              </div>
+              <span class="badge badge-warn">Nghẽn Data Ngân Hàng & Quyền</span>
+            </div>
+            <div class="module-body">
+              • <strong>Đã hoàn thành:</strong> Chuyển tiền nội bộ giữa các tiểu khoản (Đuôi 1 - Đuôi 6); Tính phí và lãi Ứng trước tiền bán tự động (UTTB T+0, T+1, T+2) cập nhật ngay sức mua.<br>
+              • <strong style="color:var(--fail);">Điểm nghẽn nghiêm trọng:</strong> Mảng <em>Ngân hàng thụ hưởng & Nộp tiền</em> cùng <em>Thực hiện Quyền</em> (cổ tức, quyền mua) <strong>chưa có dữ liệu môi trường để dựng kịch bản</strong>.<br>
+              • <strong>Hành động:</strong> Phối hợp 3 bên (FSS + BA IT + Khối Vận hành) cấu hình sandbox trước 28/09.
+            </div>
+          </div>
+          <div class="module-footer">
+            <span>Đầu mối: <strong>BA IT (TrinhNT) + Kế Toán/Cổ Đông</strong></span>
+            <span>Hạn chốt: <strong>28/09/2026</strong></span>
+          </div>
+        </div>
+
+        <!-- Module 4 -->
+        <div class="module-card inprogress">
+          <div>
+            <div class="module-head">
+              <div class="module-title">
+                <span>4. Bảo Mật, Thông Tin Tài Khoản & Thông Báo</span>
+              </div>
+              <span class="badge badge-blue">Full Luồng • Chờ Fix Bug</span>
+            </div>
+            <div class="module-body">
+              • <strong>Đã hoàn thành:</strong> Đăng nhập 2FA, Smart OTP, FaceID/TouchID, đổi mật khẩu/mã PIN, phân quyền tài khoản Master/Sub-account. Hệ thống bắn Noti đa kênh (In-app, SMS, Email).<br>
+              • <strong>Vấn đề chờ xử lý:</strong> Đang chờ FSS fix các issue đã log: SBSIEXT-171 (gửi double email), SBSIEXT-13 (SMS 304B) và sửa dứt điểm bug không cảnh báo số lần nhập sai OTP khi kill app.
+            </div>
+          </div>
+          <div class="module-footer">
+            <span>Phụ trách: <strong>AnNTT, LongNH</strong></span>
+            <span>FSS Phụ trách: <strong>Mai Cao Thi</strong></span>
+          </div>
+        </div>
+
+        <!-- Module 5 -->
+        <div class="module-card inprogress">
+          <div>
+            <div class="module-head">
+              <div class="module-title">
+                <span>5. Bảng Giá & Dữ Liệu Thị Trường</span>
+              </div>
+              <span class="badge badge-blue">Full Phiên Sở • Chờ Bàn Giao</span>
+            </div>
+            <div class="module-body">
+              • <strong>Đã hoàn thành:</strong> Test full chu kỳ các phiên giao dịch của Sở (ATO, Liên tục sáng, Nghỉ trưa, Liên tục chiều, ATC, Thỏa thuận PT, Sau giờ đóng cửa, Cuối tuần). Chuẩn 5 màu giá hoạt động chính xác.<br>
+              • <strong>Chờ bàn giao:</strong> Chờ FSS bàn giao module <em>Dữ liệu phân tích thị trường chuyên sâu</em> (Biểu đồ kỹ thuật TradingView, Heatmap dòng tiền, Khối ngoại mua bán ròng) và fix các issue tùy chỉnh cột.
+            </div>
+          </div>
+          <div class="module-footer">
+            <span>Phụ trách: <strong>QA Team</strong></span>
+            <span>Chờ FSS giao: <strong>Trước 02/10/2026</strong></span>
+          </div>
+        </div>
+
+        <!-- Module 6 -->
+        <div class="module-card inprogress">
+          <div>
+            <div class="module-head">
+              <div class="module-title">
+                <span>6. Danh Mục & Báo Cáo Tài Sản</span>
+              </div>
+              <span class="badge badge-blue">Test Case Phức Tạp</span>
+            </div>
+            <div class="module-body">
+              • <strong>Đã hoàn thành:</strong> Test toàn bộ các case cơ bản: Danh mục cổ phiếu nắm giữ, định giá tài sản thời gian thực, tính lãi/lỗ chưa thực hiện (Unrealized P&L).<br>
+              • <strong>Đang tiếp tục test case phức tạp:</strong> Thuật toán tính lãi/lỗ đã thực hiện (Realized P&L theo FIFO / bình quân gia quyền), quản trị rủi ro Margin Call & Force Sell khi giá giảm sàn liên tục, đối soát sao kê tài sản với EOD Core FLEX BackOffice.
+            </div>
+          </div>
+          <div class="module-footer">
+            <span>Phụ trách: <strong>BachNT, CuongNT</strong></span>
+            <span>Trạng thái: <strong>Đang chạy kịch bản</strong></span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Timeline Gantt & Milestones -->
+    <div class="section-card">
+      <div class="section-header">
+        <div class="section-title">
+          <span>📅 Lộ Trình Timeline Dự Kiến Hoàn Thành Các Test Case (Đích Đến Go-Live)</span>
+        </div>
+      </div>
+
+      <div class="table-responsive">
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th style="width: 150px;">Mốc Thời Gian</th>
+              <th style="width: 240px;">Giai Đoạn / Mục Tiêu</th>
+              <th>Nội Dung Công Việc Trọng Tâm</th>
+              <th style="width: 180px;">Đơn Vị Chịu Trách Nhiệm</th>
+              <th style="width: 120px;">Trạng Thái</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>22/09 - 28/09</strong><br><span style="font-size:11px; color:var(--text-muted);">Tuần hiện tại</span></td>
+              <td><strong>Giải Tỏa Điểm Nghẽn</strong><br><span style="font-size:12px; color:var(--text-muted);">Họp FSS & Bơm dữ liệu</span></td>
+              <td>
+                • Họp kỹ thuật FSS tháo gỡ 5 điểm nóng PO Onboarding.<br>
+                • <strong>BA IT + FSS + Khối Vận hành</strong> cấu hình sandbox và bơm dữ liệu test Ngân hàng thụ hưởng & Thực hiện Quyền.<br>
+                • Chạy kịch bản tài sản phức tạp (Realized P&L, FIFO).
+              </td>
+              <td><strong>SBSI PO / QA</strong><br>BA IT & Khối Vận Hành</td>
+              <td><span class="badge badge-warn">Đang Thực Hiện</span></td>
+            </tr>
+
+            <tr>
+              <td><strong>29/09 - 05/10</strong><br><span style="font-size:11px; color:var(--text-muted);">Tuần tới</span></td>
+              <td><strong>Kiểm Thử Mở Rộng</strong><br><span style="font-size:12px; color:var(--text-muted);">Nhận bàn giao bản vá</span></td>
+              <td>
+                • FSS bàn giao bản vá App/Web (Fix 6 case Fail Onboarding & Bug OTP).<br>
+                • FSS bàn giao module <em>Dữ liệu thị trường chuyên sâu</em>.<br>
+                • Tiến hành kiểm thử kịch bản Nộp tiền liên ngân hàng & Thực hiện Quyền.
+              </td>
+              <td><strong>FSS Dev Team</strong><br>SBSI QA Team</td>
+              <td><span class="badge badge-blue">Kế Hoạch</span></td>
+            </tr>
+
+            <tr>
+              <td><strong>06/10 - 16/10</strong><br><span style="font-size:11px; color:var(--text-muted);">Hạn chót Round 1</span></td>
+              <td><strong>Hoàn Tất UAT Round 1</strong><br><span style="font-size:12px; color:var(--text-muted);">Mục tiêu Pass > 95%</span></td>
+              <td>
+                • Hoàn thành toàn bộ kịch bản Quyền, Margin Call & Force Sell.<br>
+                • <strong>Đóng toàn bộ test case UAT Round 1</strong> (Tỷ lệ Đạt mục tiêu &gt; 95%).<br>
+                • Đóng các issue Won't fix sau đàm phán; chốt danh sách bàn giao.
+              </td>
+              <td><strong>SBSI QA / PMO</strong><br>FSS Project Manager</td>
+              <td><span class="badge badge-blue">Mốc Trọng Yếu</span></td>
+            </tr>
+
+            <tr>
+              <td><strong>19/10 - 31/10</strong><br><span style="font-size:11px; color:var(--text-muted);">Giai đoạn 2</span></td>
+              <td><strong>UAT Round 2 & Pentest</strong><br><span style="font-size:12px; color:var(--text-muted);">Hiệu năng & Bảo mật</span></td>
+              <td>
+                • <strong>UAT Round 2:</strong> Kiểm thử hồi quy toàn diện (Regression Testing).<br>
+                • Kiểm thử hiệu năng tải cao (Stress test ATO/ATC 50.000 lệnh/phút).<br>
+                • Đánh giá an toàn thông tin & Penetration Testing (Pentest) chuẩn UBCKNN.
+              </td>
+              <td><strong>SBSI IT Security</strong><br>Đối tác Pentest & FSS</td>
+              <td><span class="badge" style="background:var(--badge-bg);">Kế Hoạch</span></td>
+            </tr>
+
+            <tr>
+              <td><strong>02/11 - 06/11</strong><br><span style="font-size:11px; color:var(--text-muted);">Tiền Go-Live</span></td>
+              <td><strong>UAT Sign-Off & Diễn Tập</strong><br><span style="font-size:12px; color:var(--text-muted);">Chuyển đổi dữ liệu</span></td>
+              <td>
+                • Họp Hội đồng Nghiệm thu Kỹ thuật (UAT Sign-off chính thức).<br>
+                • Diễn tập chuyển đổi dữ liệu thực tế (Dry-run Cutover EOD/Core).<br>
+                • Đào tạo người dùng cuối & Chốt tài liệu hướng dẫn khách hàng.
+              </td>
+              <td><strong>Ban Lãnh Đạo SBSI</strong><br>Toàn thể Ban Dự Án</td>
+              <td><span class="badge" style="background:var(--badge-bg);">Nghiệm Thu</span></td>
+            </tr>
+
+            <tr style="background: var(--primary-light);">
+              <td><strong>09/11/2026</strong><br><span style="font-size:11px; color:var(--primary); font-weight:700;">Dự kiến</span></td>
+              <td><strong style="color:var(--primary);">🚀 GO-LIVE CHÍNH THỨC</strong></td>
+              <td>
+                <strong>Chính thức chuyển đổi toàn bộ khách hàng sang hệ thống giao dịch SBSI MARIS & Core FLEX FSS.</strong>
+              </td>
+              <td><strong>Toàn Công Ty SBSI</strong></td>
+              <td><span class="badge badge-pass" style="background:var(--primary); color:#fff;">GO-LIVE</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Recommendations -->
+    <div class="section-card">
+      <div class="section-header">
+        <div class="section-title">
+          <span>💡 Đề Xuất & Kiến Nghị Trọng Tâm Lên Ban Lãnh Đạo</span>
+        </div>
+      </div>
+      
+      <div style="font-size: 13.5px; line-height: 1.8; color: var(--text-sub);">
+        <ol style="padding-left: 20px;">
+          <li><strong>Chỉ đạo Khối Vận hành phối hợp khẩn cấp với BA IT:</strong> Cử nhân sự phụ trách Kế toán & Quản lý Cổ đông làm việc tập trung trong 03 ngày (23 - 25/09) để cấu hình sự kiện quyền và tạo dữ liệu test mẫu trên Core FLEX.</li>
+          <li><strong>Yêu cầu FSS cam kết cứng lịch bàn giao:</strong> Bản vá 6 lỗi Onboarding và lỗi OTP kill app muộn nhất ngày <strong>29/09/2026</strong>; bàn giao module Dữ liệu thị trường chuyên sâu trước <strong>02/10/2026</strong>.</li>
+          <li><strong>Đôn đốc Pháp chế duyệt mẫu Hợp đồng Margin:</strong> Hoàn tất rà soát mẫu HĐ mở Margin trong tuần này để nhóm kỹ thuật tích hợp Block chính sách động và hoàn thiện luồng ký eContract.</li>
+          <li><strong>Mở cổng kết nối Sandbox Ngân hàng:</strong> Đề nghị CNTT phối hợp các Ngân hàng đối tác (BIDV, MSB) mở cổng Sandbox phục vụ kiểm thử Nộp/Rút tiền trước ngày 28/09/2026.</li>
+        </ol>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- Toast Popup -->
+  <div id="toastPopup" class="toast-popup">
+    <span>✅</span> <span id="toastMsg">Đã sao chép tóm tắt báo cáo vào Clipboard!</span>
+  </div>
+
+  <script>
+    function toggleTheme() {
+      const cur = document.documentElement.getAttribute('data-theme');
+      const next = cur === 'dark' ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', next);
+      document.getElementById('themeIcon').innerText = next === 'dark' ? '🌙' : '☀️';
+      localStorage.setItem('sbsi_exec_theme', next);
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      const saved = localStorage.getItem('sbsi_exec_theme') || 'light';
+      document.documentElement.setAttribute('data-theme', saved);
+      document.getElementById('themeIcon').innerText = saved === 'dark' ? '🌙' : '☀️';
+    });
+
+    function showToast(msg) {
+      const t = document.getElementById('toastPopup');
+      document.getElementById('toastMsg').innerText = msg;
+      t.style.display = 'flex';
+      setTimeout(() => { t.style.display = 'none'; }, 3000);
+    }
+
+    function copyReportBrief() {
+      const text = `📌 BÁO CÁO TIẾN ĐỘ DỰ ÁN & LỘ TRÌNH UAT SBSI MARIS - CORE FLEX (FSS)
+Thời điểm: 22/09/2026
+--------------------------------------------------
+📊 1. HIỆN TRẠNG 6 PHÂN HỆ CỐT LÕI:
+1. Mở tài khoản (eKYC): ĐÃ ĐI FULL LUỒNG HAPPY CASE. Chờ fix 6 bug & chốt 5 điểm PO.
+2. Luồng lệnh: ĐÃ TEST FULL LUỒNG ĐẶT LỆNH THƯỜNG, LỆNH ĐIỀU KIỆN (Stop/Limit, Trailing...), KÍCH HOẠT & CẢNH BÁO.
+3. Giao dịch tiền & UTTB: ĐÃ TEST FULL LUỒNG NỘI BỘ & UTTB.
+   ⚠️ Điểm nghẽn: Ngân hàng thụ hưởng, Nộp tiền & Thực hiện Quyền CHƯA CÓ DATA DỰNG KỊCH BẢN -> Cần phối hợp FSS + BA IT + Khối Vận hành.
+4. Bảo mật & Noti: ĐÃ TEST FULL LUỒNG, chờ FSS fix các issue đã log.
+5. Bảng giá & Dữ liệu TT: ĐÃ TEST FULL CÁC PHIÊN SỞ (ATO, Liên tục, ATC, Thỏa thuận, Đóng cửa, Cuối tuần). Chờ bàn giao module TT chuyên sâu.
+6. Danh mục & Tài sản: ĐÃ TEST CASE CƠ BẢN, đang test tiếp các case phức tạp (Realized P&L, FIFO, Margin Call & Force Sell).
+
+📅 2. LỘ TRÌNH TIMELINE HOÀN THÀNH:
+• 22/09 - 28/09: Họp FSS; Bơm data Ngân hàng & Quyền; Test case tài sản phức tạp.
+• 29/09 - 05/10: Nhận bản vá App/Web & module Dữ liệu TT từ FSS; Test full Nộp tiền & Quyền.
+• 06/10 - 16/10: ĐÓNG TOÀN BỘ TEST CASE UAT ROUND 1 (Mục tiêu Pass > 95%).
+• 19/10 - 31/10: UAT ROUND 2 (Regression Test, Stress Test 50.000 lệnh/phút, Pentest).
+• 02/11 - 06/11: UAT Sign-off chính thức, Diễn tập Cutover chuyển đổi dữ liệu.
+• 09/11/2026: 🚀 GO-LIVE CHÍNH THỨC TOÀN HỆ THỐNG.`;
+
+      navigator.clipboard.writeText(text).then(() => {
+        showToast('Đã sao chép tóm tắt báo cáo vào Clipboard!');
+      }).catch(() => {
+        alert('Không thể tự động sao chép.');
+      });
+    }
+  </script>
+
+</body>
+</html>
