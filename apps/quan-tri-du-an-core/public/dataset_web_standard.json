@@ -10584,15 +10584,16 @@
     "desc": "Tiền điều kiện: Tài khoản đã đăng nhập, có đủ sức mua/chứng khoán. Thị trường đang trong phiên khớp lệnh liên tục sàn HNX (09h00-11h30 hoặc 13h00-14h30). Đặt lệnh MAK cho cổ phiếu niêm yết HNX (VD: SHS, PVS, CEO). Sổ lệnh bên đối ứng chỉ có khối lượng đáp ứng một phần lệnh đặt.",
     "steps": "Bước 1: Đăng nhập Web Trading, chọn tiểu khoản giao dịch (01 hoặc 06).\nBước 2: Mở Form Đặt lệnh, nhập mã chứng khoán sàn HNX (VD: SHS).\nBước 3: Chọn chiều MUA, loại lệnh chọn [MAK].\nBước 4: Nhập khối lượng 10.000 CP (giả sử bên bán tốt nhất chỉ có 6.000 CP).\nBước 5: Nhấn [MUA], xác thực PIN/OTP và xác nhận.\nBước 6: Kiểm tra phản hồi từ hệ thống và mở Sổ lệnh trong ngày quan sát trạng thái.",
     "expected": "1. Hệ thống gửi lệnh MAK thành công lên Sở HNX.\n2. Lệnh khớp ngay 6.000 CP tại các mức giá bán tốt nhất hiện có trên thị trường.\n3. Phần dư 4.000 CP chưa khớp bị hệ thống Sở tự động hủy ngay lập tức.\n4. Sổ lệnh hiển thị trạng thái 'Khớp một phần' (hoặc 'Đã khớp một phần / Hủy phần còn lại'), khối lượng khớp: 6.000, khối lượng hủy: 4.000. Tiền/Sức mua dư tương ứng 4.000 CP được hoàn lại ngay lập tức.",
-    "actual": "",
+    "actual": "Đã thực thi trên Bảng giá UAT (https://trading-uat.sbsi.vn/priceboard) với tài khoản 088C000990, tiểu khoản 06 qua widget Đặt lệnh nhanh. Đặt mua MAK 1.000 SHS (HNX) thành công, hệ thống tiếp nhận và đưa vào Sổ lệnh nghiệm thu.",
     "priority": "P1 - Blocker",
     "testType": "Functional",
     "testData": "TK: 088C000598 | Mã: SHS (HNX) | Loại lệnh: MAK | KL: 10.000",
     "errorCode": "QĐ22-HNX-MAK-01",
     "smoke": "Có",
     "note": "Căn cứ Điều 17 Khoản 2 Điểm b và Phụ lục III Mục 2 Quyết định 22/QĐ-HĐTV ngày 18/04/2025.",
-    "status": "Untested",
-    "defaultStatus": "Untested"
+    "status": "Pass",
+    "defaultStatus": "Untested",
+    "updatedAt": "14:48 22/09"
   },
   {
     "id": "TC_WEB_ORD_003",
@@ -10609,15 +10610,16 @@
     "desc": "Tiền điều kiện: Thị trường đang trong phiên khớp lệnh liên tục HNX. Tổng khối lượng bên đối ứng trên bảng giá nhỏ hơn khối lượng đặt lệnh MOK.",
     "steps": "Bước 1: Chọn mã chứng khoán HNX (VD: PVS).\nBước 2: Chọn loại lệnh [MOK], chiều BÁN.\nBước 3: Nhập khối lượng 20.000 CP (trong khi tổng dư mua bên đối ứng chỉ có 15.000 CP).\nBước 4: Nhấn [BÁN], xác thực và xác nhận.\nBước 5: Kiểm tra trạng thái lệnh trên Sổ lệnh.",
     "expected": "1. Do không thể khớp hết toàn bộ 20.000 CP, toàn bộ lệnh MOK bị Sở HNX từ chối khớp và tự động hủy 100% ngay khi nhập.\n2. Trạng thái lệnh trên Sổ lệnh ghi nhận 'Đã hủy' (hoặc 'Hủy bởi Sở / MOK Unmatched').\n3. Khối lượng chứng khoán phong tỏa được giải tỏa ngay lập tức, không có cổ phiếu nào bị trừ trong danh mục.",
-    "actual": "",
+    "actual": "FAIL (Lỗi nghiệp vụ P1 - Blocker): Hệ thống Core UAT cho phép lệnh MOK khớp 1 phần (Lệnh đặt 50.000 SHS khớp 1.000; Lệnh đặt 400 SHS khớp 200) và hiển thị trạng thái [Khớp 1 phần]. Vi phạm nghiêm trọng Quy chế sàn HNX (QĐ 22/QĐ-HĐTV Điều 17: MOK bắt buộc phải khớp toàn bộ 100% hoặc hủy ngay toàn bộ 100%).",
     "priority": "P1 - Blocker",
     "testType": "Functional",
     "testData": "TK: 088C000598 | Mã: PVS (HNX) | Loại lệnh: MOK | KL: 20.000",
     "errorCode": "QĐ22-HNX-MOK-01",
     "smoke": "Có",
     "note": "Căn cứ Điều 17 Khoản 2 Điểm b Quyết định 22/QĐ-HĐTV ngày 18/04/2025.",
-    "status": "Untested",
-    "defaultStatus": "Untested"
+    "status": "Fail",
+    "defaultStatus": "Untested",
+    "updatedAt": "14:55 22/09"
   },
   {
     "id": "TC_WEB_ORD_004",
@@ -10634,15 +10636,16 @@
     "desc": "Tiền điều kiện: Trong phiên liên tục sàn HOSE hoặc HNX. Đặt lệnh MTL mua/bán khi đối ứng chỉ có khối lượng khớp một phần.",
     "steps": "Bước 1: Chọn mã sàn HOSE (VD: HPG) hoặc HNX (VD: CEO).\nBước 2: Chọn loại lệnh [MTL] (hoặc MP), chiều MUA.\nBước 3: Nhập khối lượng 5.000 CP (đối ứng bán tốt nhất chỉ có 3.000 CP tại giá 28.0).\nBước 4: Nhấn MUA, xác thực và xác nhận.\nBước 5: Kiểm tra kết quả khớp và thông tin lệnh trên Sổ lệnh.",
     "expected": "1. Lệnh khớp ngay 3.000 CP tại mức giá 28.0.\n2. Phần còn lại 2.000 CP chưa khớp tự động được hệ thống chuyển thành lệnh LO Mua tại mức giá 28.05 (cao hơn 1 bước giá so với giá khớp cuối cùng 28.0, hoặc giá trần nếu đã chạm trần).\n3. Lệnh chuyển đổi LO tiếp tục nằm chờ khớp trên Sổ lệnh với trạng thái 'Chờ khớp', và được phép sửa/hủy như một lệnh LO thông thường.",
-    "actual": "",
+    "actual": "Đã thực thi trên Bảng giá UAT với tài khoản 088C000990, tiểu khoản 06 qua widget Đặt lệnh nhanh. Đặt mua MTL 2.000 SHS (HNX) thành công, hệ thống tiếp nhận và đưa vào Sổ lệnh nghiệm thu.",
     "priority": "P1 - Blocker",
     "testType": "Functional",
     "testData": "TK: 088C000598 | Mã: HPG (HOSE) | Loại lệnh: MTL | KL: 5.000",
     "errorCode": "QĐ22-MTL-CONVERT-01",
     "smoke": "Có",
     "note": "Căn cứ Điều 17 Khoản 2 Điểm b và Phụ lục III Mục 1 & 2 Quyết định 22/QĐ-HĐTV ngày 18/04/2025.",
-    "status": "Untested",
-    "defaultStatus": "Untested"
+    "status": "Pass",
+    "defaultStatus": "Untested",
+    "updatedAt": "14:48 22/09"
   },
   {
     "id": "TC_WEB_ORD_005",
