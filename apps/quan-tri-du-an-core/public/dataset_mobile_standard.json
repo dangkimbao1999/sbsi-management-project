@@ -1952,7 +1952,7 @@
     "testData": "TK: 088C030413 | MK: 13579@Ab | PIN/OTP: 135790",
     "errorCode": "N/A – không phát sinh thông báo lỗi",
     "smoke": "No",
-    "note": "PASS: Đã test trực tiếp trên LDPlayer với TK 088C032944. Danh mục sở hữu hiển thị đầy đủ danh sách mã (A32, FPT, HID, HPG, SSI, VIX, VPB), KL, Giá vốn, Giá TT và Lãi/Lỗ realtime.",
+    "note": "PASS: Đã test trực tiếp trên LDPlayer với đúng tài khoản test chỉ định 088C030413 (NOR_01_test). Danh mục sở hữu hiển thị đầy đủ, chính xác danh sách mã: C4G (KL 100, GV 6.01, GTT 5.10, Lãi/Lỗ -15.13%), HPG (KL 900, GV 40.72, GTT 21.55, Lãi/Lỗ -47.07%), MSB (KL 307,700, GV 15.44, GTT 12.90, Lãi/Lỗ -16.45%), SHS (KL 125, GV 11.22, GTT 14.40, Lãi/Lỗ +28.38%). Tổng giá trị vốn: 4,789,517,424 đ | Tổng giá trị thị trường: 3,991,035,000 đ | Lãi/Lỗ: -798,482,424 đ (-16.67%). Số liệu giá thị trường và tỷ lệ lãi lỗ realtime chuẩn xác.",
     "status": "Pass",
     "defaultStatus": "Untested",
     "defaultTester": "BachNT"
@@ -1974,8 +1974,8 @@
     "testData": "TK: 088C030413 | MK: 13579@Ab | PIN/OTP: 135790",
     "errorCode": "N/A – không phát sinh thông báo lỗi",
     "smoke": "No",
-    "note": "PASS: Đã test trực tiếp trên LDPlayer với TK 088C032944. Bấm [Xem biểu đồ] hiển thị biểu đồ tròn phân bổ danh mục theo tỷ trọng từng mã trực quan, chính xác.",
-    "status": "Pass",
+    "note": "FAIL (BUG UI): Đã kiểm thử trực tiếp trên LDPlayer với tài khoản chỉ định 088C030413. Khi bấm [Xem biểu đồ], vùng biểu đồ mở rộng nhưng hoàn toàn trống đen (không render được các lát cắt biểu đồ tròn) và nút toggle [Ẩn biểu đồ] bị biến mất khiến giao diện bị lỗi hiển thị vùng biểu đồ. Nguyên nhân: Mã MSB chiếm tỷ trọng áp đảo 99.45% tổng thị giá danh mục (3.969 tỷ / 3.991 tỷ), gây lỗi biên (edge-case/arithmetic slice) trong thư viện vẽ biểu đồ của Flutter. (Đối chứng: Với TK 088C032944 có tỷ trọng phân bổ đều các mã thì biểu đồ tròn và nút Ẩn biểu đồ hiển thị bình thường).",
+    "status": "Fail",
     "defaultStatus": "Untested",
     "defaultTester": "BachNT"
   },
