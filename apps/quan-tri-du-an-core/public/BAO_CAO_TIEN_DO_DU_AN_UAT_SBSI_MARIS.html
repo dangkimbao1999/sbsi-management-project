@@ -426,7 +426,7 @@
     <!-- Hero Banner -->
     <div class="hero-banner">
       <div>
-        <h2>🎯 Báo Cáo Tiến Độ UAT 6 Phân Hệ Cốt Lõi & Lộ Trình Về Đích</h2>
+        <h2>🎯 Báo Cáo Tiến Độ UAT 7 Phân Hệ Nghiệp Vụ, Trải Nghiệm & Lộ Trình Về Đích</h2>
         <p>
           Báo cáo cập nhật hiện trạng kiểm thử toàn diện giữa <strong>SBSI (Product/QA/BA/Vận hành)</strong> và <strong>Đối tác FSS</strong>. 
           Các luồng giao dịch cốt lõi (Đặt lệnh thường, Lệnh điều kiện, Kích hoạt lệnh, Tiền nội bộ & UTTB, Bảng giá 5 màu full phiên) đã hoàn tất. 
@@ -444,25 +444,31 @@
     <!-- KPI Grid -->
     <div class="kpi-grid">
       <div class="kpi-card">
-        <div class="kpi-title">Phân Hệ Cốt Lõi</div>
-        <div class="kpi-main-val" style="color:var(--primary);">6 / 6</div>
-        <div class="kpi-sub-text">5 phân hệ hoàn tất luồng Happy Path (83.3%)</div>
+        <div class="kpi-title">Phân Hệ Kiểm Thử</div>
+        <div class="kpi-main-val" style="color:var(--primary);">7 / 7</div>
+        <div class="kpi-sub-text">6 Nghiệp vụ + 1 UI/UX chuyên trách</div>
       </div>
 
       <div class="kpi-card">
-        <div class="kpi-title">Luồng Giao Dịch & Bảng Giá</div>
+        <div class="kpi-title">Luồng Lệnh & Bảng Giá</div>
         <div class="kpi-main-val" style="color:var(--pass);">100%</div>
         <div class="kpi-sub-text">Lệnh thường, Lệnh ĐK, ATO/ATC, Chu kỳ 5 màu</div>
       </div>
 
       <div class="kpi-card">
-        <div class="kpi-title">Điểm Nghẽn Môi Trường Test</div>
+        <div class="kpi-title">Điểm Nghẽn Dữ Liệu Test</div>
         <div class="kpi-main-val" style="color:var(--fail);">2</div>
-        <div class="kpi-sub-text">Ngân hàng thụ hưởng & Dữ liệu Thực hiện quyền</div>
+        <div class="kpi-sub-text">Ngân hàng thụ hưởng & Dữ liệu Quyền</div>
       </div>
 
       <div class="kpi-card">
-        <div class="kpi-title">Mục Tiêu Kết Thúc UAT Round 1</div>
+        <div class="kpi-title">UI/UX & Design System</div>
+        <div class="kpi-main-val" style="color:#8b5cf6;">59 Issues</div>
+        <div class="kpi-sub-text">14 Đã giao, 22 Đã sửa, 14 Đang mở, 9 Won't fix</div>
+      </div>
+
+      <div class="kpi-card">
+        <div class="kpi-title">Mục Tiêu UAT Round 1</div>
         <div class="kpi-main-val" style="color:var(--blue);">16/10</div>
         <div class="kpi-sub-text">Hoàn thành 100% test case UAT Round 1</div>
       </div>
@@ -472,7 +478,7 @@
     <div class="section-card">
       <div class="section-header">
         <div class="section-title">
-          <span>📦 Hiện Trạng Kiểm Thử 6 Phân Hệ Nghiệp Vụ Trọng Yếu</span>
+          <span>📦 Hiện Trạng Kiểm Thử 7 Phân Hệ Nghiệp Vụ & Trải Nghiệm Trọng Yếu</span>
         </div>
       </div>
 
@@ -597,6 +603,30 @@
           <div class="module-footer">
             <span>Phụ trách: <strong>BachNT, CuongNT</strong></span>
             <span>Trạng thái: <strong>Đang chạy kịch bản</strong></span>
+          </div>
+        </div>
+
+        <!-- Module 7 -->
+        <div class="module-card inprogress" style="border-left-color: #8b5cf6;">
+          <div>
+            <div class="module-head">
+              <div class="module-title">
+                <span>7. Giao Diện & Trải Nghiệm Người Dùng (UI/UX - Design System MARIS)</span>
+              </div>
+              <span class="badge" style="background: rgba(139, 92, 246, 0.15); color: #8b5cf6;">59 Issues Jira • Đang Rà Soát</span>
+            </div>
+            <div class="module-body">
+              • <strong>Hiện trạng xử lý 59 issue UI/UX:</strong> Đã nghiệm thu <strong>14 issues</strong>; FSS đã sửa code chờ test lại <strong>22 issues</strong>; Đang mở/FSS đang xử lý <strong>14 issues</strong>; Đang đàm phán/FSS từ chối <strong>9 issues</strong>.<br>
+              • <strong>4 điểm nóng UI/UX trọng yếu cần xử lý dứt điểm:</strong><br>
+              &nbsp;&nbsp;1. <em>Vỡ layout Responsive Laptop (&lt; 1536px - SBSIEXT-37):</em> Bảng giá bị đè Header, mất 3 cột Khối ngoại. Yêu cầu flexbox responsive chuẩn theo Figma.<br>
+              &nbsp;&nbsp;2. <em>Lỗi render đồ thị HNX-INDEX &amp; Chỉ số ngành (SBSIEXT-247, 246):</em> Biểu đồ bị phủ khối xám đặc, chỉ số ngành trắng trang.<br>
+              &nbsp;&nbsp;3. <em>Vỡ Bottom Sheet khi mở bàn phím ảo (SBSIEXT-195, 180):</em> Bàn phím che mất danh sách ngân hàng, mất ô tìm kiếm. <strong>SBSI kiên quyết bác bỏ Won't fix của FSS</strong>, yêu cầu fix cứng chiều cao theo Figma node <code>3378-43754</code>.<br>
+              &nbsp;&nbsp;4. <em>Chuẩn hóa Design System Figma MARIS v1.0.0 (SBSIEXT-172):</em> Thay Icon Dialog, style Radio/Checkbox ký HĐ, bắt buộc font <code>JetBrains Mono</code> cho số liệu tài chính và màu cam thương hiệu <code>#E45F35</code> cho Primary CTA.
+            </div>
+          </div>
+          <div class="module-footer">
+            <span>Phụ trách: <strong>UI/UX Designer &amp; Frontend QA</strong></span>
+            <span>Trọng tâm: <strong>Khắc phục 4 điểm nóng &amp; 9 case Won't fix</strong></span>
           </div>
         </div>
 
@@ -748,7 +778,7 @@
       const text = `📌 BÁO CÁO TIẾN ĐỘ DỰ ÁN & LỘ TRÌNH UAT SBSI MARIS - CORE FLEX (FSS)
 Thời điểm: 22/09/2026
 --------------------------------------------------
-📊 1. HIỆN TRẠNG 6 PHÂN HỆ CỐT LÕI:
+📊 1. HIỆN TRẠNG 7 PHÂN HỆ NGHIỆP VỤ & TRẢI NGHIỆM:
 1. Mở tài khoản (eKYC): ĐÃ ĐI FULL LUỒNG HAPPY CASE. Chờ fix 6 bug & chốt 5 điểm PO.
 2. Luồng lệnh: ĐÃ TEST FULL LUỒNG ĐẶT LỆNH THƯỜNG, LỆNH ĐIỀU KIỆN (Stop/Limit, Trailing...), KÍCH HOẠT & CẢNH BÁO.
 3. Giao dịch tiền & UTTB: ĐÃ TEST FULL LUỒNG NỘI BỘ & UTTB.
@@ -756,6 +786,7 @@ Thời điểm: 22/09/2026
 4. Bảo mật & Noti: ĐÃ TEST FULL LUỒNG, chờ FSS fix các issue đã log.
 5. Bảng giá & Dữ liệu TT: ĐÃ TEST FULL CÁC PHIÊN SỞ (ATO, Liên tục, ATC, Thỏa thuận, Đóng cửa, Cuối tuần). Chờ bàn giao module TT chuyên sâu.
 6. Danh mục & Tài sản: ĐÃ TEST CASE CƠ BẢN, đang test tiếp các case phức tạp (Realized P&L, FIFO, Margin Call & Force Sell).
+7. UI/UX & Design System MARIS: Đang rà soát 59 issues Jira (14 Đã giao, 22 Đã sửa chờ test, 14 Đang mở, 9 Won't fix). Tập trung giải quyết 4 điểm nóng: Vỡ layout laptop < 1536px, Lỗi đồ thị HNX-INDEX, Vỡ Bottom Sheet chọn ngân hàng, Chuẩn hóa font JetBrains Mono & màu cam thương hiệu #E45F35.
 
 📅 2. LỘ TRÌNH TIMELINE HOÀN THÀNH:
 • 22/09 - 28/09: Họp FSS; Bơm data Ngân hàng & Quyền; Test case tài sản phức tạp.
