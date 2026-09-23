@@ -1,6 +1,6 @@
 {
-  "syncedAt": "2026-09-23 12:29:30",
-  "total": 298,
+  "syncedAt": "2026-09-23 13:06:11",
+  "total": 299,
   "allowedUsers": [
     "anhll.sbsi",
     "anntt.sbsi",
@@ -30,6 +30,26 @@
     "vinhtq.sbsi"
   ],
   "issues": [
+    {
+      "id": "SBSIEXT-306",
+      "platform": "mobile",
+      "title": "[Mobile Trading - Symbol Detail] Trường \"Vốn hóa (Tỷ)\" bị gán nhầm sang \"Tổng GT (Tỷ)\"",
+      "type": "External Bug",
+      "priority": "High",
+      "status": "Open",
+      "assignee": "Mai Cao Thi(KT-CK-HN)",
+      "assigneeUser": "mai.cao",
+      "reporter": "Bách Nguyen Tung(SBSI)",
+      "reporterUser": "bachnt.sbsi",
+      "reporterNick": "BachNT",
+      "ba": "",
+      "desc": "h2. 🐞 [Bug Mobile App] [Mobile Trading - Symbol Detail] Trường \"Vốn hóa (Tỷ)\" bị gán nhầm sang \"Tổng GT (Tỷ)\"\n\n*Dự án*: SBSI Mobile Trading (Maris App)\n*Phiên bản*: UAT.1-upgrade_flutter\n*Môi trường*: UAT Android (LDPlayer / Flutter Engine)\n*Mức độ nghiêm trọng*: High (Sai lệch nghiêm trọng dữ liệu tài chính của doanh nghiệp)\n*Người phụ trách*: Mai Cao Thi(KT-CK-HN)\n*Component*: Mobile-Giao dịch Mobile Trading\n\n----\nh3. 1. Mô tả lỗi\nTrên màn hình Tổng quan chi tiết mã chứng khoán (Symbol Detail), chỉ số *Vốn hóa (Tỷ)* luôn hiển thị giá trị trùng khớp 100% với *Tổng GT (Tỷ)* (Tổng giá trị giao dịch trong phiên) thay vì giá trị vốn hóa thị trường thực tế của doanh nghiệp.\n\n*Ví dụ thực tế ghi nhận:*\n* *Mã CTG*: Tổng GT = 85.59 tỷ -> Vốn hóa hiển thị = *85.59 tỷ* (Thực tế vốn hóa thị trường CTG ~150.000 tỷ đồng).\n* *Mã HPG*: Tổng GT = 106.01 tỷ -> Vốn hóa hiển thị = *106.01 tỷ* (Thực tế vốn hóa thị trường HPG >130.000 tỷ đồng).\n* *Mã KBC*: Tổng GT = 16.58 tỷ -> Vốn hóa hiển thị = *16.58 tỷ* (Thực tế vốn hóa thị trường KBC ~20.000 tỷ đồng).\n* *Mã ACB*: Tổng GT = 123.73 tỷ -> Vốn hóa hiển thị = *123.73 tỷ* (Thực tế vốn hóa thị trường ACB ~100.000 tỷ đồng).\n\nh3. 2. Các bước tái hiện (Steps to Reproduce)\n1. Mở ứng dụng SBSI Mobile Trading (Maris).\n2. Vào màn hình Bảng giá hoặc tìm kiếm mã chứng khoán bất kỳ (Ví dụ: CTG, HPG, KBC).\n3. Bấm vào mã để chuyển sang màn hình Chi tiết mã (Symbol Detail).\n4. Kéo xuống phần khối *\"Chỉ số\"*.\n5. So sánh giá trị hiển thị giữa 2 trường *\"Tổng GT (Tỷ)\"* và *\"Vốn hóa (Tỷ)\"*.\n\nh3. 3. Kết quả thực tế (Actual Result)\n- Giá trị trường *\"Vốn hóa (Tỷ)\"* luôn nhảy đúng bằng số liệu của *\"Tổng GT (Tỷ)\"*. Dữ liệu vốn hóa bị sai lệch hoàn toàn so với thực tế, gây hiểu lầm nghiêm trọng cho nhà đầu tư khi ra quyết định giao dịch.\n\nh3. 4. Kết quả mong muốn (Expected Result)\n- Trường *\"Tổng GT (Tỷ)\"*: Hiển thị tổng giá trị khớp lệnh tích lũy trong ngày.\n- Trường *\"Vốn hóa (Tỷ)\"*: Hiển thị vốn hóa thị trường = (Tổng số lượng cổ phiếu đang lưu hành) × (Thị giá hiện tại) (Ví dụ: HPG ~130.000 tỷ, CTG ~150.000 tỷ).\n\nh3. 5. Phân tích nguyên nhân kỹ thuật (Technical Root Cause)\n- Frontend Mobile (Flutter) khi bóc tách DTO JSON từ API Market Data / Symbol Overview đã binding nhầm thuộc tính `totalVal` / `accumulatedVal` vào widget hiển thị của `marketCap` (hoặc do key DTO trả về bị đặt tên gây nhầm lẫn).\n\nh3. 6. Bằng chứng đính kèm (Evidence)\n- Đính kèm ảnh chụp màn hình thực tế: `evidence_mobile_tc01_symbol_from_priceboard.png` (CTG), `evidence_mobile_tc05_hpg_detail.png` (HPG), `evidence_mobile_tc03_symbol_detail_kbc.png` (KBC).",
+      "relatedTc": "",
+      "jiraUrl": "https://projects.fss.com.vn/browse/SBSIEXT-306",
+      "createdAt": "2026-09-23 13:05",
+      "updatedAt": "2026-09-23 13:05",
+      "source": "JIRA_FSS"
+    },
     {
       "id": "SBSIEXT-305",
       "platform": "web",
