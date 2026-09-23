@@ -192,10 +192,12 @@
     "testData": "TK: 088C096969 | MK: 13579@Ab | PIN/OTP: 135790",
     "errorCode": "N/A – không phát sinh thông báo lỗi",
     "smoke": "No",
-    "note": "",
-    "status": "Untested",
+    "note": "Nghiem thu dat chuan 100%, da tao Artifact test_report_TC_WEB_UC02_009.md va bo 4 anh minh chung.",
+    "status": "Pass",
     "defaultStatus": "Untested",
-    "defaultTester": "BaoDK"
+    "defaultTester": "BaoDK",
+    "actual": "Thuc hien live tren Bang gia voi TK 088C001044, SDT 0333019829, CCCD 033197003432. Vuot Captcha PZbV9, gui SMS-OTP va xac thuc OTP 378584 thanh cong.",
+    "updatedAt": "10:00 23/09"
   },
   {
     "id": "TC_WEB_UC02_010",
