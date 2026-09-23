@@ -7908,7 +7908,7 @@ Bạn có chắc chắn muốn tiếp tục?`)) {
       let pass = 0, fail = 0, pending = 0;
       for (const item of list) {
         const rec = state[item.id] || (item.legacyId ? state[item.legacyId] : undefined);
-        const st = (typeof rec === 'object' ? rec.status : rec || item.status || '').toLowerCase();
+        let _stRaw1 = typeof rec === 'object' ? rec.status : rec; if ((!_stRaw1 || _stRaw1.toLowerCase() === 'untested' || _stRaw1.toLowerCase() === 'chưa test') && item.status && item.status.toLowerCase() !== 'untested') { _stRaw1 = item.status; } const st = (_stRaw1 || '').toLowerCase();
         if (st === 'pass' || st === 'passed' || st === 'đạt') pass++;
         else if (st === 'fail' || st === 'failed' || st === 'lỗi') fail++;
         else if (st === 'pending' || st === 'blocked') pending++;
@@ -7946,7 +7946,7 @@ Bạn có chắc chắn muốn tiếp tục?`)) {
       let pass = 0, fail = 0, pending = 0;
       list.forEach(tc => {
         const rec = state[tc.id] || (tc.legacyId ? state[tc.legacyId] : undefined);
-        const st = (typeof rec === 'object' ? rec.status : rec || tc.status || 'untested').toLowerCase();
+        let _stRaw2 = typeof rec === 'object' ? rec.status : rec; if ((!_stRaw2 || _stRaw2.toLowerCase() === 'untested' || _stRaw2.toLowerCase() === 'chưa test') && tc.status && tc.status.toLowerCase() !== 'untested') { _stRaw2 = tc.status; } const st = (_stRaw2 || 'untested').toLowerCase();
         if (st === 'pass') pass++;
         else if (st === 'fail') fail++;
         else if (st === 'pending') pending++;
@@ -8014,7 +8014,7 @@ Bạn có chắc chắn muốn tiếp tục?`)) {
         }
 
         const rec = state[item.id] || (item.legacyId ? state[item.legacyId] : undefined);
-        const st = (typeof rec === 'object' ? rec.status : rec || item.status || 'untested').toLowerCase();
+        let _stRaw3 = typeof rec === 'object' ? rec.status : rec; if ((!_stRaw3 || _stRaw3.toLowerCase() === 'untested' || _stRaw3.toLowerCase() === 'chưa test') && item.status && item.status.toLowerCase() !== 'untested') { _stRaw3 = item.status; } const st = (_stRaw3 || 'untested').toLowerCase();
         if (selStatus !== 'all') {
           if (selStatus === 'untested' && st !== 'untested' && st !== '') return false;
           if (selStatus === 'pass' && !st.startsWith('pass')) return false;
@@ -8076,7 +8076,7 @@ Bạn có chắc chắn muốn tiếp tục?`)) {
       displayRows.forEach(item => {
         const rec = state[item.id] || (item.legacyId ? state[item.legacyId] : undefined);
         const itemTester = item.tester || (['margin', 'ci', 're', 'rm'].includes(modKey) ? '' : (modKey === 'uiux' ? 'VinhTQ' : ''));
-        const curSt = (typeof rec === 'object' ? rec.status : rec || item.status || 'untested').toLowerCase();
+        let _stRaw4 = typeof rec === 'object' ? rec.status : rec; if ((!_stRaw4 || _stRaw4.toLowerCase() === 'untested' || _stRaw4.toLowerCase() === 'chưa test') && item.status && item.status.toLowerCase() !== 'untested') { _stRaw4 = item.status; } const curSt = (_stRaw4 || 'untested').toLowerCase();
         const isPass = curSt === 'pass';
         const isFail = curSt === 'fail';
         const isPending = curSt === 'pending';
@@ -8167,7 +8167,7 @@ Bạn có chắc chắn muốn tiếp tục?`)) {
         let modPass = 0;
         items.forEach(it => {
           let stObj = state[it.id] || (it.legacyId ? state[it.legacyId] : undefined);
-        let st = (stObj?.status || it.status || 'untested').toLowerCase();
+        let _stRaw5 = stObj?.status; if ((!_stRaw5 || _stRaw5.toLowerCase() === 'untested' || _stRaw5.toLowerCase() === 'chưa test') && it.status && it.status.toLowerCase() !== 'untested') { _stRaw5 = it.status; } let st = (_stRaw5 || 'untested').toLowerCase();
           if (st === 'pass') modPass++;
         });
 
@@ -8186,7 +8186,7 @@ Bạn có chắc chắn muốn tiếp tục?`)) {
           '<div id="po_acc_' + modKey + '_' + idx + '" style="display:none; padding:16px;">';
 
         items.forEach(it => {
-          let curSt = (state[it.id]?.status || it.status || 'untested').toLowerCase();
+          let _stRaw6 = state[it.id]?.status; if ((!_stRaw6 || _stRaw6.toLowerCase() === 'untested' || _stRaw6.toLowerCase() === 'chưa test') && it.status && it.status.toLowerCase() !== 'untested') { _stRaw6 = it.status; } let curSt = (_stRaw6 || 'untested').toLowerCase();
           html += '<div style="padding:12px; border-bottom:1px solid var(--border-card); display:flex; justify-content:space-between; gap:16px; align-items:flex-start;">' +
             '<div>' +
               '<span style="font-weight:800; font-family:JetBrains Mono, monospace; color:#0284c7; font-size:12px; padding:2px 6px; background:rgba(2,132,199,0.12); border-radius:4px;">' + escapeHtml(it.id) + '</span> ' +
@@ -8228,7 +8228,7 @@ Bạn có chắc chắn muốn tiếp tục?`)) {
 
       list.forEach(it => {
         let stObj = state[it.id] || (it.legacyId ? state[it.legacyId] : undefined);
-        let st = (stObj?.status || it.status || 'untested').toLowerCase();
+        let _stRaw5 = stObj?.status; if ((!_stRaw5 || _stRaw5.toLowerCase() === 'untested' || _stRaw5.toLowerCase() === 'chưa test') && it.status && it.status.toLowerCase() !== 'untested') { _stRaw5 = it.status; } let st = (_stRaw5 || 'untested').toLowerCase();
         let isActive = it.id === PO_SELECTED_TC[modKey];
         let isPass = st === 'pass';
 
@@ -8246,7 +8246,7 @@ Bạn có chắc chắn muốn tiếp tục?`)) {
         '<div style="padding-left:8px;">';
 
       if (selectedItem) {
-        let curSt = (state[selectedItem.id]?.status || selectedItem.status || 'untested').toLowerCase();
+        let _stRaw7 = state[selectedItem.id]?.status; if ((!_stRaw7 || _stRaw7.toLowerCase() === 'untested' || _stRaw7.toLowerCase() === 'chưa test') && selectedItem.status && selectedItem.status.toLowerCase() !== 'untested') { _stRaw7 = selectedItem.status; } let curSt = (_stRaw7 || 'untested').toLowerCase();
         html += '<div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:16px; border-bottom:1px solid var(--border-card); padding-bottom:14px;">' +
           '<div>' +
             '<span style="font-weight:800; font-family:JetBrains Mono, monospace; color:#0284c7; font-size:14px; padding:4px 10px; background:rgba(2,132,199,0.12); border-radius:6px;">' + escapeHtml(selectedItem.id) + '</span>' +
