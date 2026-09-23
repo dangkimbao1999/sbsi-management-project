@@ -1224,7 +1224,7 @@
   {
     "id": "TC_WEB_UC12_055",
     "stt": "55",
-    "tester": "NgaMTQ",
+    "tester": "BachNT",
     "module": "Giao dịch Lệnh",
     "screen": "UC12: 3.4.1 Đặt lệnh nhanh (trên Header)",
     "useCaseId": "UC12",
@@ -1238,10 +1238,18 @@
     "testData": "TK: 088C000922 | MK: 13579@Ab | PIN/OTP: 135790 | Mã: HPG/FPT | KL: 100/500 | Giá: Thị trường / LO",
     "errorCode": "ERR-WEB-3.4.1-01",
     "smoke": "No",
-    "note": "",
-    "status": "Untested",
+    "note": "Đạt chuẩn 100% kịch bản P1 - Blocker. Đầy đủ 4 ảnh bằng chứng độc lập.",
+    "status": "Pass",
     "defaultStatus": "Untested",
-    "defaultTester": "NgaMTQ"
+    "defaultTester": "NgaMTQ",
+    "actual": "Đã kiểm thử thành công kịch bản Đặt lệnh nhanh trên Header với Khối lượng = 0 hoặc số âm (tài khoản 088C000922). Ô nhập khối lượng tự động chặn ký tự số âm (-). Khi nhập KL = 0 và bấm [MUA], hệ thống từ chối đặt lệnh và hiển thị thông báo lỗi rõ ràng: 'Số lượng không thể bỏ trống hoặc phải lớn hơn 0'. Sổ lệnh đối soát không phát sinh bất kỳ lệnh không hợp lệ nào.",
+    "evidence": [
+      "evidence_TC_WEB_UC12_055_order_form_input.png",
+      "evidence_TC_WEB_UC12_055_click_action.png",
+      "evidence_TC_WEB_UC12_055_error_message.png",
+      "evidence_TC_WEB_UC12_055_order_book_no_order.png"
+    ],
+    "updatedAt": "12:06 23/09"
   },
   {
     "id": "TC_WEB_UC12_056",
