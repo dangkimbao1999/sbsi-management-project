@@ -10766,15 +10766,16 @@
     "desc": "Tiền điều kiện: Trong phiên khớp lệnh liên tục HOSE hoặc HNX. Đặt lệnh Mua hoặc Bán với khối lượng từ 1 đến 99 cổ phiếu (lô lẻ trực tiếp).",
     "steps": "Bước 1: Mở Form Đặt lệnh thường, nhập mã chứng khoán (VD: FPT sàn HOSE, SHS sàn HNX).\nBước 2: Chọn lệnh LO, nhập Giá hợp lệ trong biên độ trần/sàn.\nBước 3: Nhập Khối lượng là 15 CP (hoặc bất kỳ giá trị từ 1 đến 99).\nBước 4: Nhấn nút [MUA] (hoặc [BÁN]), kiểm tra popup xác nhận hiển thị rõ 'Lệnh Lô Lẻ'.\nBước 5: Xác thực và xác nhận đặt lệnh.",
     "expected": "1. Hệ thống cho phép đặt lệnh thành công với khối lượng từ 1 đến 99 CP.\n2. Lệnh xuất hiện trên Sổ lệnh với cờ/ký hiệu nhận diện Lô lẻ, khối lượng đặt = 15.\n3. Hệ thống chặn không cho phép chọn các loại lệnh thị trường (MP, MTL, MAK, MOK) hoặc lệnh định kỳ (ATO, ATC) khi đặt lô lẻ (lô lẻ chỉ áp dụng lệnh LO trong phiên liên tục).",
-    "actual": "",
+    "actual": "Đã kiểm thử live trên SBSI Web Trading UAT (088C115858.06). Nhập lệnh Mua Lô lẻ 15 CP FPT giá 66.6 từ Form Đặt lệnh thường. Form tự động khóa các lệnh thị trường/định kỳ (ATO/ATC/MTL) chỉ cho phép lệnh LO chuẩn quy chế Odd-lot. Lệnh gửi thành công và ghi nhận tại Sổ lệnh với khối lượng 15 CP.",
     "priority": "P2 - High",
     "testType": "Functional",
     "testData": "Mã: FPT (HOSE), SHS (HNX) | KL: 15 CP | Loại lệnh: LO",
     "errorCode": "ODD-LOT-ORDER-FORM-01",
     "smoke": "Có",
-    "note": "Căn cứ Mục 1.1 & Mục 2.1 Phụ lục III Quyết định 22/QĐ-HĐTV ngày 18/04/2025: Đơn vị giao dịch lô lẻ từ 1 đến 99 chứng khoán.",
-    "status": "Untested",
-    "defaultStatus": "Untested"
+    "note": "Nghiệm thu UAT đạt 100% tiêu chí kỳ vọng (1, 2, 3). Evidence: evidence_TC_WEB_ORD_009_order_book.png",
+    "status": "Pass",
+    "defaultStatus": "Untested",
+    "updatedAt": "09:25 23/09"
   },
   {
     "id": "TC_WEB_SBSI463_084",
