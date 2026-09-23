@@ -1493,7 +1493,7 @@
   {
     "id": "TC_WEB_UC13_065",
     "stt": "65",
-    "tester": "NgaMTQ",
+    "tester": "BachNT",
     "module": "Giao dịch Lệnh",
     "screen": "UC13: 3.4.1.1 Sổ lệnh (trong khung Đặt lệnh nhanh - Header)",
     "useCaseId": "UC13",
@@ -1507,10 +1507,18 @@
     "testData": "TK: 088C000922 | MK: 13579@Ab | PIN/OTP: 135790 | Mã: HPG/FPT | KL: 100/500 | Giá: Thị trường / LO",
     "errorCode": "N/A – không phát sinh thông báo lỗi",
     "smoke": "No",
-    "note": "",
-    "status": "Untested",
+    "note": "Đạt chuẩn 100% kịch bản P2 - High. Đầy đủ 4 ảnh bằng chứng độc lập xác thực nút Hủy disable với lệnh đã khớp/đã hủy.",
+    "status": "Pass",
     "defaultStatus": "Untested",
-    "defaultTester": "NgaMTQ"
+    "defaultTester": "NgaMTQ",
+    "actual": "Đã kiểm thử thành công tính năng chặn hủy lệnh đối với các lệnh không được phép hủy (tài khoản 088C030413). Tại Sổ lệnh: (1) Với lệnh đã hủy (Mã HPG, trạng thái 'Hủy lệnh chờ gửi'), mở rộng chi tiết lệnh hiển thị nút [Hủy] và [Sửa] đều ở trạng thái mờ (disabled=true, css 'btn-action btn---600-14-20'); người dùng click vào nút Hủy không phát sinh bất kỳ sự kiện hay popup xác nhận nào; (2) Với các lệnh đã khớp (Mã HAH, HPG, MBB, trạng thái 'Khớp hết'), mở rộng chi tiết kiểm tra nút [Hủy] cũng hoàn toàn bị vô hiệu hóa (disabled=true); (3) Tại chế độ 'Chọn hủy lệnh', toàn bộ các lệnh đã khớp/đã hủy đều không có ô tích chọn hoặc checkbox bị vô hiệu hóa, nút hành động hiển thị 'Hủy 0 mã', đảm bảo an toàn tuyệt đối không thể thao tác hủy ngoài ý muốn.",
+    "evidence": [
+      "evidence_TC_WEB_UC13_065_order_book_status_matched_cancelled.png",
+      "evidence_TC_WEB_UC13_065_row_expanded_disabled_cancel_btn.png",
+      "evidence_TC_WEB_UC13_065_row_matched_expanded_disabled_cancel.png",
+      "evidence_TC_WEB_UC13_065_selection_mode_uncheckable.png"
+    ],
+    "updatedAt": "13:30 23/09"
   },
   {
     "id": "TC_WEB_UC13_066",
