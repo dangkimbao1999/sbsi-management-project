@@ -1192,10 +1192,12 @@
     "testData": "TK: 088C000922 | MK: 13579@Ab | PIN/OTP: 135790 | Mã: HPG/FPT | KL: 100/500 | Giá: Thị trường / LO",
     "errorCode": "N/A – không phát sinh thông báo lỗi",
     "smoke": "No",
-    "note": "",
-    "status": "Untested",
+    "note": "Nghiệm thu UAT đạt 100% tiêu chuẩn. Evidence: evidence_TC_WEB_UC12_053_order_book.png",
+    "status": "Pass",
     "defaultStatus": "Untested",
-    "defaultTester": "NgaMTQ"
+    "defaultTester": "NgaMTQ",
+    "actual": "Đã kiểm thử live trên SBSI Web Trading UAT (088C000922.01). Nhấn nút Đặt lệnh nhanh ở Header, tài khoản/tiểu khoản mặc định 088C000922.01 hiển thị chuẩn xác. Tìm kiếm mã HPG, nhập giá 21.15, khối lượng 10 CP. Xác nhận đặt lệnh với mã PIN 123456, hệ thống hiển thị thông báo Đặt lệnh thành công và dòng lệnh xuất hiện tức thời trên Sổ lệnh.",
+    "updatedAt": "10:55 23/09"
   },
   {
     "id": "TC_WEB_UC12_054",
