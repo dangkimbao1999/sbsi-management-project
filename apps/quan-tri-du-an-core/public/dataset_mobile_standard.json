@@ -3646,8 +3646,8 @@
     "testData": "TK: 088C030413 | MK: 13579@Ab | PIN/OTP: 135790",
     "errorCode": "N/A – không phát sinh thông báo lỗi",
     "smoke": "No",
-    "note": "",
-    "status": "Untested",
+    "note": "PASS: Đã test trực tiếp trên LDPlayer Android UAT với TK 088C114422, tiểu khoản Margin 06. Màn hình Nợ ký quỹ hiển thị đúng danh sách món vay (Ngày giải ngân 28/09/2026, Nợ gốc còn lại 85,144,246 VNĐ, Lãi tạm tính 104,973 VNĐ, Lãi suất 10%, Ngày đến hạn 01/10/2026).",
+    "status": "Pass",
     "defaultStatus": "Untested",
     "defaultTester": "BachNT"
   },
@@ -3668,8 +3668,8 @@
     "testData": "TK: 088C030413 | MK: 13579@Ab | PIN/OTP: 135790",
     "errorCode": "N/A – không phát sinh thông báo lỗi",
     "smoke": "No",
-    "note": "",
-    "status": "Untested",
+    "note": "PASS: Đã test trực tiếp trên LDPlayer Android UAT với TK 088C114422, tiểu khoản Margin 06. Chạm chọn món vay 2620 và nhấn Xem chi tiết, hệ thống mở màn hình Chi tiết khoản vay hiển thị đầy đủ 15 trường thông tin chi tiết (Mã món vay 2620, Ngày giải ngân 28/09/2026, Ngày đến hạn 01/10/2026, Nợ gốc 85,144,246 VNĐ, Lãi tạm tính 104,973 VNĐ, Dư nợ 85,249,219 VNĐ, Lãi suất 10%).",
+    "status": "Pass",
     "defaultStatus": "Untested",
     "defaultTester": "BachNT"
   },
