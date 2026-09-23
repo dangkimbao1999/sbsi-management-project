@@ -3760,8 +3760,8 @@
     "testData": "TK: 088C030413 | MK: 13579@Ab | PIN/OTP: 135790",
     "errorCode": "N/A – không phát sinh thông báo lỗi",
     "smoke": "No",
-    "note": "",
-    "status": "Untested",
+    "note": "Khoảng thời gian mặc định 1 tháng (24/08/2026 - 23/09/2026) đáp ứng đúng yêu cầu. Phát hiện lỗi ngày dòng Đầu kỳ hiển thị 01/01/1900, đã log issue SBSIEXT-309.",
+    "status": "Pass",
     "defaultStatus": "Untested",
     "defaultTester": "BachNT"
   },
