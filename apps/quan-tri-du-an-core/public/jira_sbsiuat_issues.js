@@ -1,6 +1,6 @@
 window.__SBSI_JIRA_DATA__ = {
-  "syncedAt": "2026-09-23 22:23:56",
-  "total": 314,
+  "syncedAt": "2026-09-23 23:12:56",
+  "total": 315,
   "allowedUsers": [
     "anhll.sbsi",
     "anntt.sbsi",
@@ -30,6 +30,26 @@ window.__SBSI_JIRA_DATA__ = {
     "vinhtq.sbsi"
   ],
   "issues": [
+    {
+      "id": "SBSIEXT-322",
+      "platform": "uiux",
+      "title": "[Mobile][Sao kê chứng khoán] Không hiển thị danh sách biến động khi chọn 'Mã CK: Tất cả' & các điểm bất cập UI/UX trên luồng Sao kê",
+      "type": "External Bug",
+      "priority": "Medium",
+      "status": "Open",
+      "assignee": "Mai Cao Thi(KT-CK-HN)",
+      "assigneeUser": "mai.cao",
+      "reporter": "Bách Nguyen Tung(SBSI)",
+      "reporterUser": "bachnt.sbsi",
+      "reporterNick": "BachNT",
+      "ba": "",
+      "desc": "*Môi trường:* Android Emulator LDPlayer (emulator-5554, 900x1600), Flutter App vn.com.sbsi.mobiletrading (Build: UAT.1-upgrade_flutter)\n*Tài khoản kiểm thử:* 088C000982 (Phuong test2)\n*Mã Test Case liên kết:* TC_APP_UC41_174, TC_APP_UC41_173, TC_APP_UC40_172\n*Người báo cáo:* BachNT\n\n----\nh3. 1. Mô tả tổng quan vấn đề\nQua đợt kiểm thử chức năng Sao kê chứng khoán (UC41) và Sao kê tiền (UC40) trên Mobile App, phát hiện lỗi chức năng P2 khiến người dùng không thể xem danh sách biến động của toàn bộ danh mục cổ phiếu, cùng 3 điểm bất cập lớn về trải nghiệm UI/UX và công thái học:\n# *Lỗi nghiệp vụ P2 (TC_APP_UC41_174):* Khi chọn \"Mã CK: Tất cả\", khối tổng hợp bên trên vẫn tính đúng số phát sinh (+30,000 / -1,000), nhưng phần \"Danh sách giao dịch\" bên dưới báo \"Không có dữ liệu\". Chỉ khi chọn đích danh từng mã (ví dụ TCB) thì danh sách mới hiện ra.\n# *Bất cập UX - Công thái học tìm kiếm mã CK:* Khi gõ từ khóa \"TCB\", danh sách hiển thị hàng loạt mã chứng quyền (CTCB2521, CTCB2601...) chiếm trọn trang đầu tiên theo alphabet, đẩy mã cổ phiếu cơ sở TCB xuống đáy danh sách (bị ẩn khỏi màn hình).\n# *Bất cập UX - Sai nhãn modal Date Picker:* Chạm vào ô \"Từ ngày 24/08/2026\", dialog mở lên nhưng nhãn phụ lại hiển thị cố định là \"Đến ngày 24/08/2026\", sai lệch ngữ cảnh thao tác.\n# *Bất cập UX - Rò rỉ ngày sentinel Database:* Trên màn hình Sao kê tiền, khi khoảng thời gian không có phát sinh giao dịch, bảng hiển thị 2 dòng chứa ngày mặc định của database: 01/01/1900 (Đầu kỳ) và 01/01/3000 (Cuối kỳ) thay vì hiển thị Empty State.\n\n----\nh3. 2. Các bước tái hiện chi tiết (Steps to Reproduce)\n*A. Lỗi không hiển thị danh sách khi chọn \"Mã CK: Tất cả\":*\n# Vào Menu > Quản lý tài khoản > Sao kê chứng khoán.\n# Chọn tiểu khoản 06 (hoặc 01), giữ nguyên \"Mã CK: Tất cả\".\n# Chọn khoảng thời gian: Từ ngày 24/08/2026 đến 23/09/2026.\n# -> *Quan sát:* Khối tổng hợp có dữ liệu (+30,000 / -1,000), nhưng phần \"Danh sách giao dịch\" hiển thị icon thư mục rỗng và báo \"Không có dữ liệu\".\n# Đổi bộ lọc sang mã TCB -> 2 giao dịch khớp lệnh lập tức hiển thị đầy đủ.\n\n*B. Bất cập thứ tự tìm kiếm mã CK:*\n# Tại màn hình Sao kê chứng khoán, bấm vào ô chọn Mã CK.\n# Nhập từ khóa \"TCB\" vào ô tìm kiếm.\n# -> *Quan sát:* Toàn bộ trang kết quả đầu tiên là chứng quyền CTCB..., cổ phiếu cơ sở TCB bị đẩy xuống cuối màn hình phải cuộn nhiều lần.\n\n*C. Sai nhãn modal Chọn ngày:*\n# Bấm vào trường \"Từ ngày 24/08/2026\".\n# -> *Quan sát:* Dialog \"Chọn thời gian\" mở lên nhưng nhãn phụ lại ghi \"Đến ngày 24/08/2026\".\n\n*D. Lộ ngày 01/01/1900 & 01/01/3000 trên Sao kê tiền:*\n# Mở Sao kê tiền, chọn khoảng thời gian không có giao dịch (ví dụ 01/08/2026 - 06/08/2026).\n# -> *Quan sát:* Bảng hiển thị 2 dòng ngày lạ 01/01/1900 và 01/01/3000.\n\n----\nh3. 3. Kết quả mong muốn (Expected Result)\n- Khi chọn \"Mã CK: Tất cả\", hệ thống phải hiển thị đầy đủ danh sách giao dịch biến động của tất cả các mã phát sinh trong kỳ, khớp với số liệu tổng hợp.\n- Thuật toán tìm kiếm mã CK phải ưu tiên kết quả khớp chính xác (Exact match TCB) lên vị trí số 1 trước các mã chứng quyền dẫn xuất.\n- Modal Date Picker hiển thị nhãn động theo đúng trường đang chọn (\"Từ ngày DD/MM/YYYY\" khi bấm Từ ngày).\n- Ẩn các mốc ngày sentinel 1900/3000, thay bằng Empty State illustration kèm thông báo \"Không có giao dịch phát sinh trong khoảng thời gian này\".\n\n----\nh3. 4. Bằng chứng hình ảnh đã đánh dấu (Attached Evidence)\n- [^issue_sao_ke_all_vs_specific.png]: Đối chiếu lỗi Tất cả vs Chọn đích danh TCB.\n- [^issue_stock_search_ranking.png]: Chứng quyền chiếm vị trí đầu bảng đẩy TCB xuống đáy.\n- [^issue_datepicker_wrong_label.png]: Bấm \"Từ ngày\" nhưng dialog ghi \"Đến ngày\".\n- [^issue_sentinel_date_leak.png]: Rò rỉ ngày sentinel 1900/3000 trên Sao kê tiền.",
+      "relatedTc": "TC_WEB_UC62_270",
+      "jiraUrl": "https://projects.fss.com.vn/browse/SBSIEXT-322",
+      "createdAt": "2026-09-23 23:12",
+      "updatedAt": "2026-09-23 23:12",
+      "source": "JIRA_FSS"
+    },
     {
       "id": "SBSIEXT-321",
       "platform": "uiux",
@@ -2136,7 +2156,7 @@ window.__SBSI_JIRA_DATA__ = {
       "title": "UIUX (System) Màu sáng tối",
       "type": "External Bug",
       "priority": "Medium",
-      "status": "Reviewed",
+      "status": "Fixed",
       "assignee": "Vo Pham Tien(LTV-CK-HN)",
       "assigneeUser": "vo.pham",
       "reporter": "Quoc Pham Bao(SBSI)",
@@ -2147,7 +2167,7 @@ window.__SBSI_JIRA_DATA__ = {
       "relatedTc": "",
       "jiraUrl": "https://projects.fss.com.vn/browse/SBSIEXT-216",
       "createdAt": "2026-09-21 09:27",
-      "updatedAt": "2026-09-23 18:33",
+      "updatedAt": "2026-09-23 22:37",
       "source": "JIRA_FSS"
     },
     {
@@ -4887,7 +4907,7 @@ window.__SBSI_JIRA_DATA__ = {
       "relatedTc": "",
       "jiraUrl": "https://projects.fss.com.vn/browse/SBSIEXT-72",
       "createdAt": "2026-09-15 09:18",
-      "updatedAt": "2026-09-18 13:16",
+      "updatedAt": "2026-09-23 22:40",
       "source": "JIRA_FSS"
     },
     {
