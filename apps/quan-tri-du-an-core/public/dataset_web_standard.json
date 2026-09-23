@@ -1344,7 +1344,7 @@
   {
     "id": "TC_WEB_UC12_059",
     "stt": "59",
-    "tester": "NgaMTQ",
+    "tester": "BachNT",
     "module": "Giao dịch Lệnh",
     "screen": "UC12: 3.4.1 Đặt lệnh nhanh (trên Header)",
     "useCaseId": "UC12",
@@ -1358,15 +1358,23 @@
     "testData": "TK: 088C000922 | MK: 13579@Ab | PIN/OTP: 135790 | Mã: HPG/FPT | KL: 100/500 | Giá: Thị trường / LO",
     "errorCode": "N/A – không phát sinh thông báo lỗi",
     "smoke": "No",
-    "note": "",
-    "status": "Untested",
+    "note": "Đạt chuẩn 100% kịch bản P2 - High. Đầy đủ 4 ảnh bằng chứng độc lập.",
+    "status": "Pass",
     "defaultStatus": "Untested",
-    "defaultTester": "NgaMTQ"
+    "defaultTester": "NgaMTQ",
+    "actual": "Đã kiểm thử thành công tính năng Lưu xác thực khi đặt lệnh nhanh trên Header (tài khoản 088C030413). Tại lệnh đầu tiên (MUA 100 HPG), bật toggle 'Lưu xác thực' và nhập mã PIN 135790, hệ thống duyệt lệnh thành công và lưu phiên xác thực. Tại lệnh kế tiếp trong cùng phiên, hệ thống tự động ghi nhớ và điền sẵn mã PIN xác thực (toggle Lưu xác thực giữ nguyên trạng thái bật), cho phép trader xác nhận đặt lệnh nhanh chóng mà không cần nhập lại mã PIN. Cả 2 lệnh đều được ghi nhận đầy đủ vào Sổ lệnh.",
+    "evidence": [
+      "evidence_TC_WEB_UC12_059_order1_modal_save_auth.png",
+      "evidence_TC_WEB_UC12_059_order1_success_toast.png",
+      "evidence_TC_WEB_UC12_059_order2_saved_pin_modal.png",
+      "evidence_TC_WEB_UC12_059_order2_no_pin_prompt_or_success.png"
+    ],
+    "updatedAt": "12:40 23/09"
   },
   {
     "id": "TC_WEB_UC13_060",
     "stt": "60",
-    "tester": "NgaMTQ",
+    "tester": "BachNT",
     "module": "Giao dịch Lệnh",
     "screen": "UC13: 3.4.1.1 Sổ lệnh (trong khung Đặt lệnh nhanh - Header)",
     "useCaseId": "UC13",
@@ -1380,10 +1388,19 @@
     "testData": "TK: 088C000922 | MK: 13579@Ab | PIN/OTP: 135790 | Mã: HPG/FPT | KL: 100/500 | Giá: Thị trường / LO",
     "errorCode": "N/A – không phát sinh thông báo lỗi",
     "smoke": "No",
-    "note": "",
-    "status": "Untested",
+    "note": "Đạt chuẩn 100% kịch bản P2 - High. Đầy đủ 5 ảnh bằng chứng cho tất cả các trạng thái lọc.",
+    "status": "Pass",
     "defaultStatus": "Untested",
-    "defaultTester": "NgaMTQ"
+    "defaultTester": "NgaMTQ",
+    "actual": "Đã kiểm thử thành công tính năng lọc Sổ lệnh theo trạng thái trong khung Đặt lệnh nhanh trên Header. Lần lượt bấm chuyển qua các bộ lọc: (1) 'Lệnh thường': hiển thị đầy đủ danh sách toàn bộ các lệnh thường trong ngày; (2) 'Chờ': lọc chính xác 3 lệnh đang ở trạng thái 'Chờ gửi'; (3) 'Khớp': lọc các lệnh đã khớp (trả về danh sách rỗng chuẩn xác do phiên trưa chưa khớp); (4) 'Huỷ': lọc các lệnh đã huỷ; (5) 'Điều kiện': giao diện tự động chuyển đổi cấu trúc cột sang định dạng lệnh điều kiện. Giao diện mượt mà, phản hồi tức thì.",
+    "evidence": [
+      "evidence_TC_WEB_UC13_060_filter_lenh_thuong.png",
+      "evidence_TC_WEB_UC13_060_filter_cho.png",
+      "evidence_TC_WEB_UC13_060_filter_khop.png",
+      "evidence_TC_WEB_UC13_060_filter_huy.png",
+      "evidence_TC_WEB_UC13_060_filter_dieu_kien.png"
+    ],
+    "updatedAt": "12:42 23/09"
   },
   {
     "id": "TC_WEB_UC13_061",
