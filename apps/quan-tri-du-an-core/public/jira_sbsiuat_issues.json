@@ -1,6 +1,6 @@
 {
   "syncedAt": "2026-09-23 14:30:36",
-  "total": 302,
+  "total": 304,
   "allowedUsers": [
     "anhll.sbsi",
     "anntt.sbsi",
@@ -30,6 +30,46 @@
     "vinhtq.sbsi"
   ],
   "issues": [
+    {
+      "id": "SBSIEXT-319",
+      "platform": "Web",
+      "title": "[Web Trading - Bảng giá] AG-Grid hiển thị chuỗi tiếng Anh mặc định \"No Rows To Show\" khi bỏ chọn hết chỉ số",
+      "type": "External Bug",
+      "priority": "Medium",
+      "status": "Open",
+      "assignee": "Mai Cao Thi(KT-CK-HN)",
+      "assigneeUser": "mai.cao",
+      "reporter": "Nguyễn Thế Bách",
+      "reporterUser": "bachnt.sbsi",
+      "reporterNick": "BáchNT",
+      "ba": "Mai Cao Thi",
+      "desc": "Khi người dùng mở modal 'Chọn chỉ số' và bỏ chọn toàn bộ 25 checkbox, bảng AG-Grid hiển thị chuỗi tiếng Anh mặc định 'No Rows To Show' chưa được Việt hóa.",
+      "relatedTc": "TC_WEB_UC04_029",
+      "jiraUrl": "https://projects.fss.com.vn/browse/SBSIEXT-319",
+      "createdAt": "2026-09-23 18:44",
+      "updatedAt": "2026-09-23 18:44",
+      "source": "Jira FSS"
+    },
+    {
+      "id": "SBSIEXT-318",
+      "platform": "Web",
+      "title": "[Web Trading - Bảng giá] Lệch đơn vị tính cột \"KL (triệu)\" tại bảng Chỉ số chính (Hiển thị 669 triệu CP dạng đầy đủ 9 chữ số)",
+      "type": "External Bug",
+      "priority": "High",
+      "status": "Open",
+      "assignee": "Mai Cao Thi(KT-CK-HN)",
+      "assigneeUser": "mai.cao",
+      "reporter": "Nguyễn Thế Bách",
+      "reporterUser": "bachnt.sbsi",
+      "reporterNick": "BáchNT",
+      "ba": "Mai Cao Thi",
+      "desc": "Tại màn hình Bảng giá (/priceboard), bảng 'Chỉ số chính' tiêu đề cột ghi 'KL (triệu)' nhưng dữ liệu số liệu hiển thị lại là số nguyên đầy đủ đơn vị cổ phiếu (669,616,162 CP thay vì 669.62 triệu CP như SSI iBoard).",
+      "relatedTc": "TC_WEB_UC04_027",
+      "jiraUrl": "https://projects.fss.com.vn/browse/SBSIEXT-318",
+      "createdAt": "2026-09-23 18:44",
+      "updatedAt": "2026-09-23 18:44",
+      "source": "Jira FSS"
+    },
     {
       "id": "SBSIEXT-309",
       "platform": "mobile",
