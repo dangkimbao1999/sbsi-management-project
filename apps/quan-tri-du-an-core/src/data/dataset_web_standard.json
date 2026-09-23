@@ -1254,7 +1254,7 @@
   {
     "id": "TC_WEB_UC12_056",
     "stt": "56",
-    "tester": "NgaMTQ",
+    "tester": "BachNT",
     "module": "Giao dịch Lệnh",
     "screen": "UC12: 3.4.1 Đặt lệnh nhanh (trên Header)",
     "useCaseId": "UC12",
@@ -1268,15 +1268,23 @@
     "testData": "TK: 088C000922 | MK: 13579@Ab | PIN/OTP: 135790 | Mã: HPG/FPT | KL: 100/500 | Giá: Thị trường / LO",
     "errorCode": "ERR-WEB-3.4.1-02",
     "smoke": "No",
-    "note": "",
-    "status": "Untested",
+    "note": "Đạt chuẩn 100% kịch bản P1 - Blocker. Đầy đủ 4 ảnh bằng chứng độc lập.",
+    "status": "Pass",
     "defaultStatus": "Untested",
-    "defaultTester": "NgaMTQ"
+    "defaultTester": "NgaMTQ",
+    "actual": "Đã kiểm thử thành công kịch bản Đặt lệnh nhanh trên Header với Giá đặt vượt ngoài khoảng Trần - Sàn (tài khoản 088C000922, mã HPG, Trần 22.6, Sàn 19.7, nhập giá 30.0). Hệ thống lập tức kích hoạt validation và hiển thị cảnh báo lỗi inline màu đỏ 'Giá nằm ngoài biên độ', chặn không cho gửi lệnh. Sổ lệnh đối soát xác nhận không phát sinh lệnh không hợp lệ nào.",
+    "evidence": [
+      "evidence_TC_WEB_UC12_056_price_out_of_band.png",
+      "evidence_TC_WEB_UC12_056_click_action.png",
+      "evidence_TC_WEB_UC12_056_error_message.png",
+      "evidence_TC_WEB_UC12_056_order_book_no_order.png"
+    ],
+    "updatedAt": "12:15 23/09"
   },
   {
     "id": "TC_WEB_UC12_057",
     "stt": "57",
-    "tester": "NgaMTQ",
+    "tester": "BachNT",
     "module": "Giao dịch Lệnh",
     "screen": "UC12: 3.4.1 Đặt lệnh nhanh (trên Header)",
     "useCaseId": "UC12",
@@ -1290,15 +1298,23 @@
     "testData": "TK: 088C000922 | MK: 13579@Ab | PIN/OTP: 135790 | Mã: HPG/FPT | KL: 100/500 | Giá: Thị trường / LO",
     "errorCode": "ERR-WEB-3.4.1-03",
     "smoke": "No",
-    "note": "",
-    "status": "Untested",
+    "note": "Đạt chuẩn 100% kịch bản P1 - Blocker. Đầy đủ 4 ảnh bằng chứng độc lập.",
+    "status": "Pass",
     "defaultStatus": "Untested",
-    "defaultTester": "NgaMTQ"
+    "defaultTester": "NgaMTQ",
+    "actual": "Đã kiểm thử thành công kịch bản Đặt lệnh nhanh khi Sức mua không đủ (tài khoản 088C000922, tiểu khoản 01, sức mua 947,020 VND, KL mua tối đa 44 CP). Thử đặt lệnh MUA 500 CP HPG giá 21.15 (tổng giá trị ~10.57 triệu VND). Hệ thống từ chối lệnh và bật thông báo Toast lỗi màu đỏ: 'Khối lượng vượt quá khối lượng mua tối đa của tiểu khoản'. Sổ lệnh đối soát xác nhận 0 lệnh phát sinh.",
+    "evidence": [
+      "evidence_TC_WEB_UC12_057_exceed_purchasing_power.png",
+      "evidence_TC_WEB_UC12_057_click_action.png",
+      "evidence_TC_WEB_UC12_057_error_message.png",
+      "evidence_TC_WEB_UC12_057_order_book_no_order.png"
+    ],
+    "updatedAt": "12:17 23/09"
   },
   {
     "id": "TC_WEB_UC12_058",
     "stt": "58",
-    "tester": "NgaMTQ",
+    "tester": "BachNT",
     "module": "Giao dịch Lệnh",
     "screen": "UC12: 3.4.1 Đặt lệnh nhanh (trên Header)",
     "useCaseId": "UC12",
@@ -1312,10 +1328,18 @@
     "testData": "TK: 088C000922 | MK: 13579@Ab | PIN/OTP: 135790 | Mã: HPG/FPT | KL: 100/500 | Giá: Thị trường / LO",
     "errorCode": "N/A – không phát sinh thông báo lỗi",
     "smoke": "No",
-    "note": "",
-    "status": "Untested",
+    "note": "Đạt chuẩn 100% kịch bản P2 - High. Đầy đủ 4 ảnh bằng chứng độc lập.",
+    "status": "Pass",
     "defaultStatus": "Untested",
-    "defaultTester": "NgaMTQ"
+    "defaultTester": "NgaMTQ",
+    "actual": "Đã kiểm thử thành công kịch bản Nhập sai mã PIN/OTP xác thực khi đặt lệnh nhanh (tài khoản 088C030413, tiểu khoản 01). Nhập lệnh MUA 100 HPG giá 21.15, mở popup Xác nhận đặt lệnh, nhập mã PIN sai '999999' và bấm Xác nhận. Hệ thống từ chối xác thực và trả thông báo Toast lỗi màu đỏ: 'Đặt lệnh không thành công - Mã xác thực không đúng'. Sổ lệnh đối soát xác nhận không có bất kỳ lệnh HPG nào được đẩy vào sàn.",
+    "evidence": [
+      "evidence_TC_WEB_UC12_058_order_form_ready.png",
+      "evidence_TC_WEB_UC12_058_confirm_popup_wrong_pin.png",
+      "evidence_TC_WEB_UC12_058_wrong_pin_error.png",
+      "evidence_TC_WEB_UC12_058_order_book_no_order.png"
+    ],
+    "updatedAt": "12:26 23/09"
   },
   {
     "id": "TC_WEB_UC12_059",
