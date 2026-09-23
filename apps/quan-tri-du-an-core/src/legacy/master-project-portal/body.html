@@ -2973,6 +2973,71 @@
         </div>
       </div>
 
+
+      <!-- SECTION 5B: CUMULATIVE TESTER PACE & RUN-RATE MATRIX (TIẾN ĐỘ KIỂM THỬ LŨY KẾ THEO NGÀY) -->
+      <div class="po-main-card" id="card_cumulative_tester_pace" style="margin-bottom: 24px; border: 1px solid var(--border-card); background: var(--bg-card); border-radius: var(--radius-card); padding: 20px;">
+        <div class="po-card-head" style="display:flex; justify-content:space-between; align-items:flex-start; flex-wrap:wrap; gap:16px; margin-bottom: 16px;">
+          <div>
+            <div class="po-card-title" style="font-size: 16px; font-weight: 800; color: var(--text-white); display:flex; align-items:center; gap:8px;">
+              <span>📈</span> TIẾN ĐỘ KIỂM THỬ LŨY KẾ THEO NGÀY TỪNG THÀNH VIÊN (RUN-RATE & PACE MATRIX)
+            </div>
+            <div style="font-size: 12.5px; color: var(--text-secondary); margin-top: 4px;">
+              Quy tắc tính toán lũy kế theo ngày làm việc (T2–T6). Đánh giá độ lệch thực tế so với định mức kế hoạch (Vượt tiến độ, Đạt tiến độ, Chậm tiến độ).
+            </div>
+          </div>
+
+          <!-- CONTROLS: PHASE SELECTOR & CRITERIA TOGGLE -->
+          <div style="display:flex; gap:10px; align-items:center; flex-wrap:wrap;">
+            <div style="display:flex; align-items:center; gap:6px;">
+              <label for="sel_pace_phase" style="font-size:12px; font-weight:700; color:var(--text-secondary);">⚙️ Giai đoạn:</label>
+              <select id="sel_pace_phase" onchange="renderCumulativeTesterProgress()" class="form-control" style="font-size:12px; font-weight:700; padding:6px 10px; border-radius:6px; background:var(--bg-card-sub); color:var(--text-white); border:1px solid var(--border-card);">
+                <option value="p1_uat" selected>Cột mốc 03 • UAT Vòng 1 (01/07 – 30/09/2026: 66 ngày)</option>
+                <option value="sprint_sep">Sprint UAT Tháng 9 (01/09 – 30/09/2026: 22 ngày)</option>
+                <option value="golive">Toàn dự án UAT đến Go-Live (01/07 – 09/11/2026: 94 ngày)</option>
+              </select>
+            </div>
+
+            <div style="display:flex; align-items:center; gap:6px;">
+              <label for="sel_pace_criteria" style="font-size:12px; font-weight:700; color:var(--text-secondary);">🎯 Tiêu chí:</label>
+              <select id="sel_pace_criteria" onchange="renderCumulativeTesterProgress()" class="form-control" style="font-size:12px; font-weight:700; padding:6px 10px; border-radius:6px; background:var(--bg-card-sub); color:var(--text-white); border:1px solid var(--border-card);">
+                <option value="pass_only" selected>Chỉ tính kịch bản Đạt (Pass)</option>
+                <option value="all_executed">Tính tổng ca Đã Test (Pass + Fail)</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <!-- PHASE TIMELINE & WORKDAYS SUMMARY PILLS -->
+        <div id="pace_phase_summary_banner" style="background:var(--bg-card-sub); border:1px solid var(--border-card); border-radius:8px; padding:12px 16px; margin-bottom:16px; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px;">
+          <!-- Rendered dynamically -->
+        </div>
+
+        <!-- TABLE OF CUMULATIVE TESTER PROGRESS -->
+        <div style="overflow-x: auto;">
+          <table class="report-table" style="width:100%; border-collapse:collapse;">
+            <thead>
+              <tr style="background:var(--bg-card-sub); font-size:11.5px; font-weight:800; color:var(--text-secondary); text-transform:uppercase; letter-spacing:0.5px; border-bottom:1px solid var(--border-card);">
+                <th style="padding:10px 12px; text-align:left; width:16%;">Thành Viên (PIC)</th>
+                <th style="padding:10px 12px; text-align:left; width:18%;">Mảng Nghiệp Vụ Phụ Trách</th>
+                <th style="padding:10px 10px; text-align:center; width:8%;">Tổng TCs</th>
+                <th style="padding:10px 10px; text-align:center; width:10%;">Định Mức Kế Hoạch</th>
+                <th style="padding:10px 10px; text-align:center; width:10%;">KH Lũy Kế</th>
+                <th style="padding:10px 10px; text-align:center; width:12%;">Thực Tế Lũy Kế</th>
+                <th style="padding:10px 10px; text-align:center; width:11%;">Độ Lệch Lũy Kế (Δ)</th>
+                <th style="padding:10px 10px; text-align:center; width:11%;">Trạng Thái</th>
+                <th style="padding:10px 12px; text-align:center; width:14%;">Vận Tốc Cần Bù</th>
+              </tr>
+            </thead>
+            <tbody id="cumulative_tester_pace_tbody">
+              <!-- Rendered dynamically by renderCumulativeTesterProgress() -->
+            </tbody>
+            <tfoot id="cumulative_tester_pace_tfoot">
+              <!-- Rendered dynamically -->
+            </tfoot>
+          </table>
+        </div>
+      </div>
+
       <!-- SECTION 6: RAID LOG (RISKS, ASSUMPTIONS, ISSUES, DEPENDENCIES) -->
       <div class="po-main-card" style="margin-bottom: 24px;">
         <div class="po-card-head">
@@ -4331,7 +4396,8 @@ Bạn có chắc chắn muốn tiếp tục?`)) {
 
       // 3. Update BÁO CÁO TỔNG QUAN TÁC NGHIỆP HÀNG NGÀY (Standup Section)
       try { updateTesterProgressMatrix(); } catch(e) {}
-      try { updateProjectStatusReport(); } catch(e) {}
+      try { updateProjectStatusReport();
+        if (typeof renderCumulativeTesterProgress === "function") renderCumulativeTesterProgress(); } catch(e) {}
       updateDailyStandupReport(grandTotal, grandTested, grandPass, grandFail, grandPending, grandUntested, grandPctStr, pStats, allTestedTcs);
     }
 
@@ -6894,6 +6960,292 @@ Bạn có chắc chắn muốn tiếp tục?`)) {
 
     // Load master issues from localStorage or seed
     // Load master issues from localStorage or seed
+    
+    // =========================================================================
+    // CUMULATIVE TESTER PROGRESS & RUN-RATE ENGINE (#report)
+    // =========================================================================
+
+    function getWorkingDaysBetween(start, end) {
+      const d1 = new Date(start);
+      const d2 = new Date(end);
+      d1.setHours(0, 0, 0, 0);
+      d2.setHours(0, 0, 0, 0);
+      if (d1 > d2) return 0;
+      let count = 0;
+      const cur = new Date(d1);
+      while (cur <= d2) {
+        const day = cur.getDay();
+        if (day !== 0 && day !== 6) { // Skip Saturday (6) and Sunday (0)
+          count++;
+        }
+        cur.setDate(cur.getDate() + 1);
+      }
+      return count;
+    }
+
+    var PACE_PHASES = window.PACE_PHASES || {
+      p1_uat: {
+        id: 'p1_uat',
+        name: 'Cột mốc 03 • UAT Vòng 1',
+        startDate: '2026-07-01',
+        endDate: '2026-09-30',
+        desc: 'Triển khai nghiệm thu toàn diện 1,105 kịch bản Front-End & eKYC'
+      },
+      sprint_sep: {
+        id: 'sprint_sep',
+        name: 'Sprint UAT Tháng 9',
+        startDate: '2026-09-01',
+        endDate: '2026-09-30',
+        desc: 'Giai đoạn cao điểm bứt phá tiến độ tháng 9/2026'
+      },
+      golive: {
+        id: 'golive',
+        name: 'Toàn dự án UAT đến Go-Live',
+        startDate: '2026-07-01',
+        endDate: '2026-11-09',
+        desc: 'Lộ trình tổng thể toàn diện đến ngày vận hành chính thức'
+      }
+    };
+
+    function renderCumulativeTesterProgress() {
+      try {
+        const selPhaseEl = document.getElementById('sel_pace_phase');
+        const selCritEl = document.getElementById('sel_pace_criteria');
+        const selPhaseKey = selPhaseEl ? selPhaseEl.value : 'p1_uat';
+        const selCriteria = selCritEl ? selCritEl.value : 'pass_only';
+
+        const phase = PACE_PHASES[selPhaseKey] || PACE_PHASES.p1_uat;
+        const today = new Date();
+        today.setHours(0, 0, 0, 0);
+
+        const totalWDays = getWorkingDaysBetween(phase.startDate, phase.endDate);
+        const curEnd = today < new Date(phase.endDate) ? today : new Date(phase.endDate);
+        const elapsedWDays = today < new Date(phase.startDate) ? 0 : getWorkingDaysBetween(phase.startDate, curEnd);
+        const remainingWDays = Math.max(0, totalWDays - elapsedWDays);
+        const timeProgressPct = totalWDays > 0 ? ((elapsedWDays / totalWDays) * 100).toFixed(1) : '0.0';
+
+        const matrixDefs = (typeof calculateTesterMatrix === 'function') ? calculateTesterMatrix() : {};
+
+        let projTotal = 0;
+        let projPlanned = 0;
+        let projActual = 0;
+        let countAhead = 0;
+        let countOnTrack = 0;
+        let countBehind = 0;
+
+        const rowsData = [];
+
+        Object.entries(matrixDefs).forEach(([k, t]) => {
+          const totalTcs = t.total || 0;
+          projTotal += totalTcs;
+
+          const actual = (selCriteria === 'all_executed') ? (t.pass + (t.fail || 0)) : t.pass;
+          projActual += actual;
+
+          const dailyRate = totalWDays > 0 ? (totalTcs / totalWDays) : 0;
+          const plannedCum = Math.min(totalTcs, Math.round(dailyRate * elapsedWDays));
+          projPlanned += plannedCum;
+
+          const delta = actual - plannedCum;
+          const pacePct = plannedCum > 0 ? ((actual / plannedCum) * 100).toFixed(1) : (actual > 0 ? '100.0' : '0.0');
+          const remainingRate = remainingWDays > 0 ? Math.max(0, (totalTcs - actual) / remainingWDays).toFixed(1) : (totalTcs > actual ? (totalTcs - actual) : 0);
+
+          let status = 'ontrack';
+          if (delta > 0) {
+            status = 'ahead';
+            countAhead++;
+          } else if (delta === 0 || (delta >= -1 && parseFloat(pacePct) >= 95)) {
+            status = 'ontrack';
+            countOnTrack++;
+          } else {
+            status = 'behind';
+            countBehind++;
+          }
+
+          rowsData.push({
+            id: k,
+            pic: t.pic || ('👤 ' + k.toUpperCase()),
+            domain: (t.name || '').replace(/^[↳\s?]+/, '').trim(),
+            total: totalTcs,
+            dailyRate: dailyRate.toFixed(2),
+            plannedCum: plannedCum,
+            actual: actual,
+            delta: delta,
+            pacePct: pacePct,
+            status: status,
+            remainingRate: remainingRate
+          });
+        });
+
+        // 1. Render Summary Banner
+        const bannerEl = document.getElementById('pace_phase_summary_banner');
+        if (bannerEl) {
+          const projDelta = projActual - projPlanned;
+          const projDeltaText = (projDelta >= 0 ? '+' : '') + projDelta.toLocaleString();
+          const projPacePct = projPlanned > 0 ? ((projActual / projPlanned) * 100).toFixed(1) : '0.0';
+          const projActualPct = projTotal > 0 ? ((projActual / projTotal) * 100).toFixed(1) : '0.0';
+
+          bannerEl.innerHTML = `
+            <div style="display:flex; align-items:center; gap:8px;">
+              <span style="font-size:18px;">📅</span>
+              <div>
+                <div style="font-size:11px; font-weight:700; color:var(--text-secondary); text-transform:uppercase;">Thời Gian Phase</div>
+                <div style="font-size:13px; font-weight:800; color:var(--text-white); font-family:'JetBrains Mono',monospace;">
+                  Đã qua <span style="color:#0284c7;">${elapsedWDays}</span> / ${totalWDays} ngày làm việc (${timeProgressPct}%) • Còn lại: <span style="color:#F59E0B;">${remainingWDays} ngày</span>
+                </div>
+              </div>
+            </div>
+
+            <div style="display:flex; align-items:center; gap:8px;">
+              <span style="font-size:18px;">🎯</span>
+              <div>
+                <div style="font-size:11px; font-weight:700; color:var(--text-secondary); text-transform:uppercase;">Kế Hoạch Lũy Kế</div>
+                <div style="font-size:13px; font-weight:800; color:var(--text-white); font-family:'JetBrains Mono',monospace;">
+                  <span style="color:var(--text-white);">${projPlanned.toLocaleString()}</span> / ${projTotal.toLocaleString()} TCs (Định mức: ${(projTotal/totalWDays).toFixed(1)}/ngày)
+                </div>
+              </div>
+            </div>
+
+            <div style="display:flex; align-items:center; gap:8px;">
+              <span style="font-size:18px;">⚡</span>
+              <div>
+                <div style="font-size:11px; font-weight:700; color:var(--text-secondary); text-transform:uppercase;">Thực Tế Toàn Dự Án</div>
+                <div style="font-size:13px; font-weight:800; color:${projDelta >= 0 ? '#10B981' : '#F59E0B'}; font-family:'JetBrains Mono',monospace;">
+                  ${projActual.toLocaleString()} TCs (${projActualPct}%) • Độ lệch: <span>${projDeltaText} TCs</span>
+                </div>
+              </div>
+            </div>
+
+            <div style="display:flex; align-items:center; gap:8px;">
+              <span style="font-size:18px;">👥</span>
+              <div>
+                <div style="font-size:11px; font-weight:700; color:var(--text-secondary); text-transform:uppercase;">Sức Khỏe Đội Ngũ</div>
+                <div style="font-size:12.5px; font-weight:700;">
+                  <span style="color:#10B981;">🚀 ${countAhead} Vượt</span> • 
+                  <span style="color:#0284c7;">✅ ${countOnTrack} Đạt</span> • 
+                  <span style="color:#EF4444;">⚠️ ${countBehind} Chậm</span>
+                </div>
+              </div>
+            </div>
+          `;
+        }
+
+        // 2. Render Table Body
+        const tbodyEl = document.getElementById('cumulative_tester_pace_tbody');
+        if (tbodyEl) {
+          let html = '';
+          rowsData.forEach(r => {
+            let statusBadge = '';
+            let deltaColor = 'var(--text-secondary)';
+            let deltaText = (r.delta >= 0 ? '+' : '') + r.delta + ' TCs';
+
+            if (r.status === 'ahead') {
+              statusBadge = `<span style="background:rgba(16,185,129,0.15); color:#10B981; font-weight:800; padding:4px 9px; border-radius:6px; font-size:11.5px; border:1px solid rgba(16,185,129,0.3); display:inline-flex; align-items:center; gap:4px;">🚀 Vượt (+${r.delta})</span>`;
+              deltaColor = '#10B981';
+            } else if (r.status === 'ontrack') {
+              statusBadge = `<span style="background:rgba(2,132,199,0.15); color:#0284c7; font-weight:800; padding:4px 9px; border-radius:6px; font-size:11.5px; border:1px solid rgba(2,132,199,0.3); display:inline-flex; align-items:center; gap:4px;">✅ Đạt tiến độ</span>`;
+              deltaColor = '#0284c7';
+            } else {
+              statusBadge = `<span style="background:rgba(239,68,68,0.15); color:#EF4444; font-weight:800; padding:4px 9px; border-radius:6px; font-size:11.5px; border:1px solid rgba(239,68,68,0.3); display:inline-flex; align-items:center; gap:4px;">⚠️ Chậm (${r.delta})</span>`;
+              deltaColor = '#EF4444';
+            }
+
+            const plannedPct = r.total > 0 ? Math.min(100, (r.plannedCum / r.total) * 100) : 0;
+            const actualPct = r.total > 0 ? Math.min(100, (r.actual / r.total) * 100) : 0;
+
+            html += `
+              <tr style="border-bottom:1px solid var(--border-card); font-size:12.5px;">
+                <td style="padding:10px 12px; vertical-align:middle;">
+                  <strong style="color:var(--text-white); font-size:13px;">${escapeHtml(r.pic)}</strong>
+                </td>
+                <td style="padding:10px 12px; vertical-align:middle; color:var(--text-secondary); font-size:12px;">
+                  ${escapeHtml(r.domain)}
+                </td>
+                <td style="padding:10px 10px; text-align:center; vertical-align:middle; font-weight:700; font-family:'JetBrains Mono',monospace; color:var(--text-white);">
+                  ${r.total.toLocaleString()}
+                </td>
+                <td style="padding:10px 10px; text-align:center; vertical-align:middle; font-family:'JetBrains Mono',monospace; color:#0284c7; font-weight:700;">
+                  ${r.dailyRate} <span style="font-size:10.5px; color:var(--text-secondary); font-weight:400;">/ngày</span>
+                </td>
+                <td style="padding:10px 10px; text-align:center; vertical-align:middle; font-family:'JetBrains Mono',monospace; color:var(--text-white); font-weight:700;">
+                  ${r.plannedCum.toLocaleString()}
+                  <div style="font-size:10px; color:var(--text-secondary); margin-top:2px;">(${plannedPct.toFixed(0)}%)</div>
+                </td>
+                <td style="padding:10px 10px; text-align:center; vertical-align:middle;">
+                  <div style="font-family:'JetBrains Mono',monospace; font-weight:800; font-size:13px; color:${r.actual >= r.plannedCum ? '#10B981' : '#F59E0B'};">
+                    ${r.actual.toLocaleString()} <span style="font-size:11px; font-weight:600; color:var(--text-secondary);">(${actualPct.toFixed(0)}%)</span>
+                  </div>
+                  <!-- Dual-layer progress track -->
+                  <div style="width:100%; height:6px; background:var(--bg-card-sub); border-radius:3px; position:relative; overflow:hidden; margin-top:4px; border:1px solid var(--border-card);">
+                    <div style="position:absolute; left:0; top:0; height:100%; width:${plannedPct}%; background:rgba(148,163,184,0.35);" title="Kế hoạch: ${plannedPct.toFixed(1)}%"></div>
+                    <div style="position:absolute; left:0; top:0; height:100%; width:${actualPct}%; background:${r.actual >= r.plannedCum ? '#10B981' : '#F59E0B'};" title="Thực tế: ${actualPct.toFixed(1)}%"></div>
+                  </div>
+                </td>
+                <td style="padding:10px 10px; text-align:center; vertical-align:middle; font-family:'JetBrains Mono',monospace; font-weight:800; font-size:13px; color:${deltaColor};">
+                  ${deltaText}
+                  <div style="font-size:10px; font-weight:600; color:var(--text-secondary); margin-top:2px;">Bám sát: ${r.pacePct}%</div>
+                </td>
+                <td style="padding:10px 10px; text-align:center; vertical-align:middle;">
+                  ${statusBadge}
+                </td>
+                <td style="padding:10px 12px; text-align:center; vertical-align:middle; font-family:'JetBrains Mono',monospace;">
+                  <span style="font-weight:700; color:${parseFloat(r.remainingRate) > parseFloat(r.dailyRate) ? '#EF4444' : '#10B981'}; font-size:12.5px;">
+                    ${r.remainingRate}
+                  </span>
+                  <span style="font-size:10.5px; color:var(--text-secondary);"> TCs/ngày</span>
+                </td>
+              </tr>
+            `;
+          });
+          tbodyEl.innerHTML = html;
+        }
+
+        // 3. Render Table Footer
+        const tfootEl = document.getElementById('cumulative_tester_pace_tfoot');
+        if (tfootEl) {
+          const projDelta = projActual - projPlanned;
+          const projDeltaColor = projDelta >= 0 ? '#10B981' : '#EF4444';
+          const projDeltaText = (projDelta >= 0 ? '+' : '') + projDelta.toLocaleString() + ' TCs';
+          const projDailyRate = totalWDays > 0 ? (projTotal / totalWDays).toFixed(1) : '0.0';
+          const projRemainingRate = remainingWDays > 0 ? Math.max(0, (projTotal - projActual) / remainingWDays).toFixed(1) : (projTotal > projActual ? (projTotal - projActual) : 0);
+
+          tfootEl.innerHTML = `
+            <tr style="background:var(--bg-card-sub); font-weight:800; border-top:2px solid var(--border-card); font-size:12.5px;">
+              <td colspan="2" style="padding:12px; color:var(--text-white);">
+                🔥 TỔNG HỢP TOÀN BỘ TIẾN ĐỘ DỰ ÁN
+              </td>
+              <td style="padding:12px 10px; text-align:center; font-family:'JetBrains Mono',monospace; color:#0284c7;">
+                ${projTotal.toLocaleString()}
+              </td>
+              <td style="padding:12px 10px; text-align:center; font-family:'JetBrains Mono',monospace; color:#0284c7;">
+                ${projDailyRate} <span style="font-size:10.5px; font-weight:400; color:var(--text-secondary);">/ngày</span>
+              </td>
+              <td style="padding:12px 10px; text-align:center; font-family:'JetBrains Mono',monospace; color:var(--text-white);">
+                ${projPlanned.toLocaleString()}
+              </td>
+              <td style="padding:12px 10px; text-align:center; font-family:'JetBrains Mono',monospace; color:${projDelta >= 0 ? '#10B981' : '#F59E0B'}; font-size:13.5px;">
+                ${projActual.toLocaleString()}
+              </td>
+              <td style="padding:12px 10px; text-align:center; font-family:'JetBrains Mono',monospace; color:${projDeltaColor}; font-size:13.5px;">
+                ${projDeltaText}
+              </td>
+              <td style="padding:12px 10px; text-align:center;">
+                <span style="font-size:11.5px; font-weight:700; color:${projDelta >= 0 ? '#10B981' : '#EF4444'};">
+                  ${projDelta >= 0 ? '🚀 Toàn dự án VƯỢT' : '⚠️ Cần tăng tốc'}
+                </span>
+              </td>
+              <td style="padding:12px 12px; text-align:center; font-family:'JetBrains Mono',monospace; color:${parseFloat(projRemainingRate) > parseFloat(projDailyRate) ? '#EF4444' : '#10B981'};">
+                <strong>${projRemainingRate}</strong> <span style="font-size:10.5px; font-weight:400; color:var(--text-secondary);">TCs/ngày</span>
+              </td>
+            </tr>
+          `;
+        }
+      } catch(e) {
+        console.error('Error in renderCumulativeTesterProgress:', e);
+      }
+    }
+
+
     function getPortalIssues() {
       // 1. Khởi tạo danh sách chuẩn từ INITIAL_MASTER_ISSUES
       let baseList = [...INITIAL_MASTER_ISSUES];
