@@ -1,6 +1,6 @@
 {
-  "syncedAt": "2026-09-23 13:06:11",
-  "total": 299,
+  "syncedAt": "2026-09-23 14:30:36",
+  "total": 302,
   "allowedUsers": [
     "anhll.sbsi",
     "anntt.sbsi",
@@ -31,6 +31,66 @@
   ],
   "issues": [
     {
+      "id": "SBSIEXT-309",
+      "platform": "mobile",
+      "title": "[Mobile Trading][Sao kê tiền] Cột ngày tại dòng số dư \"Đầu kỳ\" hiển thị sai giá trị mặc định \"01/01/1900\"",
+      "type": "Vấn đề phát sinh",
+      "priority": "Medium",
+      "status": "Open",
+      "assignee": "Trang Nguyen Thi Quynh(KT-CK-HN)",
+      "assigneeUser": "trang.nguyenthiquynh",
+      "reporter": "Bách Nguyen Tung(SBSI)",
+      "reporterUser": "bachnt.sbsi",
+      "reporterNick": "BachNT",
+      "ba": "",
+      "desc": "1. Môi trường & Tài khoản kiểm thử:\n- Môi trường: Mobile App UAT (Android emulator / Flutter build UAT.1-upgrade_flutter).\n- Tài khoản: 088C030413 | Tiểu khoản: 01.\n- Ngày hệ thống kiểm thử: 23/09/2026.\n- Liên quan Test Case: TC_APP_UC40_171 (UC40: 2.7.4 Sao kê tiền).\n\n2. Các bước tái hiện (Steps to Reproduce):\n- Bước 1: Đăng nhập vào ứng dụng Maris Mobile Trading bằng tài khoản 088C030413 / 13579@Ab.\n- Bước 2: Mở Menu (☰) -> Quản lý tài khoản -> Chọn \"Sao kê tiền\".\n- Bước 3: Quan sát bộ lọc và bảng lịch sử giao dịch mặc định (Từ ngày: 24/08/2026 - Đến ngày: 23/09/2026).\n- Bước 4: Kiểm tra dòng đầu tiên trong bảng sao kê (Dòng Số dư Đầu kỳ).\n\n3. Kết quả thực tế (Actual Result):\n- Tại dòng đầu tiên của bảng sao kê:\n  + Cột NGÀY: Hiển thị giá trị ngày mặc định \"01/01/1900\" (Năm 1900).\n  + Cột NỘI DUNG: \"Đầu kỳ\".\n  + Cột SỐ TIỀN: \"3,657,616\".\n\n4. Kết quả kỳ vọng (Expected Result):\n- Dòng \"Đầu kỳ\" là dòng phản ánh số dư chuyển sang từ trước kỳ tra cứu, không phải một giao dịch phát sinh vào ngày 01/01/1900.\n- Cột NGÀY tại dòng Đầu kỳ cần:\n  + Phương án 1 (Khuyến nghị chuẩn UX): Để trống hoặc hiển thị dấu gạch ngang \"-\" (hoặc gộp cột Ngày & Nội dung).\n  + Phương án 2: Hiển thị theo ngày bắt đầu của kỳ tra cứu (ví dụ: 24/08/2026).\n- Tuyệt đối không hiển thị giá trị ngày mặc định của database/Core (\"01/01/1900\") lên giao diện người dùng.\n\n5. Mức độ ảnh hưởng:\n- Gây mất thẩm mỹ giao diện và giảm độ tin cậy của ứng dụng, khiến khách hàng hoang mang nghi ngờ về tính chính xác của dữ liệu số dư tài khoản.\n\n6. Bằng chứng đính kèm:\n- defect_dau_ky_1900.png: Ảnh chụp màn hình lỗi khoanh vùng đỏ tại ngày 01/01/1900.",
+      "relatedTc": "TC_WEB_UC62_270",
+      "jiraUrl": "https://projects.fss.com.vn/browse/SBSIEXT-309",
+      "createdAt": "2026-09-23 14:23",
+      "updatedAt": "2026-09-23 14:26",
+      "source": "JIRA_FSS"
+    },
+    {
+      "id": "SBSIEXT-308",
+      "platform": "general",
+      "title": "Màn hình 020995 Danh sách tiêu chí STR",
+      "type": "External Bug",
+      "priority": "Medium",
+      "status": "Open",
+      "assignee": "Trang Nguyen Thi Quynh(KT-CK-HN)",
+      "assigneeUser": "trang.nguyenthiquynh",
+      "reporter": "Tuan Nguyen Anh(SBSI)",
+      "reporterUser": "tuanna.sbsi",
+      "reporterNick": "TuanNA",
+      "ba": "",
+      "desc": "Hiện tại:\r\n * Thiếu cột \"Ngày hiệu lực\", \"Trạng thái duyệt\"\r\n * Tên cột \"Ngưỡng số lượng GD CK\", \"Ngưỡng giá trị CK\" gây nhầm lẫn\r\n\r\nMM:\r\n * Hiển thị thêm cột \"Ngày hiệu lực\", \"Trạng thái duyệt\"\r\n * Đổi tên trường \r\n\"Ngưỡng số lượng GD CK\" -> \"Ngưỡng số lượng GD chuyển tiền\"\r\n\"Ngưỡng giá trị CK\" -> \"Ngưỡng giá trị GD chuyển tiền\"",
+      "relatedTc": "",
+      "jiraUrl": "https://projects.fss.com.vn/browse/SBSIEXT-308",
+      "createdAt": "2026-09-23 13:48",
+      "updatedAt": "2026-09-23 13:56",
+      "source": "JIRA_FSS"
+    },
+    {
+      "id": "SBSIEXT-307",
+      "platform": "tenora",
+      "title": "[TPRL] - bug giao diện",
+      "type": "External Bug",
+      "priority": "Low",
+      "status": "Open",
+      "assignee": "Huong Nguyen Doan Lan(KT-CK-HN)",
+      "assigneeUser": "huong.nguyen",
+      "reporter": "Ha Dong Thi(SBSI)",
+      "reporterUser": "hadt.sbsi",
+      "reporterNick": "HaDT",
+      "ba": "",
+      "desc": "*Bổ sung thêm trường \"Mã hợp đồng\" tại màn hình xác nhận lệnh + nhập số hiệu lệnh (đang bị thiếu)*\r\n\r\n!image-2026-09-23-13-36-07-050.png|width=828,height=400! 1",
+      "relatedTc": "",
+      "jiraUrl": "https://projects.fss.com.vn/browse/SBSIEXT-307",
+      "createdAt": "2026-09-23 13:37",
+      "updatedAt": "2026-09-23 13:52",
+      "source": "JIRA_FSS"
+    },
+    {
       "id": "SBSIEXT-306",
       "platform": "mobile",
       "title": "[Mobile Trading - Symbol Detail] Trường \"Vốn hóa (Tỷ)\" bị gán nhầm sang \"Tổng GT (Tỷ)\"",
@@ -43,11 +103,11 @@
       "reporterUser": "bachnt.sbsi",
       "reporterNick": "BachNT",
       "ba": "",
-      "desc": "h2. 🐞 [Bug Mobile App] [Mobile Trading - Symbol Detail] Trường \"Vốn hóa (Tỷ)\" bị gán nhầm sang \"Tổng GT (Tỷ)\"\n\n*Dự án*: SBSI Mobile Trading (Maris App)\n*Phiên bản*: UAT.1-upgrade_flutter\n*Môi trường*: UAT Android (LDPlayer / Flutter Engine)\n*Mức độ nghiêm trọng*: High (Sai lệch nghiêm trọng dữ liệu tài chính của doanh nghiệp)\n*Người phụ trách*: Mai Cao Thi(KT-CK-HN)\n*Component*: Mobile-Giao dịch Mobile Trading\n\n----\nh3. 1. Mô tả lỗi\nTrên màn hình Tổng quan chi tiết mã chứng khoán (Symbol Detail), chỉ số *Vốn hóa (Tỷ)* luôn hiển thị giá trị trùng khớp 100% với *Tổng GT (Tỷ)* (Tổng giá trị giao dịch trong phiên) thay vì giá trị vốn hóa thị trường thực tế của doanh nghiệp.\n\n*Ví dụ thực tế ghi nhận:*\n* *Mã CTG*: Tổng GT = 85.59 tỷ -> Vốn hóa hiển thị = *85.59 tỷ* (Thực tế vốn hóa thị trường CTG ~150.000 tỷ đồng).\n* *Mã HPG*: Tổng GT = 106.01 tỷ -> Vốn hóa hiển thị = *106.01 tỷ* (Thực tế vốn hóa thị trường HPG >130.000 tỷ đồng).\n* *Mã KBC*: Tổng GT = 16.58 tỷ -> Vốn hóa hiển thị = *16.58 tỷ* (Thực tế vốn hóa thị trường KBC ~20.000 tỷ đồng).\n* *Mã ACB*: Tổng GT = 123.73 tỷ -> Vốn hóa hiển thị = *123.73 tỷ* (Thực tế vốn hóa thị trường ACB ~100.000 tỷ đồng).\n\nh3. 2. Các bước tái hiện (Steps to Reproduce)\n1. Mở ứng dụng SBSI Mobile Trading (Maris).\n2. Vào màn hình Bảng giá hoặc tìm kiếm mã chứng khoán bất kỳ (Ví dụ: CTG, HPG, KBC).\n3. Bấm vào mã để chuyển sang màn hình Chi tiết mã (Symbol Detail).\n4. Kéo xuống phần khối *\"Chỉ số\"*.\n5. So sánh giá trị hiển thị giữa 2 trường *\"Tổng GT (Tỷ)\"* và *\"Vốn hóa (Tỷ)\"*.\n\nh3. 3. Kết quả thực tế (Actual Result)\n- Giá trị trường *\"Vốn hóa (Tỷ)\"* luôn nhảy đúng bằng số liệu của *\"Tổng GT (Tỷ)\"*. Dữ liệu vốn hóa bị sai lệch hoàn toàn so với thực tế, gây hiểu lầm nghiêm trọng cho nhà đầu tư khi ra quyết định giao dịch.\n\nh3. 4. Kết quả mong muốn (Expected Result)\n- Trường *\"Tổng GT (Tỷ)\"*: Hiển thị tổng giá trị khớp lệnh tích lũy trong ngày.\n- Trường *\"Vốn hóa (Tỷ)\"*: Hiển thị vốn hóa thị trường = (Tổng số lượng cổ phiếu đang lưu hành) × (Thị giá hiện tại) (Ví dụ: HPG ~130.000 tỷ, CTG ~150.000 tỷ).\n\nh3. 5. Phân tích nguyên nhân kỹ thuật (Technical Root Cause)\n- Frontend Mobile (Flutter) khi bóc tách DTO JSON từ API Market Data / Symbol Overview đã binding nhầm thuộc tính `totalVal` / `accumulatedVal` vào widget hiển thị của `marketCap` (hoặc do key DTO trả về bị đặt tên gây nhầm lẫn).\n\nh3. 6. Bằng chứng đính kèm (Evidence)\n- Đính kèm ảnh chụp màn hình thực tế: `evidence_mobile_tc01_symbol_from_priceboard.png` (CTG), `evidence_mobile_tc05_hpg_detail.png` (HPG), `evidence_mobile_tc03_symbol_detail_kbc.png` (KBC).",
+      "desc": " [Bug Mobile App] [Mobile Trading - Symbol Detail] Trường \"Vốn hóa (Tỷ)\" bị gán nhầm sang \"Tổng GT (Tỷ)\"\r\n\r\nh3. 1. Mô tả lỗi\r\nTrên màn hình Tổng quan chi tiết mã chứng khoán (Symbol Detail), chỉ số *Vốn hóa (Tỷ)* luôn hiển thị giá trị trùng khớp 100% với *Tổng GT (Tỷ)* (Tổng giá trị giao dịch trong phiên) thay vì giá trị vốn hóa thị trường thực tế của doanh nghiệp.\r\n\r\n*Ví dụ thực tế ghi nhận:*\r\n* *Mã CTG*: Tổng GT = 85.59 tỷ -> Vốn hóa hiển thị = *85.59 tỷ* (Thực tế vốn hóa thị trường CTG ~150.000 tỷ đồng).\r\n* *Mã HPG*: Tổng GT = 106.01 tỷ -> Vốn hóa hiển thị = *106.01 tỷ* (Thực tế vốn hóa thị trường HPG >130.000 tỷ đồng).\r\n* *Mã KBC*: Tổng GT = 16.58 tỷ -> Vốn hóa hiển thị = *16.58 tỷ* (Thực tế vốn hóa thị trường KBC ~20.000 tỷ đồng).\r\n* *Mã ACB*: Tổng GT = 123.73 tỷ -> Vốn hóa hiển thị = *123.73 tỷ* (Thực tế vốn hóa thị trường ACB ~100.000 tỷ đồng).\r\n\r\nh3. 2. Các bước tái hiện (Steps to Reproduce)\r\n1. Mở ứng dụng SBSI Mobile Trading (Maris).\r\n2. Vào màn hình Bảng giá hoặc tìm kiếm mã chứng khoán bất kỳ (Ví dụ: CTG, HPG, KBC).\r\n3. Bấm vào mã để chuyển sang màn hình Chi tiết mã (Symbol Detail).\r\n4. Kéo xuống phần khối *\"Chỉ số\"*.\r\n5. So sánh giá trị hiển thị giữa 2 trường *\"Tổng GT (Tỷ)\"* và *\"Vốn hóa (Tỷ)\"*.\r\n\r\nh3. 3. Kết quả thực tế (Actual Result)\r\n- Giá trị trường *\"Vốn hóa (Tỷ)\"* luôn nhảy đúng bằng số liệu của *\"Tổng GT (Tỷ)\"*. Dữ liệu vốn hóa bị sai lệch hoàn toàn so với thực tế, gây hiểu lầm nghiêm trọng cho nhà đầu tư khi ra quyết định giao dịch.\r\n\r\nh3. 4. Kết quả mong muốn (Expected Result)\r\n- Trường *\"Tổng GT (Tỷ)\"*: Hiển thị tổng giá trị khớp lệnh tích lũy trong ngày.\r\n- Trường *\"Vốn hóa (Tỷ)\"*: Hiển thị vốn hóa thị trường = (Tổng số lượng cổ phiếu đang lưu hành) × (Thị giá hiện tại) (Ví dụ: HPG ~130.000 tỷ, CTG ~150.000 tỷ).\r\n\r\nh3. 5. Phân tích nguyên nhân kỹ thuật (Technical Root Cause)\r\n- Frontend Mobile (Flutter) khi bóc tách DTO JSON từ API Market Data / Symbol Overview đã binding nhầm thuộc tính `totalVal` / `accumulatedVal` vào widget hiển thị của `marketCap` (hoặc do key DTO trả về bị đặt tên gây nhầm lẫn).\r\n\r\nh3. 6. Bằng chứng đính kèm (Evidence)\r\n- Đính kèm ảnh chụp màn hình thực tế: `evidence_mobile_tc01_symbol_from_priceboard.png` (CTG), `evidence_mobile_tc05_hpg_detail.png` (HPG), `evidence_mobile_tc03_symbol_detail_kbc.png` (KBC).",
       "relatedTc": "",
       "jiraUrl": "https://projects.fss.com.vn/browse/SBSIEXT-306",
       "createdAt": "2026-09-23 13:05",
-      "updatedAt": "2026-09-23 13:05",
+      "updatedAt": "2026-09-23 13:16",
       "source": "JIRA_FSS"
     },
     {
@@ -236,7 +296,7 @@
       "title": "Lỗi trường room limitmax ở VMR1000",
       "type": "External Bug",
       "priority": "Medium",
-      "status": "Open",
+      "status": "Reviewed Code",
       "assignee": "Hao Ha Thi(LTV-CK-HN)",
       "assigneeUser": "hao.ha",
       "reporter": "Tra Chu Thi Thu(SBSI)",
@@ -247,7 +307,7 @@
       "relatedTc": "",
       "jiraUrl": "https://projects.fss.com.vn/browse/SBSIEXT-296",
       "createdAt": "2026-09-23 10:32",
-      "updatedAt": "2026-09-23 10:38",
+      "updatedAt": "2026-09-23 13:31",
       "source": "JIRA_FSS"
     },
     {
@@ -334,9 +394,9 @@
       "id": "SBSIEXT-291",
       "platform": "general",
       "title": "111108/ Trạng thái tiểu khoản",
-      "type": "External Bug",
+      "type": "Requirement",
       "priority": "Medium",
-      "status": "Open",
+      "status": "Suspended",
       "assignee": "Mai Cao Thi(KT-CK-HN)",
       "assigneeUser": "mai.cao",
       "reporter": "Thao Nguyen Phuong(SBSI)",
@@ -347,7 +407,7 @@
       "relatedTc": "",
       "jiraUrl": "https://projects.fss.com.vn/browse/SBSIEXT-291",
       "createdAt": "2026-09-23 09:25",
-      "updatedAt": "2026-09-23 09:25",
+      "updatedAt": "2026-09-23 13:57",
       "source": "JIRA_FSS"
     },
     {
@@ -593,7 +653,7 @@
     {
       "id": "SBSIEXT-278",
       "platform": "mobile",
-      "title": "[Onboarding][App] Bổ sung câu thông báo với case KH thuộc danh sách chặn mở ekyc",
+      "title": "[Onboarding][App] Bổ sung câu thông báo với case KH thuộc danh sách chặn mở ekyc và vi phạm AML",
       "type": "Requirement",
       "priority": "Medium",
       "status": "Open",
@@ -607,7 +667,7 @@
       "relatedTc": "",
       "jiraUrl": "https://projects.fss.com.vn/browse/SBSIEXT-278",
       "createdAt": "2026-09-22 16:00",
-      "updatedAt": "2026-09-22 18:19",
+      "updatedAt": "2026-09-23 14:20",
       "source": "JIRA_FSS"
     },
     {
@@ -636,7 +696,7 @@
       "title": "[Onboarding][BO][VCF0504] Thêm button để xem ảnh ekyc",
       "type": "External Bug",
       "priority": "Medium",
-      "status": "Reviewed Code",
+      "status": "Delivered",
       "assignee": "Hao Ha Thi(LTV-CK-HN)",
       "assigneeUser": "hao.ha",
       "reporter": "An Nguyen Thi Thanh(SBSI)",
@@ -647,7 +707,7 @@
       "relatedTc": "",
       "jiraUrl": "https://projects.fss.com.vn/browse/SBSIEXT-276",
       "createdAt": "2026-09-22 15:03",
-      "updatedAt": "2026-09-22 18:06",
+      "updatedAt": "2026-09-23 14:08",
       "source": "JIRA_FSS"
     },
     {
@@ -696,7 +756,7 @@
       "title": "Bị dup dòng ở VCF2205",
       "type": "External Bug",
       "priority": "Medium",
-      "status": "Open",
+      "status": "In-progress",
       "assignee": "Hao Ha Thi(LTV-CK-HN)",
       "assigneeUser": "hao.ha",
       "reporter": "Tra Chu Thi Thu(SBSI)",
@@ -707,7 +767,7 @@
       "relatedTc": "",
       "jiraUrl": "https://projects.fss.com.vn/browse/SBSIEXT-273",
       "createdAt": "2026-09-22 14:33",
-      "updatedAt": "2026-09-22 18:14",
+      "updatedAt": "2026-09-23 14:30",
       "source": "JIRA_FSS"
     },
     {
@@ -1156,7 +1216,7 @@
       "title": "Thông báo bán xử lý gửi 2 lần",
       "type": "External Bug",
       "priority": "Medium",
-      "status": "Open",
+      "status": "Reviewed Code",
       "assignee": "Hao Ha Thi(LTV-CK-HN)",
       "assigneeUser": "hao.ha",
       "reporter": "Thao Nguyen Phuong(SBSI)",
@@ -1167,7 +1227,7 @@
       "relatedTc": "",
       "jiraUrl": "https://projects.fss.com.vn/browse/SBSIEXT-250",
       "createdAt": "2026-09-22 08:48",
-      "updatedAt": "2026-09-23 11:01",
+      "updatedAt": "2026-09-23 13:35",
       "source": "JIRA_FSS"
     },
     {
@@ -1176,7 +1236,7 @@
       "title": "UIUX (system) Loading",
       "type": "Requirement",
       "priority": "Medium",
-      "status": "Reviewed",
+      "status": "Fixed",
       "assignee": "Vo Pham Tien(LTV-CK-HN)",
       "assigneeUser": "vo.pham",
       "reporter": "Quoc Pham Bao(SBSI)",
@@ -1187,7 +1247,7 @@
       "relatedTc": "",
       "jiraUrl": "https://projects.fss.com.vn/browse/SBSIEXT-249",
       "createdAt": "2026-09-22 08:44",
-      "updatedAt": "2026-09-23 08:41",
+      "updatedAt": "2026-09-23 13:54",
       "source": "JIRA_FSS"
     },
     {
@@ -1316,7 +1376,7 @@
       "title": "Format trường số tiển chi hộ từng lần trên màn hình 031003",
       "type": "External Bug",
       "priority": "Medium",
-      "status": "Reviewed Code",
+      "status": "Tested",
       "assignee": "Trung Tran Manh(LTV-CK-HN)",
       "assigneeUser": "trung.tranmanh",
       "reporter": "Phuong Nguyen Ngoc",
@@ -1327,7 +1387,7 @@
       "relatedTc": "",
       "jiraUrl": "https://projects.fss.com.vn/browse/SBSIEXT-242",
       "createdAt": "2026-09-21 16:30",
-      "updatedAt": "2026-09-22 17:55",
+      "updatedAt": "2026-09-23 14:12",
       "source": "JIRA_FSS"
     },
     {
@@ -1537,8 +1597,8 @@
       "type": "External Bug",
       "priority": "Medium",
       "status": "Open",
-      "assignee": "Hao Ha Thi(LTV-CK-HN)",
-      "assigneeUser": "hao.ha",
+      "assignee": "Mai Cao Thi(KT-CK-HN)",
+      "assigneeUser": "mai.cao",
       "reporter": "Trinh Nguyen Thi(SBSI)",
       "reporterUser": "trinhnt.sbsi",
       "reporterNick": "TrinhNT",
@@ -1547,7 +1607,7 @@
       "relatedTc": "",
       "jiraUrl": "https://projects.fss.com.vn/browse/SBSIEXT-231",
       "createdAt": "2026-09-21 14:30",
-      "updatedAt": "2026-09-22 18:19",
+      "updatedAt": "2026-09-23 14:22",
       "source": "JIRA_FSS"
     },
     {
@@ -2197,8 +2257,8 @@
       "type": "External Bug",
       "priority": "High",
       "status": "Open",
-      "assignee": "Hao Ha Thi(LTV-CK-HN)",
-      "assigneeUser": "hao.ha",
+      "assignee": "Nguyen Duc Minh(LTV-CK-HN)",
+      "assigneeUser": "minh.nguyenduc",
       "reporter": "An Nguyen Thi Thanh(SBSI)",
       "reporterUser": "anntt.sbsi",
       "reporterNick": "AnNTT",
@@ -2207,7 +2267,7 @@
       "relatedTc": "",
       "jiraUrl": "https://projects.fss.com.vn/browse/SBSIEXT-198",
       "createdAt": "2026-09-18 14:25",
-      "updatedAt": "2026-09-23 09:26",
+      "updatedAt": "2026-09-23 14:00",
       "source": "JIRA_FSS"
     },
     {
@@ -2276,7 +2336,7 @@
       "title": "TPRL_Sửa lại đúng tên công ty ở màn hình quản lý trạng thái lệnh TPRL!",
       "type": "External Bug",
       "priority": "Medium",
-      "status": "Fixed",
+      "status": "Reviewed Code",
       "assignee": "Hai Le Duy(LTV-CK-HN)",
       "assigneeUser": "hai.leduy",
       "reporter": "Mai Dang Thi Quynh(SBSI)",
@@ -2287,7 +2347,7 @@
       "relatedTc": "",
       "jiraUrl": "https://projects.fss.com.vn/browse/SBSIEXT-194",
       "createdAt": "2026-09-18 13:39",
-      "updatedAt": "2026-09-23 09:22",
+      "updatedAt": "2026-09-23 14:18",
       "source": "JIRA_FSS"
     },
     {
@@ -2876,7 +2936,7 @@
       "title": "[Mobile app] Quên mật khẩu - chưa có restrict số lần nhập OTP và lấy SMS-OTP ",
       "type": "Requirement",
       "priority": "Medium",
-      "status": "Reviewed Code",
+      "status": "Delivered",
       "assignee": "Nguyen Duc Minh(LTV-CK-HN)",
       "assigneeUser": "minh.nguyenduc",
       "reporter": "Bao Dang Kim(SBSI)",
@@ -2887,7 +2947,7 @@
       "relatedTc": "",
       "jiraUrl": "https://projects.fss.com.vn/browse/SBSIEXT-164",
       "createdAt": "2026-09-17 14:07",
-      "updatedAt": "2026-09-22 17:55",
+      "updatedAt": "2026-09-23 14:01",
       "source": "JIRA_FSS"
     },
     {
@@ -3276,7 +3336,7 @@
       "title": "[ln0001] sai ngày thanh toán món vay",
       "type": "Requirement",
       "priority": "Medium",
-      "status": "Delivered",
+      "status": "UAT Passed",
       "assignee": "Thao Tran Thi Phuong(LTV-CK-HN)",
       "assigneeUser": "thao.tranphuong",
       "reporter": "Tra Chu Thi Thu(SBSI)",
@@ -3287,7 +3347,7 @@
       "relatedTc": "",
       "jiraUrl": "https://projects.fss.com.vn/browse/SBSIEXT-142",
       "createdAt": "2026-09-16 14:42",
-      "updatedAt": "2026-09-23 09:51",
+      "updatedAt": "2026-09-23 14:29",
       "source": "JIRA_FSS"
     },
     {
@@ -3936,7 +3996,7 @@
       "title": "Chỉ hiển thị danh sách các TK đủ điều kiện gia hạn ở màn hình VLN5574",
       "type": "External Bug",
       "priority": "Medium",
-      "status": "Delivered",
+      "status": "UAT Failed",
       "assignee": "Thao Tran Thi Phuong(LTV-CK-HN)",
       "assigneeUser": "thao.tranphuong",
       "reporter": "Tra Chu Thi Thu(SBSI)",
@@ -3947,7 +4007,7 @@
       "relatedTc": "",
       "jiraUrl": "https://projects.fss.com.vn/browse/SBSIEXT-104",
       "createdAt": "2026-09-15 15:48",
-      "updatedAt": "2026-09-23 09:54",
+      "updatedAt": "2026-09-23 14:28",
       "source": "JIRA_FSS"
     },
     {
@@ -5036,7 +5096,7 @@
       "title": "Báo cáo RMR0090 thiếu mã chứng khoán ",
       "type": "External Bug",
       "priority": "Medium",
-      "status": "Fixed",
+      "status": "Reviewed Code",
       "assignee": "Hai Le Duy(LTV-CK-HN)",
       "assigneeUser": "hai.leduy",
       "reporter": "Tra Chu Thi Thu(SBSI)",
@@ -5047,7 +5107,7 @@
       "relatedTc": "",
       "jiraUrl": "https://projects.fss.com.vn/browse/SBSIEXT-49",
       "createdAt": "2026-09-14 15:13",
-      "updatedAt": "2026-09-22 15:56",
+      "updatedAt": "2026-09-23 14:30",
       "source": "JIRA_FSS"
     },
     {
@@ -5616,7 +5676,7 @@
       "title": "[Danh mục tài sản] Lỗi điều hướng ",
       "type": "External Bug",
       "priority": "Medium",
-      "status": "Reviewed Code",
+      "status": "Delivered",
       "assignee": "Vo Pham Tien(LTV-CK-HN)",
       "assigneeUser": "vo.pham",
       "reporter": "Bách Nguyen Tung(SBSI)",
@@ -5627,7 +5687,7 @@
       "relatedTc": "TC_WEB_AST_001",
       "jiraUrl": "https://projects.fss.com.vn/browse/SBSIEXT-20",
       "createdAt": "2026-09-11 16:32",
-      "updatedAt": "2026-09-22 17:55",
+      "updatedAt": "2026-09-23 14:04",
       "source": "JIRA_FSS"
     },
     {
