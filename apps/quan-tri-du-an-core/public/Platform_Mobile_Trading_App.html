@@ -2192,11 +2192,22 @@
       mobile_dataset.forEach(c => {
         if (!mobile_state[c.id]) {
           mobile_state[c.id] = {
-            status: 'Untested',
+            status: c.status || 'Untested',
             tester: c.defaultTester || '',
-            time: ''
+            time: '',
+            note: c.note || ''
           };
         } else {
+          // If stored state is Untested/empty but dataset defines a non-Untested status (e.g. Pass/Fail/Blocked), auto-sync from dataset
+          const storedSt = typeof mobile_state[c.id] === 'object' ? mobile_state[c.id].status : mobile_state[c.id];
+          if ((!storedSt || storedSt === 'Untested' || storedSt === 'untested' || storedSt === 'Chưa test') && c.status && c.status !== 'Untested') {
+            if (typeof mobile_state[c.id] === 'object') {
+              mobile_state[c.id].status = c.status;
+              if (c.note) mobile_state[c.id].note = c.note;
+            } else {
+              mobile_state[c.id] = { status: c.status, tester: c.defaultTester || '', time: '', note: c.note || '' };
+            }
+          }
           if (typeof mobile_state[c.id] === 'string') {
             mobile_state[c.id] = { status: mobile_state[c.id], tester: c.defaultTester || '', time: '' };
           }
