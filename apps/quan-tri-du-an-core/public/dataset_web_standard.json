@@ -1405,7 +1405,7 @@
   {
     "id": "TC_WEB_UC13_061",
     "stt": "61",
-    "tester": "NgaMTQ",
+    "tester": "BachNT",
     "module": "Giao dịch Lệnh",
     "screen": "UC13: 3.4.1.1 Sổ lệnh (trong khung Đặt lệnh nhanh - Header)",
     "useCaseId": "UC13",
@@ -1419,15 +1419,23 @@
     "testData": "TK: 088C000922 | MK: 13579@Ab | PIN/OTP: 135790 | Mã: HPG/FPT | KL: 100/500 | Giá: Thị trường / LO",
     "errorCode": "N/A – không phát sinh thông báo lỗi",
     "smoke": "No",
-    "note": "",
-    "status": "Untested",
+    "note": "Đạt chuẩn 100% kịch bản P2 - High. Đầy đủ 4 ảnh bằng chứng chi tiết hiển thị toàn bộ thông số lệnh.",
+    "status": "Pass",
     "defaultStatus": "Untested",
-    "defaultTester": "NgaMTQ"
+    "defaultTester": "NgaMTQ",
+    "actual": "Đã kiểm thử thành công tính năng xem chi tiết 1 lệnh trong Sổ lệnh Header (tài khoản 088C030413). Khi nhấp vào dòng lệnh bất kỳ (ví dụ HPG), hệ thống mở rộng khung chi tiết hiển thị đầy đủ, chính xác toàn bộ tham số giao dịch: Tiểu khoản (01), SH lệnh (...000071), Hiệu lực (02/10/2026), Giờ đặt (13:43:14), Giờ khớp (-), Giá khớp (0), Loại giá (LO), SHL gốc (...000071), Kết thúc (02/10/2026), GT đặt (2,010,000 VND), KL khớp (0), GT khớp (0). Đồng thời, hiển thị 2 nút thao tác [Sửa] và [Hủy] ở trạng thái sáng (active/enabled) đối với các lệnh còn hiệu lực.",
+    "evidence": [
+      "evidence_TC_WEB_UC13_061_order_list.png",
+      "evidence_TC_WEB_UC13_061_row_detail_expanded.png",
+      "evidence_TC_WEB_UC13_061_active_buttons_verified.png",
+      "evidence_TC_WEB_UC13_061_full_detail_params.png"
+    ],
+    "updatedAt": "13:50 23/09"
   },
   {
     "id": "TC_WEB_UC13_062",
     "stt": "62",
-    "tester": "NgaMTQ",
+    "tester": "BachNT",
     "module": "Giao dịch Lệnh",
     "screen": "UC13: 3.4.1.1 Sổ lệnh (trong khung Đặt lệnh nhanh - Header)",
     "useCaseId": "UC13",
@@ -1441,15 +1449,23 @@
     "testData": "TK: 088C000922 | MK: 13579@Ab | PIN/OTP: 135790 | Mã: HPG/FPT | KL: 100/500 | Giá: Thị trường / LO",
     "errorCode": "N/A – không phát sinh thông báo lỗi",
     "smoke": "No",
-    "note": "",
-    "status": "Untested",
+    "note": "Đạt chuẩn 100% kịch bản P1 - Blocker. Đầy đủ 4 ảnh bằng chứng xác thực hủy lệnh chọn lọc thành công.",
+    "status": "Pass",
     "defaultStatus": "Untested",
-    "defaultTester": "NgaMTQ"
+    "defaultTester": "NgaMTQ",
+    "actual": "Đã kiểm thử thành công tính năng hủy tất cả có bỏ chọn 1 lệnh từ Sổ lệnh (tài khoản 088C030413). Với 2 lệnh đang ở trạng thái 'Chờ gửi', kích hoạt chế độ hủy tất cả, sau đó bỏ tích 1 lệnh (HPG 20.1) và giữ nguyên tích chọn 1 lệnh (HPG 20.0). Nút hành động tự động cập nhật từ 'Hủy 2 mã' thành 'Hủy 1 mã'. Bấm xác nhận và nhập PIN 135790: Hệ thống thông báo 'Gửi yêu cầu hủy lệnh thành công', lệnh HPG 20.0 lập tức chuyển sang trạng thái 'Hủy lệnh chờ gửi' (màu đỏ), trong khi lệnh bỏ chọn HPG 20.1 vẫn giữ nguyên trạng thái 'Chờ gửi' (màu cam).",
+    "evidence": [
+      "evidence_TC_WEB_UC13_062_uncheck_one_order.png",
+      "evidence_TC_WEB_UC13_062_confirm_popup_single.png",
+      "evidence_TC_WEB_UC13_062_success_toast.png",
+      "evidence_TC_WEB_UC13_062_order_book_one_cancelled_one_remains.png"
+    ],
+    "updatedAt": "13:50 23/09"
   },
   {
     "id": "TC_WEB_UC13_063",
     "stt": "63",
-    "tester": "NgaMTQ",
+    "tester": "BachNT",
     "module": "Giao dịch Lệnh",
     "screen": "UC13: 3.4.1.1 Sổ lệnh (trong khung Đặt lệnh nhanh - Header)",
     "useCaseId": "UC13",
@@ -1463,15 +1479,23 @@
     "testData": "TK: 088C000922 | MK: 13579@Ab | PIN/OTP: 135790 | Mã: HPG/FPT | KL: 100/500 | Giá: Thị trường / LO",
     "errorCode": "N/A – không phát sinh thông báo lỗi",
     "smoke": "No",
-    "note": "",
-    "status": "Untested",
+    "note": "Đạt chuẩn 100% kịch bản P3 - Medium. Đầy đủ 4 ảnh bằng chứng xác thực cơ chế Hủy chọn bỏ tích toàn bộ.",
+    "status": "Pass",
     "defaultStatus": "Untested",
-    "defaultTester": "NgaMTQ"
+    "defaultTester": "NgaMTQ",
+    "actual": "Đã kiểm thử thành công tính năng 'Hủy chọn' khi thao tác Hủy tất cả (tài khoản 088C030413). Tại Sổ lệnh, bấm nút 'Hủy tất cả': Hệ thống chuyển sang chế độ chọn hủy với toàn bộ các lệnh Chờ gửi được tích chọn tự động và nút hành động hiển thị 'Hủy 2 mã'. Bấm nút 'Hủy chọn': Hệ thống ngay lập tức bỏ tích toàn bộ các lệnh, thoát khỏi chế độ chọn hủy và đưa giao diện Sổ lệnh về trạng thái ban đầu; toàn bộ các lệnh vẫn giữ nguyên trạng thái 'Chờ gửi', không có bất kỳ lệnh nào bị hủy ngoài ý muốn.",
+    "evidence": [
+      "evidence_TC_WEB_UC13_063_step1_click_huy_tat_ca.png",
+      "evidence_TC_WEB_UC13_063_step2_all_active_checked.png",
+      "evidence_TC_WEB_UC13_063_step3_click_huy_chon.png",
+      "evidence_TC_WEB_UC13_063_step4_all_unchecked_no_cancel.png"
+    ],
+    "updatedAt": "13:50 23/09"
   },
   {
     "id": "TC_WEB_UC13_064",
     "stt": "64",
-    "tester": "NgaMTQ",
+    "tester": "BachNT",
     "module": "Giao dịch Lệnh",
     "screen": "UC13: 3.4.1.1 Sổ lệnh (trong khung Đặt lệnh nhanh - Header)",
     "useCaseId": "UC13",
@@ -1485,10 +1509,18 @@
     "testData": "TK: 088C000922 | MK: 13579@Ab | PIN/OTP: 135790 | Mã: HPG/FPT | KL: 100/500 | Giá: Thị trường / LO",
     "errorCode": "N/A – không phát sinh thông báo lỗi",
     "smoke": "No",
-    "note": "",
-    "status": "Untested",
+    "note": "Đạt chuẩn 100% kịch bản P1 - Blocker. Đầy đủ 4 ảnh bằng chứng xác thực hủy từng lệnh riêng lẻ thành công.",
+    "status": "Pass",
     "defaultStatus": "Untested",
-    "defaultTester": "NgaMTQ"
+    "defaultTester": "NgaMTQ",
+    "actual": "Đã kiểm thử thành công tính năng hủy từng lệnh riêng lẻ khi nút Hủy đang sáng (tài khoản 088C030413). Với lệnh HPG (giá 20.1, KL 100) đang ở trạng thái 'Chờ gửi', nút [Hủy] trong panel chi tiết và chế độ chọn lệnh đều ở trạng thái sáng (active). Thực hiện bấm Hủy, popup 'Xác nhận hủy lệnh' hiển thị đầy đủ thông tin: Mã HPG, KL 100, Giá 20.1, GT lệnh 2,010. Nhập mã PIN 135790 và bấm Xác nhận: Toast thông báo 'Gửi yêu cầu hủy lệnh thành công' màu xanh lá xuất hiện, trạng thái lệnh trên Sổ lệnh lập tức cập nhật sang 'Hủy lệnh chờ gửi' (màu đỏ) và tổng giá trị đặt mua được giải tỏa hoàn toàn.",
+    "evidence": [
+      "evidence_TC_WEB_UC13_064_single_order_active_cancel_btn.png",
+      "evidence_TC_WEB_UC13_064_confirm_popup_pin.png",
+      "evidence_TC_WEB_UC13_064_success_toast.png",
+      "evidence_TC_WEB_UC13_064_order_book_all_cancelled.png"
+    ],
+    "updatedAt": "13:50 23/09"
   },
   {
     "id": "TC_WEB_UC13_065",
