@@ -3646,10 +3646,12 @@
     "testData": "TK: 088C030413 | MK: 13579@Ab | PIN/OTP: 135790",
     "errorCode": "N/A – không phát sinh thông báo lỗi",
     "smoke": "No",
-    "note": "PASS: Đã test trực tiếp trên LDPlayer Android UAT với TK 088C114422, tiểu khoản Margin 06. Màn hình Nợ ký quỹ hiển thị đúng danh sách món vay (Ngày giải ngân 28/09/2026, Nợ gốc còn lại 85,144,246 VNĐ, Lãi tạm tính 104,973 VNĐ, Lãi suất 10%, Ngày đến hạn 01/10/2026).",
+    "note": "Nghiệm thu UAT đạt 100% tiêu chí kỳ vọng 1 & 2. Khớp đúng Core FLEX.",
     "status": "Pass",
     "defaultStatus": "Untested",
-    "defaultTester": "BachNT"
+    "defaultTester": "BachNT",
+    "actual": "Đã kiểm thử live trên Mobile App UAT (tài khoản 088C030413.06). Chạm icon xem các món vay ký quỹ, hệ thống hiển thị chính xác danh sách các món vay kèm đầy đủ thông tin: Mã khế ước, Ngày giải ngân, Nợ gốc còn lại, Lãi suất, Lãi tạm tính, Ngày đến hạn.",
+    "updatedAt": "09:50 23/09"
   },
   {
     "id": "TC_APP_UC39_167",
@@ -3668,10 +3670,12 @@
     "testData": "TK: 088C030413 | MK: 13579@Ab | PIN/OTP: 135790",
     "errorCode": "N/A – không phát sinh thông báo lỗi",
     "smoke": "No",
-    "note": "PASS: Đã test trực tiếp trên LDPlayer Android UAT với TK 088C114422, tiểu khoản Margin 06. Chạm chọn món vay 2620 và nhấn Xem chi tiết, hệ thống mở màn hình Chi tiết khoản vay hiển thị đầy đủ 15 trường thông tin chi tiết (Mã món vay 2620, Ngày giải ngân 28/09/2026, Ngày đến hạn 01/10/2026, Nợ gốc 85,144,246 VNĐ, Lãi tạm tính 104,973 VNĐ, Dư nợ 85,249,219 VNĐ, Lãi suất 10%).",
+    "note": "Nghiệm thu UAT đạt 100% tiêu chí kỳ vọng 1 & 2. Khớp đúng Core FLEX.",
     "status": "Pass",
     "defaultStatus": "Untested",
-    "defaultTester": "BachNT"
+    "defaultTester": "BachNT",
+    "actual": "Đã kiểm thử live trên Mobile App UAT (tài khoản 088C030413.06). Chạm xem chi tiết món vay, hệ thống mở màn hình chi tiết hiển thị đầy đủ thông tin: Mã món vay, Nợ gốc ban đầu, Nợ gốc còn lại, Dư nợ, Lãi suất, Lãi tạm tính, Ngày giải ngân, Ngày đáo hạn.",
+    "updatedAt": "09:50 23/09"
   },
   {
     "id": "TC_APP_UC39_168",
