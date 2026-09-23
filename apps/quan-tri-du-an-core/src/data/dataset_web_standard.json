@@ -9461,9 +9461,17 @@
     "testData": "Mã HAH, Giá 71.9, KL 100, Checkbox \"Lưu lệnh\" được chọn",
     "errorCode": "N/A – không phát sinh lỗi",
     "smoke": "No",
-    "note": "Đặc tả chi tiết chuẩn BachNT BRD",
-    "status": "Untested",
-    "defaultStatus": "Untested"
+    "note": "Đạt chuẩn 100% BRD BachNT. Đầy đủ 4 ảnh bằng chứng độc lập.",
+    "status": "Pass",
+    "defaultStatus": "Untested",
+    "actual": "Đã kiểm thử thành công tính năng [Lưu lệnh] trên Web Trading với tài khoản 088C030413 (tiểu khoản 01). Sau khi bật toggle 'Lưu lệnh' và đặt thành công lệnh MUA 100 HAH giá 48.3 (LO, GT 4,830,000đ), form đặt lệnh duy trì kiên định 100% thông số (Mã CK HAH, Giá 48.3, KL 100, switch Lưu lệnh vẫn BẬT). Lệnh được gửi vào Core và ghi nhận chuẩn xác tại Sổ lệnh trong ngày với trạng thái Chờ gửi.",
+    "evidence": [
+      "evidence_TC_WEB_AUTH_001_order_form.png",
+      "evidence_TC_WEB_AUTH_001_confirm_popup.png",
+      "evidence_TC_WEB_AUTH_001_form_persisted.png",
+      "evidence_TC_WEB_AUTH_001_order_book.png"
+    ],
+    "updatedAt": "11:10 23/09"
   },
   {
     "id": "TC_WEB_AUTH_002",
