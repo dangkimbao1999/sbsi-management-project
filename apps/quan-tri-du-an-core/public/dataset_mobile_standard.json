@@ -126,10 +126,12 @@
     "testData": "TK: 088C096969 | MK: 13579@Ab | PIN/OTP: 135790",
     "errorCode": "N/A – không phát sinh thông báo lỗi",
     "smoke": "No",
-    "note": "Hiển thị đầy đủ 4 mốc: 1, 6, 8, 12 giờ. Mặc định là 8 giờ.",
+    "note": "Cài đặt & ghi nhớ thời gian phiên đăng nhập (1h/6h/8h/12h). Mặc định 8h. Đăng nhập thành công với TK 088C096969. Đã kiểm thử chuyên sâu UI/UX và đề xuất giải pháp công thái học.",
     "status": "Pass",
     "defaultStatus": "Untested",
-    "defaultTester": "BaoDK"
+    "defaultTester": "BaoDK",
+    "evidence": "evidence_TC_APP_UC01_006_order_confirm.png",
+    "updatedAt": "2026-09-23T20:13:20.622017"
   },
   {
     "id": "TC_APP_UC02_007",
