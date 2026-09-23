@@ -3980,10 +3980,12 @@
     "testData": "TK: 088C030413 | MK: 13579@Ab | PIN/OTP: 135790",
     "errorCode": "N/A – không phát sinh thông báo lỗi",
     "smoke": "No",
-    "note": "",
-    "status": "Untested",
+    "note": "PASS: Đã test trực tiếp trên LDPlayer (TK 088C030413). Khoảng thời gian không có giao dịch (02/09/2026 - 05/09/2026) hiển thị giá trị vốn: 0, thực hiện: 0, lãi/lỗ: 0, danh sách trống hiển thị icon [Không có dữ liệu], không phát sinh lỗi.",
+    "status": "Pass",
     "defaultStatus": "Untested",
-    "defaultTester": "BachNT"
+    "defaultTester": "BachNT",
+    "actual": "Đã kiểm thử live trên Mobile App UAT (tài khoản 088C030413). Chọn khoảng thời gian 02/09/2026 - 05/09/2026 không có giao dịch, màn hình hiển thị chính xác kết quả bằng 0 (Giá trị vốn: 0, Giá trị thực hiện: 0, Lãi/Lỗ: 0) và danh sách trống có icon [Không có dữ liệu], không có lỗi phát sinh.",
+    "updatedAt": "10:38 23/09"
   },
   {
     "id": "TC_APP_UC44_182",
