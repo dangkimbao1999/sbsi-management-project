@@ -53,23 +53,23 @@
             </div>
             <a href="javascript:void(0)" onclick="switchPortalTab('mobile'); closeModulesDropdown();" class="dropdown-item" style="display: flex; align-items: center; justify-content: space-between; padding: 8px 12px; border-radius: 8px; text-decoration: none; color: var(--text-primary); font-size: 13px; font-weight: 600; transition: background 0.15s;">
               <span style="display: flex; align-items: center; gap: 8px;">📱 Phân Hệ 01 • Mobile Trading</span>
-              <span class="tab-badge" style="font-size: 11px; padding: 2px 7px; border-radius: 99px; background: rgba(59,130,246,0.15); color: #3B82F6;">353 TCs</span>
+              <span class="tab-badge" id="nav_badge_mobile" style="font-size: 11px; padding: 2px 7px; border-radius: 99px; background: rgba(59,130,246,0.15); color: #3B82F6;">353 TCs</span>
             </a>
             <a href="javascript:void(0)" onclick="switchPortalTab('web'); closeModulesDropdown();" class="dropdown-item" style="display: flex; align-items: center; justify-content: space-between; padding: 8px 12px; border-radius: 8px; text-decoration: none; color: var(--text-primary); font-size: 13px; font-weight: 600; transition: background 0.15s;">
               <span style="display: flex; align-items: center; gap: 8px;">💻 Phân Hệ 02 • Web Trading</span>
-              <span class="tab-badge" style="font-size: 11px; padding: 2px 7px; border-radius: 99px; background: rgba(16,185,129,0.15); color: #10B981;">505 TCs</span>
+              <span class="tab-badge" id="nav_badge_web" style="font-size: 11px; padding: 2px 7px; border-radius: 99px; background: rgba(16,185,129,0.15); color: #10B981;">505 TCs</span>
             </a>
             <a href="javascript:void(0)" onclick="switchPortalTab('uiux'); closeModulesDropdown();" class="dropdown-item" style="display: flex; align-items: center; justify-content: space-between; padding: 8px 12px; border-radius: 8px; text-decoration: none; color: var(--text-primary); font-size: 13px; font-weight: 600; transition: background 0.15s;">
               <span style="display: flex; align-items: center; gap: 8px;">🎨 Kiểm Thử UI/UX & Thiết Bị</span>
-              <span class="tab-badge" style="font-size: 11px; padding: 2px 7px; border-radius: 99px; background: rgba(2,132,199,0.15); color: #0284C7;">36 TCs</span>
+              <span class="tab-badge" id="nav_badge_uiux" style="font-size: 11px; padding: 2px 7px; border-radius: 99px; background: rgba(2,132,199,0.15); color: #0284C7;">36 TCs</span>
             </a>
             <a href="Platform_eKYC_Onboarding.html" class="dropdown-item" style="display: flex; align-items: center; justify-content: space-between; padding: 8px 12px; border-radius: 8px; text-decoration: none; color: var(--text-primary); font-size: 13px; font-weight: 600; transition: background 0.15s;">
               <span style="display: flex; align-items: center; gap: 8px;">🆔 Định Danh eKYC</span>
-              <span class="tab-badge" style="font-size: 11px; padding: 2px 7px; border-radius: 99px; background: rgba(147,51,234,0.15); color: #9333EA;">236 TCs</span>
+              <span class="tab-badge" id="nav_badge_ekyc" style="font-size: 11px; padding: 2px 7px; border-radius: 99px; background: rgba(147,51,234,0.15); color: #9333EA;">236 TCs</span>
             </a>
             <a href="Platform_Tenora_Bond_TPRL.html" class="dropdown-item" style="display: flex; align-items: center; justify-content: space-between; padding: 8px 12px; border-radius: 8px; text-decoration: none; color: var(--text-primary); font-size: 13px; font-weight: 600; transition: background 0.15s;">
               <span style="display: flex; align-items: center; gap: 8px;">📜 Trái Phiếu TPRL</span>
-              <span class="tab-badge" style="font-size: 11px; padding: 2px 7px; border-radius: 99px; background: rgba(245,158,11,0.15); color: #F59E0B;">545 TCs</span>
+              <span class="tab-badge" id="nav_badge_tprl" style="font-size: 11px; padding: 2px 7px; border-radius: 99px; background: rgba(245,158,11,0.15); color: #F59E0B;">545 TCs</span>
             </a>
 
             <div style="height: 1px; background: var(--border-card); margin: 6px 0;"></div>
@@ -79,19 +79,19 @@
             </div>
             <a href="javascript:void(0)" onclick="switchPortalTab('margin'); closeModulesDropdown();" class="dropdown-item" style="display: flex; align-items: center; justify-content: space-between; padding: 8px 12px; border-radius: 8px; text-decoration: none; color: var(--text-primary); font-size: 13px; font-weight: 600; transition: background 0.15s;">
               <span style="display: flex; align-items: center; gap: 8px;">📊 Phân Hệ Margin</span>
-              <span class="tab-badge" style="font-size: 11px; padding: 2px 7px; border-radius: 99px; background: rgba(239,68,68,0.15); color: #EF4444;">120 TCs</span>
+              <span class="tab-badge" id="nav_badge_margin" style="font-size: 11px; padding: 2px 7px; border-radius: 99px; background: rgba(239,68,68,0.15); color: #EF4444;">120 TCs</span>
             </a>
             <a href="javascript:void(0)" onclick="switchPortalTab('ci'); closeModulesDropdown();" class="dropdown-item" style="display: flex; align-items: center; justify-content: space-between; padding: 8px 12px; border-radius: 8px; text-decoration: none; color: var(--text-primary); font-size: 13px; font-weight: 600; transition: background 0.15s;">
               <span style="display: flex; align-items: center; gap: 8px;">💰 Phân Hệ CI (Tiền)</span>
-              <span class="tab-badge" style="font-size: 11px; padding: 2px 7px; border-radius: 99px; background: rgba(13,148,136,0.15); color: #0D9488;">84 TCs</span>
+              <span class="tab-badge" id="nav_badge_ci" style="font-size: 11px; padding: 2px 7px; border-radius: 99px; background: rgba(13,148,136,0.15); color: #0D9488;">84 TCs</span>
             </a>
             <a href="javascript:void(0)" onclick="switchPortalTab('re'); closeModulesDropdown();" class="dropdown-item" style="display: flex; align-items: center; justify-content: space-between; padding: 8px 12px; border-radius: 8px; text-decoration: none; color: var(--text-primary); font-size: 13px; font-weight: 600; transition: background 0.15s;">
               <span style="display: flex; align-items: center; gap: 8px;">🤝 Phân Hệ RE (Môi Giới)</span>
-              <span class="tab-badge" style="font-size: 11px; padding: 2px 7px; border-radius: 99px; background: rgba(99,102,241,0.15); color: #6366F1;">100 TCs</span>
+              <span class="tab-badge" id="nav_badge_re" style="font-size: 11px; padding: 2px 7px; border-radius: 99px; background: rgba(99,102,241,0.15); color: #6366F1;">100 TCs</span>
             </a>
             <a href="javascript:void(0)" onclick="switchPortalTab('rm'); closeModulesDropdown();" class="dropdown-item" style="display: flex; align-items: center; justify-content: space-between; padding: 8px 12px; border-radius: 8px; text-decoration: none; color: var(--text-primary); font-size: 13px; font-weight: 600; transition: background 0.15s;">
               <span style="display: flex; align-items: center; gap: 8px;">🛡️ Phân Hệ RM (Rủi Ro)</span>
-              <span class="tab-badge" style="font-size: 11px; padding: 2px 7px; border-radius: 99px; background: rgba(225,29,72,0.15); color: #E11D48;">18 TCs</span>
+              <span class="tab-badge" id="nav_badge_rm" style="font-size: 11px; padding: 2px 7px; border-radius: 99px; background: rgba(225,29,72,0.15); color: #E11D48;">18 TCs</span>
             </a>
             <a href="Platform_Core_FLEX_BackOffice.html" class="dropdown-item" style="display: flex; align-items: center; justify-content: space-between; padding: 8px 12px; border-radius: 8px; text-decoration: none; color: var(--text-primary); font-size: 13px; font-weight: 600; transition: background 0.15s;">
               <span style="display: flex; align-items: center; gap: 8px;">🏛️ Core FLEX Back-Office</span>
@@ -383,7 +383,7 @@
               </div>
               <div class="meta-row">
                 <span>Kịch bản:</span>
-                <span class="meta-val">353 Test Cases (Chuẩn Quốc Tế ISTQB)</span>
+                <span class="meta-val" id="meta_tcs_mobile">353 Test Cases (Chuẩn Quốc Tế ISTQB)</span>
               </div>
               <div class="meta-row">
                 <span>Mốc UAT:</span>
@@ -436,7 +436,7 @@
               </div>
               <div class="meta-row">
                 <span>Kịch bản:</span>
-                <span class="meta-val">505 Test Cases (Chuẩn Quốc Tế ISTQB)</span>
+                <span class="meta-val" id="meta_tcs_web">505 Test Cases (Chuẩn Quốc Tế ISTQB)</span>
               </div>
               <div class="meta-row">
                 <span>Mốc UAT:</span>
@@ -4187,9 +4187,13 @@ Bạn có chắc chắn muốn tiếp tục?`)) {
       const pStats = {};
       const allTestedTcs = [];
 
-      // Loop strictly through Front-End (FO) Platforms: Mobile (353), Web (505), UI/UX (36) = 894 TCs
+      // Loop strictly through Front-End (FO) Platforms: Mobile, Web, UI/UX
       for (const p in TOTAL_DATASET) {
-        const total = TOTAL_DATASET[p];
+        const isPoModule = ['mobile', 'web', 'uiux', 'margin', 'ci', 're', 'rm'].includes(p);
+        const list = (isPoModule && typeof getPoTestCases === 'function') 
+          ? getPoTestCases(p) 
+          : ((typeof PO_DATASETS !== 'undefined' && PO_DATASETS[p]) || []);
+        const total = list.length || (TOTAL_DATASET[p] || 0);
         grandTotal += total;
 
         let pass = 0;
@@ -4197,54 +4201,29 @@ Bạn có chắc chắn muốn tiếp tục?`)) {
         let pending = 0;
 
         try {
-          if (p === 'uiux') {
-            const uiuxState = getPoState('uiux');
-            if (typeof PO_DATASETS !== 'undefined' && PO_DATASETS.uiux) {
-              PO_DATASETS.uiux.forEach(item => {
-                const rec = uiuxState[item.id];
-                const st = (typeof rec === 'object' ? rec.status : rec || '').toLowerCase();
-                const tester = typeof rec === 'object' && rec.tester ? rec.tester : (item.tester || '');
-                const time = typeof rec === 'object' && rec.time ? rec.time : '';
-                if (st === 'pass' || st === 'passed') {
-                  pass++;
-                  allTestedTcs.push({ platform: 'uiux', id: item.id, status: 'Pass', tester: tester, time: time, rec: rec, item: item });
-                } else if (st === 'fail' || st === 'failed') {
-                  fail++;
-                  allTestedTcs.push({ platform: 'uiux', id: item.id, status: 'Fail', tester: tester, time: time, rec: rec, item: item });
-                } else if (st === 'pending' || st === 'blocked') {
-                  pending++;
-                  allTestedTcs.push({ platform: 'uiux', id: item.id, status: 'Pending', tester: tester, time: time, rec: rec, item: item });
-                }
-              });
-            }
-          } else if (p === 'mobile' || p === 'web') {
+          if (p === 'uiux' || p === 'mobile' || p === 'web') {
             const state = getPoState(p);
-            if (typeof PO_DATASETS !== 'undefined' && PO_DATASETS[p]) {
-              PO_DATASETS[p].forEach(item => {
-                const rec = state[item.id] || (item.legacyId ? state[item.legacyId] : undefined);
-                let st = '';
-                let tester = item.tester || '';
-                let time = '';
-                if (rec) {
-                  st = (typeof rec === 'object' ? rec.status : rec || '').toLowerCase();
-                  if (rec && typeof rec === 'object' && rec.tester) tester = rec.tester;
-                  if (typeof rec === 'object' && rec.time) time = rec.time;
-                } else if (item.status && item.status.toLowerCase() !== 'untested') {
-                  st = item.status.toLowerCase();
-                  time = '14/09/2026';
-                }
-                if (st === 'pass' || st === 'passed' || st === 'đạt') {
-                  pass++;
-                  allTestedTcs.push({ platform: p, id: item.id, status: 'Pass', tester: tester, time: time, rec: rec, item: item });
-                } else if (st === 'fail' || st === 'failed' || st === 'lỗi') {
-                  fail++;
-                  allTestedTcs.push({ platform: p, id: item.id, status: 'Fail', tester: tester, time: time, rec: rec, item: item });
-                } else if (st === 'pending' || st === 'blocked') {
-                  pending++;
-                  allTestedTcs.push({ platform: p, id: item.id, status: 'Pending', tester: tester, time: time, rec: rec, item: item });
-                }
-              });
-            }
+            list.forEach(item => {
+              const rec = state[item.id] || (item.legacyId ? state[item.legacyId] : undefined);
+              let _stRaw = typeof rec === 'object' ? rec.status : rec;
+              if ((!_stRaw || _stRaw.toLowerCase() === 'untested' || _stRaw.toLowerCase() === 'chưa test') && item.status && item.status.toLowerCase() !== 'untested') {
+                _stRaw = item.status;
+              }
+              const st = (_stRaw || '').toLowerCase();
+              let tester = (rec && typeof rec === 'object' && rec.tester) ? rec.tester : (item.tester || '');
+              let time = (rec && typeof rec === 'object' && rec.time) ? rec.time : (item.time || '14/09/2026');
+
+              if (st === 'pass' || st === 'passed' || st === 'đạt') {
+                pass++;
+                allTestedTcs.push({ platform: p, id: item.id, status: 'Pass', tester: tester, time: time, rec: rec, item: item });
+              } else if (st === 'fail' || st === 'failed' || st === 'lỗi') {
+                fail++;
+                allTestedTcs.push({ platform: p, id: item.id, status: 'Fail', tester: tester, time: time, rec: rec, item: item });
+              } else if (st === 'pending' || st === 'blocked') {
+                pending++;
+                allTestedTcs.push({ platform: p, id: item.id, status: 'Pending', tester: tester, time: time, rec: rec, item: item });
+              }
+            });
           } else {
             const state = getPlatformState(p);
             for (const id in state) {
@@ -4299,6 +4278,14 @@ Bạn có chắc chắn muốn tiếp tục?`)) {
           if (uiuxPass) uiuxPass.innerText = pass + ' / ' + total + ' Pass';
           if (uiuxFail) uiuxFail.innerText = fail + ' Fail';
         }
+
+        // Update Nav Badge ("Phân Hệ ▾")
+        const navBadge = document.getElementById('nav_badge_' + p);
+        if (navBadge) navBadge.textContent = `${total} TCs`;
+
+        // Update Card Meta
+        const metaEl = document.getElementById('meta_tcs_' + p);
+        if (metaEl) metaEl.textContent = `${total} Test Cases (Chuẩn Quốc Tế ISTQB)`;
 
         grandPass += pass;
         grandFail += fail;
@@ -4397,9 +4384,9 @@ Bạn có chắc chắn muốn tiếp tục?`)) {
       if (todayFailCum) todayFailCum.innerText = fail;
 
       // 3.3 Standup Focus Chips
-      if (pStats.mobile && document.getElementById('chip_mobile')) document.getElementById('chip_mobile').innerText = pStats.mobile.pass + '/' + (TOTAL_DATASET.mobile || 353);
-      if (pStats.web && document.getElementById('chip_web')) document.getElementById('chip_web').innerText = pStats.web.pass + '/' + (TOTAL_DATASET.web || 460);
-      if (pStats.uiux && document.getElementById('chip_uiux')) document.getElementById('chip_uiux').innerText = pStats.uiux.pass + '/36';
+      if (pStats.mobile && document.getElementById('chip_mobile')) document.getElementById('chip_mobile').innerText = pStats.mobile.pass + '/' + (pStats.mobile.total || TOTAL_DATASET.mobile || 353);
+      if (pStats.web && document.getElementById('chip_web')) document.getElementById('chip_web').innerText = pStats.web.pass + '/' + (pStats.web.total || TOTAL_DATASET.web || 505);
+      if (pStats.uiux && document.getElementById('chip_uiux')) document.getElementById('chip_uiux').innerText = pStats.uiux.pass + '/' + (pStats.uiux.total || 36);
       if (pStats.ekyc && document.getElementById('chip_ekyc')) document.getElementById('chip_ekyc').innerText = pStats.ekyc.pass + '/236';
       if (pStats.tprl && document.getElementById('chip_tprl')) document.getElementById('chip_tprl').innerText = pStats.tprl.pass + '/545';
       if (document.getElementById('chip_remaining')) {
@@ -5971,14 +5958,27 @@ Bạn có chắc chắn muốn tiếp tục?`)) {
       if (elPct) elPct.innerText = (parseFloat(pct) === 0 ? '0%' : pct + '%');
 
       // Sync with Dashboard PO Cards
-      const dashPass = document.getElementById('dash_po_' + modKey + '_pass');
-      const dashFail = document.getElementById('dash_po_' + modKey + '_fail');
-      const dashPct = document.getElementById('dash_po_' + modKey + '_pct');
-      const dashBar = document.getElementById('dash_po_' + modKey + '_bar');
+      const dashPass = document.getElementById('dash_po_' + modKey + '_pass') || document.getElementById('pass_' + modKey);
+      const dashFail = document.getElementById('dash_po_' + modKey + '_fail') || document.getElementById('fail_' + modKey);
+      const dashPct = document.getElementById('dash_po_' + modKey + '_pct') || document.getElementById('pct_' + modKey);
+      const dashBar = document.getElementById('dash_po_' + modKey + '_bar') || document.getElementById('bar_' + modKey);
+      const pctDisplay = (parseFloat(pct) === 0 ? '0%' : Math.round(parseFloat(pct)) + '%');
       if (dashPass) dashPass.innerText = `${pass} / ${total} Pass`;
       if (dashFail) dashFail.innerText = `${fail} Fail`;
-      if (dashPct) dashPct.innerText = (parseFloat(pct) === 0 ? '0%' : pct + '%');
-      if (dashBar) dashBar.style.width = pct + '%';
+      if (dashPct) dashPct.innerText = pctDisplay;
+      if (dashBar) dashBar.style.width = pctDisplay;
+
+      // Sync Navigation Dropdown Badges ("Phân Hệ ▾")
+      const navBadge = document.getElementById('nav_badge_' + modKey);
+      if (navBadge) navBadge.textContent = `${total} TCs`;
+
+      // Sync Card Meta Test Cases count
+      const metaEl = document.getElementById('meta_tcs_' + modKey);
+      if (metaEl) metaEl.textContent = `${total} Test Cases (Chuẩn Quốc Tế ISTQB)`;
+
+      // Sync Standup Focus Chip
+      const chipEl = document.getElementById('chip_' + modKey);
+      if (chipEl) chipEl.innerText = `${pass}/${total}`;
     }
 
     function updatePoSegmentTrack(modKey, list, state) {
