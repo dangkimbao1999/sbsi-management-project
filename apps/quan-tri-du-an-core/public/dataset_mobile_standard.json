@@ -1468,10 +1468,12 @@
     "testData": "TK: 088C000922 | MK: 13579@Ab | PIN/OTP: 135790 | Mã: HPG/FPT | KL: 100/500 | Giá: Thị trường / LO",
     "errorCode": "N/A – không phát sinh thông báo lỗi",
     "smoke": "No",
-    "note": "",
-    "status": "Untested",
+    "note": "Lệnh điều kiện STO và OCO được kích hoạt thành công lúc 13:46:03 ngày 23/09/2026 khi giá khớp thị trường TCB thỏa mãn điều kiện (33,150 >= 32,600 và >= 32,300), sinh đúng 2 lệnh con vào Sổ lệnh thường.",
+    "status": "Pass",
     "defaultStatus": "Untested",
-    "defaultTester": "NgaMTQ"
+    "defaultTester": "NgaMTQ",
+    "evidence": "evidence_TC_APP_UC14_067.png",
+    "updatedAt": "2026-09-23T16:09:41.483084"
   },
   {
     "id": "TC_APP_UC14_068",
@@ -1556,10 +1558,12 @@
     "testData": "TK: 088C000922 | MK: 13579@Ab | PIN/OTP: 135790 | Mã: HPG/FPT | KL: 100/500 | Giá: Thị trường / LO",
     "errorCode": "N/A – không phát sinh thông báo lỗi",
     "smoke": "No",
-    "note": "",
-    "status": "Untested",
+    "note": "Xem Sổ lệnh theo từng tab trạng thái: Lệnh thường, Chờ, Khớp, Huỷ, Điều kiện. Dữ liệu phân tách chính xác, hiển thị 2 lệnh hủy TCB trong tab Huỷ và lệnh điều kiện trong tab Điều kiện.",
+    "status": "Pass",
     "defaultStatus": "Untested",
-    "defaultTester": "NgaMTQ"
+    "defaultTester": "NgaMTQ",
+    "evidence": "evidence_TC_APP_UC15_071.png",
+    "updatedAt": "2026-09-23T16:09:41.483084"
   },
   {
     "id": "TC_APP_UC15_072",
@@ -1622,10 +1626,12 @@
     "testData": "TK: 088C000922 | MK: 13579@Ab | PIN/OTP: 135790 | Mã: HPG/FPT | KL: 100/500 | Giá: Thị trường / LO",
     "errorCode": "N/A – không phát sinh thông báo lỗi",
     "smoke": "No",
-    "note": "",
-    "status": "Untested",
+    "note": "Sổ lệnh cập nhật realtime: Khi người dùng hủy lệnh OCO hoặc STO, danh sách lệnh lập tức cập nhật trạng thái mới nhất sang 'Hủy lệnh chờ gửi' mà không cần tải lại thủ công.",
+    "status": "Pass",
     "defaultStatus": "Untested",
-    "defaultTester": "NgaMTQ"
+    "defaultTester": "NgaMTQ",
+    "evidence": "evidence_TC_APP_UC15_074.png",
+    "updatedAt": "2026-09-23T16:09:41.483084"
   },
   {
     "id": "TC_APP_UC16_075",
@@ -1644,10 +1650,12 @@
     "testData": "TK: 088C000922 | MK: 13579@Ab | PIN/OTP: 135790 | Mã: HPG/FPT | KL: 100/500 | Giá: Thị trường / LO",
     "errorCode": "N/A – không phát sinh thông báo lỗi",
     "smoke": "No",
-    "note": "",
-    "status": "Untested",
+    "note": "Thao tác 'Hủy tất cả' tự động chọn các lệnh có thể hủy, mở popup 'Xác nhận hủy lệnh' yêu cầu nhập PIN xác thực, hủy thành công toàn bộ lệnh đang chờ gửi.",
+    "status": "Pass",
     "defaultStatus": "Untested",
-    "defaultTester": "NgaMTQ"
+    "defaultTester": "NgaMTQ",
+    "evidence": "evidence_TC_APP_UC16_075.png",
+    "updatedAt": "2026-09-23T16:09:41.483084"
   },
   {
     "id": "TC_APP_UC16_076",
@@ -1864,10 +1872,12 @@
     "testData": "TK: 088C000922 | MK: 13579@Ab | PIN/OTP: 135790 | Mã: HPG/FPT | KL: 100/500 | Giá: Thị trường / LO",
     "errorCode": "N/A – không phát sinh thông báo lỗi",
     "smoke": "No",
-    "note": "",
-    "status": "Untested",
+    "note": "Kiểm tra cơ chế chặn hủy trực tiếp lệnh điều kiện đã kích hoạt: Backend từ chối hủy trực tiếp lệnh gốc, yêu cầu hủy lệnh con phát sinh để lệnh gốc chuyển sang Hết hiệu lực.",
+    "status": "Pass",
     "defaultStatus": "Untested",
-    "defaultTester": "NgaMTQ"
+    "defaultTester": "NgaMTQ",
+    "evidence": "evidence_TC_APP_UC18_085.png",
+    "updatedAt": "2026-09-23T16:09:41.483084"
   },
   {
     "id": "TC_APP_UC18_086",
@@ -1886,10 +1896,12 @@
     "testData": "TK: 088C000922 | MK: 13579@Ab | PIN/OTP: 135790 | Mã: HPG/FPT | KL: 100/500 | Giá: Thị trường / LO",
     "errorCode": "N/A – không phát sinh thông báo lỗi",
     "smoke": "No",
-    "note": "",
-    "status": "Untested",
+    "note": "Xem thông tin lệnh điều kiện và danh sách lệnh con phát sinh: Hiển thị đầy đủ thông số lệnh gốc và chi tiết lệnh con tương ứng (8000021026000073, 8000021026000074).",
+    "status": "Pass",
     "defaultStatus": "Untested",
-    "defaultTester": "NgaMTQ"
+    "defaultTester": "NgaMTQ",
+    "evidence": "evidence_TC_APP_UC18_086.png",
+    "updatedAt": "2026-09-23T16:09:41.483084"
   },
   {
     "id": "TC_APP_UC18_087",
@@ -1908,10 +1920,12 @@
     "testData": "TK: 088C000922 | MK: 13579@Ab | PIN/OTP: 135790 | Mã: HPG/FPT | KL: 100/500 | Giá: Thị trường / LO",
     "errorCode": "N/A – không phát sinh thông báo lỗi",
     "smoke": "No",
-    "note": "",
-    "status": "Untested",
+    "note": "Hủy lệnh con sinh ra từ lệnh điều kiện đã kích hoạt qua Sổ lệnh: Lệnh con chuyển sang 'Hủy lệnh chờ gửi' với mã 3, lệnh điều kiện gốc OCO tự động chuyển sang 'Hết hiệu lực' (E - Expire).",
+    "status": "Pass",
     "defaultStatus": "Untested",
-    "defaultTester": "NgaMTQ"
+    "defaultTester": "NgaMTQ",
+    "evidence": "evidence_TC_APP_UC18_087.png",
+    "updatedAt": "2026-09-23T16:09:41.483084"
   },
   {
     "id": "TC_APP_UC18_088",

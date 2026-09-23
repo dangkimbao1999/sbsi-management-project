@@ -3301,10 +3301,12 @@
     "testData": "TK: 088C000922 | MK: 13579@Ab | PIN/OTP: 135790",
     "errorCode": "N/A – không phát sinh thông báo lỗi",
     "smoke": "No",
-    "note": "",
-    "status": "Untested",
+    "note": "Xác nhận Backend Core chặn hủy trực tiếp lệnh điều kiện đã Đã kích hoạt (INVALID_TRANSACTION). Để hủy phải hủy lệnh con phát sinh, sau đó lệnh điều kiện gốc tự động hết hiệu lực (E - Expire). Đã chụp bằng chứng popup và API response.",
+    "status": "Pass",
     "defaultStatus": "Untested",
-    "defaultTester": "NgaMTQ"
+    "defaultTester": "NgaMTQ",
+    "evidence": "evidence_TC_WEB_UC33_144.png",
+    "updatedAt": "2026-09-23T16:09:41.462215"
   },
   {
     "id": "TC_WEB_UC33_145",
@@ -3879,10 +3881,12 @@
     "testData": "TK: 088C000922 | MK: 13579@Ab | PIN/OTP: 135790 | Mã: HPG/FPT | KL: 100/500 | Giá: Thị trường / LO",
     "errorCode": "N/A – không phát sinh thông báo lỗi",
     "smoke": "No",
-    "note": "",
-    "status": "Untested",
+    "note": "Xem đúng danh sách lệnh điều kiện trong ngày/nhiều ngày chưa kích hoạt (TPSL, OCO, STO, GTC) trên tab Điều kiện Sổ lệnh. Lọc và phân tách rõ ràng với các lệnh đã kích hoạt.",
+    "status": "Pass",
     "defaultStatus": "Untested",
-    "defaultTester": "NgaMTQ"
+    "defaultTester": "NgaMTQ",
+    "evidence": "evidence_TC_WEB_UC40_170.png",
+    "updatedAt": "2026-09-23T16:09:41.462215"
   },
   {
     "id": "TC_WEB_UC40_171",
@@ -3923,10 +3927,12 @@
     "testData": "TK: 088C000922 | MK: 13579@Ab | PIN/OTP: 135790 | Mã: HPG/FPT | KL: 100/500 | Giá: Thị trường / LO",
     "errorCode": "N/A – không phát sinh thông báo lỗi",
     "smoke": "No",
-    "note": "",
-    "status": "Untested",
+    "note": "Xem thông tin chi tiết lệnh điều kiện: Hiển thị đầy đủ Tiểu khoản, KL khớp, Hiệu lực, Kết thúc, Số hiệu lệnh (SHL), Loại giá, Giá đặt, Giờ kích hoạt, Ngày kích hoạt.",
+    "status": "Pass",
     "defaultStatus": "Untested",
-    "defaultTester": "NgaMTQ"
+    "defaultTester": "NgaMTQ",
+    "evidence": "evidence_TC_WEB_UC40_172.png",
+    "updatedAt": "2026-09-23T16:09:41.462215"
   },
   {
     "id": "TC_WEB_UC40_173",
@@ -3945,10 +3951,12 @@
     "testData": "TK: 088C000922 | MK: 13579@Ab | PIN/OTP: 135790 | Mã: HPG/FPT | KL: 100/500 | Giá: Thị trường / LO",
     "errorCode": "N/A – không phát sinh thông báo lỗi",
     "smoke": "No",
-    "note": "",
-    "status": "Untested",
+    "note": "Hủy thành công lệnh con sinh ra từ lệnh điều kiện đã kích hoạt (TCB Mua 100 @ 32.3 và 32.6), lệnh con chuyển sang tab Huỷ với trạng thái 'Hủy lệnh chờ gửi', lệnh gốc OCO/STO tự động hết hiệu lực.",
+    "status": "Pass",
     "defaultStatus": "Untested",
-    "defaultTester": "NgaMTQ"
+    "defaultTester": "NgaMTQ",
+    "evidence": "evidence_TC_WEB_UC40_173.png",
+    "updatedAt": "2026-09-23T16:09:41.462215"
   },
   {
     "id": "TC_WEB_UC41_174",
