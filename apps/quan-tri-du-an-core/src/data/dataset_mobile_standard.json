@@ -151,7 +151,7 @@
     "errorCode": "N/A – không phát sinh thông báo lỗi",
     "smoke": "No",
     "note": "",
-    "status": "Untested",
+    "status": "Pass",
     "defaultStatus": "Untested",
     "defaultTester": "BaoDK"
   },
@@ -173,7 +173,7 @@
     "errorCode": "ERR-APP-2.1.1-01",
     "smoke": "No",
     "note": "",
-    "status": "Untested",
+    "status": "Pass",
     "defaultStatus": "Untested",
     "defaultTester": "BaoDK"
   },
@@ -195,7 +195,7 @@
     "errorCode": "ERR-APP-2.1.1-02",
     "smoke": "No",
     "note": "",
-    "status": "Untested",
+    "status": "Pass",
     "defaultStatus": "Untested",
     "defaultTester": "BaoDK"
   },
@@ -217,7 +217,7 @@
     "errorCode": "N/A – không phát sinh thông báo lỗi",
     "smoke": "No",
     "note": "",
-    "status": "Untested",
+    "status": "Pass",
     "defaultStatus": "Untested",
     "defaultTester": "BaoDK"
   },
@@ -239,7 +239,7 @@
     "errorCode": "N/A – không phát sinh thông báo lỗi",
     "smoke": "No",
     "note": "",
-    "status": "Untested",
+    "status": "Pass",
     "defaultStatus": "Untested",
     "defaultTester": "BaoDK"
   },
@@ -283,7 +283,7 @@
     "errorCode": "N/A – không phát sinh thông báo lỗi",
     "smoke": "No",
     "note": "",
-    "status": "Untested",
+    "status": "Pass",
     "defaultStatus": "Untested",
     "defaultTester": "BaoDK"
   },
@@ -327,7 +327,7 @@
     "errorCode": "ERR-APP-2.1.2-01",
     "smoke": "No",
     "note": "",
-    "status": "Untested",
+    "status": "Pass",
     "defaultStatus": "Untested",
     "defaultTester": "BaoDK"
   },
@@ -349,7 +349,7 @@
     "errorCode": "ERR-APP-2.1.2-02",
     "smoke": "No",
     "note": "",
-    "status": "Untested",
+    "status": "Pass",
     "defaultStatus": "Untested",
     "defaultTester": "BaoDK"
   },
@@ -371,7 +371,7 @@
     "errorCode": "N/A – không phát sinh thông báo lỗi",
     "smoke": "No",
     "note": "",
-    "status": "Untested",
+    "status": "Pass",
     "defaultStatus": "Untested",
     "defaultTester": "BaoDK"
   },
@@ -393,7 +393,7 @@
     "errorCode": "ERR-APP-2.1.3-01",
     "smoke": "No",
     "note": "",
-    "status": "Untested",
+    "status": "Pass",
     "defaultStatus": "Untested",
     "defaultTester": "BaoDK"
   },
@@ -415,7 +415,7 @@
     "errorCode": "ERR-APP-2.1.3-02",
     "smoke": "No",
     "note": "",
-    "status": "Untested",
+    "status": "Fail",
     "defaultStatus": "Untested",
     "defaultTester": "BaoDK"
   },
@@ -437,7 +437,7 @@
     "errorCode": "ERR-APP-2.1.3-03",
     "smoke": "No",
     "note": "",
-    "status": "Untested",
+    "status": "Pass",
     "defaultStatus": "Untested",
     "defaultTester": "BaoDK"
   },
@@ -459,7 +459,7 @@
     "errorCode": "ERR-APP-2.1.3-04",
     "smoke": "No",
     "note": "",
-    "status": "Untested",
+    "status": "Pass",
     "defaultStatus": "Untested",
     "defaultTester": "BaoDK"
   },
@@ -576,7 +576,7 @@
   {
     "id": "TC_APP_UC06_027",
     "stt": "27",
-    "tester": "BaoDK",
+    "tester": "LongNH",
     "module": "Bảng giá & Thị trường",
     "screen": "UC06: 2.2.1 Thị trường - Tab Tổng quan",
     "useCaseId": "UC06",
@@ -591,7 +591,7 @@
     "errorCode": "N/A – không phát sinh thông báo lỗi",
     "smoke": "No",
     "note": "",
-    "status": "Untested",
+    "status": "Pass",
     "defaultStatus": "Untested",
     "defaultTester": "BaoDK"
   },
@@ -745,7 +745,7 @@
     "errorCode": "N/A – không phát sinh thông báo lỗi",
     "smoke": "No",
     "note": "",
-    "status": "Untested",
+    "status": "Pass",
     "defaultStatus": "Untested",
     "defaultTester": "LongNH"
   },
@@ -767,7 +767,7 @@
     "errorCode": "N/A – không phát sinh thông báo lỗi",
     "smoke": "No",
     "note": "",
-    "status": "Untested",
+    "status": "Pass",
     "defaultStatus": "Untested",
     "defaultTester": "LongNH"
   },
@@ -789,7 +789,7 @@
     "errorCode": "N/A – không phát sinh thông báo lỗi",
     "smoke": "No",
     "note": "",
-    "status": "Untested",
+    "status": "Pass",
     "defaultStatus": "Untested",
     "defaultTester": "LongNH"
   },
@@ -811,7 +811,7 @@
     "errorCode": "ERR-APP-2.3.2-01",
     "smoke": "No",
     "note": "",
-    "status": "Untested",
+    "status": "Pass",
     "defaultStatus": "Untested",
     "defaultTester": "LongNH"
   },
@@ -833,7 +833,7 @@
     "errorCode": "ERR-APP-2.3.2-02",
     "smoke": "No",
     "note": "Đối chiếu quy tắc thực tế trước khi test",
-    "status": "Untested",
+    "status": "Pass",
     "defaultStatus": "Untested",
     "defaultTester": "LongNH"
   },
@@ -855,14 +855,14 @@
     "errorCode": "ERR-APP-2.3.2-03",
     "smoke": "No",
     "note": "",
-    "status": "Untested",
+    "status": "Pass",
     "defaultStatus": "Untested",
     "defaultTester": "LongNH"
   },
   {
     "id": "TC_APP_UC09_040",
     "stt": "40",
-    "tester": "CuongNT",
+    "tester": "LongNH",
     "module": "Danh mục bảng giá",
     "screen": "UC09: 2.3.3 Thêm chứng khoán vào danh mục",
     "useCaseId": "UC09",
@@ -877,14 +877,14 @@
     "errorCode": "N/A – không phát sinh thông báo lỗi",
     "smoke": "No",
     "note": "",
-    "status": "Untested",
+    "status": "Fail",
     "defaultStatus": "Untested",
     "defaultTester": "CuongNT"
   },
   {
     "id": "TC_APP_UC09_041",
     "stt": "41",
-    "tester": "CuongNT",
+    "tester": "LongNH",
     "module": "Danh mục bảng giá",
     "screen": "UC09: 2.3.3 Thêm chứng khoán vào danh mục",
     "useCaseId": "UC09",
@@ -899,14 +899,14 @@
     "errorCode": "N/A – không phát sinh thông báo lỗi",
     "smoke": "No",
     "note": "",
-    "status": "Untested",
+    "status": "Fail",
     "defaultStatus": "Untested",
     "defaultTester": "CuongNT"
   },
   {
     "id": "TC_APP_UC09_042",
     "stt": "42",
-    "tester": "CuongNT",
+    "tester": "LongNH",
     "module": "Danh mục bảng giá",
     "screen": "UC09: 2.3.3 Thêm chứng khoán vào danh mục",
     "useCaseId": "UC09",
@@ -921,14 +921,14 @@
     "errorCode": "N/A – không phát sinh thông báo lỗi",
     "smoke": "No",
     "note": "",
-    "status": "Untested",
+    "status": "Pass",
     "defaultStatus": "Untested",
     "defaultTester": "CuongNT"
   },
   {
     "id": "TC_APP_UC09_043",
     "stt": "43",
-    "tester": "CuongNT",
+    "tester": "LongNH",
     "module": "Danh mục bảng giá",
     "screen": "UC09: 2.3.3 Thêm chứng khoán vào danh mục",
     "useCaseId": "UC09",
@@ -943,14 +943,14 @@
     "errorCode": "N/A – không phát sinh thông báo lỗi",
     "smoke": "No",
     "note": "",
-    "status": "Untested",
+    "status": "Pass",
     "defaultStatus": "Untested",
     "defaultTester": "CuongNT"
   },
   {
     "id": "TC_APP_UC10_044",
     "stt": "44",
-    "tester": "CuongNT",
+    "tester": "LongNH",
     "module": "Danh mục bảng giá",
     "screen": "UC10: 2.3.4 Xóa danh mục",
     "useCaseId": "UC10",
@@ -965,14 +965,14 @@
     "errorCode": "N/A – không phát sinh thông báo lỗi",
     "smoke": "No",
     "note": "",
-    "status": "Untested",
+    "status": "Fail",
     "defaultStatus": "Untested",
     "defaultTester": "CuongNT"
   },
   {
     "id": "TC_APP_UC10_045",
     "stt": "45",
-    "tester": "CuongNT",
+    "tester": "LongNH",
     "module": "Danh mục bảng giá",
     "screen": "UC10: 2.3.4 Xóa danh mục",
     "useCaseId": "UC10",
@@ -987,7 +987,7 @@
     "errorCode": "N/A – không phát sinh thông báo lỗi",
     "smoke": "No",
     "note": "",
-    "status": "Untested",
+    "status": "Pass",
     "defaultStatus": "Untested",
     "defaultTester": "CuongNT"
   },
@@ -1097,7 +1097,7 @@
     "errorCode": "ERR-APP-2.4.1-01",
     "smoke": "No",
     "note": "",
-    "status": "Untested",
+    "status": "Pass",
     "defaultStatus": "Untested",
     "defaultTester": "NgaMTQ"
   },
@@ -1163,7 +1163,7 @@
     "errorCode": "N/A – không phát sinh thông báo lỗi",
     "smoke": "No",
     "note": "",
-    "status": "Untested",
+    "status": "Pass",
     "defaultStatus": "Untested",
     "defaultTester": "NgaMTQ"
   },
@@ -2233,7 +2233,7 @@
     "errorCode": "N/A – không phát sinh thông báo lỗi",
     "smoke": "No",
     "note": "",
-    "status": "Untested",
+    "status": "Pass",
     "defaultStatus": "Untested",
     "defaultTester": "BaoDK"
   },
@@ -2277,7 +2277,7 @@
     "errorCode": "N/A – không phát sinh thông báo lỗi",
     "smoke": "No",
     "note": "",
-    "status": "Untested",
+    "status": "Pass",
     "defaultStatus": "Untested",
     "defaultTester": "BaoDK"
   },
@@ -2321,7 +2321,7 @@
     "errorCode": "N/A – không phát sinh thông báo lỗi",
     "smoke": "No",
     "note": "",
-    "status": "Untested",
+    "status": "Pass",
     "defaultStatus": "Untested",
     "defaultTester": "AnhLL"
   },
@@ -2343,7 +2343,7 @@
     "errorCode": "ERR-APP-2.7.1-01",
     "smoke": "No",
     "note": "",
-    "status": "Untested",
+    "status": "Pass",
     "defaultStatus": "Untested",
     "defaultTester": "AnhLL"
   },
@@ -2365,7 +2365,7 @@
     "errorCode": "ERR-APP-2.7.1-02",
     "smoke": "No",
     "note": "",
-    "status": "Untested",
+    "status": "Pass",
     "defaultStatus": "Untested",
     "defaultTester": "AnhLL"
   },
@@ -2387,7 +2387,7 @@
     "errorCode": "ERR-APP-2.7.1-03",
     "smoke": "No",
     "note": "",
-    "status": "Untested",
+    "status": "Pass",
     "defaultStatus": "Untested",
     "defaultTester": "AnhLL"
   },
@@ -2409,7 +2409,7 @@
     "errorCode": "N/A – không phát sinh thông báo lỗi",
     "smoke": "No",
     "note": "",
-    "status": "Untested",
+    "status": "Pass",
     "defaultStatus": "Untested",
     "defaultTester": "AnhLL"
   },
@@ -2431,7 +2431,7 @@
     "errorCode": "N/A – không phát sinh thông báo lỗi",
     "smoke": "No",
     "note": "",
-    "status": "Untested",
+    "status": "Pass",
     "defaultStatus": "Untested",
     "defaultTester": "AnhLL"
   },
@@ -2453,7 +2453,7 @@
     "errorCode": "ERR-APP-2.7.1-04",
     "smoke": "No",
     "note": "",
-    "status": "Untested",
+    "status": "Pass",
     "defaultStatus": "Untested",
     "defaultTester": "AnhLL"
   },
@@ -2475,7 +2475,7 @@
     "errorCode": "N/A – không phát sinh thông báo lỗi",
     "smoke": "No",
     "note": "",
-    "status": "Untested",
+    "status": "Pass",
     "defaultStatus": "Untested",
     "defaultTester": "AnhLL"
   },
@@ -2497,7 +2497,7 @@
     "errorCode": "N/A – không phát sinh thông báo lỗi",
     "smoke": "No",
     "note": "",
-    "status": "Untested",
+    "status": "Pass",
     "defaultStatus": "Untested",
     "defaultTester": "AnhLL"
   },
@@ -2519,7 +2519,7 @@
     "errorCode": "N/A – không phát sinh thông báo lỗi",
     "smoke": "No",
     "note": "",
-    "status": "Untested",
+    "status": "Fail",
     "defaultStatus": "Untested",
     "defaultTester": "AnhLL"
   },
@@ -2541,7 +2541,7 @@
     "errorCode": "N/A – không phát sinh thông báo lỗi",
     "smoke": "No",
     "note": "",
-    "status": "Untested",
+    "status": "Pass",
     "defaultStatus": "Untested",
     "defaultTester": "AnhLL"
   },
@@ -2563,7 +2563,7 @@
     "errorCode": "ERR-APP-2.7.1-05",
     "smoke": "No",
     "note": "",
-    "status": "Untested",
+    "status": "Pass",
     "defaultStatus": "Untested",
     "defaultTester": "AnhLL"
   },
@@ -2585,7 +2585,7 @@
     "errorCode": "N/A – không phát sinh thông báo lỗi",
     "smoke": "No",
     "note": "",
-    "status": "Untested",
+    "status": "Pass",
     "defaultStatus": "Untested",
     "defaultTester": "AnhLL"
   },
@@ -2695,7 +2695,7 @@
     "errorCode": "N/A – không phát sinh thông báo lỗi",
     "smoke": "No",
     "note": "",
-    "status": "Untested",
+    "status": "Pass",
     "defaultStatus": "Untested",
     "defaultTester": "AnhLL"
   },
@@ -2717,7 +2717,7 @@
     "errorCode": "ERR-APP-2.7.2-01",
     "smoke": "No",
     "note": "",
-    "status": "Untested",
+    "status": "Pass",
     "defaultStatus": "Untested",
     "defaultTester": "AnhLL"
   },
@@ -2739,7 +2739,7 @@
     "errorCode": "N/A – không phát sinh thông báo lỗi",
     "smoke": "No",
     "note": "",
-    "status": "Untested",
+    "status": "Pass",
     "defaultStatus": "Untested",
     "defaultTester": "AnhLL"
   },
@@ -2761,7 +2761,7 @@
     "errorCode": "ERR-APP-2.7.2-02",
     "smoke": "No",
     "note": "",
-    "status": "Untested",
+    "status": "Pass",
     "defaultStatus": "Untested",
     "defaultTester": "AnhLL"
   },
@@ -2783,7 +2783,7 @@
     "errorCode": "N/A – không phát sinh thông báo lỗi",
     "smoke": "No",
     "note": "",
-    "status": "Untested",
+    "status": "Pass",
     "defaultStatus": "Untested",
     "defaultTester": "AnhLL"
   },
@@ -2805,7 +2805,7 @@
     "errorCode": "N/A – không phát sinh thông báo lỗi",
     "smoke": "No",
     "note": "",
-    "status": "Untested",
+    "status": "Pass",
     "defaultStatus": "Untested",
     "defaultTester": "AnhLL"
   },
@@ -2827,7 +2827,7 @@
     "errorCode": "N/A – không phát sinh thông báo lỗi",
     "smoke": "No",
     "note": "",
-    "status": "Untested",
+    "status": "Pass",
     "defaultStatus": "Untested",
     "defaultTester": "AnhLL"
   },
@@ -2849,7 +2849,7 @@
     "errorCode": "ERR-APP-2.7.2-03",
     "smoke": "No",
     "note": "",
-    "status": "Untested",
+    "status": "Pass",
     "defaultStatus": "Untested",
     "defaultTester": "AnhLL"
   },
@@ -2871,7 +2871,7 @@
     "errorCode": "N/A – không phát sinh thông báo lỗi",
     "smoke": "No",
     "note": "",
-    "status": "Untested",
+    "status": "Pass",
     "defaultStatus": "Untested",
     "defaultTester": "AnhLL"
   },
@@ -2959,7 +2959,7 @@
     "errorCode": "N/A – không phát sinh thông báo lỗi",
     "smoke": "No",
     "note": "",
-    "status": "Untested",
+    "status": "Pass",
     "defaultStatus": "Untested",
     "defaultTester": "AnhLL"
   },
@@ -2981,7 +2981,7 @@
     "errorCode": "N/A – không phát sinh thông báo lỗi",
     "smoke": "No",
     "note": "",
-    "status": "Untested",
+    "status": "Pass",
     "defaultStatus": "Untested",
     "defaultTester": "AnhLL"
   },
@@ -3003,7 +3003,7 @@
     "errorCode": "N/A – không phát sinh thông báo lỗi",
     "smoke": "No",
     "note": "",
-    "status": "Untested",
+    "status": "Pass",
     "defaultStatus": "Untested",
     "defaultTester": "AnhLL"
   },
@@ -3025,7 +3025,7 @@
     "errorCode": "N/A – không phát sinh thông báo lỗi",
     "smoke": "No",
     "note": "",
-    "status": "Untested",
+    "status": "Pass",
     "defaultStatus": "Untested",
     "defaultTester": "AnhLL"
   },
@@ -3047,7 +3047,7 @@
     "errorCode": "N/A – không phát sinh thông báo lỗi",
     "smoke": "No",
     "note": "",
-    "status": "Untested",
+    "status": "Pass",
     "defaultStatus": "Untested",
     "defaultTester": "AnhLL"
   },
@@ -3179,7 +3179,7 @@
     "errorCode": "N/A – không phát sinh thông báo lỗi",
     "smoke": "No",
     "note": "BLOCKED: Bị chặn bởi TC_APP_UC33_145 do Menu Tiện ích chưa có entry point màn hình 'Tra cứu danh mục ký quỹ', không thể kiểm tra textlink 'tại đây' điều hướng web.",
-    "status": "Blocked",
+    "status": "pending",
     "defaultStatus": "Untested",
     "defaultTester": "BachNT"
   },
@@ -3274,7 +3274,7 @@
   {
     "id": "TC_APP_UC34_149",
     "stt": "149",
-    "tester": "CuongNT",
+    "tester": "BaoDK",
     "module": "Yêu cầu thay đổi bổ sung",
     "screen": "UC34: 2.7.3 Đăng ký mở tiểu khoản margin",
     "useCaseId": "UC34",
@@ -3289,7 +3289,7 @@
     "errorCode": "ERR-APP-2.7.3-04",
     "smoke": "No",
     "note": "",
-    "status": "Untested",
+    "status": "Pass",
     "defaultStatus": "Untested",
     "defaultTester": "CuongNT"
   },
@@ -3487,7 +3487,7 @@
     "errorCode": "ERR-APP-2.7.3-09",
     "smoke": "No",
     "note": "",
-    "status": "Untested",
+    "status": "pending",
     "defaultStatus": "Untested",
     "defaultTester": "BaoDK"
   },
@@ -3509,7 +3509,7 @@
     "errorCode": "ERR-APP-2.7.3-09",
     "smoke": "No",
     "note": "",
-    "status": "Untested",
+    "status": "pending",
     "defaultStatus": "Untested",
     "defaultTester": "BaoDK"
   },
@@ -3531,7 +3531,7 @@
     "errorCode": "N/A – không phát sinh thông báo lỗi",
     "smoke": "No",
     "note": "",
-    "status": "Untested",
+    "status": "pending",
     "defaultStatus": "Untested",
     "defaultTester": "BaoDK"
   },
@@ -3553,7 +3553,7 @@
     "errorCode": "ERR-APP-2.7.3-10",
     "smoke": "No",
     "note": "",
-    "status": "Untested",
+    "status": "Pass",
     "defaultStatus": "Untested",
     "defaultTester": "BaoDK"
   },
@@ -3575,7 +3575,7 @@
     "errorCode": "ERR-APP-2.7.3-11",
     "smoke": "No",
     "note": "",
-    "status": "Untested",
+    "status": "Pass",
     "defaultStatus": "Untested",
     "defaultTester": "BaoDK"
   },
@@ -3597,7 +3597,7 @@
     "errorCode": "ERR-APP-2.7.3-10",
     "smoke": "No",
     "note": "",
-    "status": "Untested",
+    "status": "Pass",
     "defaultStatus": "Untested",
     "defaultTester": "BaoDK"
   },
@@ -3619,7 +3619,7 @@
     "errorCode": "ERR-APP-2.7.3-12",
     "smoke": "No",
     "note": "",
-    "status": "Untested",
+    "status": "Pass",
     "defaultStatus": "Untested",
     "defaultTester": "BaoDK"
   },
@@ -3641,7 +3641,7 @@
     "errorCode": "ERR-APP-2.7.3-13",
     "smoke": "No",
     "note": "",
-    "status": "Untested",
+    "status": "Pass",
     "defaultStatus": "Untested",
     "defaultTester": "BaoDK"
   },
@@ -4029,7 +4029,7 @@
     "errorCode": "N/A – không phát sinh thông báo lỗi",
     "smoke": "No",
     "note": "",
-    "status": "Untested",
+    "status": "Pass",
     "defaultStatus": "Untested",
     "defaultTester": "BaoDK"
   },
@@ -4051,7 +4051,7 @@
     "errorCode": "N/A – không phát sinh thông báo lỗi",
     "smoke": "No",
     "note": "",
-    "status": "Untested",
+    "status": "Pass",
     "defaultStatus": "Untested",
     "defaultTester": "BaoDK"
   },
@@ -4073,7 +4073,7 @@
     "errorCode": "N/A – không phát sinh thông báo lỗi",
     "smoke": "No",
     "note": "",
-    "status": "Untested",
+    "status": "Pass",
     "defaultStatus": "Untested",
     "defaultTester": "BaoDK"
   },
@@ -4095,7 +4095,7 @@
     "errorCode": "ERR-APP-2.7.5-01",
     "smoke": "No",
     "note": "",
-    "status": "Untested",
+    "status": "Fail",
     "defaultStatus": "Untested",
     "defaultTester": "BaoDK"
   },
@@ -4117,7 +4117,7 @@
     "errorCode": "ERR-APP-2.7.5-02",
     "smoke": "No",
     "note": "",
-    "status": "Untested",
+    "status": "Pass",
     "defaultStatus": "Untested",
     "defaultTester": "BaoDK"
   },
@@ -4139,7 +4139,7 @@
     "errorCode": "N/A – không phát sinh thông báo lỗi",
     "smoke": "No",
     "note": "",
-    "status": "Untested",
+    "status": "Fail",
     "defaultStatus": "Untested",
     "defaultTester": "BaoDK"
   },
@@ -4161,7 +4161,7 @@
     "errorCode": "N/A – không phát sinh thông báo lỗi",
     "smoke": "No",
     "note": "",
-    "status": "Untested",
+    "status": "Pass",
     "defaultStatus": "Untested",
     "defaultTester": "BaoDK"
   },
@@ -4183,7 +4183,7 @@
     "errorCode": "ERR-APP-2.7.5-03",
     "smoke": "No",
     "note": "",
-    "status": "Untested",
+    "status": "Pass",
     "defaultStatus": "Untested",
     "defaultTester": "BaoDK"
   },
@@ -4205,7 +4205,7 @@
     "errorCode": "ERR-APP-2.7.5-04",
     "smoke": "No",
     "note": "",
-    "status": "Untested",
+    "status": "Pass",
     "defaultStatus": "Untested",
     "defaultTester": "BaoDK"
   },
@@ -4227,7 +4227,7 @@
     "errorCode": "ERR-APP-2.7.5-05",
     "smoke": "No",
     "note": "",
-    "status": "Untested",
+    "status": "Pass",
     "defaultStatus": "Untested",
     "defaultTester": "BaoDK"
   },
@@ -4249,7 +4249,7 @@
     "errorCode": "N/A – không phát sinh thông báo lỗi",
     "smoke": "No",
     "note": "",
-    "status": "Untested",
+    "status": "Pass",
     "defaultStatus": "Untested",
     "defaultTester": "BaoDK"
   },
@@ -4271,7 +4271,7 @@
     "errorCode": "ERR-APP-2.7.5-03",
     "smoke": "No",
     "note": "",
-    "status": "Untested",
+    "status": "Pass",
     "defaultStatus": "Untested",
     "defaultTester": "BaoDK"
   },
@@ -4293,7 +4293,7 @@
     "errorCode": "N/A – không phát sinh thông báo lỗi",
     "smoke": "No",
     "note": "",
-    "status": "Untested",
+    "status": "Pass",
     "defaultStatus": "Untested",
     "defaultTester": "BaoDK"
   },
@@ -4315,7 +4315,7 @@
     "errorCode": "ERR-APP-2.7.5-06",
     "smoke": "No",
     "note": "",
-    "status": "Untested",
+    "status": "Pass",
     "defaultStatus": "Untested",
     "defaultTester": "BaoDK"
   },
@@ -4337,7 +4337,7 @@
     "errorCode": "ERR-APP-2.7.5-04",
     "smoke": "No",
     "note": "",
-    "status": "Untested",
+    "status": "Pass",
     "defaultStatus": "Untested",
     "defaultTester": "BaoDK"
   },
@@ -4359,7 +4359,7 @@
     "errorCode": "N/A – không phát sinh thông báo lỗi",
     "smoke": "No",
     "note": "",
-    "status": "Untested",
+    "status": "Pass",
     "defaultStatus": "Untested",
     "defaultTester": "BaoDK"
   },
@@ -4381,7 +4381,7 @@
     "errorCode": "N/A – không phát sinh thông báo lỗi",
     "smoke": "No",
     "note": "",
-    "status": "Untested",
+    "status": "Pass",
     "defaultStatus": "Untested",
     "defaultTester": "BaoDK"
   },
@@ -4425,7 +4425,7 @@
     "errorCode": "N/A – không phát sinh thông báo lỗi",
     "smoke": "No",
     "note": "",
-    "status": "Untested",
+    "status": "Pass",
     "defaultStatus": "Untested",
     "defaultTester": "BaoDK"
   },
@@ -4447,7 +4447,7 @@
     "errorCode": "ERR-APP-2.7.5-03",
     "smoke": "No",
     "note": "",
-    "status": "Untested",
+    "status": "Pass",
     "defaultStatus": "Untested",
     "defaultTester": "BaoDK"
   },
@@ -4469,7 +4469,7 @@
     "errorCode": "N/A – không phát sinh thông báo lỗi",
     "smoke": "No",
     "note": "",
-    "status": "Untested",
+    "status": "Pass",
     "defaultStatus": "Untested",
     "defaultTester": "BaoDK"
   },
@@ -4491,14 +4491,14 @@
     "errorCode": "N/A – không phát sinh thông báo lỗi",
     "smoke": "No",
     "note": "",
-    "status": "Untested",
+    "status": "Pass",
     "defaultStatus": "Untested",
     "defaultTester": "BaoDK"
   },
   {
     "id": "TC_APP_UC49_204",
     "stt": "204",
-    "tester": "CuongNT",
+    "tester": "BaoDK",
     "module": "Thông tin & Tiện ích",
     "screen": "UC49: 2.7.6 Thông tin cá nhân",
     "useCaseId": "UC49",
@@ -4513,14 +4513,14 @@
     "errorCode": "N/A – không phát sinh thông báo lỗi",
     "smoke": "No",
     "note": "",
-    "status": "Untested",
+    "status": "Pass",
     "defaultStatus": "Untested",
     "defaultTester": "CuongNT"
   },
   {
     "id": "TC_APP_UC49_205",
     "stt": "205",
-    "tester": "CuongNT",
+    "tester": "BaoDK",
     "module": "Thông tin & Tiện ích",
     "screen": "UC49: 2.7.6 Thông tin cá nhân",
     "useCaseId": "UC49",
@@ -4535,14 +4535,14 @@
     "errorCode": "N/A – không phát sinh thông báo lỗi",
     "smoke": "No",
     "note": "",
-    "status": "Untested",
+    "status": "Pass",
     "defaultStatus": "Untested",
     "defaultTester": "CuongNT"
   },
   {
     "id": "TC_APP_UC49_206",
     "stt": "206",
-    "tester": "CuongNT",
+    "tester": "BaoDK",
     "module": "Thông tin & Tiện ích",
     "screen": "UC49: 2.7.6 Thông tin cá nhân",
     "useCaseId": "UC49",
@@ -4557,14 +4557,14 @@
     "errorCode": "N/A – không phát sinh thông báo lỗi",
     "smoke": "No",
     "note": "",
-    "status": "Untested",
+    "status": "Pass",
     "defaultStatus": "Untested",
     "defaultTester": "CuongNT"
   },
   {
     "id": "TC_APP_UC49_207",
     "stt": "207",
-    "tester": "CuongNT",
+    "tester": "BaoDK",
     "module": "Thông tin & Tiện ích",
     "screen": "UC49: 2.7.6 Thông tin cá nhân",
     "useCaseId": "UC49",
@@ -4579,7 +4579,7 @@
     "errorCode": "ERR-APP-2.7.6-01",
     "smoke": "No",
     "note": "",
-    "status": "Untested",
+    "status": "Pass",
     "defaultStatus": "Untested",
     "defaultTester": "CuongNT"
   },
@@ -4755,7 +4755,7 @@
     "errorCode": "ERR-APP-2.7.6-05",
     "smoke": "No",
     "note": "",
-    "status": "Untested",
+    "status": "Pass",
     "defaultStatus": "Untested",
     "defaultTester": "AnhLL"
   },
@@ -4806,7 +4806,7 @@
   {
     "id": "TC_APP_UC52_218",
     "stt": "218",
-    "tester": "CuongNT",
+    "tester": "BaoDK",
     "module": "Thông tin & Tiện ích",
     "screen": "UC52: 2.7.6 Giao diện",
     "useCaseId": "UC52",
@@ -4821,14 +4821,14 @@
     "errorCode": "N/A – không phát sinh thông báo lỗi",
     "smoke": "No",
     "note": "",
-    "status": "Untested",
+    "status": "Pass",
     "defaultStatus": "Untested",
     "defaultTester": "CuongNT"
   },
   {
     "id": "TC_APP_UC52_219",
     "stt": "219",
-    "tester": "CuongNT",
+    "tester": "BaoDK",
     "module": "Thông tin & Tiện ích",
     "screen": "UC52: 2.7.6 Giao diện",
     "useCaseId": "UC52",
@@ -4843,14 +4843,14 @@
     "errorCode": "N/A – không phát sinh thông báo lỗi",
     "smoke": "No",
     "note": "",
-    "status": "Untested",
+    "status": "Pass",
     "defaultStatus": "Untested",
     "defaultTester": "CuongNT"
   },
   {
     "id": "TC_APP_UC53_220",
     "stt": "220",
-    "tester": "CuongNT",
+    "tester": "BaoDK",
     "module": "Thông tin & Tiện ích",
     "screen": "UC53: 2.7.6 Đổi ngôn ngữ",
     "useCaseId": "UC53",
@@ -4865,14 +4865,14 @@
     "errorCode": "N/A – không phát sinh thông báo lỗi",
     "smoke": "No",
     "note": "",
-    "status": "Untested",
+    "status": "Pass",
     "defaultStatus": "Untested",
     "defaultTester": "CuongNT"
   },
   {
     "id": "TC_APP_UC53_221",
     "stt": "221",
-    "tester": "CuongNT",
+    "tester": "BaoDK",
     "module": "Thông tin & Tiện ích",
     "screen": "UC53: 2.7.6 Đổi ngôn ngữ",
     "useCaseId": "UC53",
@@ -4887,14 +4887,14 @@
     "errorCode": "N/A – không phát sinh thông báo lỗi",
     "smoke": "No",
     "note": "",
-    "status": "Untested",
+    "status": "Pass",
     "defaultStatus": "Untested",
     "defaultTester": "CuongNT"
   },
   {
     "id": "TC_APP_UC54_222",
     "stt": "222",
-    "tester": "CuongNT",
+    "tester": "BaoDK",
     "module": "Thông tin & Tiện ích",
     "screen": "UC54: 2.7.7 Liên hệ",
     "useCaseId": "UC54",
@@ -4909,7 +4909,7 @@
     "errorCode": "N/A – không phát sinh thông báo lỗi",
     "smoke": "No",
     "note": "",
-    "status": "Untested",
+    "status": "Pass",
     "defaultStatus": "Untested",
     "defaultTester": "CuongNT"
   },
@@ -4960,7 +4960,7 @@
   {
     "id": "TC_APP_UC56_225",
     "stt": "225",
-    "tester": "CuongNT",
+    "tester": "BaoDK",
     "module": "Thông tin & Tiện ích",
     "screen": "UC56: 2.7.7 Địa chỉ",
     "useCaseId": "UC56",
@@ -4975,14 +4975,14 @@
     "errorCode": "N/A – không phát sinh thông báo lỗi",
     "smoke": "No",
     "note": "",
-    "status": "Untested",
+    "status": "pending",
     "defaultStatus": "Untested",
     "defaultTester": "CuongNT"
   },
   {
     "id": "TC_APP_UC56_226",
     "stt": "226",
-    "tester": "CuongNT",
+    "tester": "BaoDK",
     "module": "Thông tin & Tiện ích",
     "screen": "UC56: 2.7.7 Địa chỉ",
     "useCaseId": "UC56",
@@ -4997,7 +4997,7 @@
     "errorCode": "N/A – không phát sinh thông báo lỗi",
     "smoke": "No",
     "note": "",
-    "status": "Untested",
+    "status": "pending",
     "defaultStatus": "Untested",
     "defaultTester": "CuongNT"
   },
@@ -5129,7 +5129,7 @@
     "errorCode": "N/A – không phát sinh thông báo lỗi",
     "smoke": "No",
     "note": "Test case bổ sung",
-    "status": "Untested",
+    "status": "Pass",
     "defaultStatus": "Untested",
     "defaultTester": "AnhLL"
   },
@@ -5436,8 +5436,8 @@
     "testData": "TK: 088C024014 | MK: 13579@Ab | PIN/OTP: 135790",
     "errorCode": "N/A – không phát sinh thông báo lỗi",
     "smoke": "No",
-    "note": "Test case bổ sung",
-    "status": "Untested",
+    "note": "Tại màn Chi tiết mã vẫn còn hiển thị đầy đủ tên doanh nghiệp",
+    "status": "Fail",
     "defaultStatus": "Untested",
     "defaultTester": "LongNH"
   },
@@ -5458,8 +5458,8 @@
     "testData": "TK: 088C024014 | MK: 13579@Ab | PIN/OTP: 135790",
     "errorCode": "N/A – không phát sinh thông báo lỗi",
     "smoke": "No",
-    "note": "Test case bổ sung",
-    "status": "Untested",
+    "note": "Chart vẽ theo Close < Open nên mã tăng giá nến vẫn hiện màu đỏ",
+    "status": "Fail",
     "defaultStatus": "Untested",
     "defaultTester": "LongNH"
   },
@@ -5481,7 +5481,7 @@
     "errorCode": "N/A – không phát sinh thông báo lỗi",
     "smoke": "No",
     "note": "Test case bổ sung",
-    "status": "Untested",
+    "status": "Pass",
     "defaultStatus": "Untested",
     "defaultTester": "LongNH"
   },
@@ -5503,7 +5503,7 @@
     "errorCode": "N/A – không phát sinh thông báo lỗi",
     "smoke": "No",
     "note": "Test case bổ sung",
-    "status": "Untested",
+    "status": "Pass",
     "defaultStatus": "Untested",
     "defaultTester": "LongNH"
   },
@@ -5524,8 +5524,8 @@
     "testData": "TK: 088C000922 | MK: 13579@Ab | PIN/OTP: 135790",
     "errorCode": "N/A – không phát sinh thông báo lỗi",
     "smoke": "No",
-    "note": "Test case bổ sung",
-    "status": "Untested",
+    "note": "Mua: Autofill đúng. Bán: Hoạt động đúng khi KL khả dụng > 0 (Đã verify với A32: autofill A32, tab Bán, KL tối đa 1400). Lưu ý: Khi KL khả dụng = 0 (như FPT, HPG hàng T1) app fallback về màn đặt lệnh mặc định.",
+    "status": "Pass",
     "defaultStatus": "Untested",
     "defaultTester": "NgaMTQ"
   },
@@ -5657,7 +5657,7 @@
     "errorCode": "N/A – không phát sinh thông báo lỗi",
     "smoke": "No",
     "note": "Test case bổ sung",
-    "status": "Untested",
+    "status": "Pass",
     "defaultStatus": "Untested",
     "defaultTester": "AnhLL"
   },
@@ -5700,8 +5700,8 @@
     "testData": "TK: 088C031525 | MK: 13579@Ab | PIN/OTP: 135790 | Số tiền: 1.000.000 VNĐ | NH thụ hưởng: MSB/VCB",
     "errorCode": "N/A – không phát sinh thông báo lỗi",
     "smoke": "No",
-    "note": "Test case bổ sung",
-    "status": "Untested",
+    "note": "Popup Số tài khoản ngân hàng và nút + Thêm ngân hàng hiển thị đúng chuẩn design ở đáy màn hình.",
+    "status": "Pass",
     "defaultStatus": "Untested",
     "defaultTester": "AnhLL"
   },
@@ -5744,8 +5744,8 @@
     "testData": "TK: 088C031525 | MK: 13579@Ab | PIN/OTP: 135790 | Số tiền: 1.000.000 VNĐ | NH thụ hưởng: MSB/VCB",
     "errorCode": "N/A – không phát sinh thông báo lỗi",
     "smoke": "No",
-    "note": "Test case bổ sung",
-    "status": "Untested",
+    "note": "Lỗi API truy vấn tên chủ tài khoản NH (Bug JIRA: SBSIEXT-103), không tự động fill được tên người thụ hưởng.",
+    "status": "Fail",
     "defaultStatus": "Untested",
     "defaultTester": "AnhLL"
   },
@@ -5766,8 +5766,8 @@
     "testData": "TK: 088C031525 | MK: 13579@Ab | PIN/OTP: 135790 | Số tiền: 1.000.000 VNĐ | NH thụ hưởng: MSB/VCB",
     "errorCode": "ERR-APP-BS314-01",
     "smoke": "No",
-    "note": "Test case bổ sung",
-    "status": "Untested",
+    "note": "Báo lỗi đúng: Dòng chữ đỏ \"Số tài khoản người nhận không đúng hoặc không hợp lệ\" và popup \"Vui lòng xác thực số tài khoản trước\".",
+    "status": "Pass",
     "defaultStatus": "Untested",
     "defaultTester": "AnhLL"
   },
