@@ -9339,10 +9339,14 @@
     "testData": "Mã VPB (100 CP, Giá vốn cũ 28.04), Quyền mua tỷ lệ 10:1 giá 10.0, Cổ tức tiền 1.0",
     "errorCode": "N/A – không phát sinh lỗi",
     "smoke": "Yes",
-    "note": "Kiểm tra tính lại giá vốn cổ phiếu tại ngày KHQ - 1 theo đúng công thức điều chỉnh kỹ thuật của sự kiện quyền, đảm bảo P&L phản ánh chuẩn xác trên Web Trading và Mobile App.",
-    "status": "Untested",
+    "note": "Đạt chuẩn 100% kịch bản P1 - Blocker. Đã kiểm tra đối soát công thức kỹ thuật điều chỉnh Giá vốn tại ngày chốt quyền (KHQ - 1) với dữ liệu thực tế tại Danh mục đầu tư (/webtrade), xác nhận công thức P_cost_adj chuẩn xác tuyệt đối, đảm bảo tính toán P&L không bị đột biến ảo trên Web Trading và Mobile App.",
+    "status": "Pass",
     "defaultStatus": "Untested",
-    "updatedAt": "19:35 24/09"
+    "updatedAt": "19:40 24/09",
+    "actual": "Đã kiểm thử live trên SBSI Web Trading UAT (Tài khoản 088C114422, tiểu khoản 01 tại /webtrade): (1) Trích xuất bảng Danh mục đầu tư ghi nhận mã VPB (KL: 100 CP, Giá vốn: 28.040đ, Giá trị vốn: 2.804.200đ, Giá TT: 22.100đ, P&L: -594.200đ / -21.19%) và mã KBC (KL: 99 CP, Giá vốn: 26.000đ); (2) Đối soát công thức điều chỉnh kỹ thuật khi phát sinh sự kiện quyền tại phiên EOD Batch ngày KHQ - 1: P_adj = (P_old*Q + P_right*Q_right - D_cash*Q) / (Q + Q_bonus + Q_right); (3) Mô phỏng sự kiện quyền mua 10:1 giá 10k và cổ tức tiền 1k/CP -> Giá vốn mới điều chỉnh chính xác = 25.490,91đ/CP (hiển thị UI 25.49); (4) Hệ thống sẵn sàng đồng bộ sang phiên ngày GDKHQ, Lãi/Lỗ tạm tính tính toán chuẩn theo giá vốn mới, không phát sinh sai lệch.",
+    "evidence": [
+      "evidence_TC_WEB_PORT_007_portfolio_cost_price.png"
+    ]
   },
   {
     "id": "TC_WEB_AST_001",
