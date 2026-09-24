@@ -3745,7 +3745,7 @@
   {
     "id": "TC_WEB_UC38_163",
     "stt": "163",
-    "tester": "NgaMTQ",
+    "tester": "BachNT",
     "module": "Yêu cầu thay đổi bổ sung",
     "screen": "UC38: 3.6.1.8 Lệnh hoạt động",
     "useCaseId": "UC38",
@@ -3759,15 +3759,22 @@
     "testData": "TK: 088C000922 | MK: 13579@Ab | PIN/OTP: 135790",
     "errorCode": "N/A – không phát sinh thông báo lỗi",
     "smoke": "No",
-    "note": "",
-    "status": "Untested",
-    "defaultStatus": "Untested",
-    "defaultTester": "NgaMTQ"
+    "note": "Nghiệm thu đạt 100% tiêu chí. Form sửa lệnh nhận diện và nạp dữ liệu chính xác, cập nhật thời gian thực vào bảng Lệnh hoạt động.",
+    "status": "Pass",
+    "defaultStatus": "Pass",
+    "defaultTester": "BachNT",
+    "actual": "Đã thực hiện bấm nút Sửa trên dòng lệnh VPB Mua 100 @ 21 tại tab Lệnh hoạt động. Form đặt lệnh nạp đúng thông tin lệnh gốc sang chế độ SỬA MUA. Thay đổi giá thành 21.2 và xác thực PIN thành công. Hệ thống hiển thị Toast 'Sửa lệnh thành công' và dòng lệnh tại Lệnh hoạt động cập nhật Giá đặt 21.2, Giá trị 2,120,000.",
+    "evidence": [
+      "evidence/evidence_TC_WEB_UC38_163_active_order_row.png",
+      "evidence/evidence_TC_WEB_UC38_163_edit_form_loaded.png",
+      "evidence/evidence_TC_WEB_UC38_163_confirm_edit_modal.png",
+      "evidence/evidence_TC_WEB_UC38_163_edit_success_updated.png"
+    ]
   },
   {
     "id": "TC_WEB_UC38_164",
     "stt": "164",
-    "tester": "NgaMTQ",
+    "tester": "BachNT",
     "module": "Yêu cầu thay đổi bổ sung",
     "screen": "UC38: 3.6.1.8 Lệnh hoạt động",
     "useCaseId": "UC38",
@@ -3781,10 +3788,17 @@
     "testData": "TK: 088C000922 | MK: 13579@Ab | PIN/OTP: 135790",
     "errorCode": "N/A – không phát sinh thông báo lỗi",
     "smoke": "No",
-    "note": "",
-    "status": "Untested",
-    "defaultStatus": "Untested",
-    "defaultTester": "NgaMTQ"
+    "note": "Nghiệm thu đạt 100% tiêu chí. Luồng hủy lệnh an toàn, giải phóng dữ liệu khỏi Lệnh hoạt động và đồng bộ chuẩn xác sang Sổ lệnh.",
+    "status": "Pass",
+    "defaultStatus": "Pass",
+    "defaultTester": "BachNT",
+    "actual": "Đã thực hiện bấm nút Hủy trên dòng lệnh VPB Mua 100 @ 21.2 tại tab Lệnh hoạt động. Popup modal 'Xác nhận hủy lệnh' hiển thị tóm tắt đầy đủ thông số lệnh. Nhập PIN và bấm Xác nhận thành công. Hệ thống hiển thị Toast 'Gửi yêu cầu hủy lệnh thành công', bảng Lệnh hoạt động được làm trống và Sổ lệnh ghi nhận trạng thái Hủy lệnh chờ... / Đã hủy.",
+    "evidence": [
+      "evidence/evidence_TC_WEB_UC38_164_active_order_before_cancel.png",
+      "evidence/evidence_TC_WEB_UC38_164_confirm_cancel_modal.png",
+      "evidence/evidence_TC_WEB_UC38_164_cancel_success_empty_active.png",
+      "evidence/evidence_TC_WEB_UC38_164_order_book_status_cancelled.png"
+    ]
   },
   {
     "id": "TC_WEB_UC38_165",
