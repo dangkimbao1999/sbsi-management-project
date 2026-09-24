@@ -3671,7 +3671,7 @@
   {
     "id": "TC_WEB_UC37_160",
     "stt": "160",
-    "tester": "NgaMTQ",
+    "tester": "BachNT",
     "module": "Giao dịch Lệnh",
     "screen": "UC37: 3.6.1.7 Danh mục đầu tư (tại màn hình Đặt lệnh)",
     "useCaseId": "UC37",
@@ -3685,10 +3685,18 @@
     "testData": "TK: 088C000922 | MK: 13579@Ab | PIN/OTP: 135790 | Mã: HPG/FPT | KL: 100/500 | Giá: Thị trường / LO",
     "errorCode": "N/A – không phát sinh thông báo lỗi",
     "smoke": "No",
-    "note": "",
-    "status": "Untested",
+    "note": "Đạt chuẩn 100% kịch bản P3 - Medium. Đầy đủ 4 ảnh bằng chứng xác thực người dùng nhấn 'Quay lại' tại popup cảnh báo Bán nhiều mã, hệ thống đóng popup an toàn, quay về màn hình Danh mục ban đầu, không mở dialog chọn mã và không phát sinh bất kỳ lệnh nào.",
+    "status": "Pass",
     "defaultStatus": "Untested",
-    "defaultTester": "NgaMTQ"
+    "defaultTester": "NgaMTQ",
+    "updatedAt": "19:10 24/09",
+    "actual": "Đã kiểm thử live trên SBSI Web Trading UAT (Tài khoản 088C114422, tiểu khoản 01 tại màn hình Đặt lệnh /webtrade): (1) Tại tab Danh mục đầu tư, nhấn nút [Bán nhiều mã], hệ thống hiển thị popup xác nhận với thông điệp: 'BÁN NHIỀU MÃ là chức năng cho phép khách hàng lựa chọn bán nhiều mã... Quý khách có chắc chắn muốn thực hiện ?'; (2) Nhấn nút [Quay lại] (thay vì [Xác nhận]); (3) Popup đóng hoàn toàn ngay lập tức, không mở modal cấu hình bán nhiều mã; (4) Giữ nguyên trạng thái màn hình Danh mục đầu tư và kiểm tra Sổ lệnh xác nhận 0 lệnh nào phát sinh, quy trình bán nhiều mã được hủy bỏ an toàn tuyệt đối.",
+    "evidence": [
+      "evidence_TC_WEB_UC37_160_portfolio_screen.png",
+      "evidence_TC_WEB_UC37_160_confirm_modal_active.png",
+      "evidence_TC_WEB_UC37_160_click_quay_lai.png",
+      "evidence_TC_WEB_UC37_160_flow_cancelled_success.png"
+    ]
   },
   {
     "id": "TC_WEB_UC38_161",
