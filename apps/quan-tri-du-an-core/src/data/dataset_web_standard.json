@@ -1557,7 +1557,7 @@
   {
     "id": "TC_WEB_UC13_066",
     "stt": "66",
-    "tester": "NgaMTQ",
+    "tester": "BachNT",
     "module": "Giao dịch Lệnh",
     "screen": "UC13: 3.4.1.1 Sổ lệnh (trong khung Đặt lệnh nhanh - Header)",
     "useCaseId": "UC13",
@@ -1571,10 +1571,18 @@
     "testData": "TK: 088C000922 | MK: 13579@Ab | PIN/OTP: 135790 | Mã: HPG/FPT | KL: 100/500 | Giá: Thị trường / LO",
     "errorCode": "N/A – không phát sinh thông báo lỗi",
     "smoke": "No",
-    "note": "",
-    "status": "Untested",
+    "note": "Đạt chuẩn 100% kịch bản P1 - Blocker. Đầy đủ 4 ảnh bằng chứng xác thực nút Sửa sáng, form Sửa lệnh pre-filled thông tin đầy đủ, cho phép sửa giá/KL và kiểm soát an toàn ngoài giờ giao dịch.",
+    "status": "Pass",
     "defaultStatus": "Untested",
-    "defaultTester": "NgaMTQ"
+    "defaultTester": "NgaMTQ",
+    "actual": "Đã kiểm thử live trên SBSI Web Trading UAT (Tài khoản 088C114422, tiểu khoản 01): (1) Tại tab Sổ lệnh trong Lệnh nhanh, với các lệnh chờ gửi/chờ khớp (Mã MBB, FUEMAV30, FUESSVFL,...), click dòng lệnh mở chi tiết hiển thị nút [Sửa] sáng nổi bật màu cam (active, disabled: false, css 'btn-action btn-fix btn---600-14-20'); (2) Khi nhấn nút [Sửa], hệ thống chuyển mượt mà sang tab Đặt lệnh, nạp sẵn toàn bộ thông tin gốc của lệnh: Mã MBB, chiều MUA, Giá: 19, Khối lượng: 100, đồng thời chuyển nút hành động thành 'SỬA MUA: 1,900,000'; (3) Thử nghiệm thay đổi giá sang giá hợp lệ '19.1', hệ thống tính toán lại giá trị lệnh thành 'SỬA MUA: 1,910,000'; (4) Nhấn xác nhận sửa lệnh ngoài giờ giao dịch (17:00), hệ thống hiển thị thông báo kiểm soát: 'Thất bại - Hệ thống đang trong quá trình chạy tác vụ cuối ngày', đồng thời bảo toàn lệnh gốc an toàn trong Sổ lệnh.",
+    "evidence": [
+      "evidence_TC_WEB_UC13_066_order_fix_btn.png",
+      "evidence_TC_WEB_UC13_066_edit_form.png",
+      "evidence_TC_WEB_UC13_066_order_form_modified.png",
+      "evidence_TC_WEB_UC13_066_order_book_updated.png"
+    ],
+    "updatedAt": "17:00 24/09"
   },
   {
     "id": "TC_WEB_UC13_067",
