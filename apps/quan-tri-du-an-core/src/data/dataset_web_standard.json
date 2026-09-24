@@ -1587,7 +1587,7 @@
   {
     "id": "TC_WEB_UC13_067",
     "stt": "67",
-    "tester": "NgaMTQ",
+    "tester": "BachNT",
     "module": "Giao dịch Lệnh",
     "screen": "UC13: 3.4.1.1 Sổ lệnh (trong khung Đặt lệnh nhanh - Header)",
     "useCaseId": "UC13",
@@ -1601,10 +1601,18 @@
     "testData": "TK: 088C000922 | MK: 13579@Ab | PIN/OTP: 135790 | Mã: HPG/FPT | KL: 100/500 | Giá: Thị trường / LO",
     "errorCode": "N/A – không phát sinh thông báo lỗi",
     "smoke": "No",
-    "note": "",
-    "status": "Untested",
+    "note": "Đạt chuẩn 100% kịch bản P3 - Medium. Đầy đủ 4 ảnh bằng chứng xác thực hủy thao tác sửa lệnh bằng nút Mua/Bán, khung đặt lệnh reset sạch sẽ và lệnh gốc bảo toàn nguyên vẹn.",
+    "status": "Pass",
     "defaultStatus": "Untested",
-    "defaultTester": "NgaMTQ"
+    "defaultTester": "NgaMTQ",
+    "actual": "Đã kiểm thử live trên SBSI Web Trading UAT (Tài khoản 088C114422, tiểu khoản 01): (1) Tại tab Sổ lệnh trong Lệnh nhanh, mở rộng dòng lệnh chờ gửi MBB MUA 100 @ 19, nhấn nút [Sửa]; (2) Form Sửa lệnh mở thành công với đầy đủ dữ liệu gốc, nút submit hiển thị 'SỬA MUA: 1,900,000'; (3) Click vào nút Mua/Bán trên khung đặt lệnh để hủy thao tác sửa, hệ thống ngay lập tức thoát khỏi chế độ Sửa, xóa sạch (clear) thông tin lệnh đang sửa trên khung đặt lệnh (mã CK trống, giá 0, KL 0, nút hành động trở về trạng thái đặt lệnh mới ban đầu); (4) Quay lại Sổ lệnh kiểm tra, dòng lệnh gốc MBB vẫn giữ nguyên vẹn 100% (Giá: 19, KL: 100, Trạng thái: Chờ gửi), không phát sinh bất kỳ thay đổi nào.",
+    "evidence": [
+      "evidence_TC_WEB_UC13_067_order_book_select.png",
+      "evidence_TC_WEB_UC13_067_edit_form_opened.png",
+      "evidence_TC_WEB_UC13_067_cancel_edit_action.png",
+      "evidence_TC_WEB_UC13_067_order_book_unchanged.png"
+    ],
+    "updatedAt": "17:10 24/09"
   },
   {
     "id": "TC_WEB_UC14_068",
