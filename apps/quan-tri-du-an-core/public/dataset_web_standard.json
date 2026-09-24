@@ -3597,7 +3597,7 @@
   {
     "id": "TC_WEB_UC37_157",
     "stt": "157",
-    "tester": "NgaMTQ",
+    "tester": "BachNT",
     "module": "Giao dịch Lệnh",
     "screen": "UC37: 3.6.1.7 Danh mục đầu tư (tại màn hình Đặt lệnh)",
     "useCaseId": "UC37",
@@ -3611,10 +3611,18 @@
     "testData": "TK: 088C000922 | MK: 13579@Ab | PIN/OTP: 135790 | Mã: HPG/FPT | KL: 100/500 | Giá: Thị trường / LO",
     "errorCode": "N/A – không phát sinh thông báo lỗi",
     "smoke": "No",
-    "note": "",
-    "status": "Untested",
+    "note": "Đạt chuẩn 100% kịch bản P2 - High. Đầy đủ 4 ảnh bằng chứng xác thực tính năng inline edit Giá và Khối lượng cho từng mã trong popup Bán nhiều mã, lưu thành công và cập nhật đúng thông tin trước khi xác nhận.",
+    "status": "Pass",
     "defaultStatus": "Untested",
-    "defaultTester": "NgaMTQ"
+    "defaultTester": "NgaMTQ",
+    "actual": "Đã kiểm thử live trên SBSI Web Trading UAT (Tài khoản 088C114422, tiểu khoản 01 tại màn hình Đặt lệnh /webtrade): (1) Tại tab Danh mục đầu tư, nhấn nút [Bán nhiều mã], hệ thống hiển thị popup xác nhận điều khoản và mở tiếp màn hình Bán nhiều mã với danh sách mã nắm giữ hợp lệ (VPB 100 CP, giá đặt 22.1); (2) Nhấn icon cây bút sửa tại dòng mã VPB, dòng lệnh chuyển sang chế độ Inline Edit trực tiếp với ô nhập KL đặt (kèm nút -/+) và ô nhập Giá đặt (kèm nút -/+); (3) Điều chỉnh giá đặt từ 22.1 lên 22.2, khối lượng 100 CP, sau đó nhấn icon tick cam [✓] để Lưu thay đổi; (4) Dòng mã VPB cập nhật thành công Giá đặt = 22.2, KL đặt = 100, nút hành động cập nhật [Xác nhận (1)], sẵn sàng đẩy lệnh sang Core hệ thống.",
+    "evidence": [
+      "evidence_TC_WEB_UC37_157_portfolio_screen.png",
+      "evidence_TC_WEB_UC37_157_batch_sell_dialog.png",
+      "evidence_TC_WEB_UC37_157_edit_mode_active.png",
+      "evidence_TC_WEB_UC37_157_row_saved_updated.png"
+    ],
+    "updatedAt": "18:30 24/09"
   },
   {
     "id": "TC_WEB_UC37_158",
