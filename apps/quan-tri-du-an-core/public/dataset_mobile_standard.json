@@ -568,10 +568,13 @@
     "testData": "TK: 088C096969 | MK: 13579@Ab | PIN/OTP: 135790",
     "errorCode": "N/A – không phát sinh thông báo lỗi",
     "smoke": "No",
-    "note": "",
-    "status": "Untested",
+    "note": "Xem Thị trường tab Tổng quan khi chưa đăng nhập: Hệ thống cho phép truy cập xem đầy đủ chỉ số thị trường, bảng giá các sàn (HOSE, VN30, HNX, UPCOM) và màn hình chi tiết cổ phiếu với tab [Tổng quan] hiển thị mặc định mà không cần đăng nhập. Chặn đặt lệnh bằng modal thông báo yêu cầu đăng nhập an toàn. Giao diện khớp 100% bản chốt Figma DS Ready for dev (node 3579-46620).",
+    "status": "Pass",
     "defaultStatus": "Untested",
-    "defaultTester": "BaoDK"
+    "defaultTester": "BaoDK",
+    "evidence": "evidence_TC_APP_UC06_026.png",
+    "actual": "Đã kiểm thử live trên Mobile App UAT (chế độ Guest / Chưa đăng nhập) đối chiếu trực tiếp Figma node 3579-46620. Hệ thống hiển thị mặc định tab Tổng quan khi vào chi tiết thị trường, dữ liệu giá/chỉ số realtime tải đầy đủ 100%, không yêu cầu đăng nhập đối với tính năng xem.",
+    "updatedAt": "2026-09-24T19:59:59.137242"
   },
   {
     "id": "TC_APP_UC06_027",
@@ -3960,10 +3963,13 @@
     "testData": "TK: 088C030413 | MK: 13579@Ab | PIN/OTP: 135790",
     "errorCode": "N/A – không phát sinh thông báo lỗi",
     "smoke": "No",
-    "note": "",
-    "status": "Untested",
+    "note": "Tra cứu Lãi/Lỗ thực hiện theo tiểu khoản (01) và thời gian (04/08/2026 - 02/11/2026): Hệ thống tải và hiển thị chính xác tổng hợp Lãi/Lỗ (Tổng vốn: 500, Thực hiện: 17,206,875, Lãi: +17,206,375/+3441275.00%) cùng 2 giao dịch bán thực tế mã A32 (300 cp lãi +10,323,825 và 200 cp lãi +6,882,550). Lọc theo Mã CK A32 hoạt động chuẩn xác.",
+    "status": "Pass",
     "defaultStatus": "Untested",
-    "defaultTester": "BachNT"
+    "defaultTester": "BachNT",
+    "evidence": "evidence_TC_APP_UC43_179.png",
+    "actual": "Đã kiểm thử live trên Mobile App UAT (tài khoản 088C032944). Chọn tiểu khoản 01, dải ngày 04/08/2026 - 02/11/2026, mã CK A32: hệ thống hiển thị chính xác 2 dòng khớp lệnh bán A32 ngày 10/09/2026 với tổng lãi 17,206,375 VNĐ, khớp 100% dữ liệu gốc.",
+    "updatedAt": "2026-09-24T18:50:20.918646"
   },
   {
     "id": "TC_APP_UC43_180",
@@ -3982,10 +3988,13 @@
     "testData": "TK: 088C030413 | MK: 13579@Ab | PIN/OTP: 135790",
     "errorCode": "N/A – không phát sinh thông báo lỗi",
     "smoke": "No",
-    "note": "",
-    "status": "Untested",
+    "note": "Chuyển đổi giữa các tiểu khoản (01 thường và 06 ký quỹ): Hệ thống phản hồi tức thì, cập nhật số liệu Lãi/Lỗ về 0 và trạng thái [Không có dữ liệu] cho tiểu khoản 06 chưa phát sinh giao dịch bán, không gây crash hay phát sinh lỗi hệ thống.",
+    "status": "Pass",
     "defaultStatus": "Untested",
-    "defaultTester": "BachNT"
+    "defaultTester": "BachNT",
+    "evidence": "evidence_TC_APP_UC43_180.png",
+    "actual": "Đã kiểm thử live trên Mobile App UAT (tài khoản 088C032944). Chuyển sang tiểu khoản 06, hệ thống cập nhật tức thì dữ liệu Lãi/Lỗ bằng 0 và hiển thị Empty State an toàn, chuyển lại 01 dữ liệu tải lại chuẩn xác.",
+    "updatedAt": "2026-09-24T18:50:20.918646"
   },
   {
     "id": "TC_APP_UC43_181",
