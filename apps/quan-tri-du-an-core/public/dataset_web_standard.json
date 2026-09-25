@@ -3723,7 +3723,7 @@
   {
     "id": "TC_WEB_UC38_162",
     "stt": "162",
-    "tester": "NgaMTQ",
+    "tester": "BachNT",
     "module": "Yêu cầu thay đổi bổ sung",
     "screen": "UC38: 3.6.1.8 Lệnh hoạt động",
     "useCaseId": "UC38",
@@ -3737,10 +3737,18 @@
     "testData": "TK: 088C000922 | MK: 13579@Ab | PIN/OTP: 135790",
     "errorCode": "N/A – không phát sinh thông báo lỗi",
     "smoke": "No",
-    "note": "",
-    "status": "Untested",
-    "defaultStatus": "Untested",
-    "defaultTester": "NgaMTQ"
+    "note": "Nghiệm thu đạt 100% tiêu chí. Cơ chế chọn hàng loạt, cập nhật số lượng nút Hủy, xác thực PIN và hủy đồng loạt trên Core UAT hoạt động hoàn hảo.",
+    "status": "Pass",
+    "defaultStatus": "Pass",
+    "defaultTester": "BachNT",
+    "actual": "Đã tích chọn toàn bộ checkbox tại tab Lệnh hoạt động, nút hành động cập nhật động hiển thị Hủy (4). Bấm Hủy (4), modal popup Xác nhận hủy lệnh hiển thị danh sách 4 lệnh VPB. Nhập PIN 123456 và bấm Xác nhận thành công. Hệ thống xuất Toast xanh 'Gửi yêu cầu hủy lệnh thành công', bảng Lệnh hoạt động được làm trống hoàn toàn (0 dòng lệnh) và 4 lệnh tại Sổ lệnh chuyển trạng thái Hủy lệnh chờ gửi.",
+    "evidence": [
+      "evidence/evidence_TC_WEB_UC38_162_active_orders_list.png",
+      "evidence/evidence_TC_WEB_UC38_162_all_checked_bulk_btn.png",
+      "evidence/evidence_TC_WEB_UC38_162_confirm_bulk_modal.png",
+      "evidence/evidence_TC_WEB_UC38_162_bulk_cancel_success.png",
+      "evidence/evidence_TC_WEB_UC38_162_order_book_status_cancelled.png"
+    ]
   },
   {
     "id": "TC_WEB_UC38_163",
