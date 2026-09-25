@@ -2787,7 +2787,7 @@
   {
     "id": "TC_WEB_UC31_121",
     "stt": "121",
-    "tester": "NgaMTQ",
+    "tester": "BachNT",
     "module": "Giao dịch Lệnh",
     "screen": "UC31: 3.6.1.1 Đặt lệnh thường (Lệnh LO/ATO/ATC/MP...)",
     "useCaseId": "UC31",
@@ -2801,15 +2801,22 @@
     "testData": "TK: 088C000922 | MK: 13579@Ab | PIN/OTP: 135790 | Mã: HPG/FPT | KL: 100/500 | Giá: Thị trường / LO",
     "errorCode": "N/A – không phát sinh thông báo lỗi",
     "smoke": "No",
-    "note": "",
-    "status": "Untested",
-    "defaultStatus": "Untested",
-    "defaultTester": "NgaMTQ"
+    "note": "Nghiệm thu đạt 100% tiêu chí. Toast 'Đặt lệnh thành công' hiển thị đúng, trừ sức mua tức thì chính xác cả giá trị lệnh và phí.",
+    "status": "Pass",
+    "defaultStatus": "Pass",
+    "defaultTester": "BachNT",
+    "actual": "Đặt lệnh Mua VPB 100 CP giá LO 21.0 đ thành công. Sức mua của tiểu khoản bị trừ tức thì từ 107,094,274 đ xuống 104,991,124 đ (-2,103,150 đ). Lệnh xuất hiện ngay tại tab Lệnh hoạt động với trạng thái Chờ gửi.",
+    "evidence": [
+      "evidence/evidence_TC_WEB_UC31_121_form_input_valid.png",
+      "evidence/evidence_TC_WEB_UC31_121_confirm_buy_modal.png",
+      "evidence/evidence_TC_WEB_UC31_121_buy_success_toast.png",
+      "evidence/evidence_TC_WEB_UC31_121_active_orders_deducted.png"
+    ]
   },
   {
     "id": "TC_WEB_UC31_122",
     "stt": "122",
-    "tester": "NgaMTQ",
+    "tester": "BachNT",
     "module": "Giao dịch Lệnh",
     "screen": "UC31: 3.6.1.1 Đặt lệnh thường (Lệnh LO/ATO/ATC/MP...)",
     "useCaseId": "UC31",
@@ -2823,15 +2830,22 @@
     "testData": "TK: 088C000922 | MK: 13579@Ab | PIN/OTP: 135790 | Mã: HPG/FPT | KL: 100/500 | Giá: Thị trường / LO",
     "errorCode": "N/A – không phát sinh thông báo lỗi",
     "smoke": "No",
-    "note": "",
-    "status": "Untested",
-    "defaultStatus": "Untested",
-    "defaultTester": "NgaMTQ"
+    "note": "Nghiệm thu đạt 100% tiêu chí. Phong tỏa CK khả dụng ngay lập tức, Toast 'Đặt lệnh thành công' hiển thị đúng.",
+    "status": "Pass",
+    "defaultStatus": "Pass",
+    "defaultTester": "BachNT",
+    "actual": "Đặt lệnh Bán VPB 100 CP giá LO 22.5 đ thành công. Khối lượng bán tối đa trên form giảm từ 100 CP về 0 CP tức thì (phong tỏa chứng khoán khả dụng). Lệnh xuất hiện trên Lệnh hoạt động với trạng thái Chờ gửi.",
+    "evidence": [
+      "evidence/evidence_TC_WEB_UC31_122_sell_form_valid.png",
+      "evidence/evidence_TC_WEB_UC31_122_confirm_sell_modal.png",
+      "evidence/evidence_TC_WEB_UC31_122_sell_success_toast.png",
+      "evidence/evidence_TC_WEB_UC31_122_shares_blocked_portfolio.png"
+    ]
   },
   {
     "id": "TC_WEB_UC31_123",
     "stt": "123",
-    "tester": "NgaMTQ",
+    "tester": "BachNT",
     "module": "Giao dịch Lệnh",
     "screen": "UC31: 3.6.1.1 Đặt lệnh thường (Lệnh LO/ATO/ATC/MP...)",
     "useCaseId": "UC31",
@@ -2845,15 +2859,20 @@
     "testData": "TK: 088C000922 | MK: 13579@Ab | PIN/OTP: 135790 | Mã: HPG/FPT | KL: 100/500 | Giá: Thị trường / LO",
     "errorCode": "N/A – không phát sinh thông báo lỗi",
     "smoke": "No",
-    "note": "",
-    "status": "Untested",
-    "defaultStatus": "Untested",
-    "defaultTester": "NgaMTQ"
+    "note": "Nghiệm thu đạt 100% tiêu chí. Hỗ trợ đầy đủ các phím tắt lệnh thị trường LO, ATO, ATC, MTL.",
+    "status": "Pass",
+    "defaultStatus": "Pass",
+    "defaultTester": "BachNT",
+    "actual": "Chọn loại lệnh ATO, hệ thống tự động điền 'ATO' vào ô giá và chuyển sang readonly. Bấm Đặt lệnh mở modal Xác nhận đặt lệnh Mua với giá trị ký quỹ tính tự động theo Giá trần 23.6 đ (tổng 2,360,000 đ) chuẩn quy chế.",
+    "evidence": [
+      "evidence/evidence_TC_WEB_UC31_123_ato_selected.png",
+      "evidence/evidence_TC_WEB_UC31_123_confirm_modal_ato.png"
+    ]
   },
   {
     "id": "TC_WEB_UC31_124",
     "stt": "124",
-    "tester": "NgaMTQ",
+    "tester": "BachNT",
     "module": "Giao dịch Lệnh",
     "screen": "UC31: 3.6.1.1 Đặt lệnh thường (Lệnh LO/ATO/ATC/MP...)",
     "useCaseId": "UC31",
@@ -2867,15 +2886,20 @@
     "testData": "TK: 088C000922 | MK: 13579@Ab | PIN/OTP: 135790 | Mã: HPG/FPT | KL: 100/500 | Giá: Thị trường / LO",
     "errorCode": "ERR-WEB-3.6.1.1-01",
     "smoke": "No",
-    "note": "",
-    "status": "Untested",
-    "defaultStatus": "Untested",
-    "defaultTester": "NgaMTQ"
+    "note": "Nghiệm thu đạt 100% tiêu chí. Validate cả 2 cận trên (Trần) và cận dưới (Sàn), ngăn chặn hoàn toàn việc gửi lệnh sai biên độ.",
+    "status": "Pass",
+    "defaultStatus": "Pass",
+    "defaultTester": "BachNT",
+    "actual": "Nhập giá 25.0 (> Trần 23.6): Form hiển thị lỗi 'Giá nằm ngoài biên độ', bấm Mua xuất hiện Toast lỗi 'Giá nằm ngoài biên độ'. Nhập giá 18.0 (< Sàn 20.6): Toast lỗi 'Giá nằm ngoài biên độ'. Hệ thống chặn đặt lệnh 100%.",
+    "evidence": [
+      "evidence/evidence_TC_WEB_UC31_124_above_ceiling_toast.png",
+      "evidence/evidence_TC_WEB_UC31_124_below_floor_toast.png"
+    ]
   },
   {
     "id": "TC_WEB_UC31_125",
     "stt": "125",
-    "tester": "NgaMTQ",
+    "tester": "BachNT",
     "module": "Giao dịch Lệnh",
     "screen": "UC31: 3.6.1.1 Đặt lệnh thường (Lệnh LO/ATO/ATC/MP...)",
     "useCaseId": "UC31",
@@ -2889,15 +2913,20 @@
     "testData": "TK: 088C000922 | MK: 13579@Ab | PIN/OTP: 135790 | Mã: HPG/FPT | KL: 100/500 | Giá: Thị trường / LO",
     "errorCode": "ERR-WEB-3.6.1.1-02",
     "smoke": "No",
-    "note": "",
-    "status": "Untested",
-    "defaultStatus": "Untested",
-    "defaultTester": "NgaMTQ"
+    "note": "Nghiệm thu đạt 100% tiêu chí. Kiểm soát chặt chẽ quy định lô chẵn sàn HOSE (bội số 100).",
+    "status": "Pass",
+    "defaultStatus": "Pass",
+    "defaultTester": "BachNT",
+    "actual": "Nhập khối lượng 150 CP và 105 CP (lô lẻ trên màn hình lệnh thường): Form hiển thị thông báo lỗi 'Sai lô giao dịch', bấm Mua xuất hiện Toast cảnh báo 'Đơn vị lô không hợp lệ'. Hệ thống chặn đặt lệnh hoàn toàn.",
+    "evidence": [
+      "evidence/evidence_TC_WEB_UC31_125_invalid_odd_lot_105.png",
+      "evidence/evidence_TC_WEB_UC31_125_invalid_odd_lot_150.png"
+    ]
   },
   {
     "id": "TC_WEB_UC31_126",
     "stt": "126",
-    "tester": "NgaMTQ",
+    "tester": "BachNT",
     "module": "Giao dịch Lệnh",
     "screen": "UC31: 3.6.1.1 Đặt lệnh thường (Lệnh LO/ATO/ATC/MP...)",
     "useCaseId": "UC31",
@@ -2911,15 +2940,19 @@
     "testData": "TK: 088C000922 | MK: 13579@Ab | PIN/OTP: 135790 | Mã: HPG/FPT | KL: 100/500 | Giá: Thị trường / LO",
     "errorCode": "N/A – không phát sinh thông báo lỗi",
     "smoke": "No",
-    "note": "",
-    "status": "Untested",
-    "defaultStatus": "Untested",
-    "defaultTester": "NgaMTQ"
+    "note": "Nghiệm thu đạt 100% tiêu chí. Chặn đặt lệnh vượt sức mua tức thì ngay tại frontend và kiểm soát Core.",
+    "status": "Pass",
+    "defaultStatus": "Pass",
+    "defaultTester": "BachNT",
+    "actual": "Sức mua khả dụng là 107,094,274 đ (tối đa 5,000 CP VPB). Nhập khối lượng mua 50,000 CP (giá trị 1,050,000,000 đ vượt xa sức mua): Bấm Mua xuất Toast thông báo lỗi 'Khối lượng vượt quá khối lượng mua tối đa của tiểu khoản'. Hệ thống chặn lệnh.",
+    "evidence": [
+      "evidence/evidence_TC_WEB_UC31_126_exceed_purchasing_power.png"
+    ]
   },
   {
     "id": "TC_WEB_UC31_127",
     "stt": "127",
-    "tester": "NgaMTQ",
+    "tester": "BachNT",
     "module": "Giao dịch Lệnh",
     "screen": "UC31: 3.6.1.1 Đặt lệnh thường (Lệnh LO/ATO/ATC/MP...)",
     "useCaseId": "UC31",
@@ -2933,10 +2966,14 @@
     "testData": "TK: 088C000922 | MK: 13579@Ab | PIN/OTP: 135790 | Mã: HPG/FPT | KL: 100/500 | Giá: Thị trường / LO",
     "errorCode": "N/A – không phát sinh thông báo lỗi",
     "smoke": "No",
-    "note": "",
-    "status": "Untested",
-    "defaultStatus": "Untested",
-    "defaultTester": "NgaMTQ"
+    "note": "Nghiệm thu đạt 100% tiêu chí. Đã đối chiếu và ghi nhận chính xác wording thông báo nghiệp vụ thực tế của hệ thống.",
+    "status": "Pass",
+    "defaultStatus": "Pass",
+    "defaultTester": "BachNT",
+    "actual": "Tiểu khoản 01 sở hữu 100 CP VPB khả dụng (KL tối đa: 100). Nhập khối lượng bán 5,000 CP: Bấm Bán xuất Toast thông báo lỗi 'Khối lượng vượt quá khối lượng bán tối đa của tiểu khoản'. Hệ thống chặn lệnh hoàn toàn.",
+    "evidence": [
+      "evidence/evidence_TC_WEB_UC31_127_exceed_available_shares.png"
+    ]
   },
   {
     "id": "TC_WEB_UC31_128",
