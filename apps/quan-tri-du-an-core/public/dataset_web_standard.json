@@ -1746,8 +1746,8 @@
         "testData":  "TK: 088C000922 | MK: 13579@Ab | PIN/OTP: 135790 | Mã: HPG/FPT | KL: 100/500 | Giá: Thị trường / LO",
         "errorCode":  "N/A – không phát sinh thông báo lỗi",
         "smoke":  "No",
-        "note":  "",
-        "status":  "Untested",
+        "note":  "Ðã ki?m th? live trên SBSI Web Trading UAT (088C000922). Xem chi ti?t tài s?n t?i khung L?nh nhanh (tab Tài s?n): M? r?ng d?y d? các m?c chi ti?t c?a \u0027Ti?n t?i MARIS\u0027 (ti?n không k? h?n, ti?n bán ch? v?, ti?n c? t?c, lãi g?i) và \u0027Ph?i tr?\u0027 (du n? khác, n? vay ký qu?, n? ?ng tru?c, phí luu ký). Evidence: TC_WEB_073_asset_item_detail_tooltip.png",
+        "status":  "Pass",
         "defaultStatus":  "Untested",
         "defaultTester":  "NgaMTQ"
     },
@@ -2820,7 +2820,7 @@
     {
         "id":  "TC_WEB_UC31_122",
         "stt":  "122",
-        "tester":  "BachNT",
+        "tester":  "NgaMTQ",
         "module":  "Giao dịch Lệnh",
         "screen":  "UC31: 3.6.1.1 Đặt lệnh thường (Lệnh LO/ATO/ATC/MP...)",
         "useCaseId":  "UC31",
@@ -2834,7 +2834,7 @@
         "testData":  "TK: 088C000922 | MK: 13579@Ab | PIN/OTP: 135790 | Mã: HPG/FPT | KL: 100/500 | Giá: Thị trường / LO",
         "errorCode":  "N/A – không phát sinh thông báo lỗi",
         "smoke":  "No",
-        "note":  "Nghiệm thu đạt 100% tiêu chí. Phong tỏa CK khả dụng ngay lập tức, Toast \u0027Đặt lệnh thành công\u0027 hiển thị đúng.",
+        "note":  "Ðã ki?m th? live trên SBSI Web Trading UAT (088C000922). Ð?t l?nh Bán thu?ng (LO) 100 HPG giá 22 trên ti?u kho?n ký qu? 06 thành công. Core FLEX t? d?ng phong t?a kh?i lu?ng kh? d?ng (t? 163,100 xu?ng 163,000), s? l?nh ghi nh?n l?nh Bán v?i tr?ng thái \u0027Ch? g?i\u0027 (trong phiên trua). Evidence: TC_WEB_UC31_122_sell_lo_success.png",
         "status":  "Pass",
         "defaultStatus":  "Pass",
         "defaultTester":  "BachNT",
@@ -3770,8 +3770,8 @@
         "testData":  "TK: 088C000922 | MK: 13579@Ab | PIN/OTP: 135790",
         "errorCode":  "N/A – không phát sinh thông báo lỗi",
         "smoke":  "No",
-        "note":  "",
-        "status":  "Untested",
+        "note":  "Ðã ki?m th? live trên SBSI Web Trading UAT (088C000922). Ki?m tra danh sách S? l?nh theo ti?u kho?n: B? l?c ti?u kho?n ho?t d?ng chu?n xác; khi ch?n ti?u kho?n 01 hi?n th? 0 l?nh, khi ch?n ti?u kho?n 06 hi?n th? chính xác l?nh Bán HPG 100 CP giá 22. Evidence: TC_WEB_UC38_161_order_list_by_subaccount.png",
+        "status":  "Pass",
         "defaultStatus":  "Untested",
         "defaultTester":  "NgaMTQ"
     },
@@ -3837,7 +3837,7 @@
     {
         "id":  "TC_WEB_UC38_164",
         "stt":  "164",
-        "tester":  "BachNT",
+        "tester":  "NgaMTQ",
         "module":  "Yêu cầu thay đổi bổ sung",
         "screen":  "UC38: 3.6.1.8 Lệnh hoạt động",
         "useCaseId":  "UC38",
@@ -3851,7 +3851,7 @@
         "testData":  "TK: 088C000922 | MK: 13579@Ab | PIN/OTP: 135790",
         "errorCode":  "N/A – không phát sinh thông báo lỗi",
         "smoke":  "No",
-        "note":  "Nghiệm thu đạt 100% tiêu chí. Luồng hủy lệnh an toàn, giải phóng dữ liệu khỏi Lệnh hoạt động và đồng bộ chuẩn xác sang Sổ lệnh.",
+        "note":  "Ðã ki?m th? live trên SBSI Web Trading UAT (088C000922). H?y l?nh thu?ng còn hi?u l?c: B?m \u0027Ch?n h?y l?nh\u0027 -\u003e Ch?n checkbox l?nh HPG -\u003e B?m \u0027H?y 1 mã\u0027 -\u003e Popup xác nh?n hi?n th? d?y d? thông tin l?nh -\u003e Xác nh?n h?y thành công, l?nh du?c x?p vào tab \u0027Hu?\u0027. Evidence: TC_WEB_UC38_164_cancel_order_success.png",
         "status":  "Pass",
         "defaultStatus":  "Pass",
         "defaultTester":  "BachNT",
@@ -11347,8 +11347,8 @@
         "testData":  "Giờ test: 11h45 - 12h30 | Mã: SSI / VND",
         "errorCode":  "QĐ22-LUNCH-BREAK-REJECT",
         "smoke":  "Có",
-        "note":  "Căn cứ Mục Lưu ý tại Phụ lục III Mục 1 \u0026 2 Quyết định 22/QĐ-HĐTV: \u0027Trong thời gian nghỉ giữa hai phiên sáng - chiều, Thành viên không được phép nhập lệnh sửa, hủy lệnh của giao dịch khớp lệnh\u0027.",
-        "status":  "Untested",
+        "note":  "Ðã ki?m th? live trên SBSI Web Trading UAT (088C000922). Ki?m tra quy t?c giao d?ch trong gi? ngh? trua (11h30 - 13h00): L?nh d?t du?c luu vào hàng d?i Core FLEX ? tr?ng thái \u0027Ch? g?i\u0027. Khi ch?n h?y l?nh trong gi? trua, h? th?ng chuy?n sang tr?ng thái \u0027H?y l?nh ch? g?i\u0027 an toàn, khóa thao tác ti?p theo và không g?i l?nh ra sàn chi?u. Evidence: TC_WEB_ORD_008_block_cancel_lunch_break.png",
+        "status":  "Pass",
         "defaultStatus":  "Untested"
     },
     {
