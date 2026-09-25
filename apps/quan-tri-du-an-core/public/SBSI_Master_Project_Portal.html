@@ -4806,104 +4806,298 @@
         </div>
       </div>
 
-      <!-- SECTION 4: MILESTONES & ROAD-TO-GO-LIVE ROADMAP -->
-      <div style="margin-bottom: 24px;">
-        <div class="section-head" style="margin-bottom: 12px;">
-          <div class="section-title">
-            <span>🏁 LỘ TRÌNH CỘT MỐC TRỌNG YẾU (STAGE-GATE ROADMAP TO GO-LIVE)</span>
-            <span class="badge-num">6 CỘT MỐC CỐT LÕI</span>
+      <!-- SECTION 4: STAGE-GATE ROADMAP TO GO-LIVE (11 GIAI ĐOẠN CORE FLEX FSS) -->
+      <div class="po-main-card" style="margin-bottom: 24px;">
+        <div class="po-card-head">
+          <div class="po-card-title">
+            <span>🏁</span> LỘ TRÌNH 11 CỘT MỐC GIAI ĐOẠN DỰ ÁN CORE FLEX (THEO HỢP ĐỒNG & THỰC TẾ TRIỂN KHAI)
+            <span class="badge-num" style="background:var(--maris-orange); color:#fff; font-weight:800;">11 GIAI ĐOẠN CỐT LÕI</span>
           </div>
-          <span style="font-size:12px; color:var(--text-secondary);">Mô hình kiểm soát cổng chất lượng (Stage Gate Approval)</span>
+          <span style="font-size:12px; color:var(--text-secondary);">Mô hình kiểm soát cổng chất lượng Stage-Gate phê duyệt từ chuẩn bị đến Go-Live 09/11/2026</span>
         </div>
 
-        <div class="stagegate-timeline">
+        <div class="stagegate-timeline" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); display: grid; gap: 16px;">
           <!-- Gate 1 -->
-          <div class="stagegate-card gate-completed">
-            <div class="gate-top">
-              <span class="gate-phase">Cột Mốc 01</span>
-              <span class="gate-badge b-done">✅ HOÀN THÀNH 100%</span>
+          <div class="stagegate-card gate-completed" style="border-top: 4px solid var(--green-buy); background: var(--bg-card); border-radius: 10px; padding: 16px; border: 1px solid var(--border-card);">
+            <div class="gate-top" style="display:flex; justify-content:space-between; margin-bottom:8px;">
+              <span class="gate-phase" style="font-weight:700; color:var(--text-secondary); font-size:12px;">Giai Đoạn 01</span>
+              <span class="gate-badge b-done" style="background:var(--green-bg); color:var(--green-buy); font-size:11px; padding:2px 8px; border-radius:12px; font-weight:700;">✅ HOÀN THÀNH</span>
             </div>
-            <h4 class="gate-title">Khảo Sát GAP & Phân Tích Nghiệp Vụ</h4>
-            <p class="gate-desc">Hoàn thiện 100% tài liệu phân tích khoảng cách nghiệp vụ (GAP Analysis), tài liệu FSD, cấu trúc bảng mã và luồng đối chiếu Sở HOSE/HNX/VSDC.</p>
-            <div class="gate-footer">
-              <span>01/01/2026 - 31/03/2026</span>
-              <span class="gate-pic">PIC: SBSI BA & FSS Architect</span>
+            <h4 class="gate-title" style="font-size:15px; font-weight:800; color:var(--text-white); margin-bottom:6px;">Chuẩn Bị Dự Án (Tuần 1)</h4>
+            <p class="gate-desc" style="font-size:12px; color:var(--text-secondary); line-height:1.4; margin-bottom:12px;">Kickoff nội bộ FSS, lập kế hoạch khung, chuẩn bị nguồn lực và môi trường đào tạo hệ thống Core FLEX.</p>
+            <div class="gate-footer" style="display:flex; justify-content:space-between; font-size:11px; color:var(--text-muted); border-top:1px solid var(--border-card); padding-top:8px;">
+              <span>01/06/2026 - 05/06/2026</span>
+              <span class="gate-pic" style="color:var(--text-secondary); font-weight:600;">SBSI & FSS Team</span>
             </div>
           </div>
 
           <!-- Gate 2 -->
-          <div class="stagegate-card gate-completed">
-            <div class="gate-top">
-              <span class="gate-phase">Cột Mốc 02</span>
-              <span class="gate-badge b-done">✅ HOÀN THÀNH 100%</span>
+          <div class="stagegate-card gate-completed" style="border-top: 4px solid var(--green-buy); background: var(--bg-card); border-radius: 10px; padding: 16px; border: 1px solid var(--border-card);">
+            <div class="gate-top" style="display:flex; justify-content:space-between; margin-bottom:8px;">
+              <span class="gate-phase" style="font-weight:700; color:var(--text-secondary); font-size:12px;">Giai Đoạn 02</span>
+              <span class="gate-badge b-done" style="background:var(--green-bg); color:var(--green-buy); font-size:11px; padding:2px 8px; border-radius:12px; font-weight:700;">✅ HOÀN THÀNH</span>
             </div>
-            <h4 class="gate-title">Cài Đặt Core FLEX & Cổng Kết Nối API</h4>
-            <p class="gate-desc">Triển khai hạ tầng máy chủ, cấu hình tham số hệ thống Core FLEX BackOffice, kết nối thông luồng API Gateway và kênh thanh toán Ngân hàng.</p>
-            <div class="gate-footer">
-              <span>01/04/2026 - 30/06/2026</span>
-              <span class="gate-pic">PIC: IT Infra & FSS Core Team</span>
+            <h4 class="gate-title" style="font-size:15px; font-weight:800; color:var(--text-white); margin-bottom:6px;">Khởi Động Dự Án (Kick-off)</h4>
+            <p class="gate-desc" style="font-size:12px; color:var(--text-secondary); line-height:1.4; margin-bottom:12px;">Họp khởi động chính thức dự án chuyển đổi Core giữa Ban Tổng Giám Đốc SBSI và Ban Lãnh Đạo FSS.</p>
+            <div class="gate-footer" style="display:flex; justify-content:space-between; font-size:11px; color:var(--text-muted); border-top:1px solid var(--border-card); padding-top:8px;">
+              <span>01/06/2026 - 05/06/2026</span>
+              <span class="gate-pic" style="color:var(--text-secondary); font-weight:600;">BOD SBSI & FSS</span>
             </div>
           </div>
 
           <!-- Gate 3 -->
-          <div class="stagegate-card gate-active">
-            <div class="gate-top">
-              <span class="gate-phase">Cột Mốc 03</span>
-              <span class="gate-badge b-active">🟡 GIAI ĐOẠN HIỆN TẠI (ACTIVE)</span>
+          <div class="stagegate-card gate-completed" style="border-top: 4px solid var(--green-buy); background: var(--bg-card); border-radius: 10px; padding: 16px; border: 1px solid var(--border-card);">
+            <div class="gate-top" style="display:flex; justify-content:space-between; margin-bottom:8px;">
+              <span class="gate-phase" style="font-weight:700; color:var(--text-secondary); font-size:12px;">Giai Đoạn 03</span>
+              <span class="gate-badge b-done" style="background:var(--green-bg); color:var(--green-buy); font-size:11px; padding:2px 8px; border-radius:12px; font-weight:700;">✅ HOÀN THÀNH</span>
             </div>
-            <h4 class="gate-title">Kiểm Thử Nghiệm Thu Chấp Nhận UAT Vòng 1</h4>
-            <p class="gate-desc">Triển khai nghiệm thu toàn diện 894 kịch bản Front-End (FO: Mobile 353, Web 505, UI/UX 36). Mục tiêu Pass rate >= 95% trước khi khóa vòng 1.</p>
-            <div class="gate-footer">
-              <span style="color:var(--maris-orange); font-weight:700;">01/07/2026 - 30/09/2026</span>
-              <span class="gate-pic">PIC: PMO, QA & PO Team</span>
+            <h4 class="gate-title" style="font-size:15px; font-weight:800; color:var(--text-white); margin-bottom:6px;">Đào Tạo & Phân Tích Tích Hợp</h4>
+            <p class="gate-desc" style="font-size:12px; color:var(--text-secondary); line-height:1.4; margin-bottom:12px;">Đào tạo hệ thống, chốt 9 đầu việc tích hợp: Phần mềm Kế toán Bravo, SMS/Email, K8s, eKYC, CoreBank MSB, BIDV...</p>
+            <div class="gate-footer" style="display:flex; justify-content:space-between; font-size:11px; color:var(--text-muted); border-top:1px solid var(--border-card); padding-top:8px;">
+              <span>08/06/2026 - 10/07/2026</span>
+              <span class="gate-pic" style="color:var(--text-secondary); font-weight:600;">Khối NV & IT GPS</span>
             </div>
           </div>
 
           <!-- Gate 4 -->
-          <div class="stagegate-card gate-upcoming">
-            <div class="gate-top">
-              <span class="gate-phase">Cột Mốc 04</span>
-              <span class="gate-badge b-plan">⏳ SẮP DIỄN RA (PLANNED)</span>
+          <div class="stagegate-card gate-completed" style="border-top: 4px solid var(--green-buy); background: var(--bg-card); border-radius: 10px; padding: 16px; border: 1px solid var(--border-card);">
+            <div class="gate-top" style="display:flex; justify-content:space-between; margin-bottom:8px;">
+              <span class="gate-phase" style="font-weight:700; color:var(--text-secondary); font-size:12px;">Giai Đoạn 04</span>
+              <span class="gate-badge b-done" style="background:var(--green-bg); color:var(--green-buy); font-size:11px; padding:2px 8px; border-radius:12px; font-weight:700;">✅ HOÀN THÀNH</span>
             </div>
-            <h4 class="gate-title">Chuyển Đổi Dữ Liệu Lịch Sử & Kiểm Thử Tải</h4>
-            <p class="gate-desc">Chạy thử nghiệm chuyển đổi dữ liệu khách hàng, số dư tài khoản, cổ phiếu lịch sử và stress test 50.000 kết nối đồng thời trên Web & Mobile App.</p>
-            <div class="gate-footer">
-              <span>15/09/2026 - 15/10/2026</span>
-              <span class="gate-pic">PIC: Data Team & DevOps</span>
+            <h4 class="gate-title" style="font-size:15px; font-weight:800; color:var(--text-white); margin-bottom:6px;">Chỉnh Sửa GAP & Chuẩn Bị UAT</h4>
+            <p class="gate-desc" style="font-size:12px; color:var(--text-secondary); line-height:1.4; margin-bottom:12px;">FSS bổ sung các phân hệ MSP, CCP, NPF và hoàn thành 8 tuần phát triển tính năng GAP theo yêu cầu SBSI.</p>
+            <div class="gate-footer" style="display:flex; justify-content:space-between; font-size:11px; color:var(--text-muted); border-top:1px solid var(--border-card); padding-top:8px;">
+              <span>13/07/2026 - 04/09/2026</span>
+              <span class="gate-pic" style="color:var(--text-secondary); font-weight:600;">FSS Dev Team</span>
             </div>
           </div>
 
           <!-- Gate 5 -->
-          <div class="stagegate-card gate-upcoming">
-            <div class="gate-top">
-              <span class="gate-phase">Cột Mốc 05</span>
-              <span class="gate-badge b-plan">⏳ KẾ HOẠCH (PLANNED)</span>
+          <div class="stagegate-card gate-completed" style="border-top: 4px solid var(--green-buy); background: var(--bg-card); border-radius: 10px; padding: 16px; border: 1px solid var(--border-card);">
+            <div class="gate-top" style="display:flex; justify-content:space-between; margin-bottom:8px;">
+              <span class="gate-phase" style="font-weight:700; color:var(--text-secondary); font-size:12px;">Giai Đoạn 05</span>
+              <span class="gate-badge b-done" style="background:var(--green-bg); color:var(--green-buy); font-size:11px; padding:2px 8px; border-radius:12px; font-weight:700;">✅ HOÀN THÀNH</span>
             </div>
-            <h4 class="gate-title">Diễn Tập Chuyển Đổi Thực Chiến (Cutover Dry-Run)</h4>
-            <p class="gate-desc">Thực hiện 2 đợt diễn tập chuyển đổi hệ thống quy mô toàn công ty ngoài giờ giao dịch (Thứ Bảy, Chủ Nhật) kèm kịch bản phương án ứng phó khẩn cấp Rollback 15 phút.</p>
-            <div class="gate-footer">
-              <span>16/10/2026 - 31/10/2026</span>
-              <span class="gate-pic">PIC: PMO & Toàn Bộ Khối Vận Hành</span>
+            <h4 class="gate-title" style="font-size:15px; font-weight:800; color:var(--text-white); margin-bottom:6px;">Chuẩn Bị Hệ Thống UAT</h4>
+            <p class="gate-desc" style="font-size:12px; color:var(--text-secondary); line-height:1.4; margin-bottom:12px;">Dựng môi trường server UAT, cài đặt client, phân quyền tài khoản kiểm thử cho toàn bộ 29 chuyên viên nội bộ.</p>
+            <div class="gate-footer" style="display:flex; justify-content:space-between; font-size:11px; color:var(--text-muted); border-top:1px solid var(--border-card); padding-top:8px;">
+              <span>13/07/2026 - 14/08/2026</span>
+              <span class="gate-pic" style="color:var(--text-secondary); font-weight:600;">IT Infra & FSS</span>
             </div>
           </div>
 
           <!-- Gate 6 -->
-          <div class="stagegate-card gate-upcoming" style="border-top-color: var(--green-buy);">
-            <div class="gate-top">
-              <span class="gate-phase" style="color:var(--green-buy);">Cột Mốc 06</span>
-              <span class="gate-badge" style="background:var(--green-bg); color:var(--green-buy); border:1px solid var(--green-border);">🎯 GO-LIVE CHÍNH THỨC</span>
+          <div class="stagegate-card gate-active" style="border-top: 4px solid var(--maris-orange); background: var(--bg-card); border-radius: 10px; padding: 16px; border: 1px solid var(--maris-orange); box-shadow:0 0 15px rgba(228, 95, 53, 0.2);">
+            <div class="gate-top" style="display:flex; justify-content:space-between; margin-bottom:8px;">
+              <span class="gate-phase" style="font-weight:800; color:var(--maris-orange); font-size:12px;">Giai Đoạn 06</span>
+              <span class="gate-badge b-active" style="background:rgba(228, 95, 53, 0.15); color:var(--maris-orange); font-size:11px; padding:2px 8px; border-radius:12px; font-weight:800; border:1px solid var(--maris-orange);">🟡 ĐANG THỰC HIỆN (ACTIVE)</span>
             </div>
-            <h4 class="gate-title">Khai Trương Hệ Thống Mới SBSI MARIS</h4>
-            <p class="gate-desc">Chính thức mở cổng giao dịch hệ thống mới cho toàn bộ khách hàng cá nhân và tổ chức. Đóng băng vĩnh viễn Core cũ, chuyển giao vận hành chuẩn.</p>
-            <div class="gate-footer">
-              <span style="color:var(--green-buy); font-weight:800;">09/11/2026 (THỨ HAI)</span>
-              <span class="gate-pic">PIC: Ban Lãnh Đạo SBSI & FSS</span>
+            <h4 class="gate-title" style="font-size:15px; font-weight:800; color:var(--text-white); margin-bottom:6px;">Kiểm Thử UAT Người Dùng (Tuần 14-19)</h4>
+            <p class="gate-desc" style="font-size:12px; color:var(--text-secondary); line-height:1.4; margin-bottom:12px;">Kiểm thử tích hợp UAT, nghiệm thu GAP Lần 1 & 2. Chiến dịch 10 ngày nước rút (25/09 - 06/10) giải quyết 3.400 case tồn.</p>
+            <div class="gate-footer" style="display:flex; justify-content:space-between; font-size:11px; color:var(--text-muted); border-top:1px solid var(--border-card); padding-top:8px;">
+              <span style="color:var(--maris-orange); font-weight:700;">03/09/2026 - 28/10/2026</span>
+              <span class="gate-pic" style="color:var(--text-white); font-weight:700;">29 Tester NV & IT</span>
+            </div>
+          </div>
+
+          <!-- Gate 7 -->
+          <div class="stagegate-card gate-active" style="border-top: 4px solid #3B82F6; background: var(--bg-card); border-radius: 10px; padding: 16px; border: 1px solid var(--border-card);">
+            <div class="gate-top" style="display:flex; justify-content:space-between; margin-bottom:8px;">
+              <span class="gate-phase" style="font-weight:700; color:#3B82F6; font-size:12px;">Giai Đoạn 07</span>
+              <span class="gate-badge" style="background:rgba(59, 130, 246, 0.15); color:#3B82F6; font-size:11px; padding:2px 8px; border-radius:12px; font-weight:700;">🟡 ĐANG TRIỂN KHAI</span>
+            </div>
+            <h4 class="gate-title" style="font-size:15px; font-weight:800; color:var(--text-white); margin-bottom:6px;">Chuẩn Bị Môi Trường Sản Xuất (PRO)</h4>
+            <p class="gate-desc" style="font-size:12px; color:var(--text-secondary); line-height:1.4; margin-bottom:12px;">Dựng server PRO, mở firewall thông mạng MSB, BIDV, Bravo, Email delivery, AML World-Check, VCB, 2 Sở và VSDC.</p>
+            <div class="gate-footer" style="display:flex; justify-content:space-between; font-size:11px; color:var(--text-muted); border-top:1px solid var(--border-card); padding-top:8px;">
+              <span>09/08/2026 - 16/10/2026</span>
+              <span class="gate-pic" style="color:var(--text-secondary); font-weight:600;">IT Infra & Sec</span>
+            </div>
+          </div>
+
+          <!-- Gate 8 -->
+          <div class="stagegate-card gate-active" style="border-top: 4px solid #8B5CF6; background: var(--bg-card); border-radius: 10px; padding: 16px; border: 1px solid var(--border-card);">
+            <div class="gate-top" style="display:flex; justify-content:space-between; margin-bottom:8px;">
+              <span class="gate-phase" style="font-weight:700; color:#8B5CF6; font-size:12px;">Giai Đoạn 08</span>
+              <span class="gate-badge" style="background:rgba(139, 92, 246, 0.15); color:#8B5CF6; font-size:11px; padding:2px 8px; border-radius:12px; font-weight:700;">🟡 ĐANG THÔNG SÀN</span>
+            </div>
+            <h4 class="gate-title" style="font-size:15px; font-weight:800; color:var(--text-white); margin-bottom:6px;">Test Thông Sàn HSX, HNX & VSDC</h4>
+            <p class="gate-desc" style="font-size:12px; color:var(--text-secondary); line-height:1.4; margin-bottom:12px;">Đã hoàn thành thi lấy xác nhận VSDC; Đang thực hiện test thông sàn lệnh KRX và thi lấy chứng chỉ kết nối 2 Sở.</p>
+            <div class="gate-footer" style="display:flex; justify-content:space-between; font-size:11px; color:var(--text-muted); border-top:1px solid var(--border-card); padding-top:8px;">
+              <span>15/06/2026 - 08/10/2026</span>
+              <span class="gate-pic" style="color:var(--text-secondary); font-weight:600;">SBSI, FSS, HSX, HNX</span>
+            </div>
+          </div>
+
+          <!-- Gate 9 -->
+          <div class="stagegate-card gate-upcoming" style="border-top: 4px solid #6B7280; background: var(--bg-card); border-radius: 10px; padding: 16px; border: 1px solid var(--border-card);">
+            <div class="gate-top" style="display:flex; justify-content:space-between; margin-bottom:8px;">
+              <span class="gate-phase" style="font-weight:700; color:var(--text-muted); font-size:12px;">Giai Đoạn 09</span>
+              <span class="gate-badge b-plan" style="background:var(--bg-card-sub); color:var(--text-muted); font-size:11px; padding:2px 8px; border-radius:12px; font-weight:700;">⏳ KẾ HOẠCH</span>
+            </div>
+            <h4 class="gate-title" style="font-size:15px; font-weight:800; color:var(--text-white); margin-bottom:6px;">Convert Dữ Liệu & Chạy Song Song</h4>
+            <p class="gate-desc" style="font-size:12px; color:var(--text-secondary); line-height:1.4; margin-bottom:12px;">Chuyển đổi số dư tiền, cổ phiếu và danh mục khách hàng; Diễn tập Cutover R1 & R2 ngoài giờ giao dịch.</p>
+            <div class="gate-footer" style="display:flex; justify-content:space-between; font-size:11px; color:var(--text-muted); border-top:1px solid var(--border-card); padding-top:8px;">
+              <span>18/10/2026 - 30/10/2026</span>
+              <span class="gate-pic" style="color:var(--text-secondary); font-weight:600;">PMO, Data & Kế Toán</span>
+            </div>
+          </div>
+
+          <!-- Gate 10 -->
+          <div class="stagegate-card gate-upcoming" style="border-top: 4px solid var(--green-buy); background: var(--bg-card); border-radius: 10px; padding: 16px; border: 2px solid var(--green-buy); box-shadow:0 0 15px rgba(0, 183, 104, 0.2);">
+            <div class="gate-top" style="display:flex; justify-content:space-between; margin-bottom:8px;">
+              <span class="gate-phase" style="font-weight:800; color:var(--green-buy); font-size:12px;">Giai Đoạn 10</span>
+              <span class="gate-badge" style="background:var(--green-bg); color:var(--green-buy); font-size:11px; padding:2px 8px; border-radius:12px; font-weight:800; border:1px solid var(--green-border);">🎯 GO-LIVE CHÍNH THỨC</span>
+            </div>
+            <h4 class="gate-title" style="font-size:15px; font-weight:800; color:var(--text-white); margin-bottom:6px;">Khai Trương Hệ Thống SBSI MARIS</h4>
+            <p class="gate-desc" style="font-size:12px; color:var(--text-secondary); line-height:1.4; margin-bottom:12px;">Chính thức mở cổng giao dịch hệ thống mới cho toàn thị trường. Đóng băng hệ thống cũ, bàn giao vận hành.</p>
+            <div class="gate-footer" style="display:flex; justify-content:space-between; font-size:11px; color:var(--text-muted); border-top:1px solid var(--border-card); padding-top:8px;">
+              <span style="color:var(--green-buy); font-weight:800;">02/11/2026 - 13/11/2026 (TARGET 09/11)</span>
+              <span class="gate-pic" style="color:var(--green-buy); font-weight:800;">BOD SBSI & FSS</span>
+            </div>
+          </div>
+
+          <!-- Gate 11 -->
+          <div class="stagegate-card gate-upcoming" style="border-top: 4px solid #6B7280; background: var(--bg-card); border-radius: 10px; padding: 16px; border: 1px solid var(--border-card);">
+            <div class="gate-top" style="display:flex; justify-content:space-between; margin-bottom:8px;">
+              <span class="gate-phase" style="font-weight:700; color:var(--text-muted); font-size:12px;">Giai Đoạn 11</span>
+              <span class="gate-badge b-plan" style="background:var(--bg-card-sub); color:var(--text-muted); font-size:11px; padding:2px 8px; border-radius:12px; font-weight:700;">⏳ KẾ HOẠCH</span>
+            </div>
+            <h4 class="gate-title" style="font-size:15px; font-weight:800; color:var(--text-white); margin-bottom:6px;">Hỗ Trợ Sau Go-Live (Tuần 24-26)</h4>
+            <p class="gate-desc" style="font-size:12px; color:var(--text-secondary); line-height:1.4; margin-bottom:12px;">Đội ngũ chuyên trách trực chiến 24/7 bảo hành, hỗ trợ người dùng, tối ưu hóa hiệu năng và kết thúc hợp đồng.</p>
+            <div class="gate-footer" style="display:flex; justify-content:space-between; font-size:11px; color:var(--text-muted); border-top:1px solid var(--border-card); padding-top:8px;">
+              <span>16/11/2026 - 04/12/2026</span>
+              <span class="gate-pic" style="color:var(--text-secondary); font-weight:600;">Support 24/7</span>
             </div>
           </div>
         </div>
+
       </div>
 
-      <!-- SECTION 5: WORKSTREAM PROGRESS & HEALTH MATRIX -->
+
+      <!-- SECTION 4B: BẢNG CHI TIẾT TIẾN ĐỘ TỪNG NGƯỜI THEO NGÀY (DAILY UAT SPRINT TRACKER) -->
+      <div class="po-main-card" id="card_daily_uat_tracker" style="margin-bottom: 24px; border: 1px solid var(--border-card); background: var(--bg-card); border-radius: var(--radius-card); padding: 20px;">
+        <div class="po-card-head" style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:16px; margin-bottom: 16px;">
+          <div>
+            <div class="po-card-title" style="font-size: 16px; font-weight: 800; color: var(--text-white); display:flex; align-items:center; gap:8px;">
+              <span>🔥</span> CHI TIẾT TIẾN ĐỘ TỪNG NGƯỜI THEO NGÀY (CHIẾN DỊCH 10 NGÀY UAT NƯỚC RÚT: 25/09 - 06/10)
+            </div>
+            <div style="font-size: 12.5px; color: var(--text-secondary); margin-top: 4px;">
+              Theo dõi định mức hàng ngày: Khối Nghiệp Vụ (<strong>40.1 case/ngày</strong>) • Khối IT / GPS (<strong>36.9 case/ngày</strong>). Tự tính delta tăng thêm của Vendor + Nội bộ.
+            </div>
+          </div>
+
+          <!-- TAB SWITCHER: NGHIỆP VỤ / IT / ALL -->
+          <div style="display:flex; gap:8px; align-items:center;">
+            <button class="btn btn-orange" id="btn_tracker_nv" onclick="switchUatTrackerTab('nghiepVu')" style="font-size:12px; font-weight:700; padding:6px 14px; border-radius:20px;">
+              🏢 Khối Nghiệp Vụ (20 PIC)
+            </button>
+            <button class="btn btn-dark" id="btn_tracker_it" onclick="switchUatTrackerTab('it')" style="font-size:12px; font-weight:700; padding:6px 14px; border-radius:20px;">
+              💻 Khối IT / GPS (9 PIC)
+            </button>
+            <button class="btn btn-dark" id="btn_tracker_all" onclick="switchUatTrackerTab('all')" style="font-size:12px; font-weight:700; padding:6px 14px; border-radius:20px;">
+              👥 Toàn Dự Án (29 PIC)
+            </button>
+          </div>
+        </div>
+
+        <!-- SUMMARY STATS STRIP FOR TRACKER -->
+        <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap:12px; margin-bottom:16px;" id="tracker_summary_strip">
+          <!-- Filled dynamically -->
+        </div>
+
+        <div style="overflow-x: auto; max-height: 520px; border:1px solid var(--border-card); border-radius:8px;">
+          <table class="report-table" id="table_daily_uat_tracker" style="width:100%; border-collapse:collapse; font-size:12px; text-align:center;">
+            <thead style="position: sticky; top: 0; background: var(--bg-card-sub); z-index: 5;">
+              <tr>
+                <th style="width: 40px; padding:10px 4px;">STT</th>
+                <th style="width: 110px; text-align:left; padding:10px 8px;">Tên (PIC)</th>
+                <th style="width: 90px;">Bộ Phận</th>
+                <th style="width: 80px;">Tổng Phụ Trách</th>
+                <th style="width: 80px;">Chưa Test (Gốc)</th>
+                <th style="width: 80px; color:var(--maris-orange);">Target/Ngày</th>
+                <th style="width: 85px; font-weight:800; color:#EF4444;">Còn Lại</th>
+                <th style="width: 55px; background:rgba(228, 95, 53, 0.15); color:var(--maris-orange); border:1px solid rgba(228, 95, 53, 0.4);">N1 25/09</th>
+                <th style="width: 50px;">N2 26/09</th>
+                <th style="width: 50px;">N3 28/09</th>
+                <th style="width: 50px;">N4 29/09</th>
+                <th style="width: 50px;">N5 30/09</th>
+                <th style="width: 50px;">N6 01/10</th>
+                <th style="width: 50px;">N7 02/10</th>
+                <th style="width: 50px;">N8 03/10</th>
+                <th style="width: 50px;">N9 05/10</th>
+                <th style="width: 50px;">N10 06/10</th>
+                <th style="width: 75px; font-weight:700;">Tổng Thực Tế</th>
+                <th style="width: 100px;">% Hoàn Thành</th>
+              </tr>
+            </thead>
+            <tbody id="tbody_daily_uat_tracker">
+              <!-- Rendered dynamically -->
+            </tbody>
+            <tfoot id="tfoot_daily_uat_tracker" style="position: sticky; bottom: 0; background: var(--bg-card-sub); font-weight:800; border-top:2px solid var(--border-card);">
+              <!-- Total row -->
+            </tfoot>
+          </table>
+        </div>
+      </div>
+
+
+
+      <!-- SECTION 4C: MA TRẬN 179 CÔNG VIỆC DỰ ÁN TỪ KEHOACHDA FLEX (WBS TASK EXPLORER) -->
+      <div class="po-main-card" id="card_flex_wbs_tasks" style="margin-bottom: 24px; border: 1px solid var(--border-card); background: var(--bg-card); border-radius: var(--radius-card); padding: 20px;">
+        <div class="po-card-head" style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:16px; margin-bottom: 16px;">
+          <div>
+            <div class="po-card-title" style="font-size: 16px; font-weight: 800; color: var(--text-white); display:flex; align-items:center; gap:8px;">
+              <span>📑</span> MA TRẬN 179 HẠNG MỤC CÔNG VIỆC CORE FLEX (DỮ LIỆU TỪ SHEET KEHOACHDA FLEX 🔒)
+            </div>
+            <div style="font-size: 12.5px; color: var(--text-secondary); margin-top: 4px;">
+              Toàn bộ kế hoạch khung và chi tiết phân rã công việc (Work Breakdown Structure) kết nối đối tác FSS.
+            </div>
+          </div>
+
+          <!-- FILTERS & SEARCH -->
+          <div style="display:flex; gap:10px; align-items:center; flex-wrap:wrap;">
+            <input type="text" id="wbs_search_input" oninput="filterWbsTasks()" placeholder="🔍 Tìm công việc, phân hệ (Bravo, SMS, eKYC, MSB...)..." class="form-control" style="font-size:12px; padding:6px 12px; border-radius:6px; background:var(--bg-card-sub); color:var(--text-white); border:1px solid var(--border-card); width:240px;">
+            
+            <select id="wbs_phase_filter" onchange="filterWbsTasks()" class="form-control" style="font-size:12px; padding:6px 10px; border-radius:6px; background:var(--bg-card-sub); color:var(--text-white); border:1px solid var(--border-card);">
+              <option value="ALL">Tất cả 11 Giai đoạn</option>
+              <option value="Chuẩn bị dự án (Tuần 1)">Chuẩn bị dự án (Tuần 1)...</option><option value="Khởi động dự án">Khởi động dự án...</option><option value="Đào tạo hệ thống và Phân tích yêu cầu tích hợp (Tuần 2-6)">Đào tạo hệ thống và Phân tích yêu cầu tí...</option><option value="Chỉnh sửa ứng dụng (Tuần 6-13) + Chuẩn bị UAT">Chỉnh sửa ứng dụng (Tuần 6-13) + Chuẩn b...</option><option value="Chuẩn bị cho kiểm thử ứng dụng mức người sử dụng
+(UAT)  (Tuần 6-13)">Chuẩn bị cho kiểm thử ứng dụng mức người...</option><option value="Kiểm thử mức người sử dụng (UAT) (Tuần 14-19)">Kiểm thử mức người sử dụng (UAT) (Tuần 1...</option><option value="Chuẩn bị môi trường PRO  (Tuần 10-19)">Chuẩn bị môi trường PRO  (Tuần 10-19)...</option><option value="Test thông sàn với HSX & HNX và VSDC  (Tuần 3-18)">Test thông sàn với HSX & HNX và VSDC  (T...</option><option value="Convert dữ liệu, vận hành song song  (Tuần 20-21)">Convert dữ liệu, vận hành song song  (Tu...</option><option value="Golive  (Tuần 22-23)">Golive  (Tuần 22-23)...</option><option value="Hỗ trợ sau Golive  (Tuần 24-26)">Hỗ trợ sau Golive  (Tuần 24-26)...</option>
+            </select>
+
+            <select id="wbs_status_filter" onchange="filterWbsTasks()" class="form-control" style="font-size:12px; padding:6px 10px; border-radius:6px; background:var(--bg-card-sub); color:var(--text-white); border:1px solid var(--border-card);">
+              <option value="ALL">Tất cả trạng thái</option>
+              <option value="Done">✅ Done (Đã xong)</option>
+              <option value="Doing">🟡 Doing (Đang làm)</option>
+              <option value="Plan">⏳ Plan (Kế hoạch)</option>
+            </select>
+            
+            <span class="badge-num" id="wbs_count_badge" style="background:var(--bg-card-sub); border:1px solid var(--border-card); font-size:12px;">179 công việc</span>
+          </div>
+        </div>
+
+        <div style="overflow-x: auto; max-height: 480px; border:1px solid var(--border-card); border-radius:8px;">
+          <table class="report-table" id="table_flex_wbs" style="width:100%; border-collapse:collapse; font-size:12.5px;">
+            <thead style="position: sticky; top: 0; background: var(--bg-card-sub); z-index: 5;">
+              <tr>
+                <th style="width: 45px; text-align:center; padding:10px 4px;">#</th>
+                <th style="width: 200px;">Giai Đoạn (Phase)</th>
+                <th style="width: 250px;">Công Việc Chính</th>
+                <th style="width: 280px;">Nội Dung Chi Tiết / Phân Hệ</th>
+                <th style="width: 95px; text-align:center;">Bắt Đầu (KH)</th>
+                <th style="width: 95px; text-align:center;">Kết Thúc (KH)</th>
+                <th style="width: 95px; text-align:center;">Thực Tế Xong</th>
+                <th style="width: 90px; text-align:center;">Trạng Thái</th>
+              </tr>
+            </thead>
+            <tbody id="tbody_flex_wbs">
+              <!-- Rendered dynamically -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+<!-- SECTION 5: WORKSTREAM PROGRESS & HEALTH MATRIX -->
       <div class="po-main-card" style="margin-bottom: 24px;">
         <div class="po-card-head">
           <div class="po-card-title">
@@ -8537,6 +8731,9 @@ Bạn có chắc chắn muốn tiếp tục?`)) {
     // PROJECT STATUS REPORT LOGIC & DATA BINDING
     // =========================================================
     function initProjectStatusReport() {
+      if (typeof renderDailyUatTracker === 'function') renderDailyUatTracker();
+      if (typeof filterWbsTasks === 'function') filterWbsTasks();
+
       // 1. Calculate Countdown to Go-Live (09/11/2026)
       try {
         const goLiveDate = new Date('2026-11-09T08:00:00');
@@ -8649,6 +8846,10 @@ Bạn có chắc chắn muốn tiếp tục?`)) {
     }
 
             function updateProjectStatusReport() {
+      // Trigger Daily UAT Tracker & WBS Tasks
+      if (typeof renderDailyUatTracker === 'function') renderDailyUatTracker();
+      if (typeof filterWbsTasks === 'function') filterWbsTasks();
+
       // 1. Get Live Tester Matrix
       const matrixDefs = (typeof calculateTesterMatrix === 'function') ? calculateTesterMatrix() : {
         ngamtq: { name: '↳ Core Trading (Giao Dịch Lệnh App/Web)', pic: '👤 NgaMTQ', total: 156, pass: 19, fail: 0, todayPass: 0, todayFail: 0 },
@@ -10398,6 +10599,198 @@ Thao tác này sẽ đồng bộ lên Server và xóa vĩnh viễn trên toàn h
           }).catch(() => {});
       } catch(e) {}
     })();
+
+
+    /* =====================================================================
+       FLEX PROJECT SCHEDULE & DAILY UAT TRACKER MODULE (SBSI CORE TRANSFORMATION)
+       Data source: 'Kế hoạch triển khai - SBSI (1).xlsx' (Sheet 'KeHoachDA FLEX')
+       ===================================================================== */
+    const FLEX_WBS_TASKS = [{"id": 1, "phase": "Chuẩn bị dự án (Tuần 1)", "stt": "1.0", "main_task": "Chuẩn bị nguồn lực dự án", "sub_task": "Kickoff nội bộ FSS", "start_date": "01/06/2026", "end_date": "05/06/2026", "completed_date": "18/12/2076", "status": "Done"}, {"id": 2, "phase": "Chuẩn bị dự án (Tuần 1)", "stt": "2.0", "main_task": "Lập kế hoạch khung dự án", "sub_task": "Rà soát kế hoạch khung trước khi kickoff KH", "start_date": "01/06/2026", "end_date": "05/06/2026", "completed_date": "01/06/2026", "status": "Done"}, {"id": 3, "phase": "Chuẩn bị dự án (Tuần 1)", "stt": "3.0", "main_task": "Chuẩn bị môi trường đào tạo và thực hành", "sub_task": "", "start_date": "01/06/2026", "end_date": "05/06/2026", "completed_date": "", "status": "Done"}, {"id": 4, "phase": "Chuẩn bị dự án (Tuần 1)", "stt": "", "main_task": "", "sub_task": "Yêu cầu cung cấp server Đào tạo", "start_date": "25/05/2026", "end_date": "29/05/2026", "completed_date": "06/06/2026", "status": "Done"}, {"id": 5, "phase": "Chuẩn bị dự án (Tuần 1)", "stt": "", "main_task": "", "sub_task": "FSS cài đặt Đào tạo, cài đặt client trên máy user", "start_date": "01/06/2026", "end_date": "03/06/2026", "completed_date": "12/06/2026", "status": "Done"}, {"id": 6, "phase": "Chuẩn bị dự án (Tuần 1)", "stt": "", "main_task": "", "sub_task": "Kiểm tra môi trường Đào tạo", "start_date": "04/06/2026", "end_date": "05/06/2026", "completed_date": "12/06/2026", "status": "Done"}, {"id": 7, "phase": "Đào tạo hệ thống và Phân tích yêu cầu tích hợp (Tuần 2-6)", "stt": "1", "main_task": "-\tTrình bày hệ thống\n-\tThực hành trên hệ thống", "sub_task": "NBLM trình bầy và hỗ trợ thực hành", "start_date": "08/06/2026", "end_date": "03/07/2026", "completed_date": "", "status": "Done"}, {"id": 8, "phase": "Đào tạo hệ thống và Phân tích yêu cầu tích hợp (Tuần 2-6)", "stt": "", "main_task": "", "sub_task": "Gửi tài liệu HDSD hệ thống\nLấy DS user phân quyền truy cập NBLM", "start_date": "04/06/2026", "end_date": "05/06/2026", "completed_date": "", "status": "Done"}, {"id": 9, "phase": "Đào tạo hệ thống và Phân tích yêu cầu tích hợp (Tuần 2-6)", "stt": "", "main_task": "", "sub_task": "Lên kế hoạch đào tạo chi tiết, điền thông tin user", "start_date": "04/06/2026", "end_date": "05/06/2026", "completed_date": "05/06/2026", "status": "Done"}, {"id": 10, "phase": "Đào tạo hệ thống và Phân tích yêu cầu tích hợp (Tuần 2-6)", "stt": "", "main_task": "", "sub_task": "Thống nhất cách thức đào tạo, ghi nhận yêu cầu, kế hoạch đào tạo", "start_date": "08/06/2026", "end_date": "08/06/2026", "completed_date": "08/06/2026", "status": "Done"}, {"id": 11, "phase": "Đào tạo hệ thống và Phân tích yêu cầu tích hợp (Tuần 2-6)", "stt": "", "main_task": "", "sub_task": "Đào tạo theo kế hoạch đã chốt", "start_date": "08/06/2026", "end_date": "19/06/2026", "completed_date": "19/08/2026", "status": "Done"}, {"id": 12, "phase": "Đào tạo hệ thống và Phân tích yêu cầu tích hợp (Tuần 2-6)", "stt": "2", "main_task": "Phân tích tích hợp với phần mềm kế toán nội bộ, contract center", "sub_task": "Phương: Ko triển khai contract center", "start_date": "15/06/2026", "end_date": "03/07/2026", "completed_date": "", "status": "Done"}, {"id": 13, "phase": "Đào tạo hệ thống và Phân tích yêu cầu tích hợp (Tuần 2-6)", "stt": "", "main_task": "", "sub_task": "SBSI gửi spec, FSS làm rõ yêu cầu", "start_date": "15/06/2026", "end_date": "19/06/2026", "completed_date": "16/06/2026", "status": "Done"}, {"id": 14, "phase": "Đào tạo hệ thống và Phân tích yêu cầu tích hợp (Tuần 2-6)", "stt": "", "main_task": "", "sub_task": "Chốt spec", "start_date": "22/06/2026", "end_date": "26/06/2026", "completed_date": "", "status": "Done"}, {"id": 15, "phase": "Đào tạo hệ thống và Phân tích yêu cầu tích hợp (Tuần 2-6)", "stt": "3", "main_task": "Phân tích tích hợp với SMS, email", "sub_task": "Phượng, Khoa, Quan", "start_date": "15/06/2026", "end_date": "03/07/2026", "completed_date": "", "status": "Done"}, {"id": 16, "phase": "Đào tạo hệ thống và Phân tích yêu cầu tích hợp (Tuần 2-6)", "stt": "", "main_task": "", "sub_task": "SBSI gửi spec, FSS làm rõ yêu cầu", "start_date": "15/06/2026", "end_date": "19/06/2026", "completed_date": "09/06/2026", "status": "Done"}, {"id": 17, "phase": "Đào tạo hệ thống và Phân tích yêu cầu tích hợp (Tuần 2-6)", "stt": "", "main_task": "", "sub_task": "Chốt spec iss: SBSI-14", "start_date": "22/06/2026", "end_date": "26/06/2026", "completed_date": "15/09/2026", "status": "Done"}, {"id": 18, "phase": "Đào tạo hệ thống và Phân tích yêu cầu tích hợp (Tuần 2-6)", "stt": "4.0", "main_task": "Trao đổi kiến trúc, vận hành hệ thống", "sub_task": "Team Dự án", "start_date": "15/06/2026", "end_date": "03/07/2026", "completed_date": "", "status": "Done"}, {"id": 19, "phase": "Đào tạo hệ thống và Phân tích yêu cầu tích hợp (Tuần 2-6)", "stt": "", "main_task": "", "sub_task": "Họp mô hình triển khai tại FSS", "start_date": "18/06/2026", "end_date": "18/06/2026", "completed_date": "18/06/2026", "status": "Done"}, {"id": 20, "phase": "Đào tạo hệ thống và Phân tích yêu cầu tích hợp (Tuần 2-6)", "stt": "", "main_task": "", "sub_task": "Viết tài liệu kiến trúc, mô hình, sizing -->anh Thông", "start_date": "19/06/2026", "end_date": "24/06/2026", "completed_date": "26/06/2026", "status": "Done"}, {"id": 21, "phase": "Đào tạo hệ thống và Phân tích yêu cầu tích hợp (Tuần 2-6)", "stt": "", "main_task": "", "sub_task": "Võ dựng hệ thống K8s \nTL hướng dẫn cài đặt\nVõ FO (bao gồm cả phần của Khoa)", "start_date": "22/06/2026", "end_date": "03/07/2026", "completed_date": "", "status": "Done"}, {"id": 22, "phase": "Đào tạo hệ thống và Phân tích yêu cầu tích hợp (Tuần 2-6)", "stt": "", "main_task": "", "sub_task": "TL hướng dẫn cài đặt\nDuy Anh BO", "start_date": "03/07/2026", "end_date": "07/07/2026", "completed_date": "", "status": "Done"}, {"id": 23, "phase": "Đào tạo hệ thống và Phân tích yêu cầu tích hợp (Tuần 2-6)", "stt": "", "main_task": "", "sub_task": "Gửi TL mô hình, kiến truc cho anh chị SBSI", "start_date": "24/06/2026", "end_date": "26/06/2026", "completed_date": "26/06/2026", "status": "Done"}, {"id": 24, "phase": "Đào tạo hệ thống và Phân tích yêu cầu tích hợp (Tuần 2-6)", "stt": "", "main_task": "", "sub_task": "Gửi TL cài đặt sơ bộ mt UAT cho anh chị SBSI", "start_date": "08/07/2026", "end_date": "08/07/2026", "completed_date": "10/07/2026", "status": "Done"}, {"id": 25, "phase": "Đào tạo hệ thống và Phân tích yêu cầu tích hợp (Tuần 2-6)", "stt": "", "main_task": "", "sub_task": "TRải nghiệm môi trường tại FSS", "start_date": "08/07/2026", "end_date": "10/07/2026", "completed_date": "", "status": "Done"}, {"id": 26, "phase": "Đào tạo hệ thống và Phân tích yêu cầu tích hợp (Tuần 2-6)", "stt": "", "main_task": "", "sub_task": "Ghi nhận yc GAP", "start_date": "08/07/2026", "end_date": "15/07/2026", "completed_date": "", "status": "Done"}, {"id": 27, "phase": "Đào tạo hệ thống và Phân tích yêu cầu tích hợp (Tuần 2-6)", "stt": "5.0", "main_task": "Phân tích tích hợp eKYC, eContract", "sub_task": "Hương, Khoa, Võ", "start_date": "15/06/2026", "end_date": "03/07/2026", "completed_date": "", "status": "Done"}, {"id": 28, "phase": "Đào tạo hệ thống và Phân tích yêu cầu tích hợp (Tuần 2-6)", "stt": "", "main_task": "", "sub_task": "SBSI gửi spec, FSS làm rõ yêu cầu", "start_date": "15/06/2026", "end_date": "19/06/2026", "completed_date": "23/06/2026", "status": "Done"}, {"id": 29, "phase": "Đào tạo hệ thống và Phân tích yêu cầu tích hợp (Tuần 2-6)", "stt": "", "main_task": "", "sub_task": "Chốt spec", "start_date": "22/06/2026", "end_date": "26/06/2026", "completed_date": "26/06/2026", "status": "Done"}, {"id": 30, "phase": "Đào tạo hệ thống và Phân tích yêu cầu tích hợp (Tuần 2-6)", "stt": "6", "main_task": "Phân tích tích hợp tin tức, thông tin cơ bản chứng khoán", "sub_task": "Hương, Võ", "start_date": "15/06/2026", "end_date": "03/07/2026", "completed_date": "", "status": "Done"}, {"id": 31, "phase": "Đào tạo hệ thống và Phân tích yêu cầu tích hợp (Tuần 2-6)", "stt": "", "main_task": "", "sub_task": "SBSI gửi spec, FSS làm rõ yêu cầu", "start_date": "15/06/2026", "end_date": "19/06/2026", "completed_date": "12/06/2026", "status": "Done"}, {"id": 32, "phase": "Đào tạo hệ thống và Phân tích yêu cầu tích hợp (Tuần 2-6)", "stt": "", "main_task": "", "sub_task": "Chốt spec: SBSI-31", "start_date": "22/06/2026", "end_date": "26/06/2026", "completed_date": "16/06/2026", "status": "Done"}, {"id": 33, "phase": "Đào tạo hệ thống và Phân tích yêu cầu tích hợp (Tuần 2-6)", "stt": "7", "main_task": "Phân tích kết nối ngân hàng thực hiện thu chi hộ: MSB \nKết nối CoreBank", "sub_task": "Phượng, Khoa, Quan", "start_date": "15/06/2026", "end_date": "03/07/2026", "completed_date": "", "status": "Done"}, {"id": 34, "phase": "Đào tạo hệ thống và Phân tích yêu cầu tích hợp (Tuần 2-6)", "stt": "", "main_task": "", "sub_task": "Làm rõ yc+ viết tlpt", "start_date": "15/06/2026", "end_date": "19/06/2026", "completed_date": "09/06/2026", "status": "Done"}, {"id": 35, "phase": "Đào tạo hệ thống và Phân tích yêu cầu tích hợp (Tuần 2-6)", "stt": "", "main_task": "", "sub_task": "Chốt spec TCH : SBSI-13, SBSI-17\nSpec BIDV: SBSI-16", "start_date": "22/06/2026", "end_date": "26/06/2026", "completed_date": "", "status": "Done"}, {"id": 36, "phase": "Đào tạo hệ thống và Phân tích yêu cầu tích hợp (Tuần 2-6)", "stt": "", "main_task": "", "sub_task": "Họp chốt spec 3 bên", "start_date": "29/06/2026", "end_date": "03/07/2026", "completed_date": "", "status": "Done"}, {"id": 37, "phase": "Đào tạo hệ thống và Phân tích yêu cầu tích hợp (Tuần 2-6)", "stt": "8", "main_task": "Phân tích tích chuyển đổi dữ liệu từ hệ thống cũ sang hệ thống mới: FLEX + TPRL", "sub_task": "Phương -->Chuyển sang giai đoạn chuẩn bị hệ thống UAT", "start_date": "15/06/2026", "end_date": "03/07/2026", "completed_date": "", "status": "Done"}, {"id": 38, "phase": "Đào tạo hệ thống và Phân tích yêu cầu tích hợp (Tuần 2-6)", "stt": "", "main_task": "", "sub_task": "FSS gưi đề xuất", "start_date": "29/06/2026", "end_date": "03/07/2026", "completed_date": "", "status": "Done"}, {"id": 39, "phase": "Đào tạo hệ thống và Phân tích yêu cầu tích hợp (Tuần 2-6)", "stt": "", "main_task": "", "sub_task": "Chốt kế hoạch, thời gian thực hiện", "start_date": "06/07/2026", "end_date": "10/07/2026", "completed_date": "", "status": "Done"}, {"id": 40, "phase": "Đào tạo hệ thống và Phân tích yêu cầu tích hợp (Tuần 2-6)", "stt": "9", "main_task": "Xây dựng tài liệu phân tích yêu cầu tích hợp", "sub_task": "Chốt gối đầu nội dung phân tích nghiệp vụ từng tuần\nMai(Hien):ONL, MOBILE CF_AF, ekyc,  OD, RM\nPhượng lớn: RE, SY,CA, SE, CI, ADV\nHương: MR, LN, TPRL\n\nĐào tạo:\nQuan: TPRL\nMai(Hien):ONL, MOBILE CF_AF, ekyc,  OD, RM\nPhượng lớn: RE, SY,CA  Phượng bé: SE, CI, ADV\nHương: MR, LN", "start_date": "06/07/2026", "end_date": "10/07/2026", "completed_date": "", "status": "Done"}, {"id": 41, "phase": "Đào tạo hệ thống và Phân tích yêu cầu tích hợp (Tuần 2-6)", "stt": "", "main_task": "", "sub_task": "SBSI log thông tin GAP trong quá trình đào tạo", "start_date": "08/06/2026", "end_date": "19/06/2026", "completed_date": "22/06/2026", "status": "Done"}, {"id": 42, "phase": "Đào tạo hệ thống và Phân tích yêu cầu tích hợp (Tuần 2-6)", "stt": "", "main_task": "", "sub_task": "FSS review yêu cầu GAP", "start_date": "13/06/2026", "end_date": "22/06/2026", "completed_date": "25/06/2026", "status": "Done"}, {"id": 43, "phase": "Đào tạo hệ thống và Phân tích yêu cầu tích hợp (Tuần 2-6)", "stt": "", "main_task": "", "sub_task": "FSS+SBSI tổng hợp chốt yc GAP, giai đoạn thực hiện", "start_date": "23/06/2026", "end_date": "25/06/2026", "completed_date": "25/06/2026", "status": "Done"}, {"id": 44, "phase": "Đào tạo hệ thống và Phân tích yêu cầu tích hợp (Tuần 2-6)", "stt": "", "main_task": "", "sub_task": "FSS viết TLPT, bàn giao cuốn chiếu tài liệu", "start_date": "26/06/2026", "end_date": "03/07/2026", "completed_date": "", "status": "Done"}, {"id": 45, "phase": "Đào tạo hệ thống và Phân tích yêu cầu tích hợp (Tuần 2-6)", "stt": "", "main_task": "", "sub_task": "SBSI rev TLPT", "start_date": "30/06/2026", "end_date": "07/07/2026", "completed_date": "", "status": "Done"}, {"id": 46, "phase": "Đào tạo hệ thống và Phân tích yêu cầu tích hợp (Tuần 2-6)", "stt": "", "main_task": "", "sub_task": "SBSI, FSS chốt MD, giai đoạn final", "start_date": "08/07/2026", "end_date": "08/07/2026", "completed_date": "", "status": "Done"}, {"id": 47, "phase": "Đào tạo hệ thống và Phân tích yêu cầu tích hợp (Tuần 2-6)", "stt": "", "main_task": "", "sub_task": "SBSI, FSS chốt TLPT final", "start_date": "09/07/2026", "end_date": "10/07/2026", "completed_date": "", "status": "Done"}, {"id": 48, "phase": "Chỉnh sửa ứng dụng (Tuần 6-13) + Chuẩn bị UAT", "stt": "1", "main_task": "Bổ sung các phân hệ MSP, CCP, NPF", "sub_task": "Bổ sung các phân hệ MSP, CCP, NPF", "start_date": "20/06/2026", "end_date": "10/07/2026", "completed_date": "", "status": "Done"}, {"id": 49, "phase": "Chỉnh sửa ứng dụng (Tuần 6-13) + Chuẩn bị UAT", "stt": "2.0", "main_task": "Phát triển ứng dụng + Chuẩn bị UAT", "sub_task": "Tuần 1", "start_date": "13/07/2026", "end_date": "17/07/2026", "completed_date": "", "status": "Done"}, {"id": 50, "phase": "Chỉnh sửa ứng dụng (Tuần 6-13) + Chuẩn bị UAT", "stt": "", "main_task": "", "sub_task": "FSS: Viết tài liệu phân tích: CTV, Onboarding", "start_date": "13/07/2026", "end_date": "17/07/2026", "completed_date": "", "status": "Done"}, {"id": 51, "phase": "Chỉnh sửa ứng dụng (Tuần 6-13) + Chuẩn bị UAT", "stt": "", "main_task": "", "sub_task": "Chốt TLPT các nội dung triển khai GĐ1", "start_date": "13/07/2026", "end_date": "17/07/2026", "completed_date": "", "status": "Done"}, {"id": 52, "phase": "Chỉnh sửa ứng dụng (Tuần 6-13) + Chuẩn bị UAT", "stt": "", "main_task": "", "sub_task": "FSS đánh giá MD", "start_date": "13/07/2026", "end_date": "17/07/2026", "completed_date": "", "status": "Done"}, {"id": 53, "phase": "Chỉnh sửa ứng dụng (Tuần 6-13) + Chuẩn bị UAT", "stt": "", "main_task": "", "sub_task": "SBSI xác định danh sách yc triển khai GĐ1", "start_date": "13/07/2026", "end_date": "17/07/2026", "completed_date": "", "status": "Done"}, {"id": 54, "phase": "Chỉnh sửa ứng dụng (Tuần 6-13) + Chuẩn bị UAT", "stt": "", "main_task": "", "sub_task": "FSS, SBSI: Họp thống nhất phạm vi, kế hoạch kết nối TCH MSB", "start_date": "13/07/2026", "end_date": "17/07/2026", "completed_date": "15/07/2026", "status": "Done"}, {"id": 55, "phase": "Chỉnh sửa ứng dụng (Tuần 6-13) + Chuẩn bị UAT", "stt": "", "main_task": "", "sub_task": "FSS,SBSI: Demo monitor, ghi nhận yêu cầu IT-vận hành", "start_date": "13/07/2026", "end_date": "17/07/2026", "completed_date": "16/07/2026", "status": "Done"}, {"id": 56, "phase": "Chỉnh sửa ứng dụng (Tuần 6-13) + Chuẩn bị UAT", "stt": "", "main_task": "", "sub_task": "FSS: Phát triển theo kế hoạch nội bộ", "start_date": "13/07/2026", "end_date": "17/07/2026", "completed_date": "", "status": "Done"}, {"id": 57, "phase": "Chỉnh sửa ứng dụng (Tuần 6-13) + Chuẩn bị UAT", "stt": "", "main_task": "", "sub_task": "SBSI: Chuẩn bị hệ thống máy chủ UAT", "start_date": "13/07/2026", "end_date": "14/08/2026", "completed_date": "", "status": "Done"}, {"id": 58, "phase": "Chỉnh sửa ứng dụng (Tuần 6-13) + Chuẩn bị UAT", "stt": "", "main_task": "", "sub_task": "Tuần 2", "start_date": "20/07/2026", "end_date": "24/07/2026", "completed_date": "", "status": "Plan"}, {"id": 59, "phase": "Chỉnh sửa ứng dụng (Tuần 6-13) + Chuẩn bị UAT", "stt": "", "main_task": "", "sub_task": "FSS, SBSI: Chốt tại liệu phân tích:mở TK CTV, Onboarding", "start_date": "20/07/2026", "end_date": "24/07/2026", "completed_date": "", "status": "Done"}, {"id": 60, "phase": "Chỉnh sửa ứng dụng (Tuần 6-13) + Chuẩn bị UAT", "stt": "", "main_task": "", "sub_task": "SBSI: Gửi đặc tả AML", "start_date": "20/07/2026", "end_date": "24/07/2026", "completed_date": "12/08/2026", "status": "Done"}, {"id": 61, "phase": "Chỉnh sửa ứng dụng (Tuần 6-13) + Chuẩn bị UAT", "stt": "", "main_task": "", "sub_task": "FSS, SBSI: chốt MD các yc thuộc giai đoạn Phân tích", "start_date": "20/07/2026", "end_date": "24/07/2026", "completed_date": "", "status": "Done"}, {"id": 62, "phase": "Chỉnh sửa ứng dụng (Tuần 6-13) + Chuẩn bị UAT", "stt": "", "main_task": "", "sub_task": "FSS: Phân tích api cho app CTV", "start_date": "20/07/2026", "end_date": "07/08/2026", "completed_date": "14/08/2026", "status": "Done"}, {"id": 63, "phase": "Chỉnh sửa ứng dụng (Tuần 6-13) + Chuẩn bị UAT", "stt": "", "main_task": "", "sub_task": "FSS:  Ghi nhận và phân tích  yc IT -vận hành, tạo TL mô tả moinitor\n24/07: FSS gửi TL và thảo luận thống nhất.", "start_date": "20/07/2026", "end_date": "24/07/2026", "completed_date": "", "status": "Done"}, {"id": 64, "phase": "Chỉnh sửa ứng dụng (Tuần 6-13) + Chuẩn bị UAT", "stt": "", "main_task": "", "sub_task": "FSS: gửi file định nghĩa danh sách sản phẩm, danh sách người sử dụng, danh sách phân quyền chuyển bị cho hoạt động convert.", "start_date": "20/07/2026", "end_date": "24/07/2026", "completed_date": "", "status": "Done"}, {"id": 65, "phase": "Chỉnh sửa ứng dụng (Tuần 6-13) + Chuẩn bị UAT", "stt": "", "main_task": "", "sub_task": "FSS, SBSI: Họp làm rõ và thống nhất hoạt động convert", "start_date": "20/07/2026", "end_date": "24/07/2026", "completed_date": "", "status": "Done"}, {"id": 66, "phase": "Chỉnh sửa ứng dụng (Tuần 6-13) + Chuẩn bị UAT", "stt": "", "main_task": "", "sub_task": "FSS, SBSI: Thống nhất hoạt động hỗ trợ của VNPT trong giai đoạn FSS phát triển", "start_date": "20/07/2026", "end_date": "21/07/2026", "completed_date": "", "status": "Done"}, {"id": 67, "phase": "Chỉnh sửa ứng dụng (Tuần 6-13) + Chuẩn bị UAT", "stt": "", "main_task": "", "sub_task": "SBSI: Thống nhất kế hoạch phối hợp của BIDV trong nghiệp vụ kết nối ngân hàng", "start_date": "20/07/2026", "end_date": "21/07/2026", "completed_date": "", "status": "Done"}, {"id": 68, "phase": "Chỉnh sửa ứng dụng (Tuần 6-13) + Chuẩn bị UAT", "stt": "", "main_task": "", "sub_task": "Checking kế hoạch kết nối Sở, VSDC", "start_date": "20/07/2026", "end_date": "21/07/2026", "completed_date": "", "status": "Done"}, {"id": 69, "phase": "Chỉnh sửa ứng dụng (Tuần 6-13) + Chuẩn bị UAT", "stt": "", "main_task": "", "sub_task": "Tuần 3", "start_date": "27/07/2026", "end_date": "31/07/2026", "completed_date": "", "status": "Done"}, {"id": 70, "phase": "Chỉnh sửa ứng dụng (Tuần 6-13) + Chuẩn bị UAT", "stt": "", "main_task": "", "sub_task": "FSS, SBSI: Chốt TLPT: \n-API app CTV\n- IT-vận hành", "start_date": "27/07/2026", "end_date": "28/07/2026", "completed_date": "", "status": "Done"}, {"id": 71, "phase": "Chỉnh sửa ứng dụng (Tuần 6-13) + Chuẩn bị UAT", "stt": "", "main_task": "", "sub_task": "SBSI: Gửi yêu cầu nhận diện thương hiệu", "start_date": "27/07/2026", "end_date": "31/07/2026", "completed_date": "12/08/2026", "status": "Done"}, {"id": 72, "phase": "Chỉnh sửa ứng dụng (Tuần 6-13) + Chuẩn bị UAT", "stt": "", "main_task": "", "sub_task": "SBSI: Chuẩn bị data convert và bàn giao dữ liệu convert", "start_date": "27/07/2026", "end_date": "14/08/2026", "completed_date": "", "status": "Done"}, {"id": 73, "phase": "Chỉnh sửa ứng dụng (Tuần 6-13) + Chuẩn bị UAT", "stt": "", "main_task": "", "sub_task": "FSS: Chuẩn bị công cụ convert dữ liệu", "start_date": "27/07/2026", "end_date": "14/08/2026", "completed_date": "", "status": "Done"}, {"id": 74, "phase": "Chỉnh sửa ứng dụng (Tuần 6-13) + Chuẩn bị UAT", "stt": "", "main_task": "", "sub_task": "FSS: Thực hiện SIT Thu chi hộ MSB", "start_date": "27/07/2026", "end_date": "07/08/2026", "completed_date": "", "status": "Done"}, {"id": 75, "phase": "Chỉnh sửa ứng dụng (Tuần 6-13) + Chuẩn bị UAT", "stt": "", "main_task": "", "sub_task": "FSS: Phát triển theo kế hoạch nội bộ", "start_date": "27/07/2026", "end_date": "31/07/2026", "completed_date": "", "status": "Done"}, {"id": 76, "phase": "Chỉnh sửa ứng dụng (Tuần 6-13) + Chuẩn bị UAT", "stt": "", "main_task": "", "sub_task": "Tuần 4", "start_date": "03/08/2026", "end_date": "07/08/2026", "completed_date": "", "status": "Plan"}, {"id": 77, "phase": "Chỉnh sửa ứng dụng (Tuần 6-13) + Chuẩn bị UAT", "stt": "", "main_task": "", "sub_task": "FSS: Phân tích yêu cầu thay đổi thương hiệu, MD", "start_date": "03/08/2026", "end_date": "07/08/2026", "completed_date": "13/08/2026", "status": "Done"}, {"id": 78, "phase": "Chỉnh sửa ứng dụng (Tuần 6-13) + Chuẩn bị UAT", "stt": "", "main_task": "", "sub_task": "FSS, SBSI: Thống nhất phạm vi yêu cầu, MD phần thay đổi thương hiệu", "start_date": "03/08/2026", "end_date": "07/08/2026", "completed_date": "", "status": "Done"}, {"id": 79, "phase": "Chỉnh sửa ứng dụng (Tuần 6-13) + Chuẩn bị UAT", "stt": "", "main_task": "", "sub_task": "FSS: Thực hiện convert dữ liệu trên môi trường đào tạo", "start_date": "03/08/2026", "end_date": "14/08/2026", "completed_date": "", "status": "Done"}, {"id": 80, "phase": "Chỉnh sửa ứng dụng (Tuần 6-13) + Chuẩn bị UAT", "stt": "", "main_task": "", "sub_task": "SBSI: Check hoạt động chuẩn bị server UAT", "start_date": "03/08/2026", "end_date": "03/08/2026", "completed_date": "", "status": "Done"}, {"id": 81, "phase": "Chỉnh sửa ứng dụng (Tuần 6-13) + Chuẩn bị UAT", "stt": "", "main_task": "", "sub_task": "FSS: Phát triển theo kế hoạch nội bộ", "start_date": "03/08/2026", "end_date": "07/08/2026", "completed_date": "", "status": "Done"}, {"id": 82, "phase": "Chỉnh sửa ứng dụng (Tuần 6-13) + Chuẩn bị UAT", "stt": "", "main_task": "", "sub_task": "Tuần 5", "start_date": "10/08/2026", "end_date": "14/08/2026", "completed_date": "", "status": "Plan"}, {"id": 83, "phase": "Chỉnh sửa ứng dụng (Tuần 6-13) + Chuẩn bị UAT", "stt": "", "main_task": "", "sub_task": "FSS: SIT tổng thể kết nối thu chi hộ MSB", "start_date": "17/08/2026", "end_date": "28/08/2026", "completed_date": "", "status": "Done"}, {"id": 84, "phase": "Chỉnh sửa ứng dụng (Tuần 6-13) + Chuẩn bị UAT", "stt": "", "main_task": "", "sub_task": "FSS: Phát triển theo kế hoạch nội bộ", "start_date": "10/08/2026", "end_date": "14/08/2026", "completed_date": "", "status": "Done"}, {"id": 85, "phase": "Chỉnh sửa ứng dụng (Tuần 6-13) + Chuẩn bị UAT", "stt": "", "main_task": "", "sub_task": "FSS: Bàn giao tài liệu cài đặt ứng dụng trên môi trường UAT", "start_date": "13/08/2026", "end_date": "14/08/2026", "completed_date": "", "status": "Done"}, {"id": 86, "phase": "Chỉnh sửa ứng dụng (Tuần 6-13) + Chuẩn bị UAT", "stt": "", "main_task": "", "sub_task": "Checking kế hoạch kết nối Sở, VSDC", "start_date": "31/08/2026", "end_date": "04/09/2026", "completed_date": "", "status": "Plan"}, {"id": 87, "phase": "Chỉnh sửa ứng dụng (Tuần 6-13) + Chuẩn bị UAT", "stt": "", "main_task": "", "sub_task": "Tuần 6", "start_date": "17/08/2026", "end_date": "21/08/2026", "completed_date": "", "status": "Done"}, {"id": 88, "phase": "Chỉnh sửa ứng dụng (Tuần 6-13) + Chuẩn bị UAT", "stt": "", "main_task": "", "sub_task": "FSS: Phát triển theo kế hoạch nội bộ", "start_date": "17/08/2026", "end_date": "21/08/2026", "completed_date": "", "status": "Done"}, {"id": 89, "phase": "Chỉnh sửa ứng dụng (Tuần 6-13) + Chuẩn bị UAT", "stt": "", "main_task": "", "sub_task": "FSS: Bàn giao tài liệu hướng dẫn cài đặt ứng dụng\nBộ cài ban đầu, TL hướng dẫn cấu hình\nTài liệu vận hành\nTài liệu tổng hợp mở port, mạng", "start_date": "20/08/2026", "end_date": "21/08/2026", "completed_date": "", "status": "Done"}, {"id": 90, "phase": "Chỉnh sửa ứng dụng (Tuần 6-13) + Chuẩn bị UAT", "stt": "", "main_task": "", "sub_task": "SBSI: cài đặt theo tài liệu\nThông mạng đến các hệ thống thứ 3: MSB, BIDV, AML, VNPT, VSDC(nếu có)", "start_date": "22/08/2026", "end_date": "01/09/2026", "completed_date": "", "status": "Done"}, {"id": 91, "phase": "Chỉnh sửa ứng dụng (Tuần 6-13) + Chuẩn bị UAT", "stt": "", "main_task": "", "sub_task": "FSS exp DB đã convert từ mt Đào tạo", "start_date": "17/08/2026", "end_date": "21/08/2026", "completed_date": "", "status": "Done"}, {"id": 92, "phase": "Chỉnh sửa ứng dụng (Tuần 6-13) + Chuẩn bị UAT", "stt": "", "main_task": "", "sub_task": "Tuần 7", "start_date": "24/08/2026", "end_date": "28/08/2026", "completed_date": "", "status": "Plan"}, {"id": 93, "phase": "Chỉnh sửa ứng dụng (Tuần 6-13) + Chuẩn bị UAT", "stt": "", "main_task": "", "sub_task": "FSS: SIT phần đối soát -->chờ gd UAT", "start_date": "24/08/2026", "end_date": "28/08/2026", "completed_date": "", "status": "Plan"}, {"id": 94, "phase": "Chỉnh sửa ứng dụng (Tuần 6-13) + Chuẩn bị UAT", "stt": "", "main_task": "", "sub_task": "Convert dữ liệu UAT", "start_date": "22/08/2026", "end_date": "28/08/2026", "completed_date": "", "status": "Plan"}, {"id": 95, "phase": "Chỉnh sửa ứng dụng (Tuần 6-13) + Chuẩn bị UAT", "stt": "", "main_task": "", "sub_task": "Dựng môi trường UAT", "start_date": "24/08/2026", "end_date": "28/08/2026", "completed_date": "", "status": "Plan"}, {"id": 96, "phase": "Chỉnh sửa ứng dụng (Tuần 6-13) + Chuẩn bị UAT", "stt": "", "main_task": "", "sub_task": "Chốt TLPT, MD các hạng mục phát triển", "start_date": "24/08/2026", "end_date": "28/08/2026", "completed_date": "", "status": "Plan"}, {"id": 97, "phase": "Chỉnh sửa ứng dụng (Tuần 6-13) + Chuẩn bị UAT", "stt": "", "main_task": "", "sub_task": "Checking kế hoạch kết nối Sở, VSDC", "start_date": "24/08/2026", "end_date": "28/08/2026", "completed_date": "", "status": "Plan"}, {"id": 98, "phase": "Chỉnh sửa ứng dụng (Tuần 6-13) + Chuẩn bị UAT", "stt": "", "main_task": "", "sub_task": "FSS: Kiểm tra môi trường UAT", "start_date": "24/08/2026", "end_date": "28/08/2026", "completed_date": "", "status": "Plan"}, {"id": 99, "phase": "Chỉnh sửa ứng dụng (Tuần 6-13) + Chuẩn bị UAT", "stt": "", "main_task": "", "sub_task": "FSS: SIT kết nối datafeed, dịch vụ gửi email", "start_date": "24/08/2026", "end_date": "28/08/2026", "completed_date": "", "status": "Plan"}, {"id": 100, "phase": "Chỉnh sửa ứng dụng (Tuần 6-13) + Chuẩn bị UAT", "stt": "", "main_task": "", "sub_task": "Tuần 8", "start_date": "31/08/2026", "end_date": "04/09/2026", "completed_date": "", "status": "Plan"}, {"id": 101, "phase": "Chỉnh sửa ứng dụng (Tuần 6-13) + Chuẩn bị UAT", "stt": "", "main_task": "", "sub_task": "FSS: Phát triển theo kế hoạch nội bộ", "start_date": "31/08/2026", "end_date": "04/09/2026", "completed_date": "", "status": "Plan"}, {"id": 102, "phase": "Chỉnh sửa ứng dụng (Tuần 6-13) + Chuẩn bị UAT", "stt": "", "main_task": "", "sub_task": "FSS: Kiểm tra môi trường UAT", "start_date": "31/08/2026", "end_date": "04/09/2026", "completed_date": "", "status": "Plan"}, {"id": 103, "phase": "Chuẩn bị cho kiểm thử ứng dụng mức người sử dụng\n(UAT)  (Tuần 6-13)", "stt": "1", "main_task": "Chuẩn bị hệ thống", "sub_task": "", "start_date": "13/07/2026", "end_date": "14/08/2026", "completed_date": "", "status": "Done"}, {"id": 104, "phase": "Chuẩn bị cho kiểm thử ứng dụng mức người sử dụng\n(UAT)  (Tuần 6-13)", "stt": "", "main_task": "", "sub_task": "SBSI:\n- Chuẩn bị server .\nServer DB: Đã có trên cùng server Đào tạo\nCác server khác: Chuẩn bị theo file sizing UAT\n- Mở mạng , port giữa các server", "start_date": "13/07/2026", "end_date": "14/08/2026", "completed_date": "", "status": "done"}, {"id": 105, "phase": "Chuẩn bị cho kiểm thử ứng dụng mức người sử dụng\n(UAT)  (Tuần 6-13)", "stt": "", "main_task": "", "sub_task": "FSS bàn giao tài liệu  hướng dẫn cài đặt UAT, sau đó cập nhật tài liệu chuẩn bị cài đặt cho mt PRO trong giai đoạn hỗ trợ SBSI cài đặt UAT", "start_date": "13/08/2026", "end_date": "14/08/2026", "completed_date": "", "status": "Plan"}, {"id": 106, "phase": "Chuẩn bị cho kiểm thử ứng dụng mức người sử dụng\n(UAT)  (Tuần 6-13)", "stt": "", "main_task": "", "sub_task": "Cài K8s (FSS,SBSI)", "start_date": "10/08/2026", "end_date": "17/08/2026", "completed_date": "", "status": "done"}, {"id": 107, "phase": "Chuẩn bị cho kiểm thử ứng dụng mức người sử dụng\n(UAT)  (Tuần 6-13)", "stt": "", "main_task": "", "sub_task": "FSS gửi TL HD cài đặt + bộ cài\n- Tài liệu vận hành Core áp dụng cho SBSI (Quân Võ)\n- Tài liệu Monitor (Võ, DuyAnh, Khoa)", "start_date": "17/08/2026", "end_date": "21/08/2026", "completed_date": "", "status": "Plan"}, {"id": 108, "phase": "Chuẩn bị cho kiểm thử ứng dụng mức người sử dụng\n(UAT)  (Tuần 6-13)", "stt": "", "main_task": "", "sub_task": "SBSI:\n-  Mờ firewall kết nối thông  tới: MSB, Hệ thống Bravo, 2 Sở giao dịch, VSDC, AML, Mail delivery, VCB, BIDV\n-  Mở kết nối cho Client (nghiệp vụ ) đến 1 số dịch vụ của hệ thống UAT: Link BDSservice, link web, link trang quản trị\n- Cài đặt ứng dụng theo tài liệu\nFSS: Thực hiện convert dữ liệu từ hệ thống cũ sang hệ thống Flex\nFSS: Hỗ trợ cài đặt\n(*) Một số server tích hợp bên thứ 3 có thể chậm hơn 04/09 nhưng ko chậm quá 10/09", "start_date": "19/08/2026", "end_date": "25/08/2026", "completed_date": "", "status": "Plan"}, {"id": 109, "phase": "Chuẩn bị cho kiểm thử ứng dụng mức người sử dụng\n(UAT)  (Tuần 6-13)", "stt": "", "main_task": "", "sub_task": "FSS rà soát môi trường UAT: \n- Thực hiện giao dịch trên Flex\n- Thực hiện giao dịch xử lý sinh điện VSDC\n- Thực hiện giao dịch lệnh\n- Thực hiện giao dịch thu/chi hộ \n- Thực hiện mở tài khoản\n- Thực hiện nhận emai/sms/noti", "start_date": "26/08/2026", "end_date": "28/08/2026", "completed_date": "", "status": "Plan"}, {"id": 110, "phase": "Kiểm thử mức người sử dụng (UAT) (Tuần 14-19)", "stt": "1", "main_task": "Cài đặt phần mềm, thiết lập tham số", "sub_task": "Cài đặt phần mềm, thiết lập tham số", "start_date": "03/09/2026", "end_date": "09/09/2026", "completed_date": "", "status": "Done"}, {"id": 111, "phase": "Kiểm thử mức người sử dụng (UAT) (Tuần 14-19)", "stt": "", "main_task": "", "sub_task": "SBSI: Khai báo tham số, sản phảm, phân quyền người dùng\nThiết lập ngày làm việc, ngày nghỉ test sp thu lãi, hoa hồng CTV", "start_date": "03/09/2026", "end_date": "04/09/2026", "completed_date": "", "status": "Done"}, {"id": 112, "phase": "Kiểm thử mức người sử dụng (UAT) (Tuần 14-19)", "stt": "", "main_task": "", "sub_task": "FSS convert dữ liệu \nFSS, SBSI kiểm tra cấu hình, kết nối tích hợp", "start_date": "03/09/2026", "end_date": "04/09/2026", "completed_date": "", "status": "Done"}, {"id": 113, "phase": "Kiểm thử mức người sử dụng (UAT) (Tuần 14-19)", "stt": "", "main_task": "", "sub_task": "Test tua môi trường (BO sẵn sàng ngày 07/09, các thành phần khác như web, online đến 09/09 sẵn sàng)", "start_date": "07/09/2026", "end_date": "08/09/2026", "completed_date": "", "status": "Done"}, {"id": 114, "phase": "Kiểm thử mức người sử dụng (UAT) (Tuần 14-19)", "stt": "2", "main_task": "FSS kiểm thử nội dung tích hợp", "sub_task": "FSS kiểm thử nội dung tích hợp", "start_date": "07/09/2026", "end_date": "11/09/2026", "completed_date": "", "status": "Done"}, {"id": 115, "phase": "Kiểm thử mức người sử dụng (UAT) (Tuần 14-19)", "stt": "", "main_task": "", "sub_task": "Email, SMS", "start_date": "07/09/2026", "end_date": "11/09/2026", "completed_date": "", "status": "Plan"}, {"id": 116, "phase": "Kiểm thử mức người sử dụng (UAT) (Tuần 14-19)", "stt": "", "main_task": "", "sub_task": "BIDV", "start_date": "07/09/2026", "end_date": "11/09/2026", "completed_date": "", "status": "Plan"}, {"id": 117, "phase": "Kiểm thử mức người sử dụng (UAT) (Tuần 14-19)", "stt": "", "main_task": "", "sub_task": "Thu chi hộ MSB", "start_date": "07/09/2026", "end_date": "11/09/2026", "completed_date": "", "status": "Plan"}, {"id": 118, "phase": "Kiểm thử mức người sử dụng (UAT) (Tuần 14-19)", "stt": "", "main_task": "", "sub_task": "Bảng giá, Lệnh ĐK theo giá MDDS", "start_date": "07/09/2026", "end_date": "11/09/2026", "completed_date": "", "status": "Plan"}, {"id": 119, "phase": "Kiểm thử mức người sử dụng (UAT) (Tuần 14-19)", "stt": "3", "main_task": "SBSI Kiểm thử các nội dung tích hợp", "sub_task": "SBSI Kiểm thử các nội dung tích hợp", "start_date": "14/09/2026", "end_date": "25/09/2026", "completed_date": "", "status": "Doing"}, {"id": 120, "phase": "Kiểm thử mức người sử dụng (UAT) (Tuần 14-19)", "stt": "", "main_task": "", "sub_task": "Email, SMS", "start_date": "14/09/2026", "end_date": "25/09/2026", "completed_date": "", "status": "Plan"}, {"id": 121, "phase": "Kiểm thử mức người sử dụng (UAT) (Tuần 14-19)", "stt": "", "main_task": "", "sub_task": "BIDV", "start_date": "14/09/2026", "end_date": "25/09/2026", "completed_date": "", "status": "Plan"}, {"id": 122, "phase": "Kiểm thử mức người sử dụng (UAT) (Tuần 14-19)", "stt": "", "main_task": "", "sub_task": "Thu chi hộ MSB", "start_date": "14/09/2026", "end_date": "25/09/2026", "completed_date": "", "status": "Plan"}, {"id": 123, "phase": "Kiểm thử mức người sử dụng (UAT) (Tuần 14-19)", "stt": "", "main_task": "", "sub_task": "Bảng giá, Lệnh ĐK theo giá MDDS", "start_date": "14/09/2026", "end_date": "25/09/2026", "completed_date": "", "status": "Plan"}, {"id": 124, "phase": "Kiểm thử mức người sử dụng (UAT) (Tuần 14-19)", "stt": "", "main_task": "", "sub_task": "Đẩy dữ liệu Bravo", "start_date": "14/09/2026", "end_date": "25/09/2026", "completed_date": "", "status": "Plan"}, {"id": 125, "phase": "Kiểm thử mức người sử dụng (UAT) (Tuần 14-19)", "stt": "", "main_task": "", "sub_task": "Đồ thị kỹ thuật - FIIN", "start_date": "14/09/2026", "end_date": "25/09/2026", "completed_date": "", "status": "Plan"}, {"id": 126, "phase": "Kiểm thử mức người sử dụng (UAT) (Tuần 14-19)", "stt": "4.0", "main_task": "FSS bàn giao bổ sung các nội dung GAP", "sub_task": "FSS bàn giao bổ sung các nội dung GAP", "start_date": "", "end_date": "", "completed_date": "", "status": "Plan"}, {"id": 127, "phase": "Kiểm thử mức người sử dụng (UAT) (Tuần 14-19)", "stt": "", "main_task": "", "sub_task": "Thay đổi nhận diện thương hiệu", "start_date": "11/09/2026", "end_date": "11/09/2026", "completed_date": "", "status": "Plan"}, {"id": 128, "phase": "Kiểm thử mức người sử dụng (UAT) (Tuần 14-19)", "stt": "", "main_task": "", "sub_task": "Báo cáo TPRL, BC vận hành", "start_date": "18/09/2026", "end_date": "18/09/2026", "completed_date": "", "status": "Plan"}, {"id": 129, "phase": "Kiểm thử mức người sử dụng (UAT) (Tuần 14-19)", "stt": "5.0", "main_task": "SBSI Kiểm thử các luồng nghiệp vụ sửa đổi (GAP)-lần 1", "sub_task": "SBSI Kiểm thử các luồng nghiệp vụ sửa đổi (GAP)", "start_date": "14/09/2026", "end_date": "02/10/2026", "completed_date": "", "status": "Doing"}, {"id": 130, "phase": "Kiểm thử mức người sử dụng (UAT) (Tuần 14-19)", "stt": "", "main_task": "", "sub_task": "Thu lãi, GN cuối tháng", "start_date": "14/09/2026", "end_date": "02/10/2026", "completed_date": "", "status": "Plan"}, {"id": 131, "phase": "Kiểm thử mức người sử dụng (UAT) (Tuần 14-19)", "stt": "", "main_task": "", "sub_task": "Quản lý nguồn ứng tiểu khoản thường", "start_date": "14/09/2026", "end_date": "02/10/2026", "completed_date": "", "status": "Plan"}, {"id": 132, "phase": "Kiểm thử mức người sử dụng (UAT) (Tuần 14-19)", "stt": "", "main_task": "", "sub_task": "Chính sách gia hạn món vay", "start_date": "14/09/2026", "end_date": "02/10/2026", "completed_date": "", "status": "Plan"}, {"id": 133, "phase": "Kiểm thử mức người sử dụng (UAT) (Tuần 14-19)", "stt": "", "main_task": "", "sub_task": "Mở TK ekyc", "start_date": "14/09/2026", "end_date": "02/10/2026", "completed_date": "", "status": "Plan"}, {"id": 134, "phase": "Kiểm thử mức người sử dụng (UAT) (Tuần 14-19)", "stt": "", "main_task": "", "sub_task": "Mở TK CTV", "start_date": "14/09/2026", "end_date": "02/10/2026", "completed_date": "", "status": "Plan"}, {"id": 135, "phase": "Kiểm thử mức người sử dụng (UAT) (Tuần 14-19)", "stt": "", "main_task": "", "sub_task": "Cập nhật ccccd, xác thực tài khoản", "start_date": "14/09/2026", "end_date": "02/10/2026", "completed_date": "", "status": "Plan"}, {"id": 136, "phase": "Kiểm thử mức người sử dụng (UAT) (Tuần 14-19)", "stt": "", "main_task": "", "sub_task": "Quản lý giao dịch bất thường", "start_date": "14/09/2026", "end_date": "02/10/2026", "completed_date": "", "status": "Plan"}, {"id": 137, "phase": "Kiểm thử mức người sử dụng (UAT) (Tuần 14-19)", "stt": "", "main_task": "", "sub_task": "Tính hoa hồng CTV", "start_date": "14/09/2026", "end_date": "02/10/2026", "completed_date": "", "status": "Plan"}, {"id": 138, "phase": "Kiểm thử mức người sử dụng (UAT) (Tuần 14-19)", "stt": "", "main_task": "", "sub_task": "App Advisor", "start_date": "14/09/2026", "end_date": "02/10/2026", "completed_date": "", "status": "Plan"}, {"id": 139, "phase": "Kiểm thử mức người sử dụng (UAT) (Tuần 14-19)", "stt": "", "main_task": "", "sub_task": "Bán xử lý tự động", "start_date": "14/09/2026", "end_date": "02/10/2026", "completed_date": "", "status": "Plan"}, {"id": 140, "phase": "Kiểm thử mức người sử dụng (UAT) (Tuần 14-19)", "stt": "", "main_task": "", "sub_task": "Đặt/hủy/sửa -->TTBT lệnh theo Sở, VSDC", "start_date": "14/09/2026", "end_date": "09/10/2026", "completed_date": "", "status": "Plan"}, {"id": 141, "phase": "Kiểm thử mức người sử dụng (UAT) (Tuần 14-19)", "stt": "", "main_task": "", "sub_task": "Các nghiệp vụ TPRL: Lệnh, TTBT theo Sở, VCB, VSDC", "start_date": "14/09/2026", "end_date": "09/10/2026", "completed_date": "", "status": "Plan"}, {"id": 142, "phase": "Kiểm thử mức người sử dụng (UAT) (Tuần 14-19)", "stt": "", "main_task": "", "sub_task": "Email, SMS, Noti", "start_date": "14/09/2026", "end_date": "02/10/2026", "completed_date": "", "status": "Plan"}, {"id": 143, "phase": "Kiểm thử mức người sử dụng (UAT) (Tuần 14-19)", "stt": "", "main_task": "", "sub_task": "Thay đổi nhận diện thương hiệu", "start_date": "14/09/2026", "end_date": "02/10/2026", "completed_date": "", "status": "Plan"}, {"id": 144, "phase": "Kiểm thử mức người sử dụng (UAT) (Tuần 14-19)", "stt": "", "main_task": "", "sub_task": "Báo cáo TPRL, BC vận hành", "start_date": "14/09/2026", "end_date": "02/10/2026", "completed_date": "", "status": "Plan"}, {"id": 145, "phase": "Kiểm thử mức người sử dụng (UAT) (Tuần 14-19)", "stt": "6.0", "main_task": "SBSI Kiểm thử các luồng nghiệp vụ sửa đổi (GAP)- Lần 2", "sub_task": "SBSI Kiểm thử các luồng nghiệp vụ sửa đổi (GAP)", "start_date": "05/10/2026", "end_date": "16/10/2026", "completed_date": "", "status": "Plan"}, {"id": 146, "phase": "Kiểm thử mức người sử dụng (UAT) (Tuần 14-19)", "stt": "", "main_task": "", "sub_task": "FSS clear và convert dữ liệu lần 2", "start_date": "03/10/2026", "end_date": "04/10/2026", "completed_date": "", "status": "Plan"}, {"id": 147, "phase": "Kiểm thử mức người sử dụng (UAT) (Tuần 14-19)", "stt": "", "main_task": "", "sub_task": "SBSI kiểm thử vòng 2 các nghiệp vụ", "start_date": "05/10/2026", "end_date": "16/10/2026", "completed_date": "", "status": "Plan"}, {"id": 148, "phase": "Kiểm thử mức người sử dụng (UAT) (Tuần 14-19)", "stt": "7.0", "main_task": "Sở, VSDC kiểm tra tại văn phòng", "sub_task": "Sở, VSDC kiểm tra tại văn phòng", "start_date": "09/10/2026", "end_date": "15/10/2026", "completed_date": "", "status": "Plan"}, {"id": 149, "phase": "Kiểm thử mức người sử dụng (UAT) (Tuần 14-19)", "stt": "8.0", "main_task": "Kiểm tra bảo mật (pen test) (Nếu cần)", "sub_task": "Đề xuất thực hiện môi trường Pro", "start_date": "15/10/2026", "end_date": "28/10/2026", "completed_date": "", "status": "Plan"}, {"id": 150, "phase": "Kiểm thử mức người sử dụng (UAT) (Tuần 14-19)", "stt": "9", "main_task": "Kiểm tra tải hệ thống (loadtest)", "sub_task": "Đề xuất thực hiện môi trường Pro", "start_date": "15/10/2026", "end_date": "28/10/2026", "completed_date": "", "status": "Plan"}, {"id": 151, "phase": "Kiểm thử mức người sử dụng (UAT) (Tuần 14-19)", "stt": "", "main_task": "", "sub_task": "FSS chuẩn bị biên bản, hồ sơ", "start_date": "09/10/2026", "end_date": "15/10/2026", "completed_date": "", "status": "Plan"}, {"id": 152, "phase": "Kiểm thử mức người sử dụng (UAT) (Tuần 14-19)", "stt": "", "main_task": "", "sub_task": "FSS, SBSI thống nhất nghiệm thu", "start_date": "15/10/2026", "end_date": "28/10/2026", "completed_date": "", "status": "Plan"}, {"id": 153, "phase": "Chuẩn bị môi trường PRO  (Tuần 10-19)", "stt": "1", "main_task": "Chuẩn bị tài nguyên môi trường PRO", "sub_task": "SBSI: Chuẩn bị server\n- Dựng server\n- Mở port, firewall\n- Thông mạng server đến các hệ thống tích hợp MSB, BIDV, Bravo, Email delivery, AML, VCB, Sở, VSDC", "start_date": "09/08/2026", "end_date": "02/10/2026", "completed_date": "", "status": "Doing"}, {"id": 154, "phase": "Chuẩn bị môi trường PRO  (Tuần 10-19)", "stt": "2", "main_task": "Cài đặt môi trường PRO", "sub_task": "", "start_date": "05/10/2026", "end_date": "16/10/2026", "completed_date": "", "status": "Plan"}, {"id": 155, "phase": "Chuẩn bị môi trường PRO  (Tuần 10-19)", "stt": "", "main_task": "", "sub_task": "SBSI: Cài đặt theo tài liệu\nFSS: Hỗ trợ cài đặt\nSBSI: Import DB exp từ UAT", "start_date": "01/10/2026", "end_date": "07/10/2026", "completed_date": "", "status": "Plan"}, {"id": 156, "phase": "Chuẩn bị môi trường PRO  (Tuần 10-19)", "stt": "3.0", "main_task": "", "sub_task": "Test tải trên dữ liệu UAT. (nếu có)", "start_date": "10/10/2026", "end_date": "15/10/2026", "completed_date": "", "status": "Plan"}, {"id": 157, "phase": "Chuẩn bị môi trường PRO  (Tuần 10-19)", "stt": "4.0", "main_task": "", "sub_task": "Nâng cấp ứng dụng bổ sung (nếu có)", "start_date": "10/10/2026", "end_date": "16/10/2026", "completed_date": "", "status": "Plan"}, {"id": 158, "phase": "Test thông sàn với HSX & HNX và VSDC  (Tuần 3-18)", "stt": "1", "main_task": "Đăng ký thử nghiệm với HNX và HSX, VSDC", "sub_task": "", "start_date": "15/06/2026", "end_date": "31/07/2026", "completed_date": "", "status": "Done"}, {"id": 159, "phase": "Test thông sàn với HSX & HNX và VSDC  (Tuần 3-18)", "stt": "", "main_task": "", "sub_task": "FSS chuẩn bị tài liệu kỹ thuật", "start_date": "15/06/2026", "end_date": "03/07/2026", "completed_date": "09/07/2026", "status": "Done"}, {"id": 160, "phase": "Test thông sàn với HSX & HNX và VSDC  (Tuần 3-18)", "stt": "", "main_task": "", "sub_task": "SBSI đăng ký thử nghiệm với Sở, VSDC", "start_date": "06/07/2026", "end_date": "31/07/2026", "completed_date": "", "status": "Plan"}, {"id": 161, "phase": "Test thông sàn với HSX & HNX và VSDC  (Tuần 3-18)", "stt": "2", "main_task": "Chuẩn bị môi trường kiểm tra thông sàn và kết nối VSDC", "sub_task": "", "start_date": "15/06/2026", "end_date": "24/07/2026", "completed_date": "", "status": "Done"}, {"id": 162, "phase": "Test thông sàn với HSX & HNX và VSDC  (Tuần 3-18)", "stt": "", "main_task": "", "sub_task": "SBSI chuẩn bị tài nguyên máy chủ:", "start_date": "06/07/2026", "end_date": "31/07/2026", "completed_date": "", "status": "Plan"}, {"id": 163, "phase": "Test thông sàn với HSX & HNX và VSDC  (Tuần 3-18)", "stt": "", "main_task": "", "sub_task": "FSS, SBSI phối hợp dựng mt kiểm thử:\n-BO DB : Tạo riêng môi trường lấy DB exp UAT\n-BO service: Tạo thêm trên môi trường UAT\n-FO: Sử dụng mt UAT -->cấu hình môi trường UAT trong những ngày Sở kiểm tra (khoảng 5 ngày)\nNâng cấp các chỉnh sửa vào môi trường trước khi Sở đi kiểm tra", "start_date": "31/07/2026", "end_date": "13/08/2026", "completed_date": "", "status": "Plan"}, {"id": 164, "phase": "Test thông sàn với HSX & HNX và VSDC  (Tuần 3-18)", "stt": "3", "main_task": "Thi lấy xác nhận của  VSDC", "sub_task": "", "start_date": "19/07/2026", "end_date": "07/08/2026", "completed_date": "", "status": "Done"}, {"id": 165, "phase": "Test thông sàn với HSX & HNX và VSDC  (Tuần 3-18)", "stt": "4", "main_task": "Thực hiện test thông sàn với HSX & HNX, kết nối VSDC", "sub_task": "Phụ thuộc kế hoạch kiểm tra của Sở", "start_date": "14/08/2026", "end_date": "08/10/2026", "completed_date": "", "status": "Doing"}, {"id": 166, "phase": "Test thông sàn với HSX & HNX và VSDC  (Tuần 3-18)", "stt": "5", "main_task": "Thi lấy xác nhận của 2 Sở giao dịch chứng khoán", "sub_task": "Phụ thuộc kế hoạch kiểm tra của Sở", "start_date": "14/08/2026", "end_date": "08/10/2026", "completed_date": "", "status": "Doing"}, {"id": 167, "phase": "Convert dữ liệu, vận hành song song  (Tuần 20-21)", "stt": "1.0", "main_task": "Convert dữ liệu, Vận hành song song R1", "sub_task": "", "start_date": "18/10/2026", "end_date": "30/10/2026", "completed_date": "", "status": "Plan"}, {"id": 168, "phase": "Convert dữ liệu, vận hành song song  (Tuần 20-21)", "stt": "", "main_task": "", "sub_task": "Đối tác SBSI cung cấp Data convert", "start_date": "16/10/2026", "end_date": "16/10/2026", "completed_date": "", "status": "Plan"}, {"id": 169, "phase": "Convert dữ liệu, vận hành song song  (Tuần 20-21)", "stt": "", "main_task": "", "sub_task": "FSS convert dữ liệu", "start_date": "16/10/2026", "end_date": "16/10/2026", "completed_date": "", "status": "Plan"}, {"id": 170, "phase": "Convert dữ liệu, vận hành song song  (Tuần 20-21)", "stt": "", "main_task": "", "sub_task": "Nghiệp vụ SBSI vận hành 3,4 ngày liên tiếp + chấm dữ liệu", "start_date": "19/10/2026", "end_date": "22/10/2026", "completed_date": "", "status": "Plan"}, {"id": 171, "phase": "Convert dữ liệu, vận hành song song  (Tuần 20-21)", "stt": "2.0", "main_task": "Convert dữ liệu, Vận hành song song R2", "sub_task": "", "start_date": "18/10/2026", "end_date": "30/10/2026", "completed_date": "", "status": "Plan"}, {"id": 172, "phase": "Convert dữ liệu, vận hành song song  (Tuần 20-21)", "stt": "", "main_task": "", "sub_task": "Đối tác SBSI cung cấp Data convert", "start_date": "23/10/2026", "end_date": "23/10/2026", "completed_date": "", "status": "Plan"}, {"id": 173, "phase": "Convert dữ liệu, vận hành song song  (Tuần 20-21)", "stt": "", "main_task": "", "sub_task": "FSS convert dữ liệu", "start_date": "23/10/2026", "end_date": "23/10/2026", "completed_date": "", "status": "Plan"}, {"id": 174, "phase": "Convert dữ liệu, vận hành song song  (Tuần 20-21)", "stt": "", "main_task": "", "sub_task": "Nghiệp vụ SBSI vận hành 3 ngày liên tiếp + chấm dữ liệu", "start_date": "26/10/2026", "end_date": "29/10/2026", "completed_date": "", "status": "Plan"}, {"id": 175, "phase": "Golive  (Tuần 22-23)", "stt": "1", "main_task": "Xem xét lại tham số sản phẩm, người sử dụng, môi trường…", "sub_task": "", "start_date": "02/11/2026", "end_date": "06/11/2026", "completed_date": "", "status": "Plan"}, {"id": 176, "phase": "Golive  (Tuần 22-23)", "stt": "2", "main_task": "Golive hệ thống", "sub_task": "", "start_date": "09/11/2026", "end_date": "13/11/2026", "completed_date": "", "status": "Plan"}, {"id": 177, "phase": "Golive  (Tuần 22-23)", "stt": "", "main_task": "", "sub_task": "Đối tác SBSI cung cấp Data convert", "start_date": "06/11/2026", "end_date": "06/11/2026", "completed_date": "", "status": "Plan"}, {"id": 178, "phase": "Golive  (Tuần 22-23)", "stt": "", "main_task": "", "sub_task": "FSS convert dữ liệu", "start_date": "06/11/2026", "end_date": "06/11/2026", "completed_date": "", "status": "Plan"}, {"id": 179, "phase": "Golive  (Tuần 22-23)", "stt": "", "main_task": "", "sub_task": "Bắt đầu vận hành song song -->Golive", "start_date": "09/11/2026", "end_date": "09/11/2026", "completed_date": "", "status": "Plan"}];
+    const DAILY_UAT_DATA = {"nghiepVu": {"target": 40.1, "totalCases": 5422, "uncheck": 3400, "members": [{"stt": 1, "name": "LinhPT", "dept": "VH&DVTC", "total": 869, "uncheck": 797, "target": 40.1, "n1": 0, "n2": 0, "n3": 0, "n4": 0, "n5": 0, "n6": 0, "n7": 0, "n8": 0, "n9": 0, "n10": 0}, {"stt": 2, "name": "SuongHT", "dept": "VH&DVTC", "total": 649, "uncheck": 244, "target": 40.1, "n1": 12, "n2": 0, "n3": 0, "n4": 0, "n5": 0, "n6": 0, "n7": 0, "n8": 0, "n9": 0, "n10": 0}, {"stt": 3, "name": "HuongVTM", "dept": "VH&DVTC", "total": 377, "uncheck": 360, "target": 40.1, "n1": 0, "n2": 0, "n3": 0, "n4": 0, "n5": 0, "n6": 0, "n7": 0, "n8": 0, "n9": 0, "n10": 0}, {"stt": 4, "name": "PhuongVTL", "dept": "VH&DVTC", "total": 402, "uncheck": 275, "target": 40.1, "n1": 1, "n2": 0, "n3": 0, "n4": 0, "n5": 0, "n6": 0, "n7": 0, "n8": 0, "n9": 0, "n10": 0}, {"stt": 5, "name": "OanhVTL", "dept": "VH&DVTC", "total": 132, "uncheck": 116, "target": 40.1, "n1": 0, "n2": 0, "n3": 0, "n4": 0, "n5": 0, "n6": 0, "n7": 0, "n8": 0, "n9": 0, "n10": 0}, {"stt": 6, "name": "PhuongNTM", "dept": "VH&DVTC", "total": 544, "uncheck": 317, "target": 40.1, "n1": 19, "n2": 0, "n3": 0, "n4": 0, "n5": 0, "n6": 0, "n7": 0, "n8": 0, "n9": 0, "n10": 0}, {"stt": 7, "name": "NamDN", "dept": "VH&DVTC", "total": 105, "uncheck": 39, "target": 40.1, "n1": 7, "n2": 0, "n3": 0, "n4": 0, "n5": 0, "n6": 0, "n7": 0, "n8": 0, "n9": 0, "n10": 0}, {"stt": 8, "name": "CuongNT", "dept": "PTSP Số", "total": 351, "uncheck": 405, "target": 40.1, "n1": 20, "n2": 0, "n3": 0, "n4": 0, "n5": 0, "n6": 0, "n7": 0, "n8": 0, "n9": 0, "n10": 0}, {"stt": 9, "name": "QuocPB", "dept": "PTSP Số", "total": 199, "uncheck": 178, "target": 40.1, "n1": 34, "n2": 0, "n3": 0, "n4": 0, "n5": 0, "n6": 0, "n7": 0, "n8": 0, "n9": 0, "n10": 0}, {"stt": 10, "name": "BaoDK", "dept": "PTSP Số", "total": 481, "uncheck": 152, "target": 40.1, "n1": 12, "n2": 0, "n3": 0, "n4": 0, "n5": 0, "n6": 0, "n7": 0, "n8": 0, "n9": 0, "n10": 0}, {"stt": 11, "name": "BachNT", "dept": "PTSP Số", "total": 365, "uncheck": 157, "target": 40.1, "n1": 0, "n2": 0, "n3": 0, "n4": 0, "n5": 0, "n6": 0, "n7": 0, "n8": 0, "n9": 0, "n10": 0}, {"stt": 12, "name": "LongLV", "dept": "Nghiệp vụ", "total": 514, "uncheck": 159, "target": 40.1, "n1": 32, "n2": 0, "n3": 0, "n4": 0, "n5": 0, "n6": 0, "n7": 0, "n8": 0, "n9": 0, "n10": 0}, {"stt": 13, "name": "HangNTT", "dept": "Nghiệp vụ", "total": 13, "uncheck": 12, "target": 40.1, "n1": 0, "n2": 0, "n3": 0, "n4": 0, "n5": 0, "n6": 0, "n7": 0, "n8": 0, "n9": 0, "n10": 0}, {"stt": 14, "name": "DatNT", "dept": "Nghiệp vụ", "total": 0, "uncheck": 0, "target": 40.1, "n1": 0, "n2": 0, "n3": 0, "n4": 0, "n5": 0, "n6": 0, "n7": 0, "n8": 0, "n9": 0, "n10": 0}, {"stt": 15, "name": "HaVT", "dept": "Nghiệp vụ", "total": 17, "uncheck": 0, "target": 40.1, "n1": 0, "n2": 0, "n3": 0, "n4": 0, "n5": 0, "n6": 0, "n7": 0, "n8": 0, "n9": 0, "n10": 0}, {"stt": 17, "name": "LongNH", "dept": "PTSP Số", "total": 129, "uncheck": 48, "target": 40.1, "n1": 1, "n2": 0, "n3": 0, "n4": 0, "n5": 0, "n6": 0, "n7": 0, "n8": 0, "n9": 0, "n10": 0}, {"stt": 18, "name": "NgaMTQ", "dept": "PTSP Số", "total": 143, "uncheck": 88, "target": 40.1, "n1": 0, "n2": 0, "n3": 0, "n4": 0, "n5": 0, "n6": 0, "n7": 0, "n8": 0, "n9": 0, "n10": 0}, {"stt": 19, "name": "AnhLL", "dept": "PTSP Số", "total": 119, "uncheck": 40, "target": 40.1, "n1": 13, "n2": 0, "n3": 0, "n4": 0, "n5": 0, "n6": 0, "n7": 0, "n8": 0, "n9": 0, "n10": 0}, {"stt": 20, "name": "PhuongVTM", "dept": "VH&DVTC", "total": 13, "uncheck": 13, "target": 40.1, "n1": 0, "n2": 0, "n3": 0, "n4": 0, "n5": 0, "n6": 0, "n7": 0, "n8": 0, "n9": 0, "n10": 0}]}, "it": {"target": 36.9, "totalCases": 4410, "uncheck": 1915, "members": [{"stt": 1, "name": "TrinhNT", "dept": "GPS", "total": 486, "uncheck": 270, "target": 36.9, "n1": 18, "n2": 0, "n3": 0, "n4": 0, "n5": 0, "n6": 0, "n7": 0, "n8": 0, "n9": 0, "n10": 0}, {"stt": 2, "name": "HuongPTT", "dept": "GPS", "total": 313, "uncheck": 199, "target": 36.9, "n1": 19, "n2": 0, "n3": 0, "n4": 0, "n5": 0, "n6": 0, "n7": 0, "n8": 0, "n9": 0, "n10": 0}, {"stt": 3, "name": "HaDT", "dept": "GPS", "total": 783, "uncheck": 442, "target": 36.9, "n1": 65, "n2": 0, "n3": 0, "n4": 0, "n5": 0, "n6": 0, "n7": 0, "n8": 0, "n9": 0, "n10": 0}, {"stt": 4, "name": "HuongLT", "dept": "GPS", "total": 768, "uncheck": 356, "target": 36.9, "n1": 23, "n2": 0, "n3": 0, "n4": 0, "n5": 0, "n6": 0, "n7": 0, "n8": 0, "n9": 0, "n10": 0}, {"stt": 5, "name": "ThaoNP", "dept": "GPS", "total": 218, "uncheck": 94, "target": 36.9, "n1": 25, "n2": 0, "n3": 0, "n4": 0, "n5": 0, "n6": 0, "n7": 0, "n8": 0, "n9": 0, "n10": 0}, {"stt": 6, "name": "TuanNA", "dept": "GPS", "total": 822, "uncheck": 213, "target": 36.9, "n1": 51, "n2": 0, "n3": 0, "n4": 0, "n5": 0, "n6": 0, "n7": 0, "n8": 0, "n9": 0, "n10": 0}, {"stt": 7, "name": "AnNT", "dept": "GPS", "total": 208, "uncheck": 44, "target": 36.9, "n1": 5, "n2": 0, "n3": 0, "n4": 0, "n5": 0, "n6": 0, "n7": 0, "n8": 0, "n9": 0, "n10": 0}, {"stt": 8, "name": "HungBQ", "dept": "GPS", "total": 451, "uncheck": 134, "target": 36.9, "n1": 75, "n2": 0, "n3": 0, "n4": 0, "n5": 0, "n6": 0, "n7": 0, "n8": 0, "n9": 0, "n10": 0}, {"stt": 9, "name": "TracTT", "dept": "GPS", "total": 361, "uncheck": 163, "target": 36.9, "n1": 58, "n2": 0, "n3": 0, "n4": 0, "n5": 0, "n6": 0, "n7": 0, "n8": 0, "n9": 0, "n10": 0}]}};
+
+    let currentTrackerTab = 'nghiepVu';
+
+    function switchUatTrackerTab(tab) {
+      currentTrackerTab = tab;
+      const bNv = document.getElementById('btn_tracker_nv');
+      const bIt = document.getElementById('btn_tracker_it');
+      const bAll = document.getElementById('btn_tracker_all');
+      if (bNv) bNv.className = (tab === 'nghiepVu') ? 'btn btn-orange' : 'btn btn-dark';
+      if (bIt) bIt.className = (tab === 'it') ? 'btn btn-orange' : 'btn btn-dark';
+      if (bAll) bAll.className = (tab === 'all') ? 'btn btn-orange' : 'btn btn-dark';
+      renderDailyUatTracker();
+    }
+
+    function renderDailyUatTracker() {
+      const tbody = document.getElementById('tbody_daily_uat_tracker');
+      const tfoot = document.getElementById('tfoot_daily_uat_tracker');
+      const summaryStrip = document.getElementById('tracker_summary_strip');
+      if (!tbody) return;
+
+      let list = [];
+      if (currentTrackerTab === 'nghiepVu') {
+        list = DAILY_UAT_DATA.nghiepVu.members;
+      } else if (currentTrackerTab === 'it') {
+        list = DAILY_UAT_DATA.it.members;
+      } else {
+        list = [...DAILY_UAT_DATA.nghiepVu.members, ...DAILY_UAT_DATA.it.members];
+      }
+
+      let sumTotal = 0, sumUncheck = 0, sumRemaining = 0, sumN1 = 0, sumActual = 0;
+
+      let rowsHtml = '';
+      list.forEach((m, idx) => {
+        const rowActual = (m.n1 || 0) + (m.n2 || 0) + (m.n3 || 0) + (m.n4 || 0) + (m.n5 || 0) + (m.n6 || 0) + (m.n7 || 0) + (m.n8 || 0) + (m.n9 || 0) + (m.n10 || 0);
+        const rowRemaining = Math.max(0, (m.uncheck || 0) - rowActual);
+        const pct = (m.uncheck > 0) ? ((rowActual / m.uncheck) * 100).toFixed(1) : ((m.total > 0 && rowActual > 0) ? '100.0' : '0.0');
+
+        sumTotal += (m.total || 0);
+        sumUncheck += (m.uncheck || 0);
+        sumRemaining += rowRemaining;
+        sumN1 += (m.n1 || 0);
+        sumActual += rowActual;
+
+        const isN1Done = (m.n1 || 0) >= m.target;
+        const n1Style = (m.n1 > 0) ? 'font-weight:800; color:var(--green-buy);' : 'color:var(--text-muted);';
+
+        rowsHtml += `<tr>
+          <td style="color:var(--text-muted);">${idx + 1}</td>
+          <td style="text-align:left; font-weight:700; color:var(--text-white);">${m.name}</td>
+          <td><span class="badge-num" style="font-size:11px; padding:2px 6px;">${m.dept || 'NV'}</span></td>
+          <td>${m.total.toLocaleString()}</td>
+          <td style="color:var(--text-secondary);">${m.uncheck.toLocaleString()}</td>
+          <td style="color:var(--maris-orange); font-weight:700;">${m.target}</td>
+          <td style="font-weight:800; color:${rowRemaining > 100 ? '#EF4444' : '#F59E0B'};">${rowRemaining.toLocaleString()}</td>
+          <td style="${n1Style} background:rgba(228, 95, 53, 0.08);">${m.n1 || 0}</td>
+          <td style="color:var(--text-muted);">${m.n2 || 0}</td>
+          <td style="color:var(--text-muted);">${m.n3 || 0}</td>
+          <td style="color:var(--text-muted);">${m.n4 || 0}</td>
+          <td style="color:var(--text-muted);">${m.n5 || 0}</td>
+          <td style="color:var(--text-muted);">${m.n6 || 0}</td>
+          <td style="color:var(--text-muted);">${m.n7 || 0}</td>
+          <td style="color:var(--text-muted);">${m.n8 || 0}</td>
+          <td style="color:var(--text-muted);">${m.n9 || 0}</td>
+          <td style="color:var(--text-muted);">${m.n10 || 0}</td>
+          <td style="font-weight:800; color:var(--maris-orange);">${rowActual.toLocaleString()}</td>
+          <td>
+            <div style="display:flex; align-items:center; gap:6px;">
+              <div style="flex:1; height:6px; background:var(--bg-card-sub); border-radius:3px; overflow:hidden;">
+                <div style="width:${Math.min(100, parseFloat(pct))}%; height:100%; background:${parseFloat(pct) > 20 ? 'var(--green-buy)' : 'var(--maris-orange)'};"></div>
+              </div>
+              <span style="font-size:11px; font-weight:700; width:38px; text-align:right;">${pct}%</span>
+            </div>
+          </td>
+        </tr>`;
+      });
+
+      tbody.innerHTML = rowsHtml;
+
+      const totalPct = (sumUncheck > 0) ? ((sumActual / sumUncheck) * 100).toFixed(1) : '0.0';
+
+      if (tfoot) {
+        tfoot.innerHTML = `<tr>
+          <td colspan="3" style="text-align:left; padding-left:14px; color:var(--maris-orange); font-size:13px;">TỔNG CỘNG (${list.length} PIC)</td>
+          <td>${sumTotal.toLocaleString()}</td>
+          <td>${sumUncheck.toLocaleString()}</td>
+          <td style="color:var(--maris-orange);">${currentTrackerTab === 'it' ? '36.9' : (currentTrackerTab === 'nghiepVu' ? '40.1' : '~38.5')}</td>
+          <td style="color:#EF4444; font-size:13px;">${sumRemaining.toLocaleString()}</td>
+          <td style="background:rgba(228, 95, 53, 0.15); color:var(--maris-orange); font-size:13px;">${sumN1.toLocaleString()}</td>
+          <td style="color:var(--text-muted);">0</td>
+          <td style="color:var(--text-muted);">0</td>
+          <td style="color:var(--text-muted);">0</td>
+          <td style="color:var(--text-muted);">0</td>
+          <td style="color:var(--text-muted);">0</td>
+          <td style="color:var(--text-muted);">0</td>
+          <td style="color:var(--text-muted);">0</td>
+          <td style="color:var(--text-muted);">0</td>
+          <td style="color:var(--text-muted);">0</td>
+          <td style="color:var(--maris-orange); font-size:13px;">${sumActual.toLocaleString()}</td>
+          <td style="color:var(--green-buy); font-size:13px;">${totalPct}%</td>
+        </tr>`;
+      }
+
+      if (summaryStrip) {
+        summaryStrip.innerHTML = `
+          <div style="background:var(--bg-card-sub); border:1px solid var(--border-card); border-radius:8px; padding:10px 14px;">
+            <div style="font-size:11px; color:var(--text-secondary);">TỔNG SỐ CASE PHỤ TRÁCH</div>
+            <div style="font-size:18px; font-weight:800; color:var(--text-white); margin-top:2px;">${sumTotal.toLocaleString()} <span style="font-size:11px; font-weight:400; color:var(--text-muted);">TCs</span></div>
+          </div>
+          <div style="background:var(--bg-card-sub); border:1px solid var(--border-card); border-radius:8px; padding:10px 14px;">
+            <div style="font-size:11px; color:var(--text-secondary);">CHƯA TEST (TỒN BAN ĐẦU)</div>
+            <div style="font-size:18px; font-weight:800; color:#EF4444; margin-top:2px;">${sumUncheck.toLocaleString()} <span style="font-size:11px; font-weight:400; color:var(--text-muted);">TCs</span></div>
+          </div>
+          <div style="background:var(--bg-card-sub); border:1px solid var(--border-card); border-radius:8px; padding:10px 14px; border-left:3px solid var(--maris-orange);">
+            <div style="font-size:11px; color:var(--text-secondary);">HOÀN THÀNH NGÀY N1 (25/09)</div>
+            <div style="font-size:18px; font-weight:800; color:var(--maris-orange); margin-top:2px;">+${sumN1.toLocaleString()} <span style="font-size:11px; font-weight:400; color:var(--text-muted);">TCs</span></div>
+          </div>
+          <div style="background:var(--bg-card-sub); border:1px solid var(--border-card); border-radius:8px; padding:10px 14px;">
+            <div style="font-size:11px; color:var(--text-secondary);">CÒN LẠI CẦN GIẢI QUYẾT</div>
+            <div style="font-size:18px; font-weight:800; color:#F59E0B; margin-top:2px;">${sumRemaining.toLocaleString()} <span style="font-size:11px; font-weight:400; color:var(--text-muted);">TCs</span></div>
+          </div>
+          <div style="background:var(--bg-card-sub); border:1px solid var(--border-card); border-radius:8px; padding:10px 14px; border-left:3px solid var(--green-buy);">
+            <div style="font-size:11px; color:var(--text-secondary);">TIẾN ĐỘ HOÀN THÀNH</div>
+            <div style="font-size:18px; font-weight:800; color:var(--green-buy); margin-top:2px;">${totalPct}% <span style="font-size:11px; font-weight:400; color:var(--text-muted);">(Lũy kế)</span></div>
+          </div>
+        `;
+      }
+    }
+
+    function filterWbsTasks() {
+      const search = (document.getElementById('wbs_search_input')?.value || '').toLowerCase().trim();
+      const phase = document.getElementById('wbs_phase_filter')?.value || 'ALL';
+      const status = document.getElementById('wbs_status_filter')?.value || 'ALL';
+      const tbody = document.getElementById('tbody_flex_wbs');
+      const countBadge = document.getElementById('wbs_count_badge');
+      if (!tbody) return;
+
+      const filtered = FLEX_WBS_TASKS.filter(t => {
+        if (phase !== 'ALL' && t.phase !== phase) return false;
+        if (status !== 'ALL') {
+          const tStat = (t.status || '').toLowerCase();
+          if (status === 'Done' && !tStat.includes('done')) return false;
+          if (status === 'Doing' && !tStat.includes('doing')) return false;
+          if (status === 'Plan' && (tStat.includes('done') || tStat.includes('doing'))) return false;
+        }
+        if (search) {
+          const matchMain = (t.main_task || '').toLowerCase().includes(search);
+          const matchSub = (t.sub_task || '').toLowerCase().includes(search);
+          const matchPhase = (t.phase || '').toLowerCase().includes(search);
+          if (!matchMain && !matchSub && !matchPhase) return false;
+        }
+        return true;
+      });
+
+      if (countBadge) countBadge.innerText = `${filtered.length} / ${FLEX_WBS_TASKS.length} công việc`;
+
+      let html = '';
+      filtered.forEach((t, i) => {
+        let badgeHtml = '<span class="badge-num" style="background:var(--bg-card-sub); color:var(--text-muted); font-size:11px;">⏳ Plan</span>';
+        const st = (t.status || '').toLowerCase();
+        if (st.includes('done')) {
+          badgeHtml = '<span class="badge-num" style="background:var(--green-bg); color:var(--green-buy); border:1px solid var(--green-border); font-size:11px; font-weight:700;">✅ Done</span>';
+        } else if (st.includes('doing')) {
+          badgeHtml = '<span class="badge-num" style="background:rgba(228, 95, 53, 0.15); color:var(--maris-orange); border:1px solid var(--maris-orange); font-size:11px; font-weight:700;">🟡 Doing</span>';
+        }
+
+        html += `<tr>
+          <td style="text-align:center; color:var(--text-muted);">${t.id}</td>
+          <td style="color:var(--text-secondary); font-size:11.5px; font-weight:600;">${t.phase}</td>
+          <td style="font-weight:700; color:var(--text-white);">${t.main_task || '---'}</td>
+          <td style="color:var(--text-secondary); font-size:12px; line-height:1.4;">${t.sub_task || '---'}</td>
+          <td style="text-align:center; font-size:11.5px; color:var(--text-muted);">${t.start_date || '---'}</td>
+          <td style="text-align:center; font-size:11.5px; color:var(--text-muted);">${t.end_date || '---'}</td>
+          <td style="text-align:center; font-size:11.5px; color:${t.completed_date ? 'var(--green-buy)' : 'var(--text-muted)'}; font-weight:${t.completed_date ? '700' : '400'};">${t.completed_date || '---'}</td>
+          <td style="text-align:center;">${badgeHtml}</td>
+        </tr>`;
+      });
+
+      if (filtered.length === 0) {
+        html = '<tr><td colspan="8" style="text-align:center; padding:30px; color:var(--text-muted);">Không tìm thấy công việc nào phù hợp với bộ lọc tìm kiếm.</td></tr>';
+      }
+
+      tbody.innerHTML = html;
+    }
+
 </script>
 
   <!-- MODAL CREATE ISSUE -->
