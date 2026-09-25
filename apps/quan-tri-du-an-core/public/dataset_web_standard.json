@@ -3811,7 +3811,7 @@
   {
     "id": "TC_WEB_UC38_165",
     "stt": "165",
-    "tester": "NgaMTQ",
+    "tester": "BachNT",
     "module": "Yêu cầu thay đổi bổ sung",
     "screen": "UC38: 3.6.1.8 Lệnh hoạt động",
     "useCaseId": "UC38",
@@ -3825,10 +3825,17 @@
     "testData": "TK: 088C000922 | MK: 13579@Ab | PIN/OTP: 135790",
     "errorCode": "N/A – không phát sinh thông báo lỗi",
     "smoke": "No",
-    "note": "",
-    "status": "Untested",
+    "note": "Đạt chuẩn 100% kịch bản P3 Medium. Xác thực thành công: khi bấm Sửa tại Lệnh hoạt động, thông tin lệnh được load lên form (SỬA MUA 20.8), bấm lại nút MUA/BÁN thì form tự động xóa thông tin đang sửa và không áp dụng thay đổi nào cho lệnh gốc.",
+    "status": "Pass",
     "defaultStatus": "Untested",
-    "defaultTester": "NgaMTQ"
+    "defaultTester": "NgaMTQ",
+    "updatedAt": "08:00 25/09",
+    "actual": "Tại tab Lệnh hoạt động (TK 088C114422.01), nhấn [Sửa] trên dòng lệnh VPB Giá 20.8, KL 100. Form Đặt lệnh chuyển sang chế độ Sửa (hiển thị nút SỬA MUA: 2,080,000). Trước khi xác nhận, bấm tab MUA để hủy thao tác sửa. Kết quả: Form đặt lệnh được clear về trạng thái ban đầu, lệnh gốc trong Lệnh hoạt động vẫn giữ nguyên trạng thái Chờ gửi với Giá 20.8.",
+    "evidence": [
+      "evidence_TC_WEB_UC38_165_1_active_orders.png",
+      "evidence_TC_WEB_UC38_165_2_form_in_edit_mode.png",
+      "evidence_TC_WEB_UC38_165_3_edit_cancelled_verified.png"
+    ]
   },
   {
     "id": "TC_WEB_UC39_166",
@@ -3877,7 +3884,7 @@
   {
     "id": "TC_WEB_UC39_168",
     "stt": "168",
-    "tester": "NgaMTQ",
+    "tester": "BachNT",
     "module": "Giao dịch Lệnh",
     "screen": "UC39: 3.6.1.9 Sổ lệnh (tại màn hình Đặt lệnh - Menu)",
     "useCaseId": "UC39",
@@ -3891,10 +3898,18 @@
     "testData": "TK: 088C000922 | MK: 13579@Ab | PIN/OTP: 135790 | Mã: HPG/FPT | KL: 100/500 | Giá: Thị trường / LO",
     "errorCode": "N/A – không phát sinh thông báo lỗi",
     "smoke": "No",
-    "note": "",
-    "status": "Untested",
+    "note": "Đạt chuẩn 100% kịch bản P2 High. Xác thực thành công: thực hiện hủy lệnh trong phiên từ Lệnh hoạt động, popup xác nhận hủy hiển thị đầy đủ thông tin, sau khi hủy lệnh vẫn hiển thị đầy đủ trên Sổ lệnh với trạng thái 'Hủy lệnh chờ gửi'.",
+    "status": "Pass",
     "defaultStatus": "Untested",
-    "defaultTester": "NgaMTQ"
+    "defaultTester": "NgaMTQ",
+    "updatedAt": "08:02 25/09",
+    "actual": "Thực hiện hủy lệnh mua VPB (Giá 20.8, KL 100) tại tab Lệnh hoạt động. Popup [Xác nhận hủy lệnh] hiển thị đúng thông tin, nhập mã PIN và xác nhận hủy thành công. Chuyển sang tab Sổ lệnh trong ngày, lệnh vừa hủy hiển thị rõ ràng với trạng thái 'Hủy lệnh chờ gửi' (KL đã hủy = 100), không bị ẩn khỏi danh sách.",
+    "evidence": [
+      "evidence_TC_WEB_UC39_168_1_cancel_modal_pin_filled.png",
+      "evidence_TC_WEB_UC39_168_2_so_lenh_after_cancel.png",
+      "evidence_TC_WEB_UC39_168_3_so_lenh_cancelled_verified.png",
+      "evidence_TC_WEB_UC39_168_so_lenh_all_orders.png"
+    ]
   },
   {
     "id": "TC_WEB_UC40_169",
@@ -3947,7 +3962,7 @@
   {
     "id": "TC_WEB_UC40_171",
     "stt": "171",
-    "tester": "NgaMTQ",
+    "tester": "BachNT",
     "module": "Giao dịch Lệnh",
     "screen": "UC40: 3.6.1.10 Sổ lệnh Lệnh điều kiện",
     "useCaseId": "UC40",
@@ -3961,10 +3976,19 @@
     "testData": "TK: 088C000922 | MK: 13579@Ab | PIN/OTP: 135790 | Mã: HPG/FPT | KL: 100/500 | Giá: Thị trường / LO",
     "errorCode": "N/A – không phát sinh thông báo lỗi",
     "smoke": "No",
-    "note": "",
-    "status": "Untested",
+    "note": "Đạt chuẩn 100% kịch bản P1 Blocker. Xác thực thành công: đặt lệnh điều kiện Stop Limit (STO) giá kích hoạt 23.5 chưa chạm trigger, lệnh ở trạng thái 'Chờ kích hoạt', thực hiện bấm Hủy trực tiếp trên tab Lệnh điều kiện, trạng thái cập nhật tức thì thành 'Đã hủy'.",
+    "status": "Pass",
     "defaultStatus": "Untested",
-    "defaultTester": "NgaMTQ"
+    "defaultTester": "NgaMTQ",
+    "updatedAt": "08:04 25/09",
+    "actual": "Đặt 1 lệnh điều kiện Stop limit (STO) Mua VPB, Giá kích hoạt >= 23.5, Giá đặt 23.5, KL 100 (SHL: 202609250000000354). Lệnh hiển thị tại tab Lệnh điều kiện với trạng thái 'Chờ kích hoạt'. Nhấn nút [Hủy] trên dòng lệnh, popup xác nhận hiển thị và thực hiện hủy thành công. Trạng thái lệnh trên tab Lệnh điều kiện cập nhật thành 'Đã hủy', KL đã hủy ghi nhận 100, nút Hủy được ẩn.",
+    "evidence": [
+      "evidence_TC_WEB_UC40_171_1_form_conditional_filled.png",
+      "evidence_TC_WEB_UC40_171_2_conditional_confirm_modal.png",
+      "evidence_TC_WEB_UC40_171_3_conditional_order_active.png",
+      "evidence_TC_WEB_UC40_171_4_cancel_modal.png",
+      "evidence_TC_WEB_UC40_171_5_conditional_cancelled_verified.png"
+    ]
   },
   {
     "id": "TC_WEB_UC40_172",
