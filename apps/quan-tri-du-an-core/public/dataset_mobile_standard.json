@@ -1059,10 +1059,12 @@
     "testData": "TK: 088C024014 | MK: 13579@Ab | PIN/OTP: 135790",
     "errorCode": "N/A – không phát sinh thông báo lỗi",
     "smoke": "No",
-    "note": "",
-    "status": "Untested",
+    "note": "Defect Dependency / Missing Feature: Bảng giá đầy đủ chưa được phát triển (kế thừa kết quả TC_APP_UC11_047).",
+    "status": "Fail",
     "defaultStatus": "Untested",
-    "defaultTester": "LongNH"
+    "defaultTester": "LongNH",
+    "evidence": "evidence_TC_APP_UC11_047.png",
+    "actual": "Không thể thực hiện bước kiểm thử 'Tại Bảng giá đầy đủ, chạm nút góc phải màn hình để quay lại Bảng giá rút gọn' do ứng dụng chưa phát triển màn hình Bảng giá đầy đủ (không có nút Xoay tại Bảng giá rút gọn và Activity bị khóa cố định Portrait). Ca test bị chặn do lỗi phụ thuộc vào tính năng Bảng giá đầy đủ chưa hoàn thiện."
   },
   {
     "id": "TC_APP_UC11_049",
@@ -1081,10 +1083,12 @@
     "testData": "TK: 088C024014 | MK: 13579@Ab | PIN/OTP: 135790",
     "errorCode": "N/A – không phát sinh thông báo lỗi",
     "smoke": "No",
-    "note": "",
-    "status": "Untested",
+    "note": "Defect Dependency / Missing Feature: Ứng dụng khóa dọc và chưa hỗ trợ chế độ Landscape xoay ngang.",
+    "status": "Fail",
     "defaultStatus": "Untested",
-    "defaultTester": "LongNH"
+    "defaultTester": "LongNH",
+    "evidence": "evidence_TC_APP_UC11_047.png",
+    "actual": "Không thể kiểm thử thao tác 'Xoay thiết bị khi đang ở Bảng giá đầy đủ' do giao diện Bảng giá đầy đủ màn hình ngang không tồn tại và hệ thống Android WindowManager thiết lập khóa cứng mCurrentAppOrientation=SCREEN_ORIENTATION_USER_PORTRAIT. Ứng dụng không phản hồi xoay ngang khi thiết bị thay đổi chiều hiển thị."
   },
   {
     "id": "TC_APP_UC12_050",
@@ -1125,10 +1129,12 @@
     "testData": "TK: 088C000922 | MK: 13579@Ab | PIN/OTP: 135790 | Mã: HPG/FPT | KL: 100/500 | Giá: Thị trường / LO",
     "errorCode": "ERR-APP-2.4.1-01",
     "smoke": "No",
-    "note": "",
-    "status": "Untested",
+    "note": "Pending: Chờ kết nối cổng API xác thực UAT Core.",
+    "status": "pending",
     "defaultStatus": "Untested",
-    "defaultTester": "NgaMTQ"
+    "defaultTester": "NgaMTQ",
+    "evidence": "screen_login_timeout_sso.png",
+    "actual": "Đã cấu hình dữ liệu kiểm thử tài khoản 088C000922 và chuẩn bị sẵn sàng thiết bị LDPlayer (emulator-5554). Tuy nhiên kết nối tới SSO Gateway (trading-uat.sbsi.vn) bị timeout cổng 443 từ môi trường mạng hiện tại. Tạm lưu trạng thái pending để nghiệm thu lệnh ngay khi kết nối Core FLEX được phục hồi."
   },
   {
     "id": "TC_APP_UC12_052",
@@ -1147,10 +1153,12 @@
     "testData": "TK: 088C000922 | MK: 13579@Ab | PIN/OTP: 135790 | Mã: HPG/FPT | KL: 100/500 | Giá: Thị trường / LO",
     "errorCode": "ERR-APP-2.4.1-02",
     "smoke": "No",
-    "note": "",
-    "status": "Untested",
+    "note": "Pending: Chờ kết nối cổng API xác thực UAT Core.",
+    "status": "pending",
     "defaultStatus": "Untested",
-    "defaultTester": "NgaMTQ"
+    "defaultTester": "NgaMTQ",
+    "evidence": "screen_login_timeout_sso.png",
+    "actual": "Đã sẵn sàng kịch bản kiểm thử giá ngoài khoảng trần/sàn. Chờ kết nối UAT Core ổn định để thực thi."
   },
   {
     "id": "TC_APP_UC12_053",
@@ -1191,10 +1199,12 @@
     "testData": "TK: 088C000922 | MK: 13579@Ab | PIN/OTP: 135790 | Mã: HPG/FPT | KL: 100/500 | Giá: Thị trường / LO",
     "errorCode": "N/A – không phát sinh thông báo lỗi",
     "smoke": "No",
-    "note": "",
-    "status": "Untested",
+    "note": "Pending: Chờ kết nối cổng API xác thực UAT Core.",
+    "status": "pending",
     "defaultStatus": "Untested",
-    "defaultTester": "NgaMTQ"
+    "defaultTester": "NgaMTQ",
+    "evidence": "screen_login_timeout_sso.png",
+    "actual": "Đã sẵn sàng kịch bản kiểm thử tính năng tự động điền khối lượng tối đa. Chờ kết nối UAT Core ổn định để thực thi."
   },
   {
     "id": "TC_APP_UC12_055",
@@ -1213,10 +1223,12 @@
     "testData": "TK: 088C000922 | MK: 13579@Ab | PIN/OTP: 135790 | Mã: HPG/FPT | KL: 100/500 | Giá: Thị trường / LO",
     "errorCode": "ERR-APP-2.4.1-03",
     "smoke": "No",
-    "note": "",
-    "status": "Untested",
+    "note": "Pending: Chờ kết nối cổng API xác thực UAT Core.",
+    "status": "pending",
     "defaultStatus": "Untested",
-    "defaultTester": "NgaMTQ"
+    "defaultTester": "NgaMTQ",
+    "evidence": "screen_login_timeout_sso.png",
+    "actual": "Đã sẵn sàng kịch bản kiểm thử đặt lệnh mua vượt quá sức mua. Chờ kết nối UAT Core ổn định để thực thi."
   },
   {
     "id": "TC_APP_UC12_056",
