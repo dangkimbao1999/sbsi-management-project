@@ -1011,10 +1011,12 @@
     "testData": "TK: 088C024014 | MK: 13579@Ab | PIN/OTP: 135790",
     "errorCode": "ERR-APP-2.3.4-01",
     "smoke": "No",
-    "note": "Chỉ áp dụng nếu app có danh mục mặc định không thể xóa",
-    "status": "Untested",
+    "note": "Hệ thống phòng vệ bằng UX: Không hiển thị action xóa đối với toàn bộ danh mục mặc định/hệ thống.",
+    "status": "Pass",
     "defaultStatus": "Untested",
-    "defaultTester": "CuongNT"
+    "defaultTester": "CuongNT",
+    "evidence": "evidence_TC_APP_UC10_046.png",
+    "actual": "Hệ thống tự động ẩn tùy chọn 'Xoá danh mục' và 'Chỉnh sửa danh mục' trên các danh mục mặc định của hệ thống (Danh mục sở hữu, Chỉ số VN30, HOSE, HNX, UPCOM...). Menu thao tác chỉ cho phép 'Thêm danh mục mới', ngăn chặn triệt để rủi ro xóa nhầm danh mục hệ thống ngay từ giao diện. Kết quả kiểm thử thực tế đạt kỳ vọng bảo vệ danh mục mặc định."
   },
   {
     "id": "TC_APP_UC11_047",
@@ -1033,10 +1035,12 @@
     "testData": "TK: 088C024014 | MK: 13579@Ab | PIN/OTP: 135790",
     "errorCode": "N/A – không phát sinh thông báo lỗi",
     "smoke": "No",
-    "note": "",
-    "status": "Untested",
+    "note": "Defect / Missing Feature: Thiếu biểu tượng 'Xoay' và chưa hỗ trợ chế độ Landscape Full Priceboard.",
+    "status": "Fail",
     "defaultStatus": "Untested",
-    "defaultTester": "LongNH"
+    "defaultTester": "LongNH",
+    "evidence": "evidence_TC_APP_UC11_047.png",
+    "actual": "Trên màn hình Bảng giá rút gọn hiện tại không có biểu tượng 'Xoay' để chuyển sang xem Bảng giá đầy đủ. Đồng thời, qua kiểm tra hệ thống WindowManager của Android (mCurrentAppOrientation=SCREEN_ORIENTATION_USER_PORTRAIT), ứng dụng đã khóa cố định ở chế độ màn hình dọc (Portrait), không hỗ trợ xoay ngang giao diện theo thiết bị. Bảng giá đầy đủ chưa được phát triển trên bản UAT hiện tại."
   },
   {
     "id": "TC_APP_UC11_048",
