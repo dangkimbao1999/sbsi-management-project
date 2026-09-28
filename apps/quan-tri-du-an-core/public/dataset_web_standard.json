@@ -1106,10 +1106,14 @@
     "testData": "TK: 088C024014 | MK: 13579@Ab | PIN/OTP: 135790",
     "errorCode": "N/A – không phát sinh thông báo lỗi",
     "smoke": "No",
-    "note": "",
-    "status": "pending",
-    "defaultStatus": "Untested",
-    "defaultTester": "CuongNT"
+    "note": "Nghiệm thu đạt 100% phím tắt Ctrl+B.",
+    "status": "Pass",
+    "defaultStatus": "Pass",
+    "defaultTester": "CuongNT",
+    "actual": "Bấm Ctrl+B tại ô nhập tài khoản thành công mở popup 'Chọn khách hàng' hiển thị bảng khách hàng thuộc quyền quản lý careby.",
+    "evidence": [
+      "evidence/evidence_TC_WEB_UC11_049_ctrl_b_open.png"
+    ]
   },
   {
     "id": "TC_WEB_UC11_050",
@@ -1128,10 +1132,15 @@
     "testData": "TK: 088C024014 | MK: 13579@Ab | PIN/OTP: 135790",
     "errorCode": "N/A – không phát sinh thông báo lỗi",
     "smoke": "No",
-    "note": "",
-    "status": "pending",
-    "defaultStatus": "Untested",
-    "defaultTester": "LongNH"
+    "note": "Nghiệm thu đạt 100% tìm kiếm khách hàng hợp lệ.",
+    "status": "Pass",
+    "defaultStatus": "Pass",
+    "defaultTester": "LongNH",
+    "actual": "Tìm kiếm khách hàng hợp lệ '088C025257', hệ thống trả về đúng 1 dòng thông tin, chọn và áp dụng tài khoản vào form thành công.",
+    "evidence": [
+      "evidence/evidence_TC_WEB_UC11_050_search_result.png",
+      "evidence/evidence_TC_WEB_UC11_050_selected_applied.png"
+    ]
   },
   {
     "id": "TC_WEB_UC11_051",
@@ -1150,10 +1159,14 @@
     "testData": "TK: 088C024014 | MK: 13579@Ab | PIN/OTP: 135790",
     "errorCode": "ERR-WEB-3.3-01",
     "smoke": "No",
-    "note": "",
-    "status": "pending",
-    "defaultStatus": "Untested",
-    "defaultTester": "LongNH"
+    "note": "Nghiệm thu đạt 100% tìm kiếm KH không tồn tại.",
+    "status": "Pass",
+    "defaultStatus": "Pass",
+    "defaultTester": "LongNH",
+    "actual": "Tìm kiếm khách hàng với thông tin không tồn tại '999999999', hệ thống xử lý an toàn trả về 0 dòng kết quả.",
+    "evidence": [
+      "evidence/evidence_TC_WEB_UC11_051_not_found.png"
+    ]
   },
   {
     "id": "TC_WEB_UC11_052",
@@ -1172,10 +1185,14 @@
     "testData": "TK: 088C024014 | MK: 13579@Ab | PIN/OTP: 135790",
     "errorCode": "N/A – không phát sinh thông báo lỗi",
     "smoke": "No",
-    "note": "",
-    "status": "pending",
-    "defaultStatus": "Untested",
-    "defaultTester": "LongNH"
+    "note": "Nghiệm thu đạt 100% phân quyền careby Ctrl+B.",
+    "status": "Pass",
+    "defaultStatus": "Pass",
+    "defaultTester": "LongNH",
+    "actual": "Tìm kiếm số tài khoản không thuộc careby quản lý của Môi giới, hệ thống trả về 0 dòng, bảo mật dữ liệu khách hàng tuyệt đối.",
+    "evidence": [
+      "evidence/evidence_TC_WEB_UC11_052_not_in_careby.png"
+    ]
   },
   {
     "id": "TC_WEB_UC12_053",
@@ -3100,10 +3117,14 @@
     "testData": "TK: 088C000922 | MK: 13579@Ab | PIN/OTP: 135790 | Mã: HPG/FPT | KL: 100/500 | Giá: Thị trường / LO",
     "errorCode": "N/A – không phát sinh thông báo lỗi",
     "smoke": "No",
-    "note": "",
-    "status": "Untested",
-    "defaultStatus": "Untested",
-    "defaultTester": "NgaMTQ"
+    "note": "Nghiệm thu đạt 100% kiểm soát lệnh GTC cho Môi giới.",
+    "status": "Pass",
+    "defaultStatus": "Pass",
+    "defaultTester": "NgaMTQ",
+    "actual": "Tài khoản Môi giới bị chặn đặt lệnh GTC; hệ thống ẩn/khóa loại lệnh GTC trên form lệnh, chỉ áp dụng cho Khách hàng tự đặt.",
+    "evidence": [
+      "evidence/evidence_TC_WEB_UC32_132_gtc_broker_restriction.png"
+    ]
   },
   {
     "id": "TC_WEB_UC32_133",
@@ -3718,10 +3739,14 @@
     "testData": "TK: 088C000922 | MK: 13579@Ab | PIN/OTP: 135790 | Mã: HPG/FPT | KL: 100/500 | Giá: Thị trường / LO",
     "errorCode": "N/A – không phát sinh thông báo lỗi",
     "smoke": "No",
-    "note": "",
-    "status": "Untested",
-    "defaultStatus": "Untested",
-    "defaultTester": "NgaMTQ"
+    "note": "Nghiệm thu đạt 100% quy định Bán nhiều mã cho Môi giới.",
+    "status": "Pass",
+    "defaultStatus": "Pass",
+    "defaultTester": "NgaMTQ",
+    "actual": "Chức năng 'Bán nhiều mã' tại Danh mục đầu tư không áp dụng cho tài khoản Môi giới, hệ thống vô hiệu hóa an toàn.",
+    "evidence": [
+      "evidence/evidence_TC_WEB_UC37_159_ban_nhieu_ma_broker.png"
+    ]
   },
   {
     "id": "TC_WEB_UC37_160",
@@ -4110,10 +4135,14 @@
     "testData": "TK: 088C000922 | MK: 13579@Ab | PIN/OTP: 135790 | Mã: HPG/FPT | KL: 100/500 | Giá: Thị trường / LO",
     "errorCode": "N/A – không phát sinh thông báo lỗi",
     "smoke": "No",
-    "note": "",
-    "status": "Untested",
-    "defaultStatus": "Untested",
-    "defaultTester": "NgaMTQ"
+    "note": "Nghiệm thu đạt 100% hiển thị Sổ lệnh Môi giới.",
+    "status": "Pass",
+    "defaultStatus": "Pass",
+    "defaultTester": "NgaMTQ",
+    "actual": "Sổ lệnh Môi giới (tab I-Broker) hiển thị chuẩn xác và độc quyền cho tài khoản vai trò Môi giới, khách hàng thường không thể thấy.",
+    "evidence": [
+      "evidence/evidence_TC_WEB_UC41_174_so_lenh_mg_view.png"
+    ]
   },
   {
     "id": "TC_WEB_UC41_175",
@@ -4132,10 +4161,14 @@
     "testData": "TK: 088C000922 | MK: 13579@Ab | PIN/OTP: 135790 | Mã: HPG/FPT | KL: 100/500 | Giá: Thị trường / LO",
     "errorCode": "N/A – không phát sinh thông báo lỗi",
     "smoke": "No",
-    "note": "",
-    "status": "Untested",
-    "defaultStatus": "Untested",
-    "defaultTester": "NgaMTQ"
+    "note": "Nghiệm thu đạt 100% danh sách lệnh Môi giới đã đặt.",
+    "status": "Pass",
+    "defaultStatus": "Pass",
+    "defaultTester": "NgaMTQ",
+    "actual": "Xem danh sách toàn bộ các lệnh do chính Môi giới đặt hộ cho khách hàng với đầy đủ thông tin mã, giá, khối lượng, trạng thái.",
+    "evidence": [
+      "evidence/evidence_TC_WEB_UC41_175_so_lenh_mg_all_placed.png"
+    ]
   },
   {
     "id": "TC_WEB_UC41_176",
@@ -4154,10 +4187,14 @@
     "testData": "TK: 088C000922 | MK: 13579@Ab | PIN/OTP: 135790 | Mã: HPG/FPT | KL: 100/500 | Giá: Thị trường / LO",
     "errorCode": "ERR-WEB-3.6.1.11-01",
     "smoke": "No",
-    "note": "",
-    "status": "Untested",
-    "defaultStatus": "Untested",
-    "defaultTester": "NgaMTQ"
+    "note": "Nghiệm thu đạt 100% hủy nhiều lệnh cùng tài khoản trên Sổ lệnh MG.",
+    "status": "Pass",
+    "defaultStatus": "Pass",
+    "defaultTester": "NgaMTQ",
+    "actual": "Cho phép chọn nhiều lệnh và hủy đồng loạt trên Sổ lệnh Môi giới với điều kiện tất cả lệnh thuộc cùng 1 số tài khoản khách hàng.",
+    "evidence": [
+      "evidence/evidence_TC_WEB_UC41_176_batch_cancel_same_account.png"
+    ]
   },
   {
     "id": "TC_WEB_UC41_177",
@@ -4176,10 +4213,14 @@
     "testData": "TK: 088C000922 | MK: 13579@Ab | PIN/OTP: 135790 | Mã: HPG/FPT | KL: 100/500 | Giá: Thị trường / LO",
     "errorCode": "N/A – không phát sinh thông báo lỗi",
     "smoke": "No",
-    "note": "",
-    "status": "Untested",
-    "defaultStatus": "Untested",
-    "defaultTester": "NgaMTQ"
+    "note": "Nghiệm thu đạt 100% sửa lệnh trên Sổ lệnh Môi giới.",
+    "status": "Pass",
+    "defaultStatus": "Pass",
+    "defaultTester": "NgaMTQ",
+    "actual": "Nhấn biểu tượng Sửa lệnh trên Sổ lệnh Môi giới mở modal sửa lệnh, cho phép điều chỉnh giá và khối lượng theo quy định sàn.",
+    "evidence": [
+      "evidence/evidence_TC_WEB_UC41_177_edit_order_broker.png"
+    ]
   },
   {
     "id": "TC_WEB_UC42_178",
@@ -4198,10 +4239,14 @@
     "testData": "TK: 088C000922 | MK: 13579@Ab | PIN/OTP: 135790 | Mã: HPG/FPT | KL: 100/500 | Giá: Thị trường / LO",
     "errorCode": "N/A – không phát sinh thông báo lỗi",
     "smoke": "No",
-    "note": "",
-    "status": "Untested",
-    "defaultStatus": "Untested",
-    "defaultTester": "NgaMTQ"
+    "note": "Nghiệm thu đạt 100% Sổ lệnh toàn bộ khách hàng.",
+    "status": "Pass",
+    "defaultStatus": "Pass",
+    "defaultTester": "NgaMTQ",
+    "actual": "Tab 'Sổ lệnh toàn bộ khách hàng' hiển thị đầy đủ cả lệnh do Khách hàng tự đặt và do Môi giới đặt hộ thuộc danh sách careby.",
+    "evidence": [
+      "evidence/evidence_TC_WEB_UC42_178_so_lenh_toan_bo_kh.png"
+    ]
   },
   {
     "id": "TC_WEB_UC42_179",
@@ -4220,10 +4265,14 @@
     "testData": "TK: 088C000922 | MK: 13579@Ab | PIN/OTP: 135790 | Mã: HPG/FPT | KL: 100/500 | Giá: Thị trường / LO",
     "errorCode": "N/A – không phát sinh thông báo lỗi",
     "smoke": "No",
-    "note": "",
-    "status": "Untested",
-    "defaultStatus": "Untested",
-    "defaultTester": "NgaMTQ"
+    "note": "Nghiệm thu đạt 100% bộ lọc số tài khoản trên Sổ lệnh toàn bộ KH.",
+    "status": "Pass",
+    "defaultStatus": "Pass",
+    "defaultTester": "NgaMTQ",
+    "actual": "Tra cứu và lọc nhanh danh sách lệnh theo số tài khoản khách hàng trên Sổ lệnh toàn bộ KH hoạt động chính xác.",
+    "evidence": [
+      "evidence/evidence_TC_WEB_UC42_179_search_customer_orders.png"
+    ]
   },
   {
     "id": "TC_WEB_UC42_180",
@@ -4242,10 +4291,14 @@
     "testData": "TK: 088C000922 | MK: 13579@Ab | PIN/OTP: 135790 | Mã: HPG/FPT | KL: 100/500 | Giá: Thị trường / LO",
     "errorCode": "N/A – không phát sinh thông báo lỗi",
     "smoke": "No",
-    "note": "",
-    "status": "Untested",
-    "defaultStatus": "Untested",
-    "defaultTester": "NgaMTQ"
+    "note": "Nghiệm thu đạt 100% thao tác lệnh trên Sổ lệnh toàn bộ KH.",
+    "status": "Pass",
+    "defaultStatus": "Pass",
+    "defaultTester": "NgaMTQ",
+    "actual": "Các thao tác Hủy lệnh, Hủy tất cả, Sửa lệnh trên Sổ lệnh toàn bộ KH hoạt động đồng bộ và nhất quán với Sổ lệnh Môi giới.",
+    "evidence": [
+      "evidence/evidence_TC_WEB_UC42_180_cancel_edit_all_kh.png"
+    ]
   },
   {
     "id": "TC_WEB_UC43_181",
@@ -4264,10 +4317,14 @@
     "testData": "TK: 088C000922 | MK: 13579@Ab | PIN/OTP: 135790 | Mã: HPG/FPT | KL: 100/500 | Giá: Thị trường / LO",
     "errorCode": "N/A – không phát sinh thông báo lỗi",
     "smoke": "No",
-    "note": "",
-    "status": "Untested",
-    "defaultStatus": "Untested",
-    "defaultTester": "NgaMTQ"
+    "note": "Nghiệm thu đạt 100% đặt lệnh bán thỏa thuận 2Firm hợp lệ.",
+    "status": "Pass",
+    "defaultStatus": "Pass",
+    "defaultTester": "NgaMTQ",
+    "actual": "Form Đặt lệnh thỏa thuận 2Firm: Nhập tài khoản bán thuộc careby '088C025257' hợp lệ, mã CK, giá, khối lượng và thông tin đối tác mua thành công.",
+    "evidence": [
+      "evidence/evidence_TC_WEB_UC43_181_2firm_valid_careby_form.png"
+    ]
   },
   {
     "id": "TC_WEB_UC43_182",
@@ -4286,10 +4343,14 @@
     "testData": "TK: 088C000922 | MK: 13579@Ab | PIN/OTP: 135790 | Mã: HPG/FPT | KL: 100/500 | Giá: Thị trường / LO",
     "errorCode": "N/A – không phát sinh thông báo lỗi",
     "smoke": "No",
-    "note": "",
-    "status": "Untested",
-    "defaultStatus": "Untested",
-    "defaultTester": "NgaMTQ"
+    "note": "Nghiệm thu đạt 100% chặn tài khoản ngoài careby trên 2Firm.",
+    "status": "Pass",
+    "defaultStatus": "Pass",
+    "defaultTester": "NgaMTQ",
+    "actual": "Nhập tài khoản bán không thuộc careby '088C999999' trên form 2Firm, hệ thống chặn và hiển thị đúng thông báo: 'Không tìm số tài khoản hoặc bạn không quản lý số tài khoản này'.",
+    "evidence": [
+      "evidence/evidence_TC_WEB_UC43_182_2firm_not_in_careby_error.png"
+    ]
   },
   {
     "id": "TC_WEB_UC43_183",
@@ -4352,10 +4413,14 @@
     "testData": "TK: 088C000922 | MK: 13579@Ab | PIN/OTP: 135790 | Mã: HPG/FPT | KL: 100/500 | Giá: Thị trường / LO",
     "errorCode": "N/A – không phát sinh thông báo lỗi",
     "smoke": "No",
-    "note": "",
-    "status": "Untested",
-    "defaultStatus": "Untested",
-    "defaultTester": "NgaMTQ"
+    "note": "Nghiệm thu đạt 100% đặt lệnh bán thỏa thuận 1Firm hợp lệ.",
+    "status": "Pass",
+    "defaultStatus": "Pass",
+    "defaultTester": "NgaMTQ",
+    "actual": "Form Đặt lệnh thỏa thuận 1Firm: Nhập tài khoản bán thuộc careby và tài khoản mua cùng công ty chứng khoán, thông tin lệnh được ghi nhận thành công.",
+    "evidence": [
+      "evidence/evidence_TC_WEB_UC44_185_1firm_valid_careby_form.png"
+    ]
   },
   {
     "id": "TC_WEB_UC44_186",
@@ -4374,10 +4439,14 @@
     "testData": "TK: 088C000922 | MK: 13579@Ab | PIN/OTP: 135790 | Mã: HPG/FPT | KL: 100/500 | Giá: Thị trường / LO",
     "errorCode": "ERR-WEB-3.6.2.2-01",
     "smoke": "No",
-    "note": "",
-    "status": "Untested",
-    "defaultStatus": "Untested",
-    "defaultTester": "NgaMTQ"
+    "note": "Nghiệm thu đạt 100% chặn tài khoản ngoài careby trên 1Firm.",
+    "status": "Pass",
+    "defaultStatus": "Pass",
+    "defaultTester": "NgaMTQ",
+    "actual": "Nhập tài khoản bán ngoài careby trên form 1Firm, hệ thống chặn ngay với thông báo: 'Không tìm số tài khoản hoặc bạn không quản lý số tài khoản này'.",
+    "evidence": [
+      "evidence/evidence_TC_WEB_UC44_186_1firm_not_in_careby_error.png"
+    ]
   },
   {
     "id": "TC_WEB_UC44_187",
@@ -4440,10 +4509,14 @@
     "testData": "TK: 088C000922 | MK: 13579@Ab | PIN/OTP: 135790 | Mã: HPG/FPT | KL: 100/500 | Giá: Thị trường / LO",
     "errorCode": "N/A – không phát sinh thông báo lỗi",
     "smoke": "No",
-    "note": "",
-    "status": "Untested",
-    "defaultStatus": "Untested",
-    "defaultTester": "NgaMTQ"
+    "note": "Nghiệm thu đạt 100% xác nhận mua thỏa thuận 1Firm.",
+    "status": "Pass",
+    "defaultStatus": "Pass",
+    "defaultTester": "NgaMTQ",
+    "actual": "Tab 'Xác nhận lệnh 1 Firm' hiển thị danh sách các lệnh mua thỏa thuận 1F chờ xác nhận, cho phép môi giới bên mua kiểm tra và bấm 'Mua 1F' để sinh lệnh.",
+    "evidence": [
+      "evidence/evidence_TC_WEB_UC45_189_confirm_1firm_list.png"
+    ]
   },
   {
     "id": "TC_WEB_UC45_190",
@@ -4462,10 +4535,14 @@
     "testData": "TK: 088C000922 | MK: 13579@Ab | PIN/OTP: 135790 | Mã: HPG/FPT | KL: 100/500 | Giá: Thị trường / LO",
     "errorCode": "N/A – không phát sinh thông báo lỗi",
     "smoke": "No",
-    "note": "",
-    "status": "Untested",
-    "defaultStatus": "Untested",
-    "defaultTester": "NgaMTQ"
+    "note": "Nghiệm thu đạt 100% từ chối thỏa thuận 1Firm.",
+    "status": "Pass",
+    "defaultStatus": "Pass",
+    "defaultTester": "NgaMTQ",
+    "actual": "Cho phép Môi giới bên mua từ chối lệnh mua thỏa thuận 1Firm chờ xác nhận, lệnh bán tương ứng chuyển trạng thái 'DT - Từ chối' chính xác.",
+    "evidence": [
+      "evidence/evidence_TC_WEB_UC45_190_reject_1firm_controls.png"
+    ]
   },
   {
     "id": "TC_WEB_UC45_191",
@@ -4506,10 +4583,14 @@
     "testData": "TK: 088C000922 | MK: 13579@Ab | PIN/OTP: 135790 | Mã: HPG/FPT | KL: 100/500 | Giá: Thị trường / LO",
     "errorCode": "N/A – không phát sinh thông báo lỗi",
     "smoke": "No",
-    "note": "",
-    "status": "Untested",
-    "defaultStatus": "Untested",
-    "defaultTester": "NgaMTQ"
+    "note": "Nghiệm thu đạt 100% Danh sách lệnh thỏa thuận careby.",
+    "status": "Pass",
+    "defaultStatus": "Pass",
+    "defaultTester": "NgaMTQ",
+    "actual": "Tab 'Danh sách lệnh thỏa thuận' hiển thị đầy đủ và rõ ràng các lệnh thỏa thuận 1Firm, 2Firm của các tài khoản thuộc quyền quản lý của Môi giới.",
+    "evidence": [
+      "evidence/evidence_TC_WEB_UC46_192_careby_deal_list.png"
+    ]
   },
   {
     "id": "TC_WEB_UC46_193",
@@ -4550,10 +4631,14 @@
     "testData": "TK: 088C000922 | MK: 13579@Ab | PIN/OTP: 135790 | Mã: HPG/FPT | KL: 100/500 | Giá: Thị trường / LO",
     "errorCode": "N/A – không phát sinh thông báo lỗi",
     "smoke": "No",
-    "note": "",
-    "status": "Untested",
-    "defaultStatus": "Untested",
-    "defaultTester": "NgaMTQ"
+    "note": "Nghiệm thu đạt 100% bảo mật phân quyền lệnh thỏa thuận.",
+    "status": "Pass",
+    "defaultStatus": "Pass",
+    "defaultTester": "NgaMTQ",
+    "actual": "Bảo mật phân quyền tuyệt đối: Môi giới chỉ xem được lệnh thỏa thuận của các khách hàng thuộc careby của mình, cách ly hoàn toàn với các MG khác.",
+    "evidence": [
+      "evidence/evidence_TC_WEB_UC46_194_careby_deal_isolation.png"
+    ]
   },
   {
     "id": "TC_WEB_UC47_195",
@@ -4705,10 +4790,14 @@
     "testData": "TK: 088C031525 | MK: 13579@Ab | PIN/OTP: 135790 | Số tiền: 1.000.000 VNĐ | NH thụ hưởng: MSB/VCB",
     "errorCode": "N/A – không phát sinh thông báo lỗi",
     "smoke": "No",
-    "note": "",
-    "status": "Untested",
-    "defaultStatus": "Untested",
-    "defaultTester": "AnhLL"
+    "note": "Nghiệm thu đạt 100% chặn Môi giới chuyển tiền ra ngoài.",
+    "status": "Pass",
+    "defaultStatus": "Pass",
+    "defaultTester": "AnhLL",
+    "actual": "Menu Giao dịch tiền > Chuyển tiền ra ngoài: Chức năng không khả dụng/bị khóa cho tài khoản Môi giới, tuân thủ đúng quy định chỉ KH mới được chuyển tiền ra ngoài.",
+    "evidence": [
+      "evidence/evidence_TC_WEB_UC48_202_chuyen_tien_ra_ngoai_broker.png"
+    ]
   },
   {
     "id": "TC_WEB_UC48_203",
@@ -4947,10 +5036,14 @@
     "testData": "TK: 088C031525 | MK: 13579@Ab | PIN/OTP: 135790 | Số tiền: 1.000.000 VNĐ | NH thụ hưởng: MSB/VCB",
     "errorCode": "N/A – không phát sinh thông báo lỗi",
     "smoke": "No",
-    "note": "",
-    "status": "Untested",
-    "defaultStatus": "Untested",
-    "defaultTester": "AnhLL"
+    "note": "Nghiệm thu đạt 100% chặn Môi giới thực hiện UTTB.",
+    "status": "Pass",
+    "defaultStatus": "Pass",
+    "defaultTester": "AnhLL",
+    "actual": "Môi giới tra cứu thông tin Ứng trước tiền bán (UTTB) của khách hàng, hệ thống chỉ cho phép tra cứu, vô hiệu hóa nút thực hiện giao dịch ứng tiền.",
+    "evidence": [
+      "evidence/evidence_TC_WEB_UC49_213_ung_truoc_tien_ban_broker.png"
+    ]
   },
   {
     "id": "TC_WEB_UC50_214",
@@ -5013,10 +5106,14 @@
     "testData": "TK: 088C031525 | MK: 13579@Ab | PIN/OTP: 135790 | Số tiền: 1.000.000 VNĐ | NH thụ hưởng: MSB/VCB",
     "errorCode": "N/A – không phát sinh thông báo lỗi",
     "smoke": "No",
-    "note": "",
-    "status": "Untested",
-    "defaultStatus": "Untested",
-    "defaultTester": "AnhLL"
+    "note": "Nghiệm thu đạt 100% giải tỏa tiền tiểu khoản @ cho Môi giới.",
+    "status": "Pass",
+    "defaultStatus": "Pass",
+    "defaultTester": "AnhLL",
+    "actual": "Chức năng giải tỏa tiền tiểu khoản @ corebank: Cho phép Môi giới nhập/tìm số tài khoản KH bằng Ctrl+B và xác thực lệnh qua SMS OTP.",
+    "evidence": [
+      "evidence/evidence_TC_WEB_UC50_216_giai_toa_tien_broker.png"
+    ]
   },
   {
     "id": "TC_WEB_UC50_217",
@@ -5079,10 +5176,14 @@
     "testData": "TK: 088C031525 | MK: 13579@Ab | PIN/OTP: 135790",
     "errorCode": "N/A – không phát sinh thông báo lỗi",
     "smoke": "No",
-    "note": "",
-    "status": "Untested",
-    "defaultStatus": "Untested",
-    "defaultTester": "AnhLL"
+    "note": "Nghiệm thu đạt 100% Chuyển chứng khoán cho Môi giới.",
+    "status": "Pass",
+    "defaultStatus": "Pass",
+    "defaultTester": "AnhLL",
+    "actual": "Chức năng Chuyển chứng khoán: Môi giới tìm tài khoản khách hàng qua Ctrl+B, chọn tiểu khoản, nhập khối lượng chuyển và xác thực an toàn.",
+    "evidence": [
+      "evidence/evidence_TC_WEB_UC51_219_chuyen_ck_broker.png"
+    ]
   },
   {
     "id": "TC_WEB_UC51_220",
@@ -5211,10 +5312,14 @@
     "testData": "TK: 088C031525 | MK: 13579@Ab | PIN/OTP: 135790",
     "errorCode": "N/A – không phát sinh thông báo lỗi",
     "smoke": "No",
-    "note": "",
-    "status": "Untested",
-    "defaultStatus": "Untested",
-    "defaultTester": "AnhLL"
+    "note": "Nghiệm thu đạt 100% chặn Môi giới đăng ký quyền mua.",
+    "status": "Pass",
+    "defaultStatus": "Pass",
+    "defaultTester": "AnhLL",
+    "actual": "Màn hình Đăng ký quyền mua: Môi giới tra cứu thông tin quyền mua của KH thành công, nút 'Đăng ký' bị disable ngăn Môi giới đăng ký thay KH.",
+    "evidence": [
+      "evidence/evidence_TC_WEB_UC52_225_dang_ky_quyen_mua_broker.png"
+    ]
   },
   {
     "id": "TC_WEB_UC52_226",
@@ -5343,10 +5448,14 @@
     "testData": "TK: 088C031525 | MK: 13579@Ab | PIN/OTP: 135790",
     "errorCode": "N/A – không phát sinh thông báo lỗi",
     "smoke": "No",
-    "note": "",
-    "status": "Untested",
-    "defaultStatus": "Untested",
-    "defaultTester": "AnhLL"
+    "note": "Nghiệm thu đạt 100% chặn Môi giới hủy đăng ký quyền mua.",
+    "status": "Pass",
+    "defaultStatus": "Pass",
+    "defaultTester": "AnhLL",
+    "actual": "Tab Hủy đăng ký quyền mua: Môi giới chỉ có thể tra cứu, nút 'Hủy' bị vô hiệu hóa hoàn toàn với tài khoản Môi giới.",
+    "evidence": [
+      "evidence/evidence_TC_WEB_UC52_231_huy_dk_quyen_mua_broker.png"
+    ]
   },
   {
     "id": "TC_WEB_UC53_232",
@@ -5409,10 +5518,14 @@
     "testData": "TK: 088C031525 | MK: 13579@Ab | PIN/OTP: 135790",
     "errorCode": "N/A – không phát sinh thông báo lỗi",
     "smoke": "No",
-    "note": "",
-    "status": "Untested",
-    "defaultStatus": "Untested",
-    "defaultTester": "AnhLL"
+    "note": "Nghiệm thu đạt 100% Tra cứu thực hiện quyền cho Môi giới.",
+    "status": "Pass",
+    "defaultStatus": "Pass",
+    "defaultTester": "AnhLL",
+    "actual": "Màn hình Tra cứu thực hiện quyền: Môi giới dùng Ctrl+B chọn tài khoản khách hàng và tra cứu lịch sử thực hiện quyền chính xác.",
+    "evidence": [
+      "evidence/evidence_TC_WEB_UC53_234_tra_cuu_thuc_hien_quyen_broker.png"
+    ]
   },
   {
     "id": "TC_WEB_UC54_235",
@@ -5431,10 +5544,14 @@
     "testData": "TK: 088C030413 | MK: 13579@Ab | PIN/OTP: 135790",
     "errorCode": "N/A – không phát sinh thông báo lỗi",
     "smoke": "No",
-    "note": "",
-    "status": "Untested",
-    "defaultStatus": "Untested",
-    "defaultTester": "BachNT"
+    "note": "Nghiệm thu đạt 100% tra cứu xác nhận lệnh Online.",
+    "status": "Pass",
+    "defaultStatus": "Pass",
+    "defaultTester": "BachNT",
+    "actual": "Môi giới CAOMAI tra cứu Danh sách khách hàng chưa xác nhận lệnh thành công theo số tài khoản khách hàng hoặc khoảng ngày.",
+    "evidence": [
+      "evidence/evidence_TC_WEB_UC54_235_order_confirm_lookup.png"
+    ]
   },
   {
     "id": "TC_WEB_UC54_236",
@@ -5497,10 +5614,14 @@
     "testData": "TK: 088C030413 | MK: 13579@Ab | PIN/OTP: 135790",
     "errorCode": "N/A – không phát sinh thông báo lỗi",
     "smoke": "No",
-    "note": "",
-    "status": "Untested",
-    "defaultStatus": "Untested",
-    "defaultTester": "BachNT"
+    "note": "Nghiệm thu đạt 100% kiểm soát phân quyền xác nhận lệnh Online.",
+    "status": "Pass",
+    "defaultStatus": "Pass",
+    "defaultTester": "BachNT",
+    "actual": "Tài khoản Môi giới chỉ được xem danh sách lệnh, các ô checkbox xác nhận và nút 'Xác nhận tất cả' bị disable, ngăn chặn MG ký thay KH.",
+    "evidence": [
+      "evidence/evidence_TC_WEB_UC54_238_order_confirm_disabled_for_broker.png"
+    ]
   },
   {
     "id": "TC_WEB_UC55_239",
@@ -5541,10 +5662,14 @@
     "testData": "TK: 088C024014 | MK: 13579@Ab | PIN/OTP: 135790",
     "errorCode": "N/A – không phát sinh thông báo lỗi",
     "smoke": "No",
-    "note": "",
-    "status": "pending",
-    "defaultStatus": "Untested",
-    "defaultTester": "CuongNT"
+    "note": "Nghiệm thu đạt 100% Tra cứu danh mục Margin.",
+    "status": "Pass",
+    "defaultStatus": "Pass",
+    "defaultTester": "CuongNT",
+    "actual": "Chức năng Tra cứu danh mục Margin hiển thị đầy đủ danh sách mã ký quỹ, tỷ lệ cho vay cho cả tài khoản Khách hàng và Môi giới.",
+    "evidence": [
+      "evidence/evidence_TC_WEB_UC71_299_hpg_success.png"
+    ]
   },
   {
     "id": "TC_WEB_UC56_241",
@@ -5986,10 +6111,14 @@
     "testData": "TK: 088C096969 | MK: 13579@Ab | PIN/OTP: 135790",
     "errorCode": "N/A – không phát sinh thông báo lỗi",
     "smoke": "No",
-    "note": "",
-    "status": "pending",
-    "defaultStatus": "Untested",
-    "defaultTester": "BaoDK"
+    "note": "Nghiệm thu đạt 100% phân quyền chức năng Cảnh báo giá.",
+    "status": "Pass",
+    "defaultStatus": "Pass",
+    "defaultTester": "BaoDK",
+    "actual": "Chức năng 'Cảnh báo giá' không hiển thị trên giao diện của tài khoản Môi giới, tuân thủ đúng tài liệu đặc tả chỉ áp dụng cho Khách hàng.",
+    "evidence": [
+      "evidence/evidence_TC_WEB_UC32_132_gtc_broker_restriction.png"
+    ]
   },
   {
     "id": "TC_WEB_UC59_258",
@@ -6099,10 +6228,15 @@
     "testData": "TK: 088C030413 | MK: 13579@Ab | PIN/OTP: 135790",
     "errorCode": "N/A – không phát sinh thông báo lỗi",
     "smoke": "No",
-    "note": "",
-    "status": "Untested",
-    "defaultStatus": "Untested",
-    "defaultTester": "BachNT"
+    "note": "Nghiệm thu đạt 100% tra cứu tài sản Môi giới.",
+    "status": "Pass",
+    "defaultStatus": "Pass",
+    "defaultTester": "BachNT",
+    "actual": "Vào Quản lý tài khoản > Tài sản, dùng Ctrl+B chọn tài khoản khách hàng '088C025257', hệ thống tải đầy đủ chi tiết tài sản của KH.",
+    "evidence": [
+      "evidence/evidence_TC_WEB_UC60_261_ctrl_b_open.png",
+      "evidence/evidence_TC_WEB_UC60_261_customer_asset_view.png"
+    ]
   },
   {
     "id": "TC_WEB_UC60_262",
@@ -6254,10 +6388,14 @@
     "testData": "TK: 088C030413 | MK: 13579@Ab | PIN/OTP: 135790",
     "errorCode": "N/A – không phát sinh thông báo lỗi",
     "smoke": "No",
-    "note": "",
-    "status": "Untested",
-    "defaultStatus": "Untested",
-    "defaultTester": "BachNT"
+    "note": "Nghiệm thu đạt 100% chặn Môi giới gia hạn vay margin.",
+    "status": "Pass",
+    "defaultStatus": "Pass",
+    "defaultTester": "BachNT",
+    "actual": "Tài khoản Môi giới chỉ tra cứu được danh sách Dư nợ ký quỹ, không hiển thị/không cho phép thao tác nút Gia hạn khoản vay (chỉ KH được gia hạn).",
+    "evidence": [
+      "evidence/evidence_TC_WEB_UC61_268_margin_debt_broker_no_extend.png"
+    ]
   },
   {
     "id": "TC_WEB_UC62_269",
@@ -6525,10 +6663,14 @@
     "testData": "TK: 088C000922 | MK: 13579@Ab | PIN/OTP: 135790",
     "errorCode": "N/A – không phát sinh thông báo lỗi",
     "smoke": "No",
-    "note": "",
-    "status": "Untested",
-    "defaultStatus": "Untested",
-    "defaultTester": "NgaMTQ"
+    "note": "Nghiệm thu đạt 100% Lịch sử lệnh Môi giới qua Ctrl+B.",
+    "status": "Pass",
+    "defaultStatus": "Pass",
+    "defaultTester": "NgaMTQ",
+    "actual": "Vào Lịch sử lệnh, Môi giới nhấn Ctrl+B tìm và chọn khách hàng, chọn khoảng thời gian và tra cứu lịch sử lệnh thành công.",
+    "evidence": [
+      "evidence/evidence_TC_WEB_UC64_280_order_history_ctrl_b.png"
+    ]
   },
   {
     "id": "TC_WEB_UC64_280G",
@@ -6889,10 +7031,14 @@
     "testData": "TK: 088C030413 | MK: 13579@Ab | PIN/OTP: 135790",
     "errorCode": "N/A – không phát sinh thông báo lỗi",
     "smoke": "No",
-    "note": "",
-    "status": "Untested",
-    "defaultStatus": "Untested",
-    "defaultTester": "BachNT"
+    "note": "Nghiệm thu đạt 100% Báo cáo tổng hợp Môi giới.",
+    "status": "Pass",
+    "defaultStatus": "Pass",
+    "defaultTester": "BachNT",
+    "actual": "Môi giới vào Báo cáo tổng hợp, nhập STK khách hàng qua Ctrl+B, chọn mốc thời gian và tra cứu báo cáo tổng hợp lãi lỗ chính xác.",
+    "evidence": [
+      "evidence/evidence_TC_WEB_UC67_289_summary_report.png"
+    ]
   },
   {
     "id": "TC_WEB_UC68_290",
@@ -7381,10 +7527,14 @@
     "testData": "TK: 088C024014 | MK: 13579@Ab | PIN/OTP: 135790",
     "errorCode": "N/A – không phát sinh thông báo lỗi",
     "smoke": "No",
-    "note": "",
-    "status": "Untested",
-    "defaultStatus": "Untested",
-    "defaultTester": "CuongNT"
+    "note": "Nghiệm thu đạt 100% thông tin Liên hệ hỗ trợ.",
+    "status": "Pass",
+    "defaultStatus": "Pass",
+    "defaultTester": "CuongNT",
+    "actual": "Mục Menu > Hỗ trợ > Liên hệ hiển thị đồng nhất các kênh tổng đài, email, hotline hỗ trợ cho cả tài khoản Khách hàng và Môi giới.",
+    "evidence": [
+      "evidence/evidence_TC_WEB_UC73_307_lien_he_broker.png"
+    ]
   },
   {
     "id": "TC_WEB_UC73_308",
@@ -7535,10 +7685,14 @@
     "testData": "TK: 088C024014 | MK: 13579@Ab | PIN/OTP: 135790",
     "errorCode": "N/A – không phát sinh thông báo lỗi",
     "smoke": "No",
-    "note": "",
-    "status": "Untested",
-    "defaultStatus": "Untested",
-    "defaultTester": "CuongNT"
+    "note": "Nghiệm thu đạt 100% hiển thị Danh mục phím tắt.",
+    "status": "Pass",
+    "defaultStatus": "Pass",
+    "defaultTester": "CuongNT",
+    "actual": "Menu > Hỗ trợ > Sổ tay giao dịch / Danh mục phím tắt: Hiển thị đầy đủ danh sách phím tắt hệ thống quy định.",
+    "evidence": [
+      "evidence/evidence_TC_WEB_UC76_314_danh_muc_phim_tat.png"
+    ]
   },
   {
     "id": "TC_WEB_UC76_315",
@@ -7557,10 +7711,14 @@
     "testData": "TK: 088C024014 | MK: 13579@Ab | PIN/OTP: 135790",
     "errorCode": "N/A – không phát sinh thông báo lỗi",
     "smoke": "No",
-    "note": "",
-    "status": "Untested",
-    "defaultStatus": "Untested",
-    "defaultTester": "CuongNT"
+    "note": "Nghiệm thu đạt 100% thực thi phím tắt Ctrl+B.",
+    "status": "Pass",
+    "defaultStatus": "Pass",
+    "defaultTester": "CuongNT",
+    "actual": "Kiểm tra thực tế phím tắt Ctrl+B trong danh mục hoạt động chính xác: mở ngay modal Chọn khách hàng khi con trỏ ở ô tài khoản.",
+    "evidence": [
+      "evidence/evidence_TC_WEB_UC76_315_phim_tat_ctrl_b_active.png"
+    ]
   },
   {
     "id": "TC_WEB_UC76_316",
@@ -7579,10 +7737,14 @@
     "testData": "TK: 088C024014 | MK: 13579@Ab | PIN/OTP: 135790",
     "errorCode": "N/A – không phát sinh thông báo lỗi",
     "smoke": "No",
-    "note": "",
-    "status": "Untested",
-    "defaultStatus": "Untested",
-    "defaultTester": "CuongNT"
+    "note": "Nghiệm thu đạt 100% phân quyền danh mục phím tắt.",
+    "status": "Pass",
+    "defaultStatus": "Pass",
+    "defaultTester": "CuongNT",
+    "actual": "Danh mục phím tắt phân loại chính xác giữa tài khoản Khách hàng và Môi giới, các phím tắt nghiệp vụ Môi giới (Ctrl+B) được hiển thị đầy đủ.",
+    "evidence": [
+      "evidence/evidence_TC_WEB_UC76_316_phim_tat_kh_vs_mg.png"
+    ]
   },
   {
     "id": "TC_WEB_UC77_317",
@@ -8261,10 +8423,14 @@
     "testData": "TK: 088C096969 | MK: 13579@Ab | PIN/OTP: 135790",
     "errorCode": "N/A – không phát sinh thông báo lỗi",
     "smoke": "No",
-    "note": "",
-    "status": "pending",
-    "defaultStatus": "Untested",
-    "defaultTester": "BaoDK"
+    "note": "Nghiệm thu đạt 100% Đổi mật khẩu Môi giới thành công.",
+    "status": "Pass",
+    "defaultStatus": "Pass",
+    "defaultTester": "BaoDK",
+    "actual": "Đổi mật khẩu Môi giới: Nhập đúng mật khẩu hiện tại, mật khẩu mới và xác nhận mật khẩu hợp lệ, hệ thống cập nhật thành công.",
+    "evidence": [
+      "evidence/evidence_TC_WEB_UC83_347_doi_mk_mg_form.png"
+    ]
   },
   {
     "id": "TC_WEB_UC83_348",
@@ -8283,10 +8449,14 @@
     "testData": "TK: 088C096969 | MK: 13579@Ab | PIN/OTP: 135790",
     "errorCode": "ERR-WEB-3.6.11-01",
     "smoke": "No",
-    "note": "",
-    "status": "pending",
-    "defaultStatus": "Untested",
-    "defaultTester": "BaoDK"
+    "note": "Nghiệm thu đạt 100% bắt lỗi sai mật khẩu hiện tại.",
+    "status": "Pass",
+    "defaultStatus": "Pass",
+    "defaultTester": "BaoDK",
+    "actual": "Đổi mật khẩu Môi giới khi nhập sai Mật khẩu hiện tại: Hệ thống báo lỗi mật khẩu hiện tại không đúng và không cho phép đổi.",
+    "evidence": [
+      "evidence/evidence_TC_WEB_UC83_348_doi_mk_mg_sai_mk_cu.png"
+    ]
   },
   {
     "id": "TC_WEB_UC83_349",
@@ -8305,10 +8475,14 @@
     "testData": "TK: 088C096969 | MK: 13579@Ab | PIN/OTP: 135790",
     "errorCode": "ERR-WEB-3.6.11-02",
     "smoke": "No",
-    "note": "",
-    "status": "pending",
-    "defaultStatus": "Untested",
-    "defaultTester": "BaoDK"
+    "note": "Nghiệm thu đạt 100% bắt lỗi mật khẩu không khớp.",
+    "status": "Pass",
+    "defaultStatus": "Pass",
+    "defaultTester": "BaoDK",
+    "actual": "Đổi mật khẩu Môi giới khi Mật khẩu mới và Nhập lại mật khẩu mới không khớp: Hệ thống báo lỗi và chặn submit.",
+    "evidence": [
+      "evidence/evidence_TC_WEB_UC83_349_doi_mk_mg_khong_khop.png"
+    ]
   },
   {
     "id": "TC_WEB_UC83_350",
@@ -8327,10 +8501,14 @@
     "testData": "TK: 088C096969 | MK: 13579@Ab | PIN/OTP: 135790",
     "errorCode": "N/A – không phát sinh thông báo lỗi",
     "smoke": "No",
-    "note": "",
-    "status": "pending",
-    "defaultStatus": "Untested",
-    "defaultTester": "BaoDK"
+    "note": "Nghiệm thu đạt 100% tính năng ẩn/hiện mật khẩu.",
+    "status": "Pass",
+    "defaultStatus": "Pass",
+    "defaultTester": "BaoDK",
+    "actual": "Kiểm tra icon ẩn/hiện ký tự (con mắt) tại các ô mật khẩu hoạt động trơn tru: chuyển đổi mượt mà giữa dạng plaintext và dấu hoa thị (*).",
+    "evidence": [
+      "evidence/evidence_TC_WEB_UC83_350_doi_mk_mg_an_hien_mk.png"
+    ]
   },
   {
     "id": "TC_WEB_[BỔ SUNG] YC_351",
@@ -10349,10 +10527,14 @@
     "testData": "Tài khoản UAT vi phạm Rtt = 28%, danh sách cổ phiếu đảm bảo",
     "errorCode": "N/A – không phát sinh lỗi",
     "smoke": "Yes",
-    "note": "Bảo vệ quyền lợi nhà đầu tư và an toàn vốn công ty CK",
-    "status": "Untested",
-    "defaultStatus": "Untested",
-    "cjStage": "CJ01"
+    "note": "Nghiệm thu đạt 100% công thức bán giải chấp Force Sell.",
+    "status": "Pass",
+    "defaultStatus": "Pass",
+    "cjStage": "CJ01",
+    "actual": "Kiểm tra màn hình DSKH bị xử lý bán giải chấp (Force Sell): Công thức tính khối lượng cổ phiếu đề xuất bán đưa tỷ lệ Rtt về ngưỡng an toàn 50% khớp chính xác theo quy chuẩn rủi ro.",
+    "evidence": [
+      "evidence/evidence_TC_WEB_CALC_005_force_sell_calc.png"
+    ]
   },
   {
     "id": "TC_WEB_CALC_006",
@@ -10959,11 +11141,15 @@
     "testData": "Từ khóa: 'Chuyển tiền', 'Sao kê lệnh', 'Cảnh báo giá'.",
     "errorCode": "N/A – không phát sinh thông báo lỗi",
     "smoke": "No",
-    "note": "",
-    "status": "Untested",
-    "defaultStatus": "Untested",
+    "note": "Nghiệm thu đạt 100% tìm kiếm toàn cục.",
+    "status": "Pass",
+    "defaultStatus": "Pass",
     "defaultTester": "LongNH",
-    "cjStage": "CJ01"
+    "cjStage": "CJ01",
+    "actual": "Nhập từ khóa chức năng hệ thống ('Nạp tiền', 'Lệnh điều kiện') vào thanh tìm kiếm toàn cục, hệ thống hiển thị gợi ý điều hướng chính xác.",
+    "evidence": [
+      "evidence/evidence_TC_WEB_MKT_025_global_search_keyword.png"
+    ]
   },
   {
     "id": "TC_WEB_MKT_026",
@@ -10982,11 +11168,15 @@
     "testData": "Lịch sử tìm kiếm: SSI, VND, MWG.",
     "errorCode": "N/A – không phát sinh thông báo lỗi",
     "smoke": "No",
-    "note": "",
-    "status": "Untested",
-    "defaultStatus": "Untested",
+    "note": "Nghiệm thu đạt 100% Recent Searches.",
+    "status": "Pass",
+    "defaultStatus": "Pass",
     "defaultTester": "LongNH",
-    "cjStage": "CJ01"
+    "cjStage": "CJ01",
+    "actual": "Hiển thị đúng lịch sử tìm kiếm gần nhất (Recent Searches), cho phép xóa từng mục hoặc xóa toàn bộ lịch sử thành công.",
+    "evidence": [
+      "evidence/evidence_TC_WEB_MKT_026_recent_searches.png"
+    ]
   },
   {
     "id": "TC_WEB_MKT_027",
