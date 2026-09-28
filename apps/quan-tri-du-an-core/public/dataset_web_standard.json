@@ -7691,7 +7691,7 @@
   {
     "id": "TC_WEB_UC76_314",
     "stt": "314",
-    "tester": "CuongNT",
+    "tester": "BaoDK",
     "module": "Quản lý Tài sản & Báo cáo",
     "screen": "UC76: 3.6.8.4 Danh mục phím tắt (Hỗ trợ)",
     "useCaseId": "UC76",
@@ -7708,7 +7708,7 @@
     "note": "Nghiệm thu đạt 100% hiển thị Danh mục phím tắt.",
     "status": "Pass",
     "defaultStatus": "Pass",
-    "defaultTester": "CuongNT",
+    "defaultTester": "BaoDK",
     "actual": "Menu > Hỗ trợ > Sổ tay giao dịch / Danh mục phím tắt: Hiển thị đầy đủ danh sách phím tắt hệ thống quy định.",
     "evidence": [
       "evidence/evidence_TC_WEB_UC76_314_danh_muc_phim_tat.png"
@@ -7717,7 +7717,7 @@
   {
     "id": "TC_WEB_UC76_315",
     "stt": "315",
-    "tester": "CuongNT",
+    "tester": "BaoDK",
     "module": "Quản lý Tài sản & Báo cáo",
     "screen": "UC76: 3.6.8.4 Danh mục phím tắt (Hỗ trợ)",
     "useCaseId": "UC76",
@@ -7734,7 +7734,7 @@
     "note": "Nghiệm thu đạt 100% thực thi phím tắt Ctrl+B.",
     "status": "Pass",
     "defaultStatus": "Pass",
-    "defaultTester": "CuongNT",
+    "defaultTester": "BaoDK",
     "actual": "Kiểm tra thực tế phím tắt Ctrl+B trong danh mục hoạt động chính xác: mở ngay modal Chọn khách hàng khi con trỏ ở ô tài khoản.",
     "evidence": [
       "evidence/evidence_TC_WEB_UC76_315_phim_tat_ctrl_b_active.png"
@@ -7743,7 +7743,7 @@
   {
     "id": "TC_WEB_UC76_316",
     "stt": "316",
-    "tester": "CuongNT",
+    "tester": "BaoDK",
     "module": "Quản lý Tài sản & Báo cáo",
     "screen": "UC76: 3.6.8.4 Danh mục phím tắt (Hỗ trợ)",
     "useCaseId": "UC76",
@@ -7760,7 +7760,7 @@
     "note": "Nghiệm thu đạt 100% phân quyền danh mục phím tắt.",
     "status": "Pass",
     "defaultStatus": "Pass",
-    "defaultTester": "CuongNT",
+    "defaultTester": "BaoDK",
     "actual": "Danh mục phím tắt phân loại chính xác giữa tài khoản Khách hàng và Môi giới, các phím tắt nghiệp vụ Môi giới (Ctrl+B) được hiển thị đầy đủ.",
     "evidence": [
       "evidence/evidence_TC_WEB_UC76_316_phim_tat_kh_vs_mg.png"
