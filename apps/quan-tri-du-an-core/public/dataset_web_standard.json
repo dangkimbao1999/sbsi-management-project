@@ -304,10 +304,14 @@
     "testData": "TK: 088C096969 | MK: 13579@Ab | PIN/OTP: 135790",
     "errorCode": "N/A – không phát sinh thông báo lỗi",
     "smoke": "No",
-    "note": "",
-    "status": "pending",
-    "defaultStatus": "Untested",
-    "defaultTester": "BaoDK"
+    "note": "Nghiệm thu đạt 100% Đăng nhập Môi giới hợp lệ.",
+    "status": "Pass",
+    "defaultStatus": "Pass",
+    "defaultTester": "BaoDK",
+    "actual": "Đăng nhập thành công với tài khoản Môi giới CAOMAI hợp lệ, hệ thống điều hướng vào Web Trading với đầy đủ thông tin Môi giới trên Header.",
+    "evidence": [
+      "evidence/evidence_TC_WEB_UC03_014_valid_broker_login.png"
+    ]
   },
   {
     "id": "TC_WEB_UC03_015",
@@ -326,10 +330,14 @@
     "testData": "TK: 088C096969 | MK: 13579@Ab | PIN/OTP: 135790",
     "errorCode": "ERR-WEB-3.1.3-01",
     "smoke": "No",
-    "note": "",
-    "status": "pending",
-    "defaultStatus": "Untested",
-    "defaultTester": "BaoDK"
+    "note": "Nghiệm thu đạt 100% bắt lỗi mật khẩu Môi giới không đúng.",
+    "status": "Pass",
+    "defaultStatus": "Pass",
+    "defaultTester": "BaoDK",
+    "actual": "Nhập sai mật khẩu khi đăng nhập tài khoản Môi giới: Hệ thống chặn đăng nhập và hiển thị thông báo lỗi xác thực an toàn.",
+    "evidence": [
+      "evidence/evidence_TC_WEB_UC03_015_broker_invalid_password.png"
+    ]
   },
   {
     "id": "TC_WEB_UC03_016",
@@ -348,10 +356,14 @@
     "testData": "TK: 088C096969 | MK: 13579@Ab | PIN/OTP: 135790",
     "errorCode": "N/A – không phát sinh thông báo lỗi",
     "smoke": "No",
-    "note": "",
-    "status": "pending",
-    "defaultStatus": "Untested",
-    "defaultTester": "BaoDK"
+    "note": "Nghiệm thu đạt 100% phân quyền giao diện tài khoản Môi giới.",
+    "status": "Pass",
+    "defaultStatus": "Pass",
+    "defaultTester": "BaoDK",
+    "actual": "Giao diện sau đăng nhập của Môi giới: Toàn bộ chức năng độc quyền của Khách hàng (Chuyển tiền ra ngoài, Cảnh báo giá, Bán nhiều mã, GTC) bị ẩn hoặc khóa chặt chẽ.",
+    "evidence": [
+      "evidence/evidence_TC_WEB_UC03_016_broker_ui_restrictions.png"
+    ]
   },
   {
     "id": "TC_WEB_UC03_017",
@@ -370,10 +382,14 @@
     "testData": "TK: 088C096969 | MK: 13579@Ab | PIN/OTP: 135790",
     "errorCode": "ERR-WEB-3.1.3-03",
     "smoke": "No",
-    "note": "",
-    "status": "pending",
-    "defaultStatus": "Untested",
-    "defaultTester": "BaoDK"
+    "note": "Nghiệm thu đạt 100% khóa bảo mật chống brute-force.",
+    "status": "Pass",
+    "defaultStatus": "Pass",
+    "defaultTester": "BaoDK",
+    "actual": "Đăng nhập sai mật khẩu liên tiếp nhiều lần: Hệ thống hiển thị cảnh báo bảo mật và kích hoạt khóa xác thực tạm thời chống brute-force.",
+    "evidence": [
+      "evidence/evidence_TC_WEB_UC03_017_broker_lockout_warning.png"
+    ]
   },
   {
     "id": "TC_WEB_UC04_018",
@@ -1919,10 +1935,14 @@
     "testData": "TK: 088C096969 | MK: 13579@Ab | PIN/OTP: 135790",
     "errorCode": "N/A – không phát sinh thông báo lỗi",
     "smoke": "No",
-    "note": "",
-    "status": "pending",
-    "defaultStatus": "Untested",
-    "defaultTester": "BaoDK"
+    "note": "Nghiệm thu đạt 100% phân quyền thông báo cho Môi giới.",
+    "status": "Pass",
+    "defaultStatus": "Pass",
+    "defaultTester": "BaoDK",
+    "actual": "Nhấn biểu tượng Quả chuông trên Header: Tài khoản Môi giới chỉ hiển thị 2 tab thông báo theo đặc tả: 'Khuyến nghị' và 'Khác'.",
+    "evidence": [
+      "evidence/evidence_TC_WEB_UC17_080_broker_notification_tabs.png"
+    ]
   },
   {
     "id": "TC_WEB_UC17_081",
